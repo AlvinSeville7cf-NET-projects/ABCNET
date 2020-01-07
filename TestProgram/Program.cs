@@ -1,4 +1,5 @@
-﻿using NETMouse.Utils;
+﻿using NETMouse.Extensions;
+using NETMouse.Utils;
 
 namespace TestProgram
 {
@@ -6,7 +7,7 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			Tup.ReadInteger2("Элемент {0}:");
+			Arr.Gen(10, i => i).Print();
 		}
 	}
 }

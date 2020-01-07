@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace NETMouse.Extensions
 {
     /// <summary>
-    /// Provides standart extensions for tuples.
+    /// Предоставляет функционал для работы с ссылочными кортежами.
     /// </summary>
-    public static class TuplesExtensions
+    public static class Tup
     {
         /// <summary>
         /// Converts the tuple into the key-value pair.

@@ -112,7 +112,7 @@ namespace NETMouse.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Integer.
+        /// Читает массив значений типа Boolean.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
