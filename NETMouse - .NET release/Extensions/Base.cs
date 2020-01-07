@@ -60,7 +60,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="to">The last value.</param>
         /// <returns>The sequence from 0 to the last value.</returns>
-        public static IEnumerable<int> ToThis(this int to)
+        public static IEnumerable<int> Times(this int to)
         {
             if (to < 0)
                 return 0.DownTo(to);
@@ -73,7 +73,7 @@ namespace NETMouse.Extensions
         /// <param name="from">The first item.</param>
         /// <param name="step">The step.</param>
         /// <returns>The stepped sequence.</returns>
-        public static IEnumerable<int> Stepped(this int from, int step)
+        public static IEnumerable<int> Step(this int from, int step)
         {
             do
             {
@@ -98,51 +98,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static bool PrintLine(this bool item)
-        {
-            Console.WriteLine(item);
-            return item;
-        }
-        
-        /// <summary>
-        /// Prints the singular value.
-        /// </summary>
-        /// <param name="item">The value.</param>
-        /// <returns>The value.</returns>
-        public static byte Print(this byte item)
-        {
-            Console.Write(item);
-            return item;
-        }
-        
-        /// <summary>
-        /// Prints the singular value and jumps onto the new line.
-        /// </summary>
-        /// <param name="item">The value.</param>
-        /// <returns>The value.</returns>
-        public static byte PrintLine(this byte item)
-        {
-            Console.WriteLine(item);
-            return item;
-        }
-        
-        /// <summary>
-        /// Prints the singular value.
-        /// </summary>
-        /// <param name="item">The value.</param>
-        /// <returns>The value.</returns>
-        public static sbyte Print(this sbyte item)
-        {
-            Console.Write(item);
-            return item;
-        }
-        
-        /// <summary>
-        /// Prints the singular value and jumps onto the new line.
-        /// </summary>
-        /// <param name="item">The value.</param>
-        /// <returns>The value.</returns>
-        public static sbyte PrintLine(this sbyte item)
+        public static bool Println(this bool item)
         {
             Console.WriteLine(item);
             return item;
@@ -164,7 +120,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static char PrintLine(this char item)
+        public static char Println(this char item)
         {
             Console.WriteLine(item);
             return item;
@@ -186,7 +142,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static decimal PrintLine(this decimal item)
+        public static decimal Println(this decimal item)
         {
             Console.WriteLine(item);
             return item;
@@ -208,7 +164,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static double PrintLine(this double item)
+        public static double Println(this double item)
         {
             Console.WriteLine(item);
             return item;
@@ -230,7 +186,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static float PrintLine(this float item)
+        public static float Println(this float item)
         {
             Console.WriteLine(item);
             return item;
@@ -252,7 +208,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static int PrintLine(this int item)
+        public static int Println(this int item)
         {
             Console.WriteLine(item);
             return item;
@@ -274,7 +230,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static uint PrintLine(this uint item)
+        public static uint Println(this uint item)
         {
             Console.WriteLine(item);
             return item;
@@ -296,7 +252,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static long PrintLine(this long item)
+        public static long Println(this long item)
         {
             Console.WriteLine(item);
             return item;
@@ -318,7 +274,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static ulong PrintLine(this ulong item)
+        public static ulong Println(this ulong item)
         {
             Console.WriteLine(item);
             return item;
@@ -340,7 +296,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static short PrintLine(this short item)
+        public static short Println(this short item)
         {
             Console.WriteLine(item);
             return item;
@@ -362,7 +318,7 @@ namespace NETMouse.Extensions
         /// </summary>
         /// <param name="item">The value.</param>
         /// <returns>The value.</returns>
-        public static ushort PrintLine(this ushort item)
+        public static ushort Println(this ushort item)
         {
             Console.WriteLine(item);
             return item;

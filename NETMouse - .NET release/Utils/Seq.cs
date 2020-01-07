@@ -42,7 +42,7 @@ namespace NETMouse.Utils
                 throw new ArgumentException("low");
 
             for (int i = 0; i < count; i++)
-                yield return RandomHelper.Random.Next(low, high);
+                yield return Base.Rand(low, high);
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace NETMouse.Utils
                 throw new ArgumentException("low");
 
             for (int i = 0; i < count; i++)
-                yield return RandomHelper.Random.Next((float)low, (float)high);
+                yield return Base.Rand(low, high);
         }
 
         /// <summary>

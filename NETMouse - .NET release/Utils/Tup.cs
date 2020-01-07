@@ -16,7 +16,7 @@ namespace NETMouse.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int> Rand2(int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
         {
-            return new Tuple<int, int>(RandomHelper.Random.Next(low, high), RandomHelper.Random.Next(low, high));
+            return new Tuple<int, int>(Base.Rand(low, high), Base.Rand(low, high));
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace NETMouse.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int> Rand3(int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
         {
-            return new Tuple<int, int, int>(RandomHelper.Random.Next(low, high), RandomHelper.Random.Next(low, high), RandomHelper.Random.Next(low, high));
+            return new Tuple<int, int, int>(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace NETMouse.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double> Rand2(double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
         {
-            return new Tuple<double, double>(RandomHelper.Random.Next((float)low, (float)high), RandomHelper.Random.Next((float)low, (float)high));
+            return new Tuple<double, double>(Base.Rand(low, high), Base.Rand(low, high));
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace NETMouse.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double> Rand3(double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
         {
-            return new Tuple<double, double, double>(RandomHelper.Random.Next((float)low, (float)high), RandomHelper.Random.Next((float)low, (float)high), RandomHelper.Random.Next((float)low, (float)high));
+            return new Tuple<double, double, double>(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
         }
 
         /// <summary>

@@ -54,7 +54,7 @@ namespace NETMouse.Utils
             int[,] source = new int[rowsCount, columnsCount];
             for (int i = 0; i < source.GetLength(0); i++)
                 for (int j = 0; j < source.GetLength(1); j++)
-                    source[i, j] = RandomHelper.Random.Next(low, high);
+                    source[i, j] = Base.Rand(low, high);
 
             return source;
         }
@@ -79,7 +79,7 @@ namespace NETMouse.Utils
             double[,] source = new double[rowsCount, columnsCount];
             for (int i = 0; i < source.GetLength(0); i++)
                 for (int j = 0; j < source.GetLength(1); j++)
-                    source[i, j] = RandomHelper.Random.Next((float)low, (float)high);
+                    source[i, j] = Base.Rand(low, high);
 
             return source;
         }

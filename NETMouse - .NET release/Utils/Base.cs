@@ -73,5 +73,40 @@ namespace NETMouse.Utils
             Console.Write(prompt);
             return Console.ReadLine();
         }
+
+        /// <summary>
+        /// Генерирует случайное число [0..1).
+        /// </summary>
+        /// <returns>Число.</returns>
+        public static int Rand()
+        {
+            return RandomHelper.Random.Next();
+        }
+
+        /// <summary>
+        /// Генерирует случайное число [low..high].
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Число.</returns>
+        public static int Rand(int low, int high)
+        {
+            if (high > low)
+                Swap(ref low, ref high);
+            return RandomHelper.Random.Next(low, high + 1);
+        }
+
+        /// <summary>
+        /// Генерирует случайное число [low..high].
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Число.</returns>
+        public static double Rand(double low, double high)
+        {
+            if (high > low)
+                Swap(ref low, ref high);
+            return low + Rand() * (high - low);
+        }
     }
 }

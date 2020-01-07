@@ -67,7 +67,7 @@ namespace NETMouse.Utils
 
             int[] source = new int[count];
             for (int i = 0; i < source.Length; i++)
-                source[i] = RandomHelper.Random.Next(low, high);
+                source[i] = Base.Rand(low, high);
 
             return source;
         }
@@ -88,7 +88,7 @@ namespace NETMouse.Utils
 
             double[] source = new double[count];
             for (int i = 0; i < source.Length; i++)
-                source[i] = RandomHelper.Random.Next((float)low, (float)high);
+                source[i] = Base.Rand(low, high);
 
             return source;
         }
