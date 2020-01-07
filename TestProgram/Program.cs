@@ -7,7 +7,8 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			Seq.Gen(10, i => i).Print();
+			Seq.Rand(10, 0, 2).Print();
+			
 		}
 	}
 }

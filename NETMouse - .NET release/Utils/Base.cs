@@ -91,7 +91,7 @@ namespace NETMouse.Utils
         /// <returns>Число.</returns>
         public static int Rand(int low, int high)
         {
-            if (high > low)
+            if (high < low)
                 Swap(ref low, ref high);
             return RandomHelper.Random.Next(low, high + 1);
         }
@@ -104,7 +104,7 @@ namespace NETMouse.Utils
         /// <returns>Число.</returns>
         public static double Rand(double low, double high)
         {
-            if (high > low)
+            if (high < low)
                 Swap(ref low, ref high);
             return low + Rand() * (high - low);
         }
