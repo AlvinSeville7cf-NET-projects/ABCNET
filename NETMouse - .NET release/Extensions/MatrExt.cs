@@ -3,9 +3,9 @@ using System;
 namespace NETMouse.Extensions
 {
     /// <summary>
-    /// Provides standart extensions for matrices.
+    /// Предоставляет функционал для работы с матрицами.
     /// </summary>
-    public static class MatricesExtensions
+    public static class MatrExt
     {
         /// <summary>
         /// The default delimiter.
@@ -19,26 +19,11 @@ namespace NETMouse.Extensions
         /// <param name="index">The column index.</param>
         /// <typeparam name="T">The value type.</typeparam>
         /// <returns>The column of the current matrix.</returns>
-        public static T[] GetColumn<T>(this T[,] matrix, int index)
+        public static T[] Col<T>(this T[,] matrix, int index)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
 
-            return matrix.InternalGetColumn(index);
-        }
-        
-        /// <summary>
-        /// Retrieves the particular column from the matrix.
-        /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="index">The column index.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <returns>The column of the current matrix or the empty collection if matrix is null.</returns>
-        public static T[] GetColumnOrEmpty<T>(this T[,] matrix, int index)
-        {
-            if (matrix == null)
-                return ArrayHelper<T>.Empty;
-            
             return matrix.InternalGetColumn(index);
         }
 
@@ -51,27 +36,10 @@ namespace NETMouse.Extensions
         /// <typeparam name="T">The value type.</typeparam>
         /// <typeparam name="TOutput">The output value type.</typeparam>
         /// <returns>The column of the current matrix.</returns>
-        public static TOutput[] GetColumnSelected<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
+        public static TOutput[] Col<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
-
-            return matrix.InternalGetColumnSelected(index, selector);
-        }
-
-        /// <summary>
-        /// Retrieves the particular column from the matrix and applies map method to it.
-        /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="index">The column index.</param>
-        /// <param name="selector">The map method.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <typeparam name="TOutput">The output value type.</typeparam>
-        /// <returns>The column of the current matrix or the empty collection if matrix is null.</returns>
-        public static TOutput[] GetColumnSelectedOrEmpty<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
-        {
-            if (matrix == null)
-                return ArrayHelper<TOutput>.Empty;
 
             return matrix.InternalGetColumnSelected(index, selector);
         }
@@ -83,26 +51,11 @@ namespace NETMouse.Extensions
         /// <param name="index">The row index.</param>
         /// <typeparam name="T">The value type.</typeparam>
         /// <returns>The row of the current matrix.</returns>
-        public static T[] GetRow<T>(this T[,] matrix, int index)
+        public static T[] Row<T>(this T[,] matrix, int index)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
 
-            return matrix.InternalGetRow(index);
-        }
-        
-        /// <summary>
-        /// Retrieves the particular row from the matrix.
-        /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="index">The row index.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <returns>The row of the current matrix or the empty collection if matrix is null.</returns>
-        public static T[] GetRowOrEmpty<T>(this T[,] matrix, int index)
-        {
-            if (matrix == null)
-                return ArrayHelper<T>.Empty;
-            
             return matrix.InternalGetRow(index);
         }
         
@@ -115,27 +68,10 @@ namespace NETMouse.Extensions
         /// <typeparam name="T">The value type.</typeparam>
         /// <typeparam name="TOutput">The output value type.</typeparam>
         /// <returns>The row of the current matrix.</returns>
-        public static TOutput[] GetRowSelected<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
+        public static TOutput[] Row<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
-
-            return matrix.InternalGetRowSelected(index, selector);
-        }
-
-        /// <summary>
-        /// Retrieves the particular row from the matrix and applies map method to it.
-        /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="index">The row index.</param>
-        /// <param name="selector">The map method.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <typeparam name="TOutput">The output value type.</typeparam>
-        /// <returns>The row of the current matrix or the empty collection if matrix is null.</returns>
-        public static TOutput[] GetRowSelectedOrEmpty<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
-        {
-            if (matrix == null)
-                return ArrayHelper<TOutput>.Empty;
 
             return matrix.InternalGetRowSelected(index, selector);
         }

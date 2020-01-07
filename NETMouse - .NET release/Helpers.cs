@@ -17,6 +17,11 @@ namespace NETMouse
         internal const string Message = "Неверный ввод. Введите элемент повторно.";
     }
 
+    internal static class DefaultDelimiterHelper
+    {
+        internal const string Delimiter = " ";
+    }
+
     internal static class RandomHelper
     {
         internal static Random Random { get; } = new Random();
