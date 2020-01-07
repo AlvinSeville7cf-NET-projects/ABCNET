@@ -8,17 +8,11 @@ namespace NETMouse.Extensions
     public static class MatrExt
     {
         /// <summary>
-        /// The default delimiter.
+        /// Получает столбец матрицы.
         /// </summary>
-        public const string DefaultDelimiter = " ";
-        
-        /// <summary>
-        /// Retrieves the particular column from the matrix.
-        /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="index">The column index.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <returns>The column of the current matrix.</returns>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="index">Индекс столбца.</param>
+        /// <returns>Столбец.</returns>
         public static T[] Col<T>(this T[,] matrix, int index)
         {
             if (matrix == null)
@@ -28,14 +22,12 @@ namespace NETMouse.Extensions
         }
 
         /// <summary>
-        /// Retrieves the particular column from the matrix and applies map method to it.
+        /// Получает столбец матрицы.
         /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="index">The column index.</param>
-        /// <param name="selector">The map method.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <typeparam name="TOutput">The output value type.</typeparam>
-        /// <returns>The column of the current matrix.</returns>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="index">Индекс столбца.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Столбец.</returns>
         public static TOutput[] Col<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (matrix == null)
@@ -43,14 +35,13 @@ namespace NETMouse.Extensions
 
             return matrix.InternalGetColumnSelected(index, selector);
         }
-        
+
         /// <summary>
-        /// Retrieves the particular row from the matrix.
+        /// Получает строку матрицы.
         /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="index">The row index.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <returns>The row of the current matrix.</returns>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="index">Индекс строки.</param>
+        /// <returns>Строка.</returns>
         public static T[] Row<T>(this T[,] matrix, int index)
         {
             if (matrix == null)
@@ -58,16 +49,14 @@ namespace NETMouse.Extensions
 
             return matrix.InternalGetRow(index);
         }
-        
+
         /// <summary>
-        /// Retrieves the particular row from the matrix and applies map method to it.
+        /// Получает строку матрицы.
         /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="index">The row index.</param>
-        /// <param name="selector">The map method.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <typeparam name="TOutput">The output value type.</typeparam>
-        /// <returns>The row of the current matrix.</returns>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="index">Индекс строки.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Строка.</returns>
         public static TOutput[] Row<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (matrix == null)
@@ -77,29 +66,27 @@ namespace NETMouse.Extensions
         }
 
         /// <summary>
-        /// Prints the matrix with the specified delimiter.
+        /// Выводит матрицу и переходит на новую строку.
         /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="delimiter">The delimiter.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <returns>The matrix.</returns>
-        public static T[,] PrintAsMatrix<T>(this T[,] matrix, string delimiter = DefaultDelimiter)
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="delimiter">Разделитель.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] Print<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	if (matrix == null)
         		throw new ArgumentNullException("matrix");
         	
         	return matrix.InternalPrintAsMatrix(delimiter);
         }
-        
+
         /// <summary>
-        /// Prints the matrix with the specified delimiter.
+        /// Выводит матрицу и переходит на новую строку.
         /// </summary>
-        /// <param name="matrix">The matrix.</param>
-        /// <param name="selector">The map method.</param>
-        /// <param name="delimiter">The delimiter.</param>
-        /// <typeparam name="T">The value type.</typeparam>
-        /// <returns>The matrix.</returns>
-        public static T[,] PrintByAsMatrix<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiter)
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="delimiter">Разделитель.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] PrintBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	if (matrix == null)
         		throw new ArgumentNullException("matrix");
@@ -167,7 +154,7 @@ namespace NETMouse.Extensions
             return row;
         }
         
-        private static T[,] InternalPrintAsMatrix<T>(this T[,] matrix, string delimiter = DefaultDelimiter)
+        private static T[,] InternalPrintAsMatrix<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	int rowsCount = matrix.GetLength(0);
         	int columnsCount = matrix.GetLength(1);
@@ -191,7 +178,7 @@ namespace NETMouse.Extensions
 			return matrix;
         }
         
-        private static T[,] InternalPrintByAsMatrix<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiter)
+        private static T[,] InternalPrintByAsMatrix<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	int rowsCount = matrix.GetLength(0);
         	int columnsCount = matrix.GetLength(1);

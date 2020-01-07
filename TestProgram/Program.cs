@@ -9,8 +9,7 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			Seq.Rand(10, 0, 2).Print();
-			Tuple.Create(1, 2).Println();
+			new[,] { { 1, 2 }, { 3, 4 } }.Print();
 		}
 	}
 }
