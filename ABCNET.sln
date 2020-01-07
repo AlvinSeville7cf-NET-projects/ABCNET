@@ -1,8 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-# SharpDevelop 5.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETMouse - .NET release", "NETMouse - .NET release\NETMouse - .NET release.csproj", "{738CF8B3-CE36-4BE8-B9DA-BE4759D6CF5B}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCNET", "NETMouse - .NET release\ABCNET.csproj", "{738CF8B3-CE36-4BE8-B9DA-BE4759D6CF5B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProgram", "TestProgram\TestProgram.csproj", "{824303D6-A8A5-485E-93C9-EB36BA21D336}"
 EndProject
@@ -20,5 +21,11 @@ Global
 		{824303D6-A8A5-485E-93C9-EB36BA21D336}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{824303D6-A8A5-485E-93C9-EB36BA21D336}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{824303D6-A8A5-485E-93C9-EB36BA21D336}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC0EE686-A282-4A7A-B79D-672268480C90}
 	EndGlobalSection
 EndGlobal

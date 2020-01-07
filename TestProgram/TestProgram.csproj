@@ -55,9 +55,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NETMouse - .NET release\NETMouse - .NET release.csproj">
+    <ProjectReference Include="..\NETMouse - .NET release\ABCNET.csproj">
       <Project>{738cf8b3-ce36-4be8-b9da-be4759d6cf5b}</Project>
-      <Name>NETMouse - .NET release</Name>
+      <Name>ABCNET</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

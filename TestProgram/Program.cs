@@ -1,7 +1,6 @@
 ﻿using NETMouse.Extensions;
 using NETMouse.Utils;
 using System;
-using System.Linq;
 
 namespace TestProgram
 {
@@ -9,7 +8,8 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			new[,] { { 1, 2 }, { 3, 4 } }.Print();
+			Arr.ReadInteger(3).Println();
+			Matr.ReadInteger(2, 2).Print();
 		}
 	}
 }
