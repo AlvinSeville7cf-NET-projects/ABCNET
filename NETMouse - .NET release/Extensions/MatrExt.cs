@@ -67,6 +67,72 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Меняет местами две строки матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="firstIndex">Индекс первой строки.</param>
+        /// <param name="secondIndex">Индекс второй строки.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] SwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            return matrix.InternalSwapRows(firstIndex, secondIndex);
+        }
+
+        /// <summary>
+        /// Меняет местами две строки матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="firstIndex">Индекс первой строки.</param>
+        /// <param name="secondIndex">Индекс второй строки.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] SwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException("selector");
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            return matrix.InternalSwapRows(firstIndex, secondIndex, selector);
+        }
+
+        /// <summary>
+        /// Меняет местами два столбца матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="firstIndex">Индекс первого столбца.</param>
+        /// <param name="secondIndex">Индекс второго столбца.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            return matrix.InternalSwapColumns(firstIndex, secondIndex);
+        }
+
+        /// <summary>
+        /// Меняет местами два столбца матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="firstIndex">Индекс первого столбца.</param>
+        /// <param name="secondIndex">Индекс второго столбца.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException("selector");
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            return matrix.InternalSwapColumns(firstIndex, secondIndex, selector);
+        }
+
+        /// <summary>
         /// Выводит матрицу и переходит на новую строку.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
@@ -349,7 +415,81 @@ namespace ABCNET.Extensions
 
             return row;
         }
-        
+
+        private static T[,] InternalSwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        {
+            int lastRowIndex = matrix.GetLength(0) - 1;
+            if (!firstIndex.IsBetween(0, lastRowIndex))
+                throw new ArgumentOutOfRangeException("firstIndex");
+            if (!secondIndex.IsBetween(0, lastRowIndex))
+                throw new ArgumentOutOfRangeException("secondIndex");
+
+            T[,] newMatrix = (T[,])matrix.Clone();
+
+            int columnsCount = newMatrix.GetLength(1);
+            for (int j = 0; j < columnsCount; j++)
+                Base.Swap(ref newMatrix[firstIndex, j], ref newMatrix[secondIndex, j]);
+            return newMatrix;
+        }
+
+        private static T[,] InternalSwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        {
+            int lastRowIndex = matrix.GetLength(0) - 1;
+            if (!firstIndex.IsBetween(0, lastRowIndex))
+                throw new ArgumentOutOfRangeException("firstIndex");
+            if (!secondIndex.IsBetween(0, lastRowIndex))
+                throw new ArgumentOutOfRangeException("secondIndex");
+
+            T[,] newMatrix = (T[,])matrix.Clone();
+
+            int columnsCount = newMatrix.GetLength(1);
+            for (int j = 0; j < columnsCount; j++)
+            {
+                newMatrix[firstIndex, j] = selector(newMatrix[firstIndex, j]);
+                newMatrix[secondIndex, j] = selector(newMatrix[secondIndex, j]);
+                Base.Swap(ref newMatrix[firstIndex, j], ref newMatrix[secondIndex, j]);
+            }
+
+            return newMatrix;
+        }
+
+        private static T[,] InternalSwapColumns<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        {
+            int lastColumnIndex = matrix.GetLength(1) - 1;
+            if (!firstIndex.IsBetween(0, lastColumnIndex))
+                throw new ArgumentOutOfRangeException("firstIndex");
+            if (!secondIndex.IsBetween(0, lastColumnIndex))
+                throw new ArgumentOutOfRangeException("secondIndex");
+
+            T[,] newMatrix = (T[,])matrix.Clone();
+
+            int rowsCount = newMatrix.GetLength(0);
+            for (int i = 0; i < rowsCount; i++)
+                Base.Swap(ref newMatrix[i, firstIndex], ref newMatrix[i, secondIndex]);
+            return newMatrix;
+        }
+
+        private static T[,] InternalSwapColumns<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        {
+            int lastColumnIndex = matrix.GetLength(1) - 1;
+            if (!firstIndex.IsBetween(0, lastColumnIndex))
+                throw new ArgumentOutOfRangeException("firstIndex");
+            if (!secondIndex.IsBetween(0, lastColumnIndex))
+                throw new ArgumentOutOfRangeException("secondIndex");
+
+            T[,] newMatrix = (T[,])matrix.Clone();
+
+            int rowsCount = newMatrix.GetLength(0);
+            for (int i = 0; i < rowsCount; i++)
+            {
+                newMatrix[i, firstIndex] = selector(newMatrix[i, firstIndex]);
+                newMatrix[i, secondIndex] = selector(newMatrix[i, secondIndex]);
+                Base.Swap(ref newMatrix[i, firstIndex], ref newMatrix[i, secondIndex]);
+            }
+
+            return newMatrix;
+        }
+
         private static T[,] InternalPrint<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	int rowsCount = matrix.GetLength(0);

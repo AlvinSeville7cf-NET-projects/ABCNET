@@ -9,7 +9,7 @@ namespace TestProgram
 		{
 			Matr.New(2, 2,
 				1, 2,
-				3, 4).Print().SwapCols(0, 1).Print();
+				3, 4).Print().SwapRows(0, 1).Print();
 		}
 	}
 }
