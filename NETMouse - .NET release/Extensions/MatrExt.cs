@@ -106,7 +106,7 @@ namespace ABCNET.Extensions
         /// <param name="firstIndex">Индекс первого столбца.</param>
         /// <param name="secondIndex">Индекс второго столбца.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] SwapСols<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
@@ -122,7 +122,7 @@ namespace ABCNET.Extensions
         /// <param name="secondIndex">Индекс второго столбца.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] SwapСols<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
         {
             if (selector == null)
                 throw new ArgumentNullException("selector");
