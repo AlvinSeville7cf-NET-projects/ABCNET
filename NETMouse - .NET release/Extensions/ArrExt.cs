@@ -17,9 +17,9 @@ namespace ABCNET.Extensions
         public static void Gen<T>(this T[] array, Func<int, T> selector, int firstIndex = 0)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
 
             for (int i = 0; i < array.Length; i++)
                 array[i] = selector(i + firstIndex);
@@ -34,9 +34,9 @@ namespace ABCNET.Extensions
         public static void Gen<T>(this T[] array, T first, Func<T, T> next)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             if (next == null)
-                throw new ArgumentNullException("next");
+                throw new ArgumentNullException(nameof(next));
 
             array[0] = first;
             for (int i = 1; i < array.Length; i++)
@@ -52,9 +52,9 @@ namespace ABCNET.Extensions
         public static void Rand(this int[] array, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < array.Length; i++)
                 array[i] = Base.Rand(low, high);
@@ -69,9 +69,9 @@ namespace ABCNET.Extensions
         public static void Rand(this double[] array, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < array.Length; i++)
                 array[i] = Base.Rand(low, high);
@@ -85,7 +85,7 @@ namespace ABCNET.Extensions
         public static void Fill<T>(this T[] array, T value)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
 
             for (int i = 0; i < array.Length; i++)
                 array[i] = value;
@@ -99,7 +99,7 @@ namespace ABCNET.Extensions
         public static void Read(this bool[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
 
             int i = 0;
             while (i < array.Length)
@@ -122,7 +122,7 @@ namespace ABCNET.Extensions
         public static void Read(this char[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
 
             for (int i = 0; i < array.Length; i++)
                 array[i] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
@@ -136,7 +136,7 @@ namespace ABCNET.Extensions
         public static void Read(this double[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
 
             int i = 0;
             while (i < array.Length)
@@ -159,7 +159,7 @@ namespace ABCNET.Extensions
         public static void Read(this int[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
 
             int i = 0;
             while (i < array.Length)
@@ -182,7 +182,7 @@ namespace ABCNET.Extensions
         public static void Read(this string[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
 
             for (int i = 0; i < array.Length; i++)
                 array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
