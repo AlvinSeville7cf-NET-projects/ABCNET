@@ -15,7 +15,7 @@ namespace ABCNET.Utils
         public static T[] New<T>(params T[] values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return values;
         }
@@ -30,9 +30,9 @@ namespace ABCNET.Utils
         public static T[] Gen<T>(int count, Func<int, T> selector, int firstIndex = 0)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             
             T[] source = new T[count];
             for (int i = 0; i < source.Length; i++)
@@ -51,9 +51,9 @@ namespace ABCNET.Utils
         public static T[] Gen<T>(int count, T first, Func<T, T> next)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
             if (next == null)
-                throw new ArgumentNullException("next");
+                throw new ArgumentNullException(nameof(next));
             
             T[] source = new T[count];
             source[0] = first;
@@ -73,9 +73,9 @@ namespace ABCNET.Utils
         public static int[] Rand(int count, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             int[] source = new int[count];
             for (int i = 0; i < source.Length; i++)
@@ -94,9 +94,9 @@ namespace ABCNET.Utils
         public static double[] Rand(int count, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             double[] source = new double[count];
             for (int i = 0; i < source.Length; i++)
@@ -114,7 +114,7 @@ namespace ABCNET.Utils
         public static T[] Fill<T>(int count, T value)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
 
             T[] source = new T[count];
             for (int i = 0; i < source.Length; i++)
@@ -132,7 +132,7 @@ namespace ABCNET.Utils
         public static bool[] ReadBoolean(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
 
             bool[] array = new bool[count];
             int i = 0;
@@ -159,7 +159,7 @@ namespace ABCNET.Utils
         public static char[] ReadChar(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
 
             char[] array = new char[count];
             for (int i = 0; i < count; i++)
@@ -177,7 +177,7 @@ namespace ABCNET.Utils
         public static double[] ReadReal(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
 
             double[] array = new double[count];
             int i = 0;
@@ -204,7 +204,7 @@ namespace ABCNET.Utils
         public static int[] ReadInteger(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
 
             int[] array = new int[count];
             int i = 0;
@@ -231,7 +231,7 @@ namespace ABCNET.Utils
         public static string[] ReadString(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
 
             string[] array = new string[count];
             for (int i = 0; i < count; i++)

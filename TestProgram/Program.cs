@@ -7,9 +7,7 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			Matr.New(2, 2,
-				1, 2,
-				3, 4).Print().SwapRows(0, 1).Print();
+			Arr.Gen(10, i => i).ZipTuple(Arr.Gen(10, i => i + 3)).Println();
 		}
 	}
 }
