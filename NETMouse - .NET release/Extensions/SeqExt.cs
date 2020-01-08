@@ -26,6 +26,36 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Объединяет две последовательности в последовательность двухэлементных кортежей.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="secondCollection">Вторая последовательность.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<Tuple<T, T1>> ZipTuple<T, T1>(this IEnumerable<T> collection, IEnumerable<T1> secondCollection)
+        {
+            if (collection == null)
+                throw new ArgumentNullException("collection");
+            if (secondCollection == null)
+                throw new ArgumentNullException("secondCollection");
+
+            return collection.Zip(secondCollection, delegate (T x, T1 y) { return Tuple.Create(x, y); });
+        }
+
+        /// <summary>
+        /// Разъединяет последовательность кортежей в две последовательности.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Пара последовательностей.</returns>
+        public static Tuple<IEnumerable<T>, IEnumerable<T1>> UnzipTuple<T, T1>(this IEnumerable<Tuple<T, T1>> collection)
+        {
+            if (collection == null)
+                throw new ArgumentNullException("collection");
+
+            return Tuple.Create(collection.Select(delegate (Tuple<T, T1> x) { return x.Item1; }),
+                collection.Select(delegate (Tuple<T, T1> x) { return x.Item2; }));
+        }
+
+        /// <summary>
         /// Нумерует последовательность.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
