@@ -1,6 +1,5 @@
 ﻿using ABCNET.Extensions;
 using ABCNET.Utils;
-using System;
 
 namespace TestProgram
 {
@@ -8,8 +7,10 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			Arr.ReadInteger(3).Println();
-			Matr.ReadInteger(2, 2).Print();
+			var a = Arr.Fill(10, 2);
+			a.Println();
+			a.Gen(i => i * 2);
+			a.Println();
 		}
 	}
 }
