@@ -19,7 +19,7 @@ namespace ABCNET.Extensions
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
 
-            return matrix.InternalGetColumn(index);
+            return matrix.InternalGetCol(index);
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace ABCNET.Extensions
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
 
-            return matrix.InternalGetColumnSelected(index, selector);
+            return matrix.InternalGetCol(index, selector);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace ABCNET.Extensions
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
 
-            return matrix.InternalGetRowSelected(index, selector);
+            return matrix.InternalGetRow(index, selector);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace ABCNET.Extensions
         	if (matrix == null)
         		throw new ArgumentNullException("matrix");
         	
-        	return matrix.InternalPrintAsMatrix(delimiter);
+        	return matrix.InternalPrint(delimiter);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace ABCNET.Extensions
             if (selector == null)
                 throw new ArgumentNullException("selector");
         	
-        	return matrix.InternalPrintByAsMatrix(selector, delimiter);
+        	return matrix.InternalPrintBy(selector, delimiter);
         }
 
         /// <summary>
@@ -292,7 +292,7 @@ namespace ABCNET.Extensions
         }
 
 
-        private static T[] InternalGetColumn<T>(this T[,] matrix, int index)
+        private static T[] InternalGetCol<T>(this T[,] matrix, int index)
         {
             int length = matrix.GetLength(0);
             if (!index.IsBetween(0, length - 1))
@@ -305,7 +305,7 @@ namespace ABCNET.Extensions
             return column;
         }
         
-        private static TOutput[] InternalGetColumnSelected<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
+        private static TOutput[] InternalGetCol<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (selector == null)
                 throw new ArgumentNullException("selector");
@@ -334,7 +334,7 @@ namespace ABCNET.Extensions
             return row;
         }
         
-        private static TOutput[] InternalGetRowSelected<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
+        private static TOutput[] InternalGetRow<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (selector == null)
                 throw new ArgumentNullException("selector");
@@ -350,7 +350,7 @@ namespace ABCNET.Extensions
             return row;
         }
         
-        private static T[,] InternalPrintAsMatrix<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter)
+        private static T[,] InternalPrint<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	int rowsCount = matrix.GetLength(0);
         	int columnsCount = matrix.GetLength(1);
@@ -374,7 +374,7 @@ namespace ABCNET.Extensions
 			return matrix;
         }
         
-        private static T[,] InternalPrintByAsMatrix<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
+        private static T[,] InternalPrintBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	int rowsCount = matrix.GetLength(0);
         	int columnsCount = matrix.GetLength(1);
