@@ -1,7 +1,7 @@
 using System;
-using NETMouse.Extensions;
+using ABCNET.Extensions;
 
-namespace NETMouse.Utils
+namespace ABCNET.Utils
 {
     /// <summary>
     /// Предоставляет функционал для работы с матрицами.

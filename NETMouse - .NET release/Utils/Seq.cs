@@ -1,8 +1,7 @@
-using NETMouse.Extensions;
 using System;
 using System.Collections.Generic;
 
-namespace NETMouse.Utils
+namespace ABCNET.Utils
 {
     /// <summary>
     /// Предоставляет функционал для работы с последовательностями.

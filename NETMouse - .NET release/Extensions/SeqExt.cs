@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NETMouse.Extensions
+namespace ABCNET.Extensions
 {
     /// <summary>
     /// Предоставляет функционал для работы с последовательностями.

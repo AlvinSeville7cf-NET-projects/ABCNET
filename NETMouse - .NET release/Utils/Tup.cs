@@ -1,7 +1,6 @@
 using System;
-using NETMouse.Extensions;
 
-namespace NETMouse.Utils
+namespace ABCNET.Utils
 {
     /// <summary>
     /// Предоставляет функционал для работы с ссылочными кортежами.

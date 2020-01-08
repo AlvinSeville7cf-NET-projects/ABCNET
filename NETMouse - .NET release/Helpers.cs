@@ -1,6 +1,6 @@
 using System;
 
-namespace NETMouse
+namespace ABCNET
 {
     internal static class ArrayHelper<T>
     {

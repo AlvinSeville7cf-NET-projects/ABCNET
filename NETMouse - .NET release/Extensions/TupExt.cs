@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace NETMouse.Extensions
+namespace ABCNET.Extensions
 {
     /// <summary>
     /// Предоставляет функционал для работы с ссылочными кортежами.

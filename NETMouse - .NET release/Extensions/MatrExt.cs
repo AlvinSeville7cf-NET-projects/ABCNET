@@ -1,6 +1,6 @@
 using System;
 
-namespace NETMouse.Extensions
+namespace ABCNET.Extensions
 {
     /// <summary>
     /// Предоставляет функционал для работы с матрицами.

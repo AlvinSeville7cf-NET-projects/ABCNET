@@ -1,6 +1,6 @@
 using System;
 
-namespace NETMouse.Utils
+namespace ABCNET.Utils
 {
     /// <summary>
     /// Предоставляет функционал для работы с базовыми типами.
