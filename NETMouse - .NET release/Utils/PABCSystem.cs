@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace ABCNET.Utils
 {
@@ -17,7 +16,7 @@ namespace ABCNET.Utils
         public static Dictionary<TKey, TValue> Dict<TKey, TValue>(params KeyValuePair<TKey, TValue>[] pairs)
         {
             if (pairs == null)
-                throw new ArgumentNullException("pairs");
+                throw new ArgumentNullException(nameof(pairs));
 
             Dictionary<TKey, TValue> d = new Dictionary<TKey, TValue>();
             foreach (var item in pairs)
@@ -33,7 +32,7 @@ namespace ABCNET.Utils
         public static Dictionary<TKey, TValue> Dict<TKey, TValue>(params Tuple<TKey, TValue>[] pairs)
         {
             if (pairs == null)
-                throw new ArgumentNullException("pairs");
+                throw new ArgumentNullException(nameof(pairs));
 
             Dictionary<TKey, TValue> d = new Dictionary<TKey, TValue>();
             foreach (var item in pairs)
@@ -49,7 +48,7 @@ namespace ABCNET.Utils
         public static HashSet<T> HSet<T>(params T[] values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return new HashSet<T>(values);
         }
@@ -61,7 +60,7 @@ namespace ABCNET.Utils
         public static HashSet<T> HSet<T>(IEnumerable<T> values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return new HashSet<T>(values);
         }
@@ -82,7 +81,7 @@ namespace ABCNET.Utils
         public static LinkedList<T> LLst<T>(params T[] values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return new LinkedList<T>(values);
         }
@@ -94,7 +93,7 @@ namespace ABCNET.Utils
         public static LinkedList<T> LLst<T>(IEnumerable<T> values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return new LinkedList<T>(values);
         }
@@ -106,7 +105,7 @@ namespace ABCNET.Utils
         public static List<T> Lst<T>(params T[] values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return new List<T>(values);
         }
@@ -118,7 +117,7 @@ namespace ABCNET.Utils
         public static List<T> Lst<T>(IEnumerable<T> values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return new List<T>(values);
         }
@@ -130,7 +129,7 @@ namespace ABCNET.Utils
         public static SortedSet<T> SSet<T>(params T[] values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return new SortedSet<T>(values);
         }
@@ -142,7 +141,7 @@ namespace ABCNET.Utils
         public static SortedSet<T> SSet<T>(IEnumerable<T> values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             return new SortedSet<T>(values);
         }
