@@ -17,13 +17,13 @@ namespace ABCNET.Utils
         public static T[,] New<T>(int rowsCount, int columnsCount, params T[] values)
         {
             if (values == null)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
             if (rowsCount * columnsCount != values.Length)
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
 
             T[,] source = new T[rowsCount, columnsCount];
             int k = 0;
@@ -49,11 +49,11 @@ namespace ABCNET.Utils
         public static T[,] Gen<T>(int rowsCount, int columnsCount, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             
             T[,] source = new T[rowsCount, columnsCount];
             for (int i = 0; i < source.GetLength(0); i++)
@@ -74,11 +74,11 @@ namespace ABCNET.Utils
         public static int[,] Rand(int rowsCount, int columnsCount, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             int[,] source = new int[rowsCount, columnsCount];
             for (int i = 0; i < source.GetLength(0); i++)
@@ -99,11 +99,11 @@ namespace ABCNET.Utils
         public static double[,] Rand(int rowsCount, int columnsCount, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             double[,] source = new double[rowsCount, columnsCount];
             for (int i = 0; i < source.GetLength(0); i++)
@@ -123,9 +123,9 @@ namespace ABCNET.Utils
         public static T[,] Fill<T>(int rowsCount, int columnsCount, T value)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
 
             T[,] source = new T[rowsCount, columnsCount];
             for (int i = 0; i < source.GetLength(0); i++)
@@ -145,9 +145,9 @@ namespace ABCNET.Utils
         public static bool[,] ReadBoolean(int rowsCount, int columnsCount, string prompt = EmptyStringHelper.Empty)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
 
             bool[,] source = new bool[rowsCount, columnsCount];
             int i = 0;
@@ -183,9 +183,9 @@ namespace ABCNET.Utils
         public static char[,] ReadChar(int rowsCount, int columnsCount, string prompt = EmptyStringHelper.Empty)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
 
             char[,] source = new char[rowsCount, columnsCount];
             for (int i = 0; i < rowsCount; i++)
@@ -205,9 +205,9 @@ namespace ABCNET.Utils
         public static double[,] ReadReal(int rowsCount, int columnsCount, string prompt = EmptyStringHelper.Empty)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
 
             double[,] source = new double[rowsCount, columnsCount];
             int i = 0;
@@ -243,9 +243,9 @@ namespace ABCNET.Utils
         public static int[,] ReadInteger(int rowsCount, int columnsCount, string prompt = EmptyStringHelper.Empty)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
 
             int[,] source = new int[rowsCount, columnsCount];
             int i = 0;
@@ -281,9 +281,9 @@ namespace ABCNET.Utils
         public static string[,] ReadString(int rowsCount, int columnsCount, string prompt = EmptyStringHelper.Empty)
         {
             if (rowsCount < 0)
-                throw new ArgumentOutOfRangeException("rowsCount");
+                throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (columnsCount < 0)
-                throw new ArgumentOutOfRangeException("columnsCount");
+                throw new ArgumentOutOfRangeException(nameof(columnsCount));
 
             string[,] source = new string[rowsCount, columnsCount];
             for (int i = 0; i < rowsCount; i++)
