@@ -152,7 +152,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <param name="selector">Функция селектор.</param>
-        /// <returns>Последовательность.</returns
+        /// <returns>Последовательность.</returns>
         public static IEnumerable<TOutput> Shuffle<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (selector == null)
