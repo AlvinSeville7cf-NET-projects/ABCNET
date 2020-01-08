@@ -70,6 +70,7 @@ namespace ABCNET.Extensions
         /// <summary>
         /// Создаёт бесконечную последовательность от начального числа.
         /// </summary>
+        /// <param name="from">Начальное число.</param>
         /// <param name="step">Шаг.</param>
         /// <returns>Последовательность.</returns>
         public static IEnumerable<int> Step(this int from, int step)
