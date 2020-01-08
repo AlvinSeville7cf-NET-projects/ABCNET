@@ -8,6 +8,36 @@ namespace ABCNET.Utils
     public static class Matr
     {
         /// <summary>
+        /// Создаёт матрицу из указанных значений.
+        /// </summary>
+        ///  <param name="rowsCount">Количество строк.</param>
+        /// <param name="columnsCount">Количество столбцов.</param>
+        /// <param name="values">Значения.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] New<T>(int rowsCount, int columnsCount, params T[] values)
+        {
+            if (values == null)
+                throw new ArgumentNullException("values");
+            if (rowsCount < 0)
+                throw new ArgumentOutOfRangeException("rowsCount");
+            if (columnsCount < 0)
+                throw new ArgumentOutOfRangeException("columnsCount");
+            if (rowsCount * columnsCount != values.Length)
+                throw new ArgumentNullException("values");
+
+            T[,] source = new T[rowsCount, columnsCount];
+            int k = 0;
+            for (int i = 0; i < rowsCount; i++)
+                for (int j = 0; j < columnsCount; j++)
+                {
+                    source[i, j] = values[k];
+                    k++;
+                }
+
+            return source;
+        }
+
+        /// <summary>
         /// Создаёт матрицу на основе функции селектора.
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>

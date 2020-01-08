@@ -8,6 +8,19 @@ namespace ABCNET.Utils
     public static class Arr
     {
         /// <summary>
+        /// Создаёт массив из указанных значений.
+        /// </summary>
+        /// <param name="values">Значения.</param>
+        /// <returns>Массив.</returns>
+        public static T[] New<T>(params T[] values)
+        {
+            if (values == null)
+                throw new ArgumentNullException("values");
+
+            return values;
+        }
+
+        /// <summary>
         /// Создаёт массив на основе функции селектора.
         /// </summary>
         /// <param name="count">Количество элементов.</param>

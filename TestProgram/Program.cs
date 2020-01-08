@@ -11,6 +11,7 @@ namespace TestProgram
 			a.Print();
 			a.Gen((i, j) => (i + j) % 2);
 			a.Print();
+			Matr.New(2, 2, 1, 2, 3, 4).Print();
 		}
 	}
 }

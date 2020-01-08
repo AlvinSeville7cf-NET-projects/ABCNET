@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ABCNET.Utils
 {
@@ -135,7 +136,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// <summary>Возвращает множество на базе бинарного дерева поиска, заполненное значениями из последовательности.
+        /// Возвращает множество на базе бинарного дерева поиска, заполненное значениями из последовательности.
         /// </summary>
         [Obsolete(ObsoleteMessageHelper.Message)]
         public static SortedSet<T> SSet<T>(IEnumerable<T> values)
