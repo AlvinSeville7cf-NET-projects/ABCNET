@@ -10,6 +10,22 @@ namespace ABCNET.Extensions
     public static class SeqExt
     {
         /// <summary>
+        /// Ассоцирует элементы последовательности с их проекциями.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<AssociateRes<T, TOutput>> Associate<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException("selector");
+            if (collection == null)
+                throw new ArgumentNullException("collection");
+
+            return collection.Select(delegate (T x) { return new AssociateRes<T, TOutput>(x, selector(x)); });
+        }
+
+        /// <summary>
         /// Нумерует последовательность.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
@@ -289,6 +305,45 @@ namespace ABCNET.Extensions
             {
                 item = Item;
                 index = Index;
+            }
+
+            public override string ToString()
+            {
+                return $"[{Item} - {Index}]";
+            }
+        }
+
+        /// <summary>
+        /// Результат для Associate.
+        /// </summary>
+        public class AssociateRes<T, TOutput>
+        {
+            /// <summary>
+            /// Элемент.
+            /// </summary>
+            public T Item { get; }
+
+            /// <summary>
+            /// Проекция элемента.
+            /// </summary>
+            public TOutput Projection { get; }
+
+
+            public AssociateRes(T item, TOutput projection)
+            {
+                Item = item;
+                Projection = projection;
+            }
+
+            public void Deconstruct(out T item, out TOutput projection)
+            {
+                item = Item;
+                projection = Projection;
+            }
+
+            public override string ToString()
+            {
+                return $"[{Item} - {Projection}]";
             }
         }
     }

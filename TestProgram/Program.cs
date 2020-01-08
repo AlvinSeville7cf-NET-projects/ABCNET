@@ -7,11 +7,7 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			Tup.New(1, 2, 3).Println();
-			Arr.New(1, 2, 3).Println();
-			Matr.New(2, 2,
-				1, 2,
-				3, 4).Print();
+			Seq.Gen(10, i => i).Associate(x => x + 2).Println();
 		}
 	}
 }
