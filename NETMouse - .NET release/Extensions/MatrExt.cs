@@ -239,7 +239,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadBoolean(this bool[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this bool[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
@@ -270,7 +270,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadChar(this char[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this char[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
@@ -285,7 +285,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadReal(this double[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this double[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
@@ -316,7 +316,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadInteger(this int[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this int[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");
@@ -347,7 +347,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadString(this string[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this string[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
                 throw new ArgumentNullException("matrix");

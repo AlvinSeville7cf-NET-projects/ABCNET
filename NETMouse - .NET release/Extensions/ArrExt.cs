@@ -96,7 +96,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadBoolean(this bool[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this bool[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
                 throw new ArgumentNullException("array");
@@ -119,7 +119,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadChar(this char[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this char[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
                 throw new ArgumentNullException("array");
@@ -133,7 +133,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadReal(this double[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this double[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
                 throw new ArgumentNullException("array");
@@ -156,7 +156,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadInteger(this int[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this int[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
                 throw new ArgumentNullException("array");
@@ -179,7 +179,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void ReadString(this string[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this string[] array, string prompt = EmptyStringHelper.Empty)
         {
             if (array == null)
                 throw new ArgumentNullException("array");
