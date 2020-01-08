@@ -59,6 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Arr.cs" />
     <Compile Include="Utils\Base.cs" />
+    <Compile Include="Utils\PABCSystem.cs" />
     <Compile Include="Utils\Seq.cs" />
     <Compile Include="Utils\Matr.cs" />
     <Compile Include="Utils\Tup.cs" />
