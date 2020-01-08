@@ -18,9 +18,9 @@ namespace ABCNET.Utils
         public static IEnumerable<T> Gen<T>(int count, Func<int, T> selector, int firstIndex = 0)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
 
             for (int i = 0; i < count; i++)
                 yield return selector(i + firstIndex);
@@ -36,9 +36,9 @@ namespace ABCNET.Utils
         public static IEnumerable<int> Rand(int count, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < count; i++)
                 yield return Base.Rand(low, high);
@@ -54,9 +54,9 @@ namespace ABCNET.Utils
         public static IEnumerable<double> Rand(int count, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < count; i++)
                 yield return Base.Rand(low, high);
@@ -71,7 +71,7 @@ namespace ABCNET.Utils
         public static IEnumerable<T> Fill<T>(int count, T value)
         {
             if (count < 0)
-                throw new ArgumentOutOfRangeException("count");
+                throw new ArgumentOutOfRangeException(nameof(count));
 
             for (int i = 0; i < count; i++)
                 yield return value;
