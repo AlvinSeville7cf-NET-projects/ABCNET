@@ -1,3 +1,4 @@
+using ABCNET.Utils;
 using System;
 
 namespace ABCNET.Extensions
@@ -70,7 +71,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="delimiter">Разделитель.</param>
-        /// <returns>Матрица.</returns>
+
         public static T[,] Print<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	if (matrix == null)
@@ -85,7 +86,7 @@ namespace ABCNET.Extensions
         /// <param name="matrix">Матрица.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <param name="delimiter">Разделитель.</param>
-        /// <returns>Матрица.</returns>
+
         public static T[,] PrintBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	if (matrix == null)
@@ -95,7 +96,202 @@ namespace ABCNET.Extensions
         	
         	return matrix.InternalPrintByAsMatrix(selector, delimiter);
         }
-        
+
+        /// <summary>
+        /// Заполняет матрицу на основе функции селектора.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="rowFirstIndex">Начальный индекс строки.</param>
+        /// <param name="columnFirstIndex">Начальный индекс столбца.</param>
+        public static void Gen<T>(this T[,] matrix, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+            if (selector == null)
+                throw new ArgumentNullException("selector");
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                    matrix[i, j] = selector(i + rowFirstIndex, j + columnFirstIndex);
+        }
+
+        /// <summary>
+        /// Заполняет матрицу случайными числами типа Integer.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        public static void Rand(this int[,] matrix, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+            if (low > high)
+                throw new ArgumentException("low");
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                    matrix[i, j] = Base.Rand(low, high);
+        }
+
+        /// <summary>
+        /// Заполняет матрицу случайными числами типа Real.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        public static void Rand(this double[,] matrix, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+            if (low > high)
+                throw new ArgumentException("low");
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                    matrix[i, j] = Base.Rand(low, high);
+        }
+
+        /// <summary>
+        /// Заполняет матрицу указанным значением.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="value">Значение.</param>
+        /// <returns>Массив.</returns>
+        public static void Fill<T>(this T[,] matrix, T value)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                    matrix[i, j] = value;
+        }
+
+        /// <summary>
+        /// Заполняет матрицу значениями типа Boolean.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void ReadBoolean(this bool[,] matrix, string prompt = EmptyStringHelper.Empty)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            int i = 0;
+            int j = 0;
+
+            while (i < matrix.GetLength(0))
+            {
+                while (j < matrix.GetLength(1))
+                    try
+                    {
+                        matrix[i, j] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                        j++;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine(InputErrorHelper.Message);
+                    }
+
+                i++;
+                j = 0;
+            }
+        }
+
+        /// <summary>
+        /// Заполняет матрицу значениями типа Char.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void ReadChar(this char[,] matrix, string prompt = EmptyStringHelper.Empty)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                    matrix[i, j] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+        }
+
+        /// <summary>
+        /// Заполняет матрицу значениями типа Real.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void ReadReal(this double[,] matrix, string prompt = EmptyStringHelper.Empty)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            int i = 0;
+            int j = 0;
+
+            while (i < matrix.GetLength(0))
+            {
+                while (j < matrix.GetLength(1))
+                    try
+                    {
+                        matrix[i, j] = Base.ReadReal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                        j++;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine(InputErrorHelper.Message);
+                    }
+
+                i++;
+                j = 0;
+            }
+        }
+
+        /// <summary>
+        /// Заполняет матрицу значениями типа Integer.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void ReadInteger(this int[,] matrix, string prompt = EmptyStringHelper.Empty)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            int i = 0;
+            int j = 0;
+
+            while (i < matrix.GetLength(0))
+            {
+                while (j < matrix.GetLength(1))
+                    try
+                    {
+                        matrix[i, j] = Base.ReadInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                        j++;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine(InputErrorHelper.Message);
+                    }
+
+                i++;
+                j = 0;
+            }
+        }
+
+        /// <summary>
+        /// Заполняет матрицу значениями типа String.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void ReadString(this string[,] matrix, string prompt = EmptyStringHelper.Empty)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException("matrix");
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                    matrix[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+        }
+
+
         private static T[] InternalGetColumn<T>(this T[,] matrix, int index)
         {
             int length = matrix.GetLength(0);

@@ -7,10 +7,10 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			var a = Arr.Fill(10, 2);
-			a.Println();
-			a.Gen(i => i * 2);
-			a.Println();
+			var a = Matr.Fill(10, 10, 2);
+			a.Print();
+			a.Gen((i, j) => (i + j) % 2);
+			a.Print();
 		}
 	}
 }
