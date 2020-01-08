@@ -7,7 +7,7 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			Seq.Gen(10, i => i).Associate(x => x + 2).Println();
+			Seq.Gen(10, i => i, 100).Println().Associate(x => (char)x).Println();
 		}
 	}
 }
