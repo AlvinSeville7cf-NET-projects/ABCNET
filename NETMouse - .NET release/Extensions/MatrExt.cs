@@ -17,7 +17,7 @@ namespace ABCNET.Extensions
         public static T[] Col<T>(this T[,] matrix, int index)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             return matrix.InternalGetCol(index);
         }
@@ -32,7 +32,7 @@ namespace ABCNET.Extensions
         public static TOutput[] Col<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             return matrix.InternalGetCol(index, selector);
         }
@@ -46,7 +46,7 @@ namespace ABCNET.Extensions
         public static T[] Row<T>(this T[,] matrix, int index)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             return matrix.InternalGetRow(index);
         }
@@ -61,7 +61,7 @@ namespace ABCNET.Extensions
         public static TOutput[] Row<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             return matrix.InternalGetRow(index, selector);
         }
@@ -76,7 +76,7 @@ namespace ABCNET.Extensions
         public static T[,] SwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             return matrix.InternalSwapRows(firstIndex, secondIndex);
         }
@@ -92,9 +92,9 @@ namespace ABCNET.Extensions
         public static T[,] SwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
         {
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             return matrix.InternalSwapRows(firstIndex, secondIndex, selector);
         }
@@ -109,9 +109,9 @@ namespace ABCNET.Extensions
         public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
-            return matrix.InternalSwapColumns(firstIndex, secondIndex);
+            return matrix.InternalSwapCols(firstIndex, secondIndex);
         }
 
         /// <summary>
@@ -125,11 +125,11 @@ namespace ABCNET.Extensions
         public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
         {
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
-            return matrix.InternalSwapColumns(firstIndex, secondIndex, selector);
+            return matrix.InternalSwapCols(firstIndex, secondIndex, selector);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace ABCNET.Extensions
         public static T[,] Print<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	if (matrix == null)
-        		throw new ArgumentNullException("matrix");
+        		throw new ArgumentNullException(nameof(matrix));
         	
         	return matrix.InternalPrint(delimiter);
         }
@@ -156,9 +156,9 @@ namespace ABCNET.Extensions
         public static T[,] PrintBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
         	if (matrix == null)
-        		throw new ArgumentNullException("matrix");
+        		throw new ArgumentNullException(nameof(matrix));
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
         	
         	return matrix.InternalPrintBy(selector, delimiter);
         }
@@ -173,9 +173,9 @@ namespace ABCNET.Extensions
         public static void Gen<T>(this T[,] matrix, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
 
             for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -191,9 +191,9 @@ namespace ABCNET.Extensions
         public static void Rand(this int[,] matrix, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -209,9 +209,9 @@ namespace ABCNET.Extensions
         public static void Rand(this double[,] matrix, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
             if (low > high)
-                throw new ArgumentException("low");
+                throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -227,7 +227,7 @@ namespace ABCNET.Extensions
         public static void Fill<T>(this T[,] matrix, T value)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -242,7 +242,7 @@ namespace ABCNET.Extensions
         public static void Read(this bool[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             int i = 0;
             int j = 0;
@@ -273,7 +273,7 @@ namespace ABCNET.Extensions
         public static void Read(this char[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -288,7 +288,7 @@ namespace ABCNET.Extensions
         public static void Read(this double[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             int i = 0;
             int j = 0;
@@ -319,7 +319,7 @@ namespace ABCNET.Extensions
         public static void Read(this int[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             int i = 0;
             int j = 0;
@@ -350,7 +350,7 @@ namespace ABCNET.Extensions
         public static void Read(this string[,] matrix, string prompt = EmptyStringHelper.Empty)
         {
             if (matrix == null)
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
 
             for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -362,7 +362,7 @@ namespace ABCNET.Extensions
         {
             int length = matrix.GetLength(0);
             if (!index.IsBetween(0, length - 1))
-                throw new IndexOutOfRangeException("index");
+                throw new IndexOutOfRangeException(nameof(matrix));
             
             T[] column = new T[length];
             for (int i = 0; i < column.Length; i++)
@@ -374,11 +374,11 @@ namespace ABCNET.Extensions
         private static TOutput[] InternalGetCol<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
 
             int length = matrix.GetLength(0);
             if (!index.IsBetween(0, length - 1))
-                throw new IndexOutOfRangeException("index");
+                throw new IndexOutOfRangeException(nameof(index));
             
             TOutput[] column = new TOutput[length];
             for (int i = 0; i < column.Length; i++)
@@ -391,7 +391,7 @@ namespace ABCNET.Extensions
         {
             int length = matrix.GetLength(1);
             if (!index.IsBetween(0, length - 1))
-                throw new IndexOutOfRangeException("index");
+                throw new IndexOutOfRangeException(nameof(index));
             
             T[] row = new T[length];
             for (int i = 0; i < row.Length; i++)
@@ -403,11 +403,11 @@ namespace ABCNET.Extensions
         private static TOutput[] InternalGetRow<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
 
             int length = matrix.GetLength(1);
             if (!index.IsBetween(0, length - 1))
-                throw new IndexOutOfRangeException("index");
+                throw new IndexOutOfRangeException(nameof(index));
             
             TOutput[] row = new TOutput[length];
             for (int i = 0; i < row.Length; i++)
@@ -420,9 +420,9 @@ namespace ABCNET.Extensions
         {
             int lastRowIndex = matrix.GetLength(0) - 1;
             if (!firstIndex.IsBetween(0, lastRowIndex))
-                throw new ArgumentOutOfRangeException("firstIndex");
+                throw new ArgumentOutOfRangeException(nameof(firstIndex));
             if (!secondIndex.IsBetween(0, lastRowIndex))
-                throw new ArgumentOutOfRangeException("secondIndex");
+                throw new ArgumentOutOfRangeException(nameof(secondIndex));
 
             T[,] newMatrix = (T[,])matrix.Clone();
 
@@ -436,9 +436,9 @@ namespace ABCNET.Extensions
         {
             int lastRowIndex = matrix.GetLength(0) - 1;
             if (!firstIndex.IsBetween(0, lastRowIndex))
-                throw new ArgumentOutOfRangeException("firstIndex");
+                throw new ArgumentOutOfRangeException(nameof(firstIndex));
             if (!secondIndex.IsBetween(0, lastRowIndex))
-                throw new ArgumentOutOfRangeException("secondIndex");
+                throw new ArgumentOutOfRangeException(nameof(secondIndex));
 
             T[,] newMatrix = (T[,])matrix.Clone();
 
@@ -453,13 +453,13 @@ namespace ABCNET.Extensions
             return newMatrix;
         }
 
-        private static T[,] InternalSwapColumns<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        private static T[,] InternalSwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex)
         {
             int lastColumnIndex = matrix.GetLength(1) - 1;
             if (!firstIndex.IsBetween(0, lastColumnIndex))
-                throw new ArgumentOutOfRangeException("firstIndex");
+                throw new ArgumentOutOfRangeException(nameof(firstIndex));
             if (!secondIndex.IsBetween(0, lastColumnIndex))
-                throw new ArgumentOutOfRangeException("secondIndex");
+                throw new ArgumentOutOfRangeException(nameof(secondIndex));
 
             T[,] newMatrix = (T[,])matrix.Clone();
 
@@ -469,13 +469,13 @@ namespace ABCNET.Extensions
             return newMatrix;
         }
 
-        private static T[,] InternalSwapColumns<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        private static T[,] InternalSwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
         {
             int lastColumnIndex = matrix.GetLength(1) - 1;
             if (!firstIndex.IsBetween(0, lastColumnIndex))
-                throw new ArgumentOutOfRangeException("firstIndex");
+                throw new ArgumentOutOfRangeException(nameof(firstIndex));
             if (!secondIndex.IsBetween(0, lastColumnIndex))
-                throw new ArgumentOutOfRangeException("secondIndex");
+                throw new ArgumentOutOfRangeException(nameof(secondIndex));
 
             T[,] newMatrix = (T[,])matrix.Clone();
 
