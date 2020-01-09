@@ -7,7 +7,8 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			Arr.Gen(10, i => i).ZipTuple(Arr.Gen(10, i => i + 3)).Println();
+			foreach (var item in Arr.Gen(10, i => i).Batch(3, x => x + 2))
+				item.Println();
 		}
 	}
 }

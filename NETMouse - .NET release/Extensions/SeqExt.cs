@@ -10,6 +10,73 @@ namespace ABCNET.Extensions
     public static class SeqExt
     {
         /// <summary>
+        /// Разбивает последовательность на серии.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="count">Длина серии.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<T[]> Batch<T>(this IEnumerable<T> collection, int count)
+        {
+            if (count <= 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            int k = 0;
+            List<T> part = new List<T>();
+
+            foreach (var item in collection)
+            {
+                if (k < count)
+                    k++;
+                else
+                {
+                    yield return part.ToArray();
+                    part.Clear();
+                    k = 1;
+                }
+                part.Add(item);
+            }
+            if (part.Count != 0)
+                yield return part.ToArray();
+        }
+
+        /// <summary>
+        /// Разбивает последовательность на серии.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="count">Длина серии.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<TOutput[]> Batch<T, TOutput>(this IEnumerable<T> collection, int count, Func<T, TOutput> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            if (count <= 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            int k = 0;
+            List<TOutput> part = new List<TOutput>();
+
+            foreach (var item in collection)
+            {
+                if (k < count)
+                    k++;
+                else
+                {
+                    yield return part.ToArray();
+                    part.Clear();
+                    k = 1;
+                }
+                part.Add(selector(item));
+            }
+            if (part.Count != 0)
+                yield return part.ToArray();
+        }
+
+        /// <summary>
         /// Ассоцирует элементы последовательности с их проекциями.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
