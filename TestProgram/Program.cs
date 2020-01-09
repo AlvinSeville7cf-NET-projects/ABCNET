@@ -7,8 +7,7 @@ namespace TestProgram
 	{
 		private static void Main(string[] args)
 		{
-			foreach (var item in Arr.Gen(10, i => i).Batch(3, x => x + 2))
-				item.Println();
+			Arr.Gen(10, i => i).Pairwise(x => x + 1).Println();
 		}
 	}
 }

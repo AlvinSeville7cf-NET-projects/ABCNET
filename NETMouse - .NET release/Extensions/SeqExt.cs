@@ -77,6 +77,54 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Превращает последовательность в последовательность пар соседних элементов.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<Tuple<T, T>> Pairwise<T>(this IEnumerable<T> collection)
+        {
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            T previous = default;
+            if (enumerator.MoveNext())
+                previous = enumerator.Current;
+
+            while (enumerator.MoveNext())
+            {
+                yield return Tuple.Create(previous, enumerator.Current);
+                previous = enumerator.Current;
+            }
+        }
+
+        /// <summary>
+        /// Превращает последовательность в последовательность пар соседних элементов.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<Tuple<TOutput, TOutput>> Pairwise<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            TOutput previous = default;
+            if (enumerator.MoveNext())
+                previous = selector(enumerator.Current);
+
+            while (enumerator.MoveNext())
+            {
+                TOutput current = selector(enumerator.Current);
+                yield return Tuple.Create(previous, current);
+                previous = current;
+            }
+        }
+
+        /// <summary>
         /// Ассоцирует элементы последовательности с их проекциями.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
