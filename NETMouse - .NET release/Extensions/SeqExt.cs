@@ -129,6 +129,33 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Превращает последовательность в последовательность пар соседних элементов.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<TOutput> Pairwise<T, TOutput>(this IEnumerable<T> collection, Func<Tuple<T, T>, TOutput> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            T previous = default;
+            if (enumerator.MoveNext())
+                previous = enumerator.Current;
+            else
+                yield break;
+
+            while (enumerator.MoveNext())
+            {
+                yield return selector(Tuple.Create(previous, enumerator.Current));
+                previous = enumerator.Current;
+            }
+        }
+
+        /// <summary>
         /// Ассоцирует элементы последовательности с их проекциями.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
