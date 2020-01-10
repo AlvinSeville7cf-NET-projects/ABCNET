@@ -19,6 +19,7 @@
 - Избегание использования специфических возможностей компиляторов
 
 # Как использовать?
+## PascalABC.NET
 Скачайте архив и разархивируйте его в папку с программой. Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
 ```pascal
 {$reference ABCNET.dll}
@@ -27,6 +28,23 @@ uses ABCNET.Extensions;
 begin
   // code here
 end.
+```
+## Visual Studio 2019
+Скачайте архив и разархивируйте его в любую папку. Подключите библиотеку через `<project>`->`Add`->`Reference` Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
+```Csharp
+using ABCNET.Utils;
+using ABCNET.Extensions;
+
+namespace TestProgram
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            // code here
+        }
+    }
+}
 ```
 
 # Гарантируется ли полная совместимость с PABCSystem?
