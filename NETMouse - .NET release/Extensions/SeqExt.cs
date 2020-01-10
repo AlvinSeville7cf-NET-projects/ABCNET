@@ -134,7 +134,7 @@ namespace ABCNET.Extensions
         /// <param name="collection">Последовательность.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<TOutput> Pairwise<T, TOutput>(this IEnumerable<T> collection, Func<Tuple<T, T>, TOutput> selector)
+        public static IEnumerable<TOutput> Pairwise<T, TOutput>(this IEnumerable<T> collection, Func<T, T, TOutput> selector)
         {
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
@@ -150,7 +150,7 @@ namespace ABCNET.Extensions
 
             while (enumerator.MoveNext())
             {
-                yield return selector(Tuple.Create(previous, enumerator.Current));
+                yield return selector(previous, enumerator.Current);
                 previous = enumerator.Current;
             }
         }
