@@ -90,6 +90,8 @@ namespace ABCNET.Extensions
             T previous = default;
             if (enumerator.MoveNext())
                 previous = enumerator.Current;
+            else
+                yield break;
 
             while (enumerator.MoveNext())
             {
@@ -115,6 +117,8 @@ namespace ABCNET.Extensions
             TOutput previous = default;
             if (enumerator.MoveNext())
                 previous = selector(enumerator.Current);
+            else
+                yield break;
 
             while (enumerator.MoveNext())
             {
