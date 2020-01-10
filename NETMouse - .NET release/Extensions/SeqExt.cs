@@ -339,11 +339,19 @@ namespace ABCNET.Extensions
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
-            
+
             if (typeof(T) == typeof(char))
                 delimiter = string.Empty;
-            foreach (T item in collection)
-                Console.Write(string.Format("{0}{1}", item, delimiter));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            if (!enumerator.MoveNext())
+                return collection;
+
+            Console.Write(enumerator.Current);
+
+            while (enumerator.MoveNext())
+                Console.Write($"{delimiter}{enumerator.Current}");
+
             return collection;
         }
 
@@ -388,11 +396,19 @@ namespace ABCNET.Extensions
                 throw new ArgumentNullException(nameof(collection));
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
-            
+
             if (typeof(T) == typeof(char))
                 delimiter = string.Empty;
-            foreach (T item in collection)
-            	Console.Write(string.Format("{0}{1}", selector(item), delimiter));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            if (!enumerator.MoveNext())
+                return ArrayHelper<T>.Empty;
+
+            Console.Write(selector(enumerator.Current));
+
+            while (enumerator.MoveNext())
+                Console.Write($"{delimiter}{selector(enumerator.Current)}");
+
             return collection;
         }
 
