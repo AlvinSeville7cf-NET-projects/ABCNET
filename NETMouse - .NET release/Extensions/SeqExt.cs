@@ -10,6 +10,63 @@ namespace ABCNET.Extensions
     public static class SeqExt
     {
         /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T> ToTup2<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                        throw new ArgumentException(nameof(collection));
+                    return Tuple.Create(a, b);
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T> ToTup3<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                            throw new ArgumentException(nameof(collection));
+                        return Tuple.Create(a, b, c);
+                    }
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
         /// Разбивает последовательность на серии.
         /// </summary>
         /// <param name="collection">Последовательность.</param>

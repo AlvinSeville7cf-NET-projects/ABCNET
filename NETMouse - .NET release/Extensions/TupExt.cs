@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ABCNET.Extensions
 {
@@ -27,6 +28,29 @@ namespace ABCNET.Extensions
         public static Tuple<T2, T, T1> AddFirst<T, T1, T2>(this Tuple<T, T1> tuple, T2 item)
         {
             return new Tuple<T2, T, T1>(item, tuple.Item1, tuple.Item2);
+        }
+
+        /// <summary>
+        /// Преобразует кортеж в последовательность.
+        /// </summary>
+        /// <param name="tuple">Кортеж.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<T> ToSeq<T>(this Tuple<T, T> tuple)
+        {
+            yield return tuple.Item1;
+            yield return tuple.Item2;
+        }
+
+        /// <summary>
+        /// Преобразует кортеж в последовательность.
+        /// </summary>
+        /// <param name="tuple">Кортеж.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<T> ToSeq<T>(this Tuple<T, T, T> tuple)
+        {
+            yield return tuple.Item1;
+            yield return tuple.Item2;
+            yield return tuple.Item3;
         }
 
         /// <summary>
