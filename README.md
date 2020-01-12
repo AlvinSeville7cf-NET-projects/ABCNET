@@ -1,6 +1,6 @@
 # ABCNET
 
-`ABCNET` - альтернатива модулю `PABCSystem` для всего `NET`. Является чем-то средним между `PABCSystem` и `NETSquirrel`. Ориентирована на русскоязычную аудиторию. 
+`ABCNET` - альтернатива модулю `PABCSystem` для всего `NET`. Является чем-то средним между `PABCSystem` и `[NETSquirrel](https://github.com/NETMouse-projects/NETSquirrel)`. Ориентирована на русскоязычную аудиторию. 
 
 # Минимальные требования
 `NET Framework 4.0`
