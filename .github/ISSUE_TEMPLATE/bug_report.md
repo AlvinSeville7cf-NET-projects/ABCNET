@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Сообщение об ошибки
+about: Сообщение об ошибке
 title: Сообщение об ошибке
 labels: ''
 assignees: ''
