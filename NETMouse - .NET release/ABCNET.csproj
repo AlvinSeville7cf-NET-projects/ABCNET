@@ -61,6 +61,8 @@
     <Compile Include="Utils\Matr.cs" />
     <Compile Include="Utils\Tup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Для разработчиков.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
