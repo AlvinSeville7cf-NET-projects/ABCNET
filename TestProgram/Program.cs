@@ -3,11 +3,11 @@ using ABCNET.Utils;
 
 namespace TestProgram
 {
-	internal class Program
-	{
-		private static void Main(string[] args)
-		{
-			Arr.Gen(10, i => i).ZipTuple(Arr.Gen(10, i => i + 3)).Println();
-		}
-	}
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            Arr.New<byte>(1, 2, 3).ToTup3().Println();
+        }
+    }
 }

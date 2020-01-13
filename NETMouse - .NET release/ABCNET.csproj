@@ -51,9 +51,7 @@
     <Compile Include="Helpers.cs" />
     <Compile Include="Extensions\BaseExt.cs" />
     <Compile Include="Extensions\SeqExt.cs" />
-    <Compile Include="Extensions\KVExt.cs" />
     <Compile Include="Extensions\MatrExt.cs" />
-    <Compile Include="Extensions\StringBuilderExt.cs" />
     <Compile Include="Extensions\TupExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Arr.cs" />

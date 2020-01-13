@@ -10,6 +10,209 @@ namespace ABCNET.Extensions
     public static class SeqExt
     {
         /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T> ToTup2<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                        throw new ArgumentException(nameof(collection));
+                    return Tuple.Create(a, b);
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T> ToTup3<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                            throw new ArgumentException(nameof(collection));
+                        return Tuple.Create(a, b, c);
+                    }
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Разбивает последовательность на серии.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="count">Длина серии.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<T[]> Batch<T>(this IEnumerable<T> collection, int count)
+        {
+            if (count <= 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            int k = 0;
+            List<T> part = new List<T>();
+
+            foreach (var item in collection)
+            {
+                if (k < count)
+                    k++;
+                else
+                {
+                    yield return part.ToArray();
+                    part.Clear();
+                    k = 1;
+                }
+                part.Add(item);
+            }
+            if (part.Count != 0)
+                yield return part.ToArray();
+        }
+
+        /// <summary>
+        /// Разбивает последовательность на серии.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="count">Длина серии.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<TOutput[]> Batch<T, TOutput>(this IEnumerable<T> collection, int count, Func<T, TOutput> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            if (count <= 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            int k = 0;
+            List<TOutput> part = new List<TOutput>();
+
+            foreach (var item in collection)
+            {
+                if (k < count)
+                    k++;
+                else
+                {
+                    yield return part.ToArray();
+                    part.Clear();
+                    k = 1;
+                }
+                part.Add(selector(item));
+            }
+            if (part.Count != 0)
+                yield return part.ToArray();
+        }
+
+        /// <summary>
+        /// Превращает последовательность в последовательность пар соседних элементов.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<Tuple<T, T>> Pairwise<T>(this IEnumerable<T> collection)
+        {
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            T previous = default;
+            if (enumerator.MoveNext())
+                previous = enumerator.Current;
+            else
+                yield break;
+
+            while (enumerator.MoveNext())
+            {
+                yield return Tuple.Create(previous, enumerator.Current);
+                previous = enumerator.Current;
+            }
+        }
+
+        /// <summary>
+        /// Превращает последовательность в последовательность пар соседних элементов.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<Tuple<TOutput, TOutput>> Pairwise<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            TOutput previous = default;
+            if (enumerator.MoveNext())
+                previous = selector(enumerator.Current);
+            else
+                yield break;
+
+            while (enumerator.MoveNext())
+            {
+                TOutput current = selector(enumerator.Current);
+                yield return Tuple.Create(previous, current);
+                previous = current;
+            }
+        }
+
+        /// <summary>
+        /// Превращает последовательность в последовательность пар соседних элементов и применяет функцию селектор к каждой паре.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<TOutput> Pairwise<T, TOutput>(this IEnumerable<T> collection, Func<T, T, TOutput> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            T previous = default;
+            if (enumerator.MoveNext())
+                previous = enumerator.Current;
+            else
+                yield break;
+
+            while (enumerator.MoveNext())
+            {
+                yield return selector(previous, enumerator.Current);
+                previous = enumerator.Current;
+            }
+        }
+
+        /// <summary>
         /// Ассоцирует элементы последовательности с их проекциями.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
@@ -18,9 +221,9 @@ namespace ABCNET.Extensions
         public static IEnumerable<AssociateRes<T, TOutput>> Associate<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             return collection.Select(delegate (T x) { return new AssociateRes<T, TOutput>(x, selector(x)); });
         }
@@ -34,9 +237,9 @@ namespace ABCNET.Extensions
         public static IEnumerable<Tuple<T, T1>> ZipTuple<T, T1>(this IEnumerable<T> collection, IEnumerable<T1> secondCollection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
             if (secondCollection == null)
-                throw new ArgumentNullException("secondCollection");
+                throw new ArgumentNullException(nameof(secondCollection));
 
             return collection.Zip(secondCollection, delegate (T x, T1 y) { return Tuple.Create(x, y); });
         }
@@ -49,7 +252,7 @@ namespace ABCNET.Extensions
         public static Tuple<IEnumerable<T>, IEnumerable<T1>> UnzipTuple<T, T1>(this IEnumerable<Tuple<T, T1>> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             return Tuple.Create(collection.Select(delegate (Tuple<T, T1> x) { return x.Item1; }),
                 collection.Select(delegate (Tuple<T, T1> x) { return x.Item2; }));
@@ -63,7 +266,7 @@ namespace ABCNET.Extensions
         public static IEnumerable<NumerateRes<T>> Numerate<T>(this IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             return collection.Select(delegate(T x, int i) { return new NumerateRes<T>(x, i); });
         }
@@ -77,9 +280,9 @@ namespace ABCNET.Extensions
         public static IEnumerable<NumerateRes<TOutput>> Numerate<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             return collection.Select(delegate(T x, int i) { return new NumerateRes<TOutput>(selector(x), i); });
         }
@@ -92,7 +295,7 @@ namespace ABCNET.Extensions
         public static IOrderedEnumerable<T> Sort<T>(this IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             return collection.OrderBy(x => x);
         }
@@ -105,7 +308,7 @@ namespace ABCNET.Extensions
         public static IOrderedEnumerable<T> SortDesc<T>(this IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
             
             return collection.OrderByDescending(x => x);
         }
@@ -119,7 +322,7 @@ namespace ABCNET.Extensions
         public static T MinBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
             
             IComparer<TOutput> comparer = Comparer<TOutput>.Default;
             return collection.Aggregate((a, b) => comparer.Compare(selector(a), selector(b)) < 0 ? a : b);
@@ -134,7 +337,7 @@ namespace ABCNET.Extensions
         public static T MaxBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
             
             IComparer<TOutput> comparer = Comparer<TOutput>.Default;
             return collection.Aggregate((a, b) => comparer.Compare(selector(a), selector(b)) > 0 ? a : b);
@@ -149,9 +352,9 @@ namespace ABCNET.Extensions
         public static IEnumerable<Tuple<T, T1>> Cartesian<T, T1>(this IEnumerable<T> collectionFirst, IEnumerable<T1> collectionSecond)
         {
             if (collectionFirst == null)
-                throw new ArgumentNullException("collectionFirst");
+                throw new ArgumentNullException(nameof(collectionFirst));
             if (collectionSecond == null)
-                throw new ArgumentNullException("collectionSecond");
+                throw new ArgumentNullException(nameof(collectionSecond));
 
             foreach (T itemA in collectionFirst)
                 foreach (T1 itemB in collectionSecond)
@@ -168,11 +371,11 @@ namespace ABCNET.Extensions
         public static IEnumerable<Tuple<TOutput, TOutput>> Cartesian<T, TOutput>(this IEnumerable<T> collectionFirst, IEnumerable<T> collectionSecond, Func<T, TOutput> selector)
         {
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             if (collectionFirst == null)
-                throw new ArgumentNullException("collectionFirst");
+                throw new ArgumentNullException(nameof(collectionFirst));
             if (collectionSecond == null)
-                throw new ArgumentNullException("collectionSecond");
+                throw new ArgumentNullException(nameof(collectionSecond));
 
             foreach (T itemA in collectionFirst)
                 foreach (T itemB in collectionSecond)
@@ -187,7 +390,7 @@ namespace ABCNET.Extensions
         public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             Random random = new Random();
             return collection.OrderBy(x => random.Next(int.MaxValue));
@@ -202,9 +405,9 @@ namespace ABCNET.Extensions
         public static IEnumerable<TOutput> Shuffle<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             Random random = new Random();
             return collection.Select(x => selector(x)).OrderBy(x => random.Next(int.MaxValue));
@@ -219,12 +422,20 @@ namespace ABCNET.Extensions
         public static IEnumerable<T> Print<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
-            
+                throw new ArgumentNullException(nameof(collection));
+
             if (typeof(T) == typeof(char))
                 delimiter = string.Empty;
-            foreach (T item in collection)
-                Console.Write(string.Format("{0}{1}", item, delimiter));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            if (!enumerator.MoveNext())
+                return collection;
+
+            Console.Write(enumerator.Current);
+
+            while (enumerator.MoveNext())
+                Console.Write($"{delimiter}{enumerator.Current}");
+
             return collection;
         }
 
@@ -249,7 +460,7 @@ namespace ABCNET.Extensions
         public static IEnumerable<T> PrintLines<T>(this IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
             
             foreach (T item in collection)
                 Console.WriteLine(item);
@@ -266,14 +477,22 @@ namespace ABCNET.Extensions
         public static IEnumerable<T> PrintBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
             if (selector == null)
-                throw new ArgumentNullException("selector");
-            
+                throw new ArgumentNullException(nameof(selector));
+
             if (typeof(T) == typeof(char))
                 delimiter = string.Empty;
-            foreach (T item in collection)
-            	Console.Write(string.Format("{0}{1}", selector(item), delimiter));
+
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            if (!enumerator.MoveNext())
+                return ArrayHelper<T>.Empty;
+
+            Console.Write(selector(enumerator.Current));
+
+            while (enumerator.MoveNext())
+                Console.Write($"{delimiter}{selector(enumerator.Current)}");
+
             return collection;
         }
 
@@ -300,9 +519,9 @@ namespace ABCNET.Extensions
         public static IEnumerable<T> PrintLinesBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
             if (selector == null)
-                throw new ArgumentNullException("selector");
+                throw new ArgumentNullException(nameof(selector));
             
             foreach (T item in collection)
                 Console.WriteLine(selector(item));

@@ -31,64 +31,6 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт кортеж из четырёх значений.
-        /// </summary>
-        /// <param name="arg0">Первое значение.</param>
-        /// <param name="arg1">Второе значение.</param>
-        /// <param name="arg2">Третье значение.</param>
-        /// <param name="arg3">Четвёртое значение.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<T, T1, T2, T3> New<T, T1, T2, T3>(T arg0, T1 arg1, T2 arg2, T3 arg3)
-        {
-            return Tuple.Create(arg0, arg1, arg2, arg3);
-        }
-
-        /// <summary>
-        /// Создаёт кортеж из пяти значений.
-        /// </summary>
-        /// <param name="arg0">Первое значение.</param>
-        /// <param name="arg1">Второе значение.</param>
-        /// <param name="arg2">Третье значение.</param>
-        /// <param name="arg3">Четвёртое значение.</param>
-        /// <param name="arg4">Пятое значение.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<T, T1, T2, T3, T4> New<T, T1, T2, T3, T4>(T arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)
-        {
-            return Tuple.Create(arg0, arg1, arg2, arg3, arg4);
-        }
-
-        /// <summary>
-        /// Создаёт кортеж из шести значений.
-        /// </summary>
-        /// <param name="arg0">Первое значение.</param>
-        /// <param name="arg1">Второе значение.</param>
-        /// <param name="arg2">Третье значение.</param>
-        /// <param name="arg3">Четвёртое значение.</param>
-        /// <param name="arg4">Пятое значение.</param>
-        /// <param name="arg5">Шестое значение.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<T, T1, T2, T3, T4, T5> New<T, T1, T2, T3, T4, T5>(T arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
-        {
-            return Tuple.Create(arg0, arg1, arg2, arg3, arg4, arg5);
-        }
-
-        /// <summary>
-        /// Создаёт кортеж из семи значений.
-        /// </summary>
-        /// <param name="arg0">Первое значение.</param>
-        /// <param name="arg1">Второе значение.</param>
-        /// <param name="arg2">Третье значение.</param>
-        /// <param name="arg3">Четвёртое значение.</param>
-        /// <param name="arg4">Пятое значение.</param>
-        /// <param name="arg5">Шестое значение.</param>
-        /// <param name="arg6">Седьмое значение.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<T, T1, T2, T3, T4, T5, T6> New<T, T1, T2, T3, T4, T5, T6>(T arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
-        {
-            return Tuple.Create(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
-        }
-
-        /// <summary>
         /// Создаёт кортеж из двух случайных значений типа Integer.
         /// </summary>
         /// <param name="low">Нижняя граница диапазона.</param>
