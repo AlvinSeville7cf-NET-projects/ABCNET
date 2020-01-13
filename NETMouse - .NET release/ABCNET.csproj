@@ -49,10 +49,6 @@
   <ItemGroup>
     <Compile Include="Extensions\ArrExt.cs" />
     <Compile Include="Helpers.cs" />
-    <Compile Include="Debug\CollectionDebugView.cs" />
-    <Compile Include="Debug\DictionaryDebugView.cs" />
-    <Compile Include="Debug\Generic\CollectionDebugView.cs" />
-    <Compile Include="Debug\Generic\DictionaryDebugView.cs" />
     <Compile Include="Extensions\BaseExt.cs" />
     <Compile Include="Extensions\SeqExt.cs" />
     <Compile Include="Extensions\KVExt.cs" />
