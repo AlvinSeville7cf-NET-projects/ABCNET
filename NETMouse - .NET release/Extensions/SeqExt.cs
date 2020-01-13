@@ -414,6 +414,49 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Чередует элементы двух последовательностей.
+        /// </summary>
+        /// <param name="collectionFirst">Первая последовательность.</param>
+        /// <param name="collectionSecond">Вторая последовательность.</param>
+        /// <param name="onlyPairs">Возвращать ли только пары элементов, или возвращать и оставшиеся элементы большей последовательности.</param>
+        /// <returns>Последовательность.</returns>
+        public static IEnumerable<T> Interleave<T>(this IEnumerable<T> collectionFirst, IEnumerable<T> collectionSecond, bool onlyPairs = true)
+        {
+            if (collectionFirst == null)
+                throw new ArgumentNullException(nameof(collectionFirst));
+            if (collectionSecond == null)
+                throw new ArgumentNullException(nameof(collectionSecond));
+
+            using (IEnumerator<T> e1 = collectionFirst.GetEnumerator())
+            using (IEnumerator<T> e2 = collectionSecond.GetEnumerator())
+            {
+                bool firstCanMove = e1.MoveNext();
+                bool secondCanMove = e2.MoveNext();
+                while (firstCanMove && secondCanMove)
+                {
+                    yield return e1.Current;
+                    yield return e2.Current;
+
+                    firstCanMove = e1.MoveNext();
+                    secondCanMove = e2.MoveNext();
+                }
+                if (!onlyPairs)
+                    if (firstCanMove)
+                        do
+                        {
+                            yield return e1.Current;
+                        }
+                        while (e1.MoveNext());
+                if (secondCanMove)
+                    do
+                    {
+                        yield return e2.Current;
+                    }
+                    while (e2.MoveNext());
+            }
+        }
+
+        /// <summary>
         /// Выводит последовательность.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
@@ -594,48 +637,6 @@ namespace ABCNET.Extensions
             {
                 return $"[{Item} - {Projection}]";
             }
-        }
-        /// <summary>
-        /// Чередует элементы двух последовательностей.
-        /// </summary>
-        /// <param name="collectionFirst">Первая последовательность.</param>
-        /// <param name="collectionSecond">Вторая последовательность.</param>
-        /// <param name="onlyPairs">Возвращать ли только пары элементов, или возвращать и оставшиеся элементы большей последовательности.</param>
-        /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> Interleave<T>(this IEnumerable<T> collectionFirst, IEnumerable<T> collectionSecond, bool onlyPairs = true)
-        {
-            if (collectionFirst == null)
-                throw new ArgumentNullException(nameof(collectionFirst));
-            if (collectionSecond == null)
-                throw new ArgumentNullException(nameof(collectionSecond));
-
-            using (IEnumerator<T> e1 = collectionFirst.GetEnumerator())
-                using (IEnumerator<T> e2 = collectionSecond.GetEnumerator())
-                {
-                    bool firstCanMove = e1.MoveNext();
-                    bool secondCanMove = e2.MoveNext();
-                    while (firstCanMove && secondCanMove)
-                    {
-                        yield return e1.Current;
-                        yield return e2.Current;
-
-                        firstCanMove = e1.MoveNext();
-                        secondCanMove = e2.MoveNext();
-                    }
-                    if (!onlyPairs)
-                        if (firstCanMove)
-                            do
-                            {
-                                yield return e1.Current;
-                            }
-                            while (e1.MoveNext());
-                        if (secondCanMove)
-                            do
-                            {
-                                yield return e2.Current;
-                            }
-                            while (e2.MoveNext());
-                }
         }
     }
 }
