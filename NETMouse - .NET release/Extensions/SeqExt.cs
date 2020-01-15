@@ -643,11 +643,11 @@ namespace ABCNET.Extensions
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            int Res = 1;
+            int res = 1;
             foreach (int item in collection)
-                Res*=item;
+                res *= item;
 
-            return Res;
+            return res;
         }
 
         /// <summary>
@@ -660,11 +660,11 @@ namespace ABCNET.Extensions
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            double Res = 1;
+            double res = 1;
             foreach (double item in collection)
-                Res *= item;
+                res *= item;
 
-            return Res;
+            return res;
         }
     }
 }
