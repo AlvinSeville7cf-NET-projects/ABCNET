@@ -638,9 +638,12 @@ namespace ABCNET.Extensions
                 return $"[{Item} - {Projection}]";
             }
         }
+
         /// <summary>
         /// Произведение элементов последовательности.
         /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Произведение.</returns>
         public static int Prod(this IEnumerable<int> collection)
         {
             if (collection == null)
@@ -652,9 +655,12 @@ namespace ABCNET.Extensions
 
             return Res;
         }
+
         /// <summary>
         /// Произведение элементов последовательности.
         /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Произведение.</returns>
         public static double Prod(this IEnumerable<double> collection)
         {
             if (collection == null)
