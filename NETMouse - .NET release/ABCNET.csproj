@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\ArrExt.cs" />
-    <Compile Include="Extensions\StrExt.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Extensions\BaseExt.cs" />
     <Compile Include="Extensions\SeqExt.cs" />
