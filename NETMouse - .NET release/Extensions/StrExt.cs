@@ -3,7 +3,7 @@
 namespace ABCNET.Extensions
 {
     /// <summary>
-    /// Предоставляет функционал для работы с последовательностями.
+    /// Предоставляет функционал для работы со строками.
     /// </summary>
     public static class StrExt
     {
