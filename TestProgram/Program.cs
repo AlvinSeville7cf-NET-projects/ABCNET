@@ -1,5 +1,6 @@
 ﻿using static ABCNET.Extensions.SeqExt;
 using ABCNET.Utils;
+using ABCNET.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace TestProgram
         
         private static void Main(string[] args)
         {
+            "aa".Print();
             var Arr1 = Arr.Fill(5, 2);
             var Arr2 = Arr.Fill(3, 3);
             //Arr.New<byte>(1, 2, 3).ToTup3().Println();

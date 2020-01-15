@@ -467,9 +467,6 @@ namespace ABCNET.Extensions
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            if (typeof(T) == typeof(char))
-                delimiter = string.Empty;
-
             IEnumerator<T> enumerator = collection.GetEnumerator();
             if (!enumerator.MoveNext())
                 return collection;
@@ -523,9 +520,6 @@ namespace ABCNET.Extensions
                 throw new ArgumentNullException(nameof(collection));
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
-
-            if (typeof(T) == typeof(char))
-                delimiter = string.Empty;
 
             IEnumerator<T> enumerator = collection.GetEnumerator();
             if (!enumerator.MoveNext())
