@@ -268,7 +268,7 @@ namespace ABCNET.Extensions
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            return collection.Select(delegate(T x, int i) { return new NumerateRes<T>(x, i); });
+            return collection.Select(delegate (T x, int i) { return new NumerateRes<T>(x, i); });
         }
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace ABCNET.Extensions
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            return collection.Select(delegate(T x, int i) { return new NumerateRes<TOutput>(selector(x), i); });
+            return collection.Select(delegate (T x, int i) { return new NumerateRes<TOutput>(selector(x), i); });
         }
 
         /// <summary>
@@ -309,7 +309,7 @@ namespace ABCNET.Extensions
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
-            
+
             return collection.OrderByDescending(x => x);
         }
 
@@ -323,7 +323,7 @@ namespace ABCNET.Extensions
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
-            
+
             IComparer<TOutput> comparer = Comparer<TOutput>.Default;
             return collection.Aggregate((a, b) => comparer.Compare(selector(a), selector(b)) < 0 ? a : b);
         }
@@ -338,7 +338,7 @@ namespace ABCNET.Extensions
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
-            
+
             IComparer<TOutput> comparer = Comparer<TOutput>.Default;
             return collection.Aggregate((a, b) => comparer.Compare(selector(a), selector(b)) > 0 ? a : b);
         }
@@ -504,7 +504,7 @@ namespace ABCNET.Extensions
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
-            
+
             foreach (T item in collection)
                 Console.WriteLine(item);
             return collection;
@@ -565,7 +565,7 @@ namespace ABCNET.Extensions
                 throw new ArgumentNullException(nameof(collection));
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
-            
+
             foreach (T item in collection)
                 Console.WriteLine(selector(item));
             return collection;
@@ -637,6 +637,34 @@ namespace ABCNET.Extensions
             {
                 return $"[{Item} - {Projection}]";
             }
+        }
+        /// <summary>
+        /// Произведение элементов последовательности.
+        /// </summary>
+        public static int Prod(this IEnumerable<int> collection)
+        {
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            int Res = 1;
+            foreach (int item in collection)
+                Res*=item;
+
+            return Res;
+        }
+        /// <summary>
+        /// Произведение элементов последовательности.
+        /// </summary>
+        public static double Prod(this IEnumerable<double> collection)
+        {
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            double Res = 1;
+            foreach (double item in collection)
+                Res *= item;
+
+            return Res;
         }
     }
 }
