@@ -441,18 +441,20 @@ namespace ABCNET.Extensions
                     secondCanMove = e2.MoveNext();
                 }
                 if (!onlyPairs)
+                {
                     if (firstCanMove)
                         do
                         {
                             yield return e1.Current;
                         }
                         while (e1.MoveNext());
-                if (secondCanMove)
-                    do
-                    {
-                        yield return e2.Current;
-                    }
-                    while (e2.MoveNext());
+                    if (secondCanMove)
+                        do
+                        {
+                            yield return e2.Current;
+                        }
+                        while (e2.MoveNext());
+                }
             }
         }
 
@@ -665,6 +667,64 @@ namespace ABCNET.Extensions
                 Res *= item;
 
             return Res;
+        }
+        /// <summary>
+        /// –аздел€ет последовательность на две по заданному условию.
+        /// </summary>
+        public static PartitionRes<T> Partition<T>(this IEnumerable<T> collection, Func<T,bool> func)
+        {
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+            if (func == null)
+                throw new ArgumentNullException(nameof(func));
+
+            List<T> List1 = new List<T>();
+            List<T> List2 = new List<T>();
+            foreach (var item in collection)
+            {
+                if (func(item))
+                    List1.Add(item);
+                else
+                    List2.Add(item);
+            }
+
+            return new PartitionRes<T>(List1, List2);
+        }
+
+        /// <summary>
+        /// –езультат дл€ Partition.
+        /// </summary>
+        public class PartitionRes<T>
+        {
+            /// <summary>
+            /// Ёлементы, отвечающие условию.
+            /// </summary>
+            public IEnumerable<T> True { get; }
+
+            /// <summary>
+            /// Ёлементы, не отвечающие условию.
+            /// </summary>
+            public IEnumerable<T> False { get; }
+
+
+            public PartitionRes(IEnumerable<T> TrueCollection, IEnumerable<T> FalseCollection)
+            {
+                
+                True = TrueCollection;
+                False = FalseCollection;
+
+            }
+
+            public void Deconstruct(out IEnumerable<T> TrueCollection, out IEnumerable<T> FalseCollection)
+            {
+                TrueCollection = True;
+                FalseCollection = False;
+            }
+
+            public override string ToString()
+            {
+                return $"[{True} - {False}]";
+            }
         }
     }
 }
