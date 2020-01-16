@@ -469,9 +469,6 @@ namespace ABCNET.Extensions
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            if (typeof(T) == typeof(char))
-                delimiter = string.Empty;
-
             IEnumerator<T> enumerator = collection.GetEnumerator();
             if (!enumerator.MoveNext())
                 return collection;
@@ -526,9 +523,6 @@ namespace ABCNET.Extensions
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
 
-            if (typeof(T) == typeof(char))
-                delimiter = string.Empty;
-
             IEnumerator<T> enumerator = collection.GetEnumerator();
             if (!enumerator.MoveNext())
                 return ArrayHelper<T>.Empty;
@@ -574,99 +568,37 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Результат для Numerate.
-        /// </summary>
-        public class NumerateRes<T>
-        {
-            /// <summary>
-            /// Элемент.
-            /// </summary>
-            public T Item { get; }
-
-            /// <summary>
-            /// Индекс.
-            /// </summary>
-            public int Index { get; }
-
-
-            public NumerateRes(T item, int index)
-            {
-                Item = item;
-                Index = index;
-            }
-
-            public void Deconstruct(out T item, out int index)
-            {
-                item = Item;
-                index = Index;
-            }
-
-            public override string ToString()
-            {
-                return $"[{Item} - {Index}]";
-            }
-        }
-
-        /// <summary>
-        /// Результат для Associate.
-        /// </summary>
-        public class AssociateRes<T, TOutput>
-        {
-            /// <summary>
-            /// Элемент.
-            /// </summary>
-            public T Item { get; }
-
-            /// <summary>
-            /// Проекция элемента.
-            /// </summary>
-            public TOutput Projection { get; }
-
-
-            public AssociateRes(T item, TOutput projection)
-            {
-                Item = item;
-                Projection = projection;
-            }
-
-            public void Deconstruct(out T item, out TOutput projection)
-            {
-                item = Item;
-                projection = Projection;
-            }
-
-            public override string ToString()
-            {
-                return $"[{Item} - {Projection}]";
-            }
-        }
-        /// <summary>
         /// Произведение элементов последовательности.
         /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Произведение.</returns>
         public static int Prod(this IEnumerable<int> collection)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            int Res = 1;
+            int res = 1;
             foreach (int item in collection)
-                Res*=item;
+                res *= item;
 
-            return Res;
+            return res;
         }
+
         /// <summary>
         /// Произведение элементов последовательности.
         /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Произведение.</returns>
         public static double Prod(this IEnumerable<double> collection)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            double Res = 1;
+            double res = 1;
             foreach (double item in collection)
-                Res *= item;
+                res *= item;
 
-            return Res;
+            return res;
         }
         /// <summary>
         /// Разделяет последовательность на две по заданному условию.
