@@ -603,60 +603,22 @@ namespace ABCNET.Extensions
         /// <summary>
         /// –аздел€ет последовательность на две по заданному условию.
         /// </summary>
-        public static PartitionRes<T> Partition<T>(this IEnumerable<T> collection, Func<T,bool> func)
+        public static PartitionRes<T> Partition<T>(this IEnumerable<T> collection, Predicate<T> predicate)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
-            if (func == null)
-                throw new ArgumentNullException(nameof(func));
+            if (predicate == null)
+                throw new ArgumentNullException(nameof(predicate));
 
-            List<T> List1 = new List<T>();
-            List<T> List2 = new List<T>();
+            List<T> trueList = new List<T>();
+            List<T> falseList = new List<T>();
             foreach (var item in collection)
-            {
-                if (func(item))
-                    List1.Add(item);
+                if (predicate(item))
+                    trueList.Add(item);
                 else
-                    List2.Add(item);
-            }
+                    falseList.Add(item);
 
-            return new PartitionRes<T>(List1, List2);
-        }
-
-        /// <summary>
-        /// –езультат дл€ Partition.
-        /// </summary>
-        public class PartitionRes<T>
-        {
-            /// <summary>
-            /// Ёлементы, отвечающие условию.
-            /// </summary>
-            public IEnumerable<T> True { get; }
-
-            /// <summary>
-            /// Ёлементы, не отвечающие условию.
-            /// </summary>
-            public IEnumerable<T> False { get; }
-
-
-            public PartitionRes(IEnumerable<T> TrueCollection, IEnumerable<T> FalseCollection)
-            {
-                
-                True = TrueCollection;
-                False = FalseCollection;
-
-            }
-
-            public void Deconstruct(out IEnumerable<T> TrueCollection, out IEnumerable<T> FalseCollection)
-            {
-                TrueCollection = True;
-                FalseCollection = False;
-            }
-
-            public override string ToString()
-            {
-                return $"[{True} - {False}]";
-            }
+            return new PartitionRes<T>(trueList, falseList);
         }
     }
 }

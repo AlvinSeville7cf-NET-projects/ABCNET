@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Extensions\ArrExt.cs" />
     <Compile Include="Extensions\AssociateRes.cs" />
+    <Compile Include="Extensions\Class1.cs" />
     <Compile Include="Extensions\NumerateRes.cs" />
     <Compile Include="Extensions\StrExt.cs" />
     <Compile Include="Helpers.cs" />
