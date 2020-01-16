@@ -7,7 +7,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с последовательностями.
     /// </summary>
-    public static partial class SeqExt
+    public static class SeqExt
     {
         /// <summary>
         /// Преобразует последовательность в кортеж.
