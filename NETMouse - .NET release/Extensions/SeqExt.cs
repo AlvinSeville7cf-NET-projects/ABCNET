@@ -7,7 +7,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с последовательностями.
     /// </summary>
-    public static class SeqExt
+    public static partial class SeqExt
     {
         /// <summary>
         /// Преобразует последовательность в кортеж.
@@ -563,74 +563,6 @@ namespace ABCNET.Extensions
             foreach (T item in collection)
                 Console.WriteLine(selector(item));
             return collection;
-        }
-
-        /// <summary>
-        /// Результат для Numerate.
-        /// </summary>
-        public class NumerateRes<T>
-        {
-            /// <summary>
-            /// Элемент.
-            /// </summary>
-            public T Item { get; }
-
-            /// <summary>
-            /// Индекс.
-            /// </summary>
-            public int Index { get; }
-
-
-            public NumerateRes(T item, int index)
-            {
-                Item = item;
-                Index = index;
-            }
-
-            public void Deconstruct(out T item, out int index)
-            {
-                item = Item;
-                index = Index;
-            }
-
-            public override string ToString()
-            {
-                return $"[{Item} - {Index}]";
-            }
-        }
-
-        /// <summary>
-        /// Результат для Associate.
-        /// </summary>
-        public class AssociateRes<T, TOutput>
-        {
-            /// <summary>
-            /// Элемент.
-            /// </summary>
-            public T Item { get; }
-
-            /// <summary>
-            /// Проекция элемента.
-            /// </summary>
-            public TOutput Projection { get; }
-
-
-            public AssociateRes(T item, TOutput projection)
-            {
-                Item = item;
-                Projection = projection;
-            }
-
-            public void Deconstruct(out T item, out TOutput projection)
-            {
-                item = Item;
-                projection = Projection;
-            }
-
-            public override string ToString()
-            {
-                return $"[{Item} - {Projection}]";
-            }
         }
 
         /// <summary>
