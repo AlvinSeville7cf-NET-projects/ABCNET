@@ -600,9 +600,13 @@ namespace ABCNET.Extensions
 
             return res;
         }
+
         /// <summary>
         /// Разделяет последовательность на две по заданному условию.
         /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="predicate">Предикат.</param>
+        /// <returns>Пара последовательностей.</returns>
         public static PartitionRes<T> Partition<T>(this IEnumerable<T> collection, Predicate<T> predicate)
         {
             if (collection == null)
