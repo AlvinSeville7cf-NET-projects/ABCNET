@@ -441,18 +441,20 @@ namespace ABCNET.Extensions
                     secondCanMove = e2.MoveNext();
                 }
                 if (!onlyPairs)
+                {
                     if (firstCanMove)
                         do
                         {
                             yield return e1.Current;
                         }
                         while (e1.MoveNext());
-                if (secondCanMove)
-                    do
-                    {
-                        yield return e2.Current;
-                    }
-                    while (e2.MoveNext());
+                    if (secondCanMove)
+                        do
+                        {
+                            yield return e2.Current;
+                        }
+                        while (e2.MoveNext());
+                }
             }
         }
 
@@ -566,74 +568,6 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Результат для Numerate.
-        /// </summary>
-        public class NumerateRes<T>
-        {
-            /// <summary>
-            /// Элемент.
-            /// </summary>
-            public T Item { get; }
-
-            /// <summary>
-            /// Индекс.
-            /// </summary>
-            public int Index { get; }
-
-
-            public NumerateRes(T item, int index)
-            {
-                Item = item;
-                Index = index;
-            }
-
-            public void Deconstruct(out T item, out int index)
-            {
-                item = Item;
-                index = Index;
-            }
-
-            public override string ToString()
-            {
-                return $"[{Item} - {Index}]";
-            }
-        }
-
-        /// <summary>
-        /// Результат для Associate.
-        /// </summary>
-        public class AssociateRes<T, TOutput>
-        {
-            /// <summary>
-            /// Элемент.
-            /// </summary>
-            public T Item { get; }
-
-            /// <summary>
-            /// Проекция элемента.
-            /// </summary>
-            public TOutput Projection { get; }
-
-
-            public AssociateRes(T item, TOutput projection)
-            {
-                Item = item;
-                Projection = projection;
-            }
-
-            public void Deconstruct(out T item, out TOutput projection)
-            {
-                item = Item;
-                projection = Projection;
-            }
-
-            public override string ToString()
-            {
-                return $"[{Item} - {Projection}]";
-            }
-        }
-
-        /// <summary>
         /// Произведение элементов последовательности.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
@@ -665,6 +599,30 @@ namespace ABCNET.Extensions
                 res *= item;
 
             return res;
+        }
+
+        /// <summary>
+        /// Разделяет последовательность на две по заданному условию.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <param name="predicate">Предикат.</param>
+        /// <returns>Пара последовательностей.</returns>
+        public static PartitionRes<T> Partition<T>(this IEnumerable<T> collection, Predicate<T> predicate)
+        {
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+            if (predicate == null)
+                throw new ArgumentNullException(nameof(predicate));
+
+            List<T> trueList = new List<T>();
+            List<T> falseList = new List<T>();
+            foreach (var item in collection)
+                if (predicate(item))
+                    trueList.Add(item);
+                else
+                    falseList.Add(item);
+
+            return new PartitionRes<T>(trueList, falseList);
         }
     }
 }
