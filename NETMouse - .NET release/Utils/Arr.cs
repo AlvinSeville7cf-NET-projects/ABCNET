@@ -124,7 +124,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Boolean.
+        /// Читает массив значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -151,7 +151,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Char.
+        /// Читает массив значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -169,7 +169,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Real.
+        /// Читает массив значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -196,7 +196,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Integer.
+        /// Читает массив значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -223,7 +223,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа String.
+        /// Читает массив значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
