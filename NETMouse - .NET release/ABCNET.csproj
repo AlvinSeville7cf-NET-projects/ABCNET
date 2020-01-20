@@ -68,5 +68,16 @@
   <ItemGroup>
     <Content Include="Для разработчиков.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Actions\PrepareVersion.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Examples\" />
+    <Folder Include="Prepared release\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>
