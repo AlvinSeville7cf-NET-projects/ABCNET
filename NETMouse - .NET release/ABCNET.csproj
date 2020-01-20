@@ -68,5 +68,8 @@
   <ItemGroup>
     <Content Include="Для разработчиков.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentations\ABCNET как альтернатива PABCSystem.pptx" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
