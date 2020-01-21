@@ -15,7 +15,6 @@
         /// </summary>
         public int Index { get; }
 
-
         public NumerateRes(T item, int index)
         {
             Item = item;
