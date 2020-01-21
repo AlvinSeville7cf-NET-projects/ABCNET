@@ -61,7 +61,7 @@ if not exist "%pabcnetc%" (
 	exit 1
 )
 
-for %file in (%pascalExamplesFolder%*) do pabcnetc.exe %file
+for %%F in ("%pascalExamplesFolder%*") do "%pabcnetc%" "%%F"
 
 echo Examples have been successfully recompiled.
 
