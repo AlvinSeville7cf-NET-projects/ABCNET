@@ -56,10 +56,12 @@ set "compilationError=[CRITICAL ERROR] pabcnetc.exe file not found: "
 echo Examples recompiling...
 
 if not exist "%pabcnetc%" (
-	echo %compilationError%%pabcnetc%
+	echo "%compilationError%%pabcnetc%"
 	pause
 	exit 1
 )
+
+for %file in (%pascalExamplesFolder%*) do pabcnetc.exe %file
 
 echo Examples have been successfully recompiled.
 
