@@ -49,7 +49,7 @@ echo Files have been successfully copied.
 
 Rem = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-set "pabcnetc=C:\Program Files (x86)\PascalABC.NET\pabcnetc.exe"
+set "pabcnetc=C:\Program Files (x86)\PascalABC.NET\pabcnetcclear.exe"
 
 set "compilationError=[CRITICAL ERROR] pabcnetc.exe file not found: "
 
