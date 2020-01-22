@@ -23,4 +23,5 @@ end;
 
 begin
   Matr.Rand(Base.ReadInteger('N:'), Base.ReadInteger('M:'), -17, 26).Print().Sort().Print();
+  Base.ReadChar();
 end.

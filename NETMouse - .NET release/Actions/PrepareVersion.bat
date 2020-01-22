@@ -49,19 +49,19 @@ echo Files have been successfully copied.
 
 Rem = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-set "pabcnetc=C:\Program Files (x86)\PascalABC.NET\pabcnetcclear.exe"
+set "pascalabcnetCompiler=C:\Program Files (x86)\PascalABC.NET\pabcnetcclear.exe"
 
 set "compilationError=[CRITICAL ERROR] pabcnetc.exe file not found: "
 
 echo Examples recompiling...
 
-if not exist "%pabcnetc%" (
-	echo "%compilationError%%pabcnetc%"
+if not exist "%pascalabcnetCompiler%" (
+	echo "%compilationError%%pascalabcnetCompiler%"
 	pause
 	exit 1
 )
 
-for %%f in ("%pascalExamplesFolder%*.pas") do "%pabcnetc%" "%%f"
+for %%f in ("%pascalExamplesFolder%*.pas") do "%pascalabcnetCompiler%" "%%f"
 
 echo Examples have been successfully recompiled.
 
