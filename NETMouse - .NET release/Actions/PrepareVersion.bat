@@ -49,7 +49,7 @@ echo Files have been successfully copied.
 Rem = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 set "pascalabcnetCompiler=C:\Program Files (x86)\PascalABC.NET\pabcnetcclear.exe"
-set "csharpCompiler=csc.exe"
+set "csharpCompiler=%FrameworkDir%\%FrameworkVersion%\csc.exe"
 
 set "compilationError=[CRITICAL ERROR] pabcnetcclear.exe or csc.exe file not found: "
 
