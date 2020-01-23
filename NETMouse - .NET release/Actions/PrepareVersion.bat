@@ -35,7 +35,6 @@ if not exist "%dllPath%" (
 copy "%dllPath%" "%pascalExamplesFolder%"
 copy "%dllPath%" "%csharpExamplesFolder%"
 
-
 if not exist "%xmlPath%" (
 	echo %copyingError%%xmlPath%
 	pause
@@ -50,8 +49,9 @@ echo Files have been successfully copied.
 Rem = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 set "pascalabcnetCompiler=C:\Program Files (x86)\PascalABC.NET\pabcnetcclear.exe"
+set "csharpCompiler=csc.exe"
 
-set "compilationError=[CRITICAL ERROR] pabcnetc.exe file not found: "
+set "compilationError=[CRITICAL ERROR] pabcnetcclear.exe or csc.exe file not found: "
 
 echo Examples recompiling...
 
@@ -62,6 +62,14 @@ if not exist "%pascalabcnetCompiler%" (
 )
 
 for %%f in ("%pascalExamplesFolder%*.pas") do "%pascalabcnetCompiler%" "%%f"
+
+if not exist "%csharpCompiler%" (
+	echo "%compilationError%%csharpCompiler%"
+	pause
+	exit 1
+)
+
+for %%f in ("%csharpExamplesFolder%*.cs") do "%csharpCompiler%" "%%f"
 
 echo Examples have been successfully recompiled.
 

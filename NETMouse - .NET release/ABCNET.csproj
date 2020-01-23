@@ -47,6 +47,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Examples\C#\Arrays_1.cs" />
+    <None Include="Examples\C#\Arrays_10.cs" />
+    <None Include="Examples\C#\Arrays_11.cs" />
+    <None Include="Examples\C#\Arrays_12.cs" />
+    <None Include="Examples\C#\Arrays_13.cs" />
+    <None Include="Examples\C#\Arrays_14.cs" />
+    <None Include="Examples\C#\Arrays_2.cs" />
+    <None Include="Examples\C#\Arrays_3.cs" />
+    <None Include="Examples\C#\Arrays_4.cs" />
+    <None Include="Examples\C#\Arrays_5.cs" />
+    <None Include="Examples\C#\Arrays_6.cs" />
+    <None Include="Examples\C#\Arrays_7.cs" />
+    <None Include="Examples\C#\Arrays_8.cs" />
+    <None Include="Examples\C#\Arrays_9.cs" />
+    <None Include="Examples\C#\Matrices_1.cs" />
+    <None Include="Examples\C#\Matrices_10.cs" />
+    <None Include="Examples\C#\Matrices_11.cs" />
+    <None Include="Examples\C#\Matrices_2.cs" />
+    <None Include="Examples\C#\Matrices_3.cs" />
+    <None Include="Examples\C#\Matrices_4.cs" />
+    <None Include="Examples\C#\Matrices_5.cs" />
+    <None Include="Examples\C#\Matrices_6.cs" />
+    <None Include="Examples\C#\Matrices_7.cs" />
+    <None Include="Examples\C#\Matrices_8.cs" />
+    <None Include="Examples\C#\Matrices_9.cs" />
     <Compile Include="Extensions\ArrExt.cs" />
     <Compile Include="Extensions\AssociateRes.cs" />
     <Compile Include="Extensions\PartionRes.cs" />
