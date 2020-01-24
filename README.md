@@ -34,7 +34,25 @@ begin
 end.
 ```
 ## Visual Studio 2019
+### Через скачивание архива напрямую
 Скачайте архив и разархивируйте его в любую папку. Подключите библиотеку через `<project>`->`Add`->`Reference`. Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
+```Csharp
+using ABCNET.Utils;
+using ABCNET.Extensions;
+
+namespace TestProgram
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            // code here
+        }
+    }
+}
+```
+### Через пакетный менеджер `NuGet`
+Установите `NuGet-пакет` `ABCNET.NETMouseProjects` в Ваш проект. Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
 ```Csharp
 using ABCNET.Utils;
 using ABCNET.Extensions;
