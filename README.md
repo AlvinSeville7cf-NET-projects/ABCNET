@@ -35,6 +35,7 @@ begin
 end.
 ```
 ### Через пакетный менеджер `NuGet` в режиме проекта
+![PascalABC.NET - NuGet package installation](https://sun9-29.userapi.com/c204828/v204828716/488d3/eFcKpAIwcP8.jpg)
 Установите `NuGet-пакет` `ABCNET.NETMouseProjects` через `Подключённые сборки`->`Добавить сборку`->`NuGet`. Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
 ```pascal
 {$reference ABCNET.dll}
