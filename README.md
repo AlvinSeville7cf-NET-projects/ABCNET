@@ -24,6 +24,7 @@
 
 # Как использовать?
 ## PascalABC.NET
+### Через скачивание архива напрямую
 Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию `PascalABC.NET` из `Program Files (x86)`). Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
 ```pascal
 {$reference ABCNET.dll}
@@ -33,6 +34,17 @@ begin
   // code here
 end.
 ```
+### Через пакетный менеджер `NuGet`
+Установите `NuGet-пакет` `ABCNET.NETMouseProjects` через `Подключённые сборки`->`Добавить сборку`->`NuGet`. Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
+```pascal
+{$reference ABCNET.dll}
+uses ABCNET.Utils;
+uses ABCNET.Extensions;
+begin
+  // code here
+end.
+```
+
 ## Visual Studio 2019
 ### Через скачивание архива напрямую
 Скачайте архив и разархивируйте его в любую папку. Подключите библиотеку через `<project>`->`Add`->`Reference`. Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
