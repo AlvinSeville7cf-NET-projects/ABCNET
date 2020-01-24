@@ -15,7 +15,6 @@
         /// </summary>
         public TOutput Projection { get; }
 
-
         public AssociateRes(T item, TOutput projection)
         {
             Item = item;

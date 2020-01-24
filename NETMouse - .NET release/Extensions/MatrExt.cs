@@ -235,7 +235,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Boolean.
+        /// Заполняет матрицу значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -266,7 +266,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Char.
+        /// Заполняет матрицу значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -281,7 +281,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Real.
+        /// Заполняет матрицу значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -312,7 +312,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Integer.
+        /// Заполняет матрицу значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -343,7 +343,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа String.
+        /// Заполняет матрицу значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
