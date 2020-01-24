@@ -25,18 +25,14 @@
 # Как использовать?
 ## PascalABC.NET
 ### Через скачивание архива напрямую
-Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию `PascalABC.NET` из `Program Files (x86)`). Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
-```pascal
-{$reference ABCNET.dll}
-uses ABCNET.Utils;
-uses ABCNET.Extensions;
-begin
-  // code here
-end.
-```
+Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию `PascalABC.NET` из `Program Files (x86)`).
+
 ### Через пакетный менеджер `NuGet` в режиме проекта
 ![PascalABC.NET - NuGet package installation](https://sun9-29.userapi.com/c204828/v204828716/488d3/eFcKpAIwcP8.jpg)
-Установите `NuGet-пакет` [`ABCNET.NETMouseProjects`](https://www.nuget.org/packages/ABCNET.NETMouseProjects/) через `Подключённые сборки`->`Добавить сборку`->`NuGet`. Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
+Установите `NuGet-пакет` [`ABCNET.NETMouseProjects`](https://www.nuget.org/packages/ABCNET.NETMouseProjects/) через `Подключённые сборки`->`Добавить сборку`->`NuGet`.
+
+### Рекомендуемый шаблон кода
+Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
 ```pascal
 {$reference ABCNET.dll}
 uses ABCNET.Utils;
@@ -49,24 +45,13 @@ end.
 ## Visual Studio 2019
 ### Через скачивание архива напрямую
 Скачайте архив и разархивируйте его в любую папку. Подключите библиотеку через `<project>`->`Add`->`Reference`. Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
-```Csharp
-using ABCNET.Utils;
-using ABCNET.Extensions;
 
-namespace TestProgram
-{
-    internal class Program
-    {
-        private static void Main(string[] args)
-        {
-            // code here
-        }
-    }
-}
-```
 ### Через пакетный менеджер `NuGet`
 ![Visual Studio - NuGet package installation](https://sun9-23.userapi.com/c858232/v858232025/15cb70/z-NsdL6lZTk.jpg)
-Установите `NuGet-пакет` [`ABCNET.NETMouseProjects`](https://www.nuget.org/packages/ABCNET.NETMouseProjects/) через `<project>`->`Manage NuGet Packages`->`Browse`. Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
+Установите `NuGet-пакет` [`ABCNET.NETMouseProjects`](https://www.nuget.org/packages/ABCNET.NETMouseProjects/) через `<project>`->`Manage NuGet Packages`->`Browse`.
+
+### Рекомендуемый шаблон кода
+Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
 ```Csharp
 using ABCNET.Utils;
 using ABCNET.Extensions;
