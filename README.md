@@ -52,7 +52,7 @@ namespace TestProgram
 }
 ```
 ### Через пакетный менеджер `NuGet`
-Установите `NuGet-пакет` `ABCNET.NETMouseProjects` в Ваш проект. Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
+Установите `NuGet-пакет` `ABCNET.NETMouseProjects` через `<project>`->`Manage NuGet Packages`->`Browse`. Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
 ```Csharp
 using ABCNET.Utils;
 using ABCNET.Extensions;
