@@ -10,7 +10,7 @@
 
 Не используйте `GitHub Desktop` при разработке данного продукта.
 
-Для запуска проектов онлайн применялась online `IDE` [`.NET Fiddle`](https://dotnetfiddle.net/).
+Для запуска примеров онлайн применялась [`.NET Fiddle`](https://dotnetfiddle.net/). ![NET Fiddle Logo](https://sun9-22.userapi.com/c855016/v855016141/1ca3af/gsRG97RJ6R4.jpg)
 
 # Цель проекта
 Обеспечить пользователей [`PascalABC.NET 3.5.1.2277`](https://drive.google.com/open?id=1eHzHpHw7SYTCwefaxYPr4QbsB1bf6M41) (другие версии не поддерживаются нашим проектом) `PABCSystem`-подобным функционалом за пределами данного языка. Но, в то же время, не предоставлять множество обёрток для работы с типами `NET`, а стимулировать обучающихся изучать данную платформу.
