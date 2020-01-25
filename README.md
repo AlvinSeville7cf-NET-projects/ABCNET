@@ -10,7 +10,7 @@
 
 Для автоматизации сборки версий применялся `Batch Script`.
 
-Для выполнения простых и рутинных задач использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
+Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
 
 # Цель проекта
 Обеспечить пользователей [`PascalABC.NET 3.5.1.2277`](https://drive.google.com/open?id=1eHzHpHw7SYTCwefaxYPr4QbsB1bf6M41) (другие версии не поддерживаются нашим проектом) `PABCSystem`-подобным функционалом за пределами данного языка. Но, в то же время, не предоставлять множество обёрток для работы с типами `NET`, а стимулировать обучающихся изучать данную платформу.
