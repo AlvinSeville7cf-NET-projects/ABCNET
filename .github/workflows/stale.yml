@@ -14,6 +14,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'В данной Issue достаточно длительное время не наблюдается активности. Просьба участникам сообщества NETMouse projects рассмотреть данную Issue.'
         stale-pr-message: 'В данном Pull Request-е достаточно длительное время не наблюдается активности. Просьба участникам сообщества NETMouse projects рассмотреть данный Pull Request.'
-        stale-issue-label: '➥ NO ACTIVITY'
-        stale-pr-label: '➥ NO ACTIVITY'
+        stale-issue-label: '➥ STALE'
+        stale-pr-label: '➥ STALE'
+        exempt-issue-label: '➥ SUPPRESS "STALE"'
         days-before-stale: 14
