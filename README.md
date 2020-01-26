@@ -36,7 +36,7 @@
 ### Рекомендуемый шаблон кода
 Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
 ```pascal
-{$reference ABCNET.dll}
+{$reference ABCNET.dll} // Уберите данную строку, если используйте ABCNET в режиме проекта и подключили её как NuGet-пакет.
 uses ABCNET.Utils;
 uses ABCNET.Extensions;
 begin
