@@ -2,6 +2,7 @@ name: milestone
 on: 
   issues:
     types: demilestoned
+
 jobs:
   demilestoned:
     runs-on: [ubuntu-latest]
@@ -11,4 +12,4 @@ jobs:
           echo ${{ github.event.issue.url }}
       - name: add label
         run: |
-          curl -v -u admin:${{ secrets.GITHUB_TOKEN }} -H "Accept: application/vnd.github.antiope-preview+json" -d '{"labels": ["Needs Milestone"]}' ${{ github.event.issue.url }}/labels
+          curl -v -u admin:${{ secrets.GITHUB_TOKEN }} -H "Accept: application/vnd.github.antiope-preview+json" -d '{"labels": ["➥ MISSING MILESTONE"]}' ${{ github.event.issue.url }}/labels
