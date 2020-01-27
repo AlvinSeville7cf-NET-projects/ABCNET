@@ -1,0 +1,15 @@
+name: Bug-Enhancement-Labeler
+on:
+  issues:
+    types: [opened, edited, pinned, unpinned, reopened, assigned, unassigned, labeled, unlabeled, milestoned, demilestoned]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: damccorm/tag-ur-it@master
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: "./BugEnhancementIssueRules.yml"
