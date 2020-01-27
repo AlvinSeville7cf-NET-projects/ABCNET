@@ -1,7 +1,7 @@
 name: Platform-Labeler
 on:
   issues:
-    types: [opened, edited, pinned, unpinned, reopened, assigned, unassigned, labeled, unlabeled, milestoned, demilestoned]
+    types: [opened]
 
 jobs:
   label:
