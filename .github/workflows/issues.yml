@@ -1,7 +1,7 @@
 name: Labeler
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, pinned, unpinned, reopened, assigned, unassigned, labeled, unlabeled, milestoned, demilestoned]
 
 jobs:
   label:
