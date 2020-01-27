@@ -6,9 +6,13 @@
 `NET Framework 4.0`
 
 # Для разработчиков
-При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download).
+При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Не используйте `GitHub Desktop` при разработке данного продукта.
 
-Не используйте `GitHub Desktop` при разработке данного продукта.
+Для автоматизации сборки версий применялся `Batch Script`.
+
+Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
+
+![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
 
 # Цель проекта
 Обеспечить пользователей [`PascalABC.NET 3.5.1.2277`](https://drive.google.com/open?id=1eHzHpHw7SYTCwefaxYPr4QbsB1bf6M41) (другие версии не поддерживаются нашим проектом) `PABCSystem`-подобным функционалом за пределами данного языка. Но, в то же время, не предоставлять множество обёрток для работы с типами `NET`, а стимулировать обучающихся изучать данную платформу.
@@ -22,17 +26,34 @@
 
 # Как использовать?
 ## PascalABC.NET
-Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию `PascalABC.NET` из `Program Files (x86)`). Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
+### Через скачивание архива напрямую
+Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию `PascalABC.NET` из `Program Files (x86)`).
+
+### Через пакетный менеджер `NuGet` в режиме проекта
+![PascalABC.NET - NuGet package installation](https://sun9-29.userapi.com/c204828/v204828716/488d3/eFcKpAIwcP8.jpg)
+Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.1) через `Подключённые сборки`->`Добавить сборку`->`NuGet`.
+
+### Рекомендуемый шаблон кода
+Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
 ```pascal
-{$reference ABCNET.dll}
+{$reference ABCNET.dll} // Уберите данную строку, если используйте ABCNET в режиме проекта и подключили её как NuGet-пакет.
 uses ABCNET.Utils;
 uses ABCNET.Extensions;
 begin
   // code here
 end.
 ```
+
 ## Visual Studio 2019
+### Через скачивание архива напрямую
 Скачайте архив и разархивируйте его в любую папку. Подключите библиотеку через `<project>`->`Add`->`Reference`. Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
+
+### Через пакетный менеджер `NuGet`
+![Visual Studio - NuGet package installation](https://sun9-23.userapi.com/c858232/v858232025/15cb70/z-NsdL6lZTk.jpg)
+Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.1) через `<project>`->`Manage NuGet Packages`->`Browse`.
+
+### Рекомендуемый шаблон кода
+Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
 ```Csharp
 using ABCNET.Utils;
 using ABCNET.Extensions;
@@ -51,6 +72,9 @@ namespace TestProgram
 
 # Гарантируется ли полная совместимость с PABCSystem?
 Нет. Функционал хоть и похожий, но отличается и по-разному распределён. Единственное место, в котором гарантируется полная совместимость - класс `ABCNET.Utils.PABCSystem`, который предоставляет часть функционала `PABCSystem` в его изначальном виде. На данный момент доступны лишь короткие функции `Lst`, `LLst`, `HSet`, `SSet`, `Dict`, `KV`.
+
+# Как перевести код с PABCSystem на ABCNET?
+Смотрите [здесь](http://netmouseprojects.rusff.ru/viewtopic.php?id=10).
 
 # Не хватает функционала - что делать? 
 Если Вам недостаточно предоставляемого функционала, то Вы можете:
