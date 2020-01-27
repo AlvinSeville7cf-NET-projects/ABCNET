@@ -1,0 +1,14 @@
+rules:
+- valueFor: 'Платформа [**N**et/[all]/?]'
+  contains: '?'
+  addLabels: ['platform-N/A']
+- valueFor: 'Платформа [**N**et/[all]/?]'
+  contains: 'N'
+  addLabels: ['platform-NET']
+- valueFor: 'Платформа [**N**et/[all]/?]'
+  contains: '[all]'
+  addLabels: ['platform-[all]']
+
+tags:
+- noneIn: ['platform-N/A', 'platform-NET', 'platform-[all]']
+  addLabels: ['➥ MISSING PLATFORM']
