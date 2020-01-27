@@ -1,15 +1,27 @@
 # list of primary rules
 rules:
 - valueFor: '**Пространство имён**'
+  contains: 'N/A'
+  addLabels: ['namespace-N/A']
+- valueFor: '**Пространство имён**'
   contains: 'ABCNET.Extensions'
   addLabels: ['namespace-Extensions']
 - valueFor: '**Пространство имён**'
   contains: 'ABCNET.Utils'
   addLabels: ['namespace-Utils']
+- valueFor: '**Пространство имён**'
+  contains: '[all]'
+  addLabels: ['namespace-[all]']
+- valueFor: '**Платформа**'
+  contains: 'N/A'
+  addLabels: ['platform-N/A']
 - valueFor: '**Платформа**'
   contains: 'NET'
   addLabels: ['platform-NET']
+- valueFor: '**Платформа**'
+  contains: '[all]'
+  addLabels: ['platform-[all]']
 
 tags:
-- noneIn: ['namespace-Extensions', 'namespace-Utils', 'platform-NET']
+- noneIn: ['namespace-N/A', 'namespace-Extensions', 'namespace-Utils', 'namespace-[all]', 'platform-N/A', 'platform-NET', 'platform-[all]']
   addLabels: ['➥ MISSING LABELS']
