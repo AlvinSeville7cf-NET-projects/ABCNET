@@ -1,4 +1,3 @@
-# list of primary rules
 rules:
 - valueFor: '**Пространство имён**'
   contains: 'N/A'
@@ -21,6 +20,12 @@ rules:
 - valueFor: '**Платформа**'
   contains: '[all]'
   addLabels: ['platform-[all]']
+
+nomatches:
+- contains: '**Пространство имён**' 
+  addLabels: ['namespace-N/A']
+- contains: '**Платформа**' 
+  addLabels: ['platform-N/A']
 
 tags:
 - noneIn: ['namespace-N/A', 'namespace-Extensions', 'namespace-Utils', 'namespace-[all]', 'platform-N/A', 'platform-NET', 'platform-[all]']
