@@ -9,7 +9,7 @@ namespace TestProgram
         public static int Max(this int[,] matrix)
         {
             if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
+                throw new ArgumentNullException("matrix");
 
             int max = int.MinValue;
             bool oddFound = false;
@@ -24,7 +24,7 @@ namespace TestProgram
                     }
 
             if (!oddFound)
-                throw new ArgumentException(nameof(matrix));
+                throw new ArgumentException("matrix");
 
             return max;
         }

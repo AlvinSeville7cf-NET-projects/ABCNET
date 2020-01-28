@@ -1,4 +1,3 @@
-@echo off
 title PrepareVersion
 setlocal
 
@@ -69,7 +68,7 @@ if not exist "%csharpCompiler%" (
 	exit 1
 )
 
-for %%f in ("%csharpExamplesFolder%*.cs") do "%csharpCompiler%" -reference:"ABCNET.dll" -lib:"%csharpExamplesFolder%" "%%f"
+for %%f in ("%csharpExamplesFolder%*.cs") do "%csharpCompiler%" "-reference:ABCNET.dll" "-lib:%csharpExamplesFolder%\" "%%f"
 
 echo Examples have been successfully recompiled.
 

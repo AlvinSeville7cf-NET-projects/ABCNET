@@ -9,7 +9,7 @@ namespace TestProgram
         public static Tuple<int, int> Min(this int[,] matrix)
         {
             if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
+                throw new ArgumentNullException("matrix");
 
             int min = int.MaxValue;
             int minRow = 0;

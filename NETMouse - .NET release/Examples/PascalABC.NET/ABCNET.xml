@@ -647,6 +647,22 @@
             <param name="matrix">Матрица.</param>
             <param name="prompt">Приглашение к вводу.</param>
         </member>
+        <member name="M:ABCNET.Extensions.MatrExt.SetCol``1(``0[0:,0:],``0[],System.Int32)">
+            <summary>
+            Изменяет столбец матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="index">Индекс столбца.</param>
+            <returns>Столбец.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.SetRow``1(``0[0:,0:],``0[],System.Int32)">
+            <summary>
+            Изменяет строку матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="index">Индекс строки.</param>
+            <returns>Столбец.</returns>
+        </member>
         <member name="T:ABCNET.Extensions.TupExt">
             <summary>
             Предоставляет функционал для работы с ссылочными кортежами.
