@@ -22,10 +22,8 @@ namespace ABCNET.Extensions
 
         public PartitionRes(IEnumerable<T> trueCollection, IEnumerable<T> falseCollection)
         {
-
             True = trueCollection;
             False = falseCollection;
-
         }
 
         public void Deconstruct(out IEnumerable<T> trueCollection, out IEnumerable<T> falseCollection)

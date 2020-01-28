@@ -92,7 +92,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив значениями типа Boolean.
+        /// Заполняет массив значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -115,7 +115,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив значениями типа Char.
+        /// Заполняет массив значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -129,7 +129,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив значениями типа Real.
+        /// Заполняет массив значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -152,7 +152,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив значениями типа Integer.
+        /// Заполняет массив значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -175,7 +175,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив значениями типа String.
+        /// Заполняет массив значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>

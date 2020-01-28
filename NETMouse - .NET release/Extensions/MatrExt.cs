@@ -235,7 +235,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Boolean.
+        /// Заполняет матрицу значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -266,7 +266,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Char.
+        /// Заполняет матрицу значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -281,7 +281,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Real.
+        /// Заполняет матрицу значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -312,7 +312,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Integer.
+        /// Заполняет матрицу значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -343,7 +343,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа String.
+        /// Заполняет матрицу значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -536,6 +536,48 @@ namespace ABCNET.Extensions
 			}
 			
 			return matrix;
+        }
+
+        /// <summary>
+        /// Изменяет столбец матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="index">Индекс столбца.</param>
+        /// <returns>Столбец.</returns>
+        public static T[,] SetCol<T>(this T[,] matrix, T[] col, int index)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+            if (matrix.GetLength(1) != col.Length)
+                throw new ArgumentException(nameof(col));
+
+            T[,] matrixRes = (T[,])matrix.Clone();
+
+            for (int i = 0; i < matrixRes.GetLength(1);i++)
+                matrixRes[index, i] = col[i];
+
+            return matrixRes;
+        }
+
+        /// <summary>
+        /// Изменяет строку матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="index">Индекс строки.</param>
+        /// <returns>Столбец.</returns>
+        public static T[,] SetRow<T>(this T[,] matrix, T[] row, int index)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+            if (matrix.GetLength(0) != row.Length)
+                throw new ArgumentException(nameof(row));
+
+            T[,] matrixRes = (T[,])matrix.Clone();
+
+            for (int i = 0; i < matrixRes.GetLength(1); i++)
+                matrixRes[i, index] = row[i];
+
+            return matrixRes;
         }
     }
 }
