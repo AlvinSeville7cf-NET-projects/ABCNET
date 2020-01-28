@@ -1,0 +1,11 @@
+nomatches:
+- contains: 'self-importance-1' 
+  addLabels: ['☆']
+- contains: 'self-importance-2' 
+  addLabels: ['☆☆']
+- contains: 'self-importance-3' 
+  addLabels: ['☆☆☆']
+- contains: 'self-importance-4' 
+  addLabels: ['☆☆☆☆']
+- contains: 'self-importance-5' 
+  addLabels: ['☆☆☆☆☆']

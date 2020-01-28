@@ -1,4 +1,4 @@
-name: Labeler
+name: Platform-Labeler
 on:
   issues:
     types: [opened]
@@ -12,4 +12,4 @@ jobs:
     - uses: damccorm/tag-ur-it@master
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: "./IssueRules.yml"
+        configuration-path: "./PlatformIssueRules.yml"
