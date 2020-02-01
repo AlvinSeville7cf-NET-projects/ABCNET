@@ -19,3 +19,4 @@ jobs:
         exempt-issue-label: '➥ SUPPRESS "STALE"'
         exempt-pr-label: '➥ SUPPRESS "STALE"'
         days-before-stale: 14
+        days-before-close: 1000
