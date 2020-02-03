@@ -95,35 +95,9 @@
     <Content Include="Examples\C#\ABCNET.xml" />
     <Content Include="Examples\PascalABC.NET\ABCNET.dll" />
     <Content Include="Examples\PascalABC.NET\ABCNET.xml" />
-    <Content Include="Examples\PascalABC.NET\Arrays_1.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_10.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_11.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_12.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_13.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_14.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_2.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_3.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_4.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_5.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_6.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_7.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_8.exe" />
-    <Content Include="Examples\PascalABC.NET\Arrays_9.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_1.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_10.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_11.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_2.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_3.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_4.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_5.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_6.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_7.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_8.exe" />
-    <Content Include="Examples\PascalABC.NET\Matrices_9.exe" />
     <Content Include="Для разработчиков.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Actions\PrepareVersion.bat" />
     <None Include="Examples\PascalABC.NET\Arrays_1.pas" />
     <None Include="Examples\PascalABC.NET\Arrays_10.pas" />
     <None Include="Examples\PascalABC.NET\Arrays_11.pas" />
@@ -151,6 +125,7 @@
     <None Include="Examples\PascalABC.NET\Matrices_9.pas" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Actions\" />
     <Folder Include="Prepared release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
