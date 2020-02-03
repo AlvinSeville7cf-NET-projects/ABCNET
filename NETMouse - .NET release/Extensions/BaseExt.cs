@@ -31,28 +31,12 @@ namespace ABCNET.Extensions
         /// <returns>Последовательность.</returns>
         public static IEnumerable<int> To(this int from, int to)
         {
-            if (from > to)
-                return Enumerable.Empty<int>();
-            return Enumerable.Range(from, to - from + 1);
-        }
-
-        /// <summary>
-        /// Создаёт последовательность от начального числа до конечного.
-        /// </summary>
-        /// <param name="from">Начальное число.</param>
-        /// <param name="to">Конечное число.</param>
-        /// <returns>Последовательность.</returns>
-        public static IEnumerable<int> DownTo(this int from, int to)
-        {
-            if (from < to)
-            {
-                foreach (var item in Enumerable.Empty<int>())
-                    yield return item;
-                yield break;
-            }
-            
-            for (int i = from; i >= to; i--)
-                yield return i;
+            if (from >= to)
+                for (int i = from; i >= to; i--)
+                    yield return i;
+            else
+                for (int i = from; i <= to; i++)
+                    yield return i;
         }
 
         /// <summary>
@@ -63,7 +47,7 @@ namespace ABCNET.Extensions
         public static IEnumerable<int> Times(this int to)
         {
             if (to < 0)
-                return 0.DownTo(to);
+                return 0.To(to);
             return 0.To(to);
         }
 
