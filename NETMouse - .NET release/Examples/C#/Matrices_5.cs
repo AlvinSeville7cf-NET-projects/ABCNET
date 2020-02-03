@@ -9,7 +9,7 @@ namespace TestProgram
         public static int[] Sum(this int[,] matrix)
         {
             if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
+                throw new ArgumentNullException("matrix");
 
             int[] result = new int[matrix.GetLength(0)];
             int rowsCount = matrix.GetLength(0);

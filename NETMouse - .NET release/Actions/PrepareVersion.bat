@@ -1,4 +1,3 @@
-@echo off
 title PrepareVersion
 setlocal
 
@@ -49,7 +48,7 @@ echo Files have been successfully copied.
 Rem = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 set "pascalabcnetCompiler=C:\Program Files (x86)\PascalABC.NET\pabcnetcclear.exe"
-set "csharpCompiler=%FrameworkDir%\%FrameworkVersion%\csc.exe"
+set "csharpCompiler=C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe"
 
 set "compilationError=[CRITICAL ERROR] pabcnetcclear.exe or csc.exe file not found: "
 
@@ -69,7 +68,7 @@ if not exist "%csharpCompiler%" (
 	exit 1
 )
 
-for %%f in ("%csharpExamplesFolder%*.cs") do "%csharpCompiler%" "%%f"
+for %%f in ("%csharpExamplesFolder%*.cs") do "%csharpCompiler%" "-reference:ABCNET.dll" "-lib:%csharpExamplesFolder%\" "%%f"
 
 echo Examples have been successfully recompiled.
 

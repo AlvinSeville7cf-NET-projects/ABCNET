@@ -9,7 +9,7 @@ namespace TestProgram
         public static int[,] Sort(this int[,] matrix)
         {
             if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
+                throw new ArgumentNullException("matrix");
 
             int[,] result = (int[,])matrix.Clone();
             int rowsCount = result.GetLength(0);

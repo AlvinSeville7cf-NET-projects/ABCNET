@@ -9,7 +9,7 @@ namespace TestProgram
         public static int Min(this int[,] matrix)
         {
             if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
+                throw new ArgumentNullException("matrix");
 
             int min = int.MaxValue;
             int rowsCount = matrix.GetLength(0);

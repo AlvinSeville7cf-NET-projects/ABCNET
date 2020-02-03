@@ -9,7 +9,7 @@ namespace TestProgram
         public static int[] Count(this int[,] matrix)
         {
             if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
+                throw new ArgumentNullException("matrix");
 
             int[] result = new int[matrix.GetLength(1)];
             int rowsCount = matrix.GetLength(0);
