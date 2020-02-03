@@ -463,8 +463,10 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> Print<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter)
+        public static IEnumerable<T> Print<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -473,10 +475,12 @@ namespace ABCNET.Extensions
             if (!enumerator.MoveNext())
                 return collection;
 
-            Console.Write(enumerator.Current);
+            Console.Write(string.Format("{0}{1}", start, enumerator.Current));
 
             while (enumerator.MoveNext())
                 Console.Write($"{delimiter}{enumerator.Current}");
+
+            Console.Write(end);
 
             return collection;
         }
@@ -486,8 +490,10 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> Println<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter)
+        public static IEnumerable<T> Println<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             collection.Print(delimiter);
             Console.WriteLine();
@@ -515,8 +521,10 @@ namespace ABCNET.Extensions
         /// <param name="collection">Последовательность.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> PrintBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
+        public static IEnumerable<T> PrintBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -527,10 +535,12 @@ namespace ABCNET.Extensions
             if (!enumerator.MoveNext())
                 return ArrayHelper<T>.Empty;
 
-            Console.Write(selector(enumerator.Current));
+            Console.Write($"{start}{selector(enumerator.Current)}");
 
             while (enumerator.MoveNext())
                 Console.Write($"{delimiter}{selector(enumerator.Current)}");
+
+            Console.Write(end);
 
             return collection;
         }
@@ -541,10 +551,12 @@ namespace ABCNET.Extensions
         /// <param name="collection">Последовательность.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> PrintlnBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
+        public static IEnumerable<T> PrintlnBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
-            collection.PrintBy(selector, delimiter);
+            collection.PrintBy(selector, delimiter, start, end);
             Console.WriteLine();
             return collection;
         }

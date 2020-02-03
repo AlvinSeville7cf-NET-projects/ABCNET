@@ -19,7 +19,7 @@ namespace TestProgram
             //Base.ReadChar();
             int[,] matr = new int[10, 10];
             matr.Rand(0, 10);
-            matr.Print("||");
+            matr.Print("||","<",">");
             matr.Read();
         }
     }
