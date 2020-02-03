@@ -1,0 +1,22 @@
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+  - cron: "0 0 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/stale@v1.1.0
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-issue-message: 'В данной Issue достаточно длительное время не наблюдается активности. Просьба участникам сообщества NETMouse projects рассмотреть данную Issue.'
+        stale-pr-message: 'В данном Pull Request-е достаточно длительное время не наблюдается активности. Просьба участникам сообщества NETMouse projects рассмотреть данный Pull Request.'
+        stale-issue-label: '➥ STALE'
+        stale-pr-label: '➥ STALE'
+        exempt-issue-label: '➥ SUPPRESS "STALE"'
+        exempt-pr-label: '➥ SUPPRESS "STALE"'
+        days-before-stale: 14
+        days-before-close: 1000

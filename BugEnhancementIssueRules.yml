@@ -1,0 +1,11 @@
+rules:
+- valueFor: 'Ошибка ли это [**Y**es/**N**o]'
+  contains: 'Y'
+  addLabels: ['bug-small']
+- valueFor: 'Ошибка ли это [**Y**es/**N**o]'
+  contains: 'N'
+  addLabels: ['enhancement']
+
+tags:
+- noneIn: ['bug-small', 'enhancement']
+  addLabels: ['➥ MISSING BUG/ENHANCEMENT']
