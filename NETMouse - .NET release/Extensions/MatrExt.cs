@@ -507,8 +507,8 @@ namespace ABCNET.Extensions
 			for (int i = 0; i < rowsCount; i++)
 			{
 				for (int j = 0; j < columnsCount; j++)
-					Console.Write(string.Format("{0}{1}", matrix[i, j].ToString().PadLeft(lengths[j]), delimiter));
-				Console.WriteLine();
+                    Console.Write(string.Format("{0}{1}", matrix[i, j].ToString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
+                Console.WriteLine();
 			}
 			
 			return matrix;

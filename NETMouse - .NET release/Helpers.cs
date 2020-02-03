@@ -35,7 +35,7 @@ namespace ABCNET
     internal static class IntegerBordersHelper
     {
         internal const int Low = 0;
-        internal const int High = int.MaxValue;
+        internal const int High = int.MaxValue - 1;
     }
 
     internal static class RealBordersHelper
