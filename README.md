@@ -31,7 +31,7 @@
 
 ### Через пакетный менеджер `NuGet` в режиме проекта
 ![PascalABC.NET - NuGet package installation](https://sun9-29.userapi.com/c204828/v204828716/488d3/eFcKpAIwcP8.jpg)
-Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.1) через `Подключённые сборки`->`Добавить сборку`->`NuGet`.
+Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.2) через `Подключённые сборки`->`Добавить сборку`->`NuGet`.
 
 ### Рекомендуемый шаблон кода
 Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
@@ -50,7 +50,7 @@ end.
 
 ### Через пакетный менеджер `NuGet`
 ![Visual Studio - NuGet package installation](https://sun9-23.userapi.com/c858232/v858232025/15cb70/z-NsdL6lZTk.jpg)
-Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.1) через `<project>`->`Manage NuGet Packages`->`Browse`.
+Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.2) через `<project>`->`Manage NuGet Packages`->`Browse`.
 
 ### Рекомендуемый шаблон кода
 Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
