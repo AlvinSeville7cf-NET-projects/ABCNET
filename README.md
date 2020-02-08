@@ -26,12 +26,14 @@
 
 # Как использовать?
 ## PascalABC.NET
+Не используйте данную `IDE` для крупных проектов.
+
 ### Через скачивание архива напрямую
 Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию `PascalABC.NET` из `Program Files (x86)`).
 
 ### Через пакетный менеджер `NuGet` в режиме проекта
 ![PascalABC.NET - NuGet package installation](https://sun9-29.userapi.com/c204828/v204828716/488d3/eFcKpAIwcP8.jpg)
-Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.1) через `Подключённые сборки`->`Добавить сборку`->`NuGet`.
+Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.2) через `Подключённые сборки`->`Добавить сборку`->`NuGet`.
 
 ### Рекомендуемый шаблон кода
 Используйте следующий шаблон кода для написания программы через `ABCNET` в `PascalABC.NET`:
@@ -50,7 +52,7 @@ end.
 
 ### Через пакетный менеджер `NuGet`
 ![Visual Studio - NuGet package installation](https://sun9-23.userapi.com/c858232/v858232025/15cb70/z-NsdL6lZTk.jpg)
-Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.1) через `<project>`->`Manage NuGet Packages`->`Browse`.
+Установите `NuGet-пакет` [`NETMouseProjectsOrganization.ABCNET`](https://www.nuget.org/packages/NETMouseProjectsOrganization.ABCNET/0.0.2) через `<project>`->`Manage NuGet Packages`->`Browse`.
 
 ### Рекомендуемый шаблон кода
 Используйте следующий шаблон кода для написания программы через `ABCNET` на `C#`:
@@ -89,7 +91,12 @@ namespace TestProgram
 - Вторые 5 `Issue` (необязательные) затрагивают примеры для `API` библиотеки.
 - Третьи 5 `Issue` (необязательные) затрагивают внутренние изменения, которые не видны пользователям.
 
-После публикации версии `X` в разделе `Releases` она получает статус `Pre-release`, после чего в течении двух дней (включая день публикации) проводится тестирование пользователями. На третий день - она сменяет статус на `Release`. Допускается внесение не более 5 изменений в дни тестирования. Причём, в дни тестирования версии `X` только пользователи могут создавать Issue (или разработчики, но только, если пользователи сами не имеют возможности это сделать).
+Формат версии: `x.y.z`, где:
+- `x` - major-версия, принимает любое неотрицательное значение.
+- `y` - minor-версия, принимает значение 0 и 5.
+- `z` - количество закрытых Issue, касающихся `API` библиотеки.
+
+Каждая major-версия закрывает в сумме ровно 50 `Issue` по `API`-библиотеки и состоит из двух minor-версий. Каждая сборка minor-версии закрывает в сумме ровно 5 `Issue` по `API`-библиотеки.
 
 # Дополнительно
 - [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
