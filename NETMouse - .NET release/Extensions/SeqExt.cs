@@ -60,6 +60,195 @@ namespace ABCNET.Extensions
                             throw new ArgumentException(nameof(collection));
                         return Tuple.Create(a, b, c);
                     }
+                    throw new ArgumentException(nameof(collection));
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T> ToTup4<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+            T d = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                        {
+                            d = en.Current;
+                            if (en.MoveNext())
+                                throw new ArgumentException(nameof(collection));
+                            return Tuple.Create(a, b, c, d);
+                        }
+                        throw new ArgumentException(nameof(collection));
+                    }
+                    throw new ArgumentException(nameof(collection));
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T> ToTup5<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+            T d = default;
+            T e = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                        {
+                            d = en.Current;
+                            if (en.MoveNext())
+                            {
+                                e = en.Current;
+                                if (en.MoveNext())
+                                    throw new ArgumentException(nameof(collection));
+                                return Tuple.Create(a, b, c, d, e);
+                            }
+                            throw new ArgumentException(nameof(collection));
+                        }
+                        throw new ArgumentException(nameof(collection));
+                    }
+                    throw new ArgumentException(nameof(collection));
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T> ToTup6<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+            T d = default;
+            T e = default;
+            T f = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                        {
+                            d = en.Current;
+                            if (en.MoveNext())
+                            {
+                                e = en.Current;
+                                if (en.MoveNext())
+                                {
+                                    f = en.Current;
+                                    if (en.MoveNext())
+                                        throw new ArgumentException(nameof(collection));
+                                    return Tuple.Create(a, b, c, d, e, f);
+                                }
+                                throw new ArgumentException(nameof(collection));
+                            }
+                            throw new ArgumentException(nameof(collection));
+                        }
+                        throw new ArgumentException(nameof(collection));
+                    }
+                    throw new ArgumentException(nameof(collection));
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T, T> ToTup7<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+            T d = default;
+            T e = default;
+            T f = default;
+            T g = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                        {
+                            d = en.Current;
+                            if (en.MoveNext())
+                            {
+                                e = en.Current;
+                                if (en.MoveNext())
+                                {
+                                    f = en.Current;
+                                    if (en.MoveNext())
+                                    {
+                                        g = en.Current;
+                                        if (en.MoveNext())
+                                            throw new ArgumentException(nameof(collection));
+                                        return Tuple.Create(a, b, c, d, e, f, g);
+                                    }
+                                    throw new ArgumentException(nameof(collection));
+                                }
+                                throw new ArgumentException(nameof(collection));
+                            }
+                            throw new ArgumentException(nameof(collection));
+                        }
+                        throw new ArgumentException(nameof(collection));
+                    }
+                    throw new ArgumentException(nameof(collection));
                 }
                 throw new ArgumentException(nameof(collection));
             }
