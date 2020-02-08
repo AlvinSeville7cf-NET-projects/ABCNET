@@ -169,14 +169,6 @@
             <param name="to">Конечное число.</param>
             <returns>Последовательность.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.BaseExt.DownTo(System.Int32,System.Int32)">
-            <summary>
-            Создаёт последовательность от начального числа до конечного.
-            </summary>
-            <param name="from">Начальное число.</param>
-            <param name="to">Конечное число.</param>
-            <returns>Последовательность.</returns>
-        </member>
         <member name="M:ABCNET.Extensions.BaseExt.Times(System.Int32)">
             <summary>
             Создаёт последовательность от 0 до конечного числа.
@@ -261,6 +253,34 @@
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.SeqExt.ToTup3``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Преобразует последовательность в кортеж.
+            </summary>
+            <param name="collection">Последовательность.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.SeqExt.ToTup4``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Преобразует последовательность в кортеж.
+            </summary>
+            <param name="collection">Последовательность.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.SeqExt.ToTup5``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Преобразует последовательность в кортеж.
+            </summary>
+            <param name="collection">Последовательность.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.SeqExt.ToTup6``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Преобразует последовательность в кортеж.
+            </summary>
+            <param name="collection">Последовательность.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.SeqExt.ToTup7``1(System.Collections.Generic.IEnumerable{``0})">
             <summary>
             Преобразует последовательность в кортеж.
             </summary>
@@ -416,20 +436,24 @@
             <param name="onlyPairs">Возвращать ли только пары элементов, или возвращать и оставшиеся элементы большей последовательности.</param>
             <returns>Последовательность.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.SeqExt.Print``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+        <member name="M:ABCNET.Extensions.SeqExt.Print``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.String)">
             <summary>
             Выводит последовательность.
             </summary>
             <param name="collection">Последовательность.</param>
             <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
             <returns>Последовательность.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.SeqExt.Println``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+        <member name="M:ABCNET.Extensions.SeqExt.Println``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.String)">
             <summary>
             Выводит последовательность и переходит на новую строку.
             </summary>
             <param name="collection">Последовательность.</param>
             <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
             <returns>Последовательность.</returns>
         </member>
         <member name="M:ABCNET.Extensions.SeqExt.PrintLines``1(System.Collections.Generic.IEnumerable{``0})">
@@ -439,22 +463,26 @@
             <param name="collection">Последовательность.</param>
             <returns>Последовательность.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.SeqExt.PrintBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.String)">
+        <member name="M:ABCNET.Extensions.SeqExt.PrintBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.String,System.String,System.String)">
             <summary>
             Выводит последовательность.
             </summary>
             <param name="collection">Последовательность.</param>
             <param name="selector">Функция селектор.</param>
             <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
             <returns>Последовательность.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.SeqExt.PrintlnBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.String)">
+        <member name="M:ABCNET.Extensions.SeqExt.PrintlnBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.String,System.String,System.String)">
             <summary>
             Выводит последовательность и переходит на новую строку.
             </summary>
             <param name="collection">Последовательность.</param>
             <param name="selector">Функция селектор.</param>
             <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
             <returns>Последовательность.</returns>
         </member>
         <member name="M:ABCNET.Extensions.SeqExt.PrintLinesBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
@@ -564,20 +592,24 @@
             <param name="selector">Функция селектор.</param>
             <returns>Матрица.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Print``1(``0[0:,0:],System.String)">
+        <member name="M:ABCNET.Extensions.MatrExt.Println``1(``0[0:,0:],System.String,System.String,System.String)">
             <summary>
             Выводит матрицу и переходит на новую строку.
             </summary>
             <param name="matrix">Матрица.</param>
             <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
         </member>
-        <member name="M:ABCNET.Extensions.MatrExt.PrintBy``2(``0[0:,0:],System.Func{``0,``1},System.String)">
+        <member name="M:ABCNET.Extensions.MatrExt.PrintBy``2(``0[0:,0:],System.Func{``0,``1},System.String,System.String,System.String)">
             <summary>
             Выводит матрицу и переходит на новую строку.
             </summary>
             <param name="matrix">Матрица.</param>
             <param name="selector">Функция селектор.</param>
             <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
         </member>
         <member name="M:ABCNET.Extensions.MatrExt.Gen``1(``0[0:,0:],System.Func{System.Int32,System.Int32,``0},System.Int32,System.Int32)">
             <summary>
@@ -647,7 +679,7 @@
             <param name="matrix">Матрица.</param>
             <param name="prompt">Приглашение к вводу.</param>
         </member>
-        <member name="M:ABCNET.Extensions.MatrExt.SetCol``1(``0[0:,0:],``0[],System.Int32)">
+        <member name="M:ABCNET.Extensions.MatrExt.SetRow``1(``0[0:,0:],``0[],System.Int32)">
             <summary>
             Изменяет столбец матрицы.
             </summary>
@@ -655,7 +687,7 @@
             <param name="index">Индекс столбца.</param>
             <returns>Столбец.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.MatrExt.SetRow``1(``0[0:,0:],``0[],System.Int32)">
+        <member name="M:ABCNET.Extensions.MatrExt.SetCol``1(``0[0:,0:],``0[],System.Int32)">
             <summary>
             Изменяет строку матрицы.
             </summary>
@@ -668,13 +700,12 @@
             Предоставляет функционал для работы с ссылочными кортежами.
             </summary>
         </member>
-        <member name="M:ABCNET.Extensions.TupExt.Add``3(System.Tuple{``0,``1},``2)">
+        <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0})">
             <summary>
-            Добавляет элемент к кортежу.
+            Преобразует кортеж в последовательность.
             </summary>
             <param name="tuple">Кортеж.</param>
-            <param name="item">Элемент.</param>
-            <returns>Кортеж.</returns>
+            <returns>Последовательность.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.AddFirst``3(System.Tuple{``0,``1},``2)">
             <summary>
@@ -684,12 +715,76 @@
             <param name="item">Элемент.</param>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0})">
+        <member name="M:ABCNET.Extensions.TupExt.Add``3(System.Tuple{``0,``1},``2)">
             <summary>
-            Преобразует кортеж в последовательность.
+            Добавляет элемент к кортежу.
             </summary>
             <param name="tuple">Кортеж.</param>
-            <returns>Последовательность.</returns>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0})">
             <summary>
@@ -698,30 +793,409 @@
             <param name="tuple">Кортеж.</param>
             <returns>Последовательность.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``2(System.Tuple{``0,``1})">
+        <member name="M:ABCNET.Extensions.TupExt.AddFirst``1(System.Tuple{``0,``0,``0},``0)">
+            <summary>
+            Добавляет элемент к кортежу.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Add``1(System.Tuple{``0,``0,``0},``0)">
+            <summary>
+            Добавляет элемент к кортежу.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0})">
             <summary>
             Выводит кортеж.
             </summary>
             <param name="tuple">Кортеж.</param>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``2(System.Tuple{``0,``1})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``3(System.Tuple{``0,``1,``2})">
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
             <summary>
             Выводит кортеж.
             </summary>
             <param name="tuple">Кортеж.</param>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``3(System.Tuple{``0,``1,``2})">
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0})">
             <summary>
             Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0})">
+            <summary>
+            Преобразует кортеж в последовательность.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Последовательность.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.AddFirst``1(System.Tuple{``0,``0,``0,``0},``0)">
+            <summary>
+            Добавляет элемент к кортежу.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Add``1(System.Tuple{``0,``0,``0,``0},``0)">
+            <summary>
+            Добавляет элемент к кортежу.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0,``0})">
+            <summary>
+            Преобразует кортеж в последовательность.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Последовательность.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.AddFirst``1(System.Tuple{``0,``0,``0,``0,``0},``0)">
+            <summary>
+            Добавляет элемент к кортежу.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Add``1(System.Tuple{``0,``0,``0,``0,``0},``0)">
+            <summary>
+            Добавляет элемент к кортежу.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Преобразует кортеж в последовательность.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Последовательность.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.AddFirst``1(System.Tuple{``0,``0,``0,``0,``0,``0},``0)">
+            <summary>
+            Добавляет элемент к кортежу.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Add``1(System.Tuple{``0,``0,``0,``0,``0,``0},``0)">
+            <summary>
+            Добавляет элемент к кортежу.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="item">Элемент.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Преобразует кортеж в последовательность.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Последовательность.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
             </summary>
             <param name="tuple">Кортеж.</param>
             <returns>Кортеж.</returns>
@@ -870,10 +1344,10 @@
             <returns>Значение.</returns>
         </member>
         <member name="M:ABCNET.Utils.Base.Rand">
-            <summary>
-            Генерирует случайное число [0..1).
-            </summary>
-            <returns>Число.</returns>
+            <summary> 
+            Генерирует случайное число [0..1). 
+            </summary> 
+            <returns>Число.</returns> 
         </member>
         <member name="M:ABCNET.Utils.Base.Rand(System.Int32,System.Int32)">
             <summary>

@@ -140,7 +140,7 @@ namespace ABCNET.Extensions
         /// <param name="start">Первый выводимый символ строки.</param>
         /// <param name="end">Последний выводимый символ строки.</param>
 
-        public static T[,] Print<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        public static T[,] Println<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
         	if (matrix == null)
         		throw new ArgumentNullException(nameof(matrix));
@@ -550,7 +550,7 @@ namespace ABCNET.Extensions
         /// <param name="matrix">Матрица.</param>
         /// <param name="index">Индекс столбца.</param>
         /// <returns>Столбец.</returns>
-        public static T[,] SetCol<T>(this T[,] matrix, T[] col, int index)
+        public static T[,] SetRow<T>(this T[,] matrix, T[] col, int index)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -571,7 +571,7 @@ namespace ABCNET.Extensions
         /// <param name="matrix">Матрица.</param>
         /// <param name="index">Индекс строки.</param>
         /// <returns>Столбец.</returns>
-        public static T[,] SetRow<T>(this T[,] matrix, T[] row, int index)
+        public static T[,] SetCol<T>(this T[,] matrix, T[] row, int index)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
