@@ -145,6 +145,14 @@ namespace ABCNET.Extensions
         	if (matrix == null)
         		throw new ArgumentNullException(nameof(matrix));
 
+            return matrix.InternalPrintln(delimiter, start, end);
+        }
+
+        public static T[,] Print<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+
             return matrix.InternalPrint(delimiter, start, end);
         }
 
@@ -157,7 +165,7 @@ namespace ABCNET.Extensions
         /// <param name="start">Первый выводимый символ строки.</param>
         /// <param name="end">Последний выводимый символ строки.</param>
 
-        public static T[,] PrintBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        public static T[,] PrintlnBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
         	if (matrix == null)
         		throw new ArgumentNullException(nameof(matrix));
@@ -361,6 +369,49 @@ namespace ABCNET.Extensions
                     matrix[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
         }
 
+        /// <summary>
+        /// Изменяет столбец матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="index">Индекс столбца.</param>
+        /// <returns>Столбец.</returns>
+        public static T[,] SetRow<T>(this T[,] matrix, T[] col, int index)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+            if (matrix.GetLength(1) != col.Length)
+                throw new ArgumentException(nameof(col));
+
+            T[,] matrixRes = (T[,])matrix.Clone();
+
+            for (int i = 0; i < matrixRes.GetLength(1); i++)
+                matrixRes[index, i] = col[i];
+
+            return matrixRes;
+        }
+
+        /// <summary>
+        /// Изменяет строку матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="index">Индекс строки.</param>
+        /// <returns>Столбец.</returns>
+        public static T[,] SetCol<T>(this T[,] matrix, T[] row, int index)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+            if (matrix.GetLength(0) != row.Length)
+                throw new ArgumentException(nameof(row));
+
+            T[,] matrixRes = (T[,])matrix.Clone();
+
+            for (int i = 0; i < matrixRes.GetLength(1); i++)
+                matrixRes[i, index] = row[i];
+
+            return matrixRes;
+        }
+
+        #region Internal
 
         private static T[] InternalGetCol<T>(this T[,] matrix, int index)
         {
@@ -494,7 +545,7 @@ namespace ABCNET.Extensions
             return newMatrix;
         }
 
-        private static T[,] InternalPrint<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        private static T[,] InternalPrintln<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
         	int rowsCount = matrix.GetLength(0);
         	int columnsCount = matrix.GetLength(1);
@@ -512,13 +563,41 @@ namespace ABCNET.Extensions
 			{
                 Console.Write(start);
                 for (int j = 0; j < columnsCount; j++)
-                    Console.Write(string.Format("{0}{1}", matrix[i, j].ToString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
+                    Console.Write(string.Format("{0}{1}", matrix[i, j].NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
                 Console.WriteLine(end);
 			}
 			
 			return matrix;
         }
-        
+
+        private static T[,] InternalPrint<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        {
+            int rowsCount = matrix.GetLength(0);
+            int columnsCount = matrix.GetLength(1);
+            int[] lengths = new int[columnsCount];
+
+            for (int j = 0; j < columnsCount; j++)
+                for (int i = 0; i < rowsCount; i++)
+                {
+                    int itemLength = matrix[i, j].ToString().Length;
+                    if (itemLength > lengths[j])
+                        lengths[j] = itemLength;
+                }
+
+            for (int i = 0; i < rowsCount; i++)
+            {
+                Console.Write(start);
+                for (int j = 0; j < columnsCount; j++)
+                    Console.Write(string.Format("{0}{1}", matrix[i, j].NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
+                if (i == rowsCount - 1)
+                    Console.Write(end);
+                else
+                    Console.WriteLine(end);
+            }
+
+            return matrix;
+        }
+
         private static T[,] InternalPrintBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
         	int rowsCount = matrix.GetLength(0);
@@ -537,53 +616,14 @@ namespace ABCNET.Extensions
 			{
                 Console.Write(start);
                 for (int j = 0; j < columnsCount; j++)
-					Console.Write(string.Format("{0}{1}", selector(matrix[i, j]).ToString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
+					Console.Write(string.Format("{0}{1}", selector(matrix[i, j]).NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
                 Console.WriteLine(end);
             }
 			
 			return matrix;
         }
 
-        /// <summary>
-        /// Изменяет столбец матрицы.
-        /// </summary>
-        /// <param name="matrix">Матрица.</param>
-        /// <param name="index">Индекс столбца.</param>
-        /// <returns>Столбец.</returns>
-        public static T[,] SetRow<T>(this T[,] matrix, T[] col, int index)
-        {
-            if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
-            if (matrix.GetLength(1) != col.Length)
-                throw new ArgumentException(nameof(col));
+        #endregion
 
-            T[,] matrixRes = (T[,])matrix.Clone();
-
-            for (int i = 0; i < matrixRes.GetLength(1);i++)
-                matrixRes[index, i] = col[i];
-
-            return matrixRes;
-        }
-
-        /// <summary>
-        /// Изменяет строку матрицы.
-        /// </summary>
-        /// <param name="matrix">Матрица.</param>
-        /// <param name="index">Индекс строки.</param>
-        /// <returns>Столбец.</returns>
-        public static T[,] SetCol<T>(this T[,] matrix, T[] row, int index)
-        {
-            if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
-            if (matrix.GetLength(0) != row.Length)
-                throw new ArgumentException(nameof(row));
-
-            T[,] matrixRes = (T[,])matrix.Clone();
-
-            for (int i = 0; i < matrixRes.GetLength(1); i++)
-                matrixRes[i, index] = row[i];
-
-            return matrixRes;
-        }
     }
 }
