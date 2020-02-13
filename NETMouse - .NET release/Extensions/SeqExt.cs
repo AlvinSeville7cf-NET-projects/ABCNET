@@ -9,6 +9,8 @@ namespace ABCNET.Extensions
     /// </summary>
     public static class SeqExt
     {
+        #region ToTup2-7
+
         /// <summary>
         /// Преобразует последовательность в кортеж.
         /// </summary>
@@ -254,6 +256,8 @@ namespace ABCNET.Extensions
             }
             throw new ArgumentException(nameof(collection));
         }
+
+        #endregion
 
         /// <summary>
         /// Разбивает последовательность на серии.
@@ -667,7 +671,7 @@ namespace ABCNET.Extensions
             Console.Write(string.Format("{0}{1}", start, enumerator.Current));
 
             while (enumerator.MoveNext())
-                Console.Write($"{delimiter}{enumerator.Current}");
+                Console.Write($"{delimiter}{enumerator.Current.NilOrString()}");
 
             Console.Write(end);
 
@@ -684,8 +688,9 @@ namespace ABCNET.Extensions
         /// <returns>Последовательность.</returns>
         public static IEnumerable<T> Println<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
+            Console.Write(start);
             collection.Print(delimiter);
-            Console.WriteLine();
+            Console.WriteLine(end);
             return collection;
         }
 
@@ -700,7 +705,7 @@ namespace ABCNET.Extensions
                 throw new ArgumentNullException(nameof(collection));
 
             foreach (T item in collection)
-                Console.WriteLine(item);
+                Console.WriteLine(item.NilOrString());
             return collection;
         }
 
@@ -724,10 +729,10 @@ namespace ABCNET.Extensions
             if (!enumerator.MoveNext())
                 return ArrayHelper<T>.Empty;
 
-            Console.Write($"{start}{selector(enumerator.Current)}");
+            Console.Write($"{start}{selector(enumerator.Current).NilOrString()}");
 
             while (enumerator.MoveNext())
-                Console.Write($"{delimiter}{selector(enumerator.Current)}");
+                Console.Write($"{delimiter}{selector(enumerator.Current).NilOrString()}");
 
             Console.Write(end);
 
@@ -764,7 +769,7 @@ namespace ABCNET.Extensions
                 throw new ArgumentNullException(nameof(selector));
 
             foreach (T item in collection)
-                Console.WriteLine(selector(item));
+                Console.WriteLine(selector(item).NilOrString());
             return collection;
         }
 
