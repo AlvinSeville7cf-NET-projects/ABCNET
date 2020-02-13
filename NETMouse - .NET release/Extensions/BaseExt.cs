@@ -66,6 +66,8 @@ namespace ABCNET.Extensions
             } while (true);
         }
 
+        #region Print/ln T
+
         /// <summary>
         /// Выводит значение типа Boolean.
         /// </summary>
@@ -73,7 +75,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static bool Print(this bool item)
         {
-            Console.Write(item);
+            Console.Write(item.NilOrString());
             return item;
         }
 
@@ -84,7 +86,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static bool Println(this bool item)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(item.NilOrString());
             return item;
         }
 
@@ -95,7 +97,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static char Print(this char item)
         {
-            Console.Write(item);
+            Console.Write(item.NilOrString());
             return item;
         }
 
@@ -106,7 +108,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static char Println(this char item)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(item.NilOrString());
             return item;
         }
 
@@ -117,7 +119,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static double Print(this double item)
         {
-            Console.Write(item);
+            Console.Write(item.NilOrString());
             return item;
         }
 
@@ -128,7 +130,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static double Println(this double item)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(item.NilOrString());
             return item;
         }
 
@@ -139,7 +141,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static int Print(this int item)
         {
-            Console.Write(item);
+            Console.Write(item.NilOrString());
             return item;
         }
 
@@ -150,8 +152,102 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static int Println(this int item)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(item.NilOrString());
             return item;
         }
+
+        #endregion
+
+        #region Print/ln T?
+
+        /// <summary>
+        /// Выводит значение типа Boolean?.
+        /// </summary>
+        /// <param name="item">Boolean.</param>
+        /// <returns>Значение.</returns>
+        public static bool? Print(this bool? item)
+        {
+            Console.Write(item.NilOrString());
+            return item;
+        }
+
+        /// <summary>
+        /// Выводит значение типа Boolean? и переходит на новую строку.
+        /// </summary>
+        /// <param name="item">Boolean.</param>
+        /// <returns>Значение.</returns>
+        public static bool? Println(this bool? item)
+        {
+            Console.WriteLine(item.NilOrString());
+            return item;
+        }
+
+        /// <summary>
+        /// Выводит значение типа Char?.
+        /// </summary>
+        /// <param name="item">Char.</param>
+        /// <returns>Значение.</returns>
+        public static char? Print(this char? item)
+        {
+            Console.Write(item.NilOrString());
+            return item;
+        }
+
+        /// <summary>
+        /// Выводит значение типа Char? и переходит на новую строку.
+        /// </summary>
+        /// <param name="item">Char.</param>
+        /// <returns>Значение.</returns>
+        public static char? Println(this char? item)
+        {
+            Console.WriteLine(item.NilOrString());
+            return item;
+        }
+
+        /// <summary>
+        /// Выводит значение типа Real?.
+        /// </summary>
+        /// <param name="item">Real.</param>
+        /// <returns>Значение.</returns>
+        public static double? Print(this double? item)
+        {
+            Console.Write(item.NilOrString());
+            return item;
+        }
+
+        /// <summary>
+        /// Выводит значение типа Real? и переходит на новую строку.
+        /// </summary>
+        /// <param name="item">Real.</param>
+        /// <returns>Значение.</returns>
+        public static double? Println(this double? item)
+        {
+            Console.WriteLine(item.NilOrString());
+            return item;
+        }
+
+        /// <summary>
+        /// Выводит значение типа Integer?.
+        /// </summary>
+        /// <param name="item">Integer.</param>
+        /// <returns>Значение.</returns>
+        public static int? Print(this int? item)
+        {
+            Console.Write(item.NilOrString());
+            return item;
+        }
+
+        /// <summary>
+        /// Выводит значение типа Integer? и переходит на новую строку.
+        /// </summary>
+        /// <param name="item">Integer.</param>
+        /// <returns>Значение.</returns>
+        public static int? Println(this int? item)
+        {
+            Console.WriteLine(item.NilOrString());
+            return item;
+        }
+
+        #endregion
     }
 }
