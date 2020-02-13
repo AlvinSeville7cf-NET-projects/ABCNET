@@ -29,7 +29,7 @@
 
         public override string ToString()
         {
-            return $"[{Item} - {Projection}]";
+            return $"[{Item.NilOrString()} - {Projection.NilOrString()}]";
         }
     }
 }
