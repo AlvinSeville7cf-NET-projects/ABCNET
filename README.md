@@ -110,5 +110,5 @@ namespace TestProgram
 ![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
 
 ----
-Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь одной из следующих ссылок: [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/) | [`Google Groups`](https://groups.google.com/forum/#!forum/netmouse-projects) (для вопросов по библиотеке имеется [официальный форум](http://netmouseprojects.rusff.ru/viewforum.php?id=5))
+Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь одной из следующих ссылок: [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/) | [`Google Groups`](https://groups.google.com/forum/#!forum/netmouse-projects) (для вопросов по библиотеке имеется [официальный форум](https://spectrum.chat/netmouse-projects?tab=posts))
 
