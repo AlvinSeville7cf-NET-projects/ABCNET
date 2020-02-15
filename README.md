@@ -9,15 +9,6 @@
 - [Alvin Seville](https://github.com/Alvin-Seville) (руководитель проекта и основатель `NETMouse-projects`)
 - [ProMix0](https://github.com/ProMix0) (главный разработчик)
 
-# Для разработчиков
-При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Не используйте `GitHub Desktop` при разработке данного продукта.
-
-Для автоматизации сборки версий применялся `Batch Script`.
-
-Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
-
-![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
-
 # Цель проекта
 Обеспечить пользователей [`PascalABC.NET 3.5.1.2277`](https://drive.google.com/open?id=1eHzHpHw7SYTCwefaxYPr4QbsB1bf6M41) (другие версии не поддерживаются нашим проектом) `PABCSystem`-подобным функционалом за пределами данного языка. Но, в то же время, не предоставлять множество обёрток для работы с типами `NET`, а стимулировать обучающихся изучать данную платформу.
 
@@ -76,19 +67,14 @@ namespace TestProgram
 }
 ```
 
-# Гарантируется ли полная совместимость с PABCSystem?
-Нет. Функционал хоть и похожий, но отличается и по-разному распределён. Единственное место, в котором гарантируется полная совместимость (до `v0.5.0`, не включая её) - класс `ABCNET.Utils.PABCSystem`, который предоставляет часть функционала `PABCSystem` в его изначальном виде. На данный момент доступны лишь короткие функции `Lst`, `LLst`, `HSet`, `SSet`, `Dict`, `KV`.
+# Совместимость с похожими продуктами
+Полная совместимость с `PABCSystem` не гарантируется. Функционал хоть и похожий, но отличается и по-разному распределён. Единственное место, в котором гарантируется полная совместимость (до `v0.5.0`, не включая её) - класс `ABCNET.Utils.PABCSystem`, который предоставляет часть функционала `PABCSystem` в его изначальном виде. На данный момент доступны лишь короткие функции `Lst`, `LLst`, `HSet`, `SSet`, `Dict`, `KV`.
 
-# Как перевести код с PABCSystem на ABCNET?
-Смотрите [здесь](http://netmouseprojects.rusff.ru/viewtopic.php?id=10).
+# Перенос кода на ABCNET
+Как перенести код с `PABCSystem` на `ABCNET` смотрите [здесь](http://netmouseprojects.rusff.ru/viewtopic.php?id=10).
 
-# Не хватает функционала или нашли ошибку - что делать? 
-Если Вам недостаточно предоставляемого функционала или нашли ошибку, то Вы можете:
-
-- Запросить сообщить об этом здесь, либо по `NETMouseProjects@yandex.ru`
-- Перейти на [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel)
-
-# Система улучшений и исправлений
+# Для разработчиков
+## Жизненный цикл ABCNET
 Любая версия должна содержать не более 20 `Issue`.
 - Первые 5 `Issue` затрагивают `API` библиотеки (по их количеству ведётся версионирование).
 - Вторые 5 `Issue` (необязательные) затрагивают исправления `API` библиотеки (`bug-small` и `bug-critical`).
@@ -104,3 +90,18 @@ namespace TestProgram
 
 # Дополнительно
 - [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
+
+# Инструменты разработки
+При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Не используйте `GitHub Desktop` при разработке данного продукта.
+
+Для автоматизации сборки версий применялся `Batch Script`.
+
+Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
+
+![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
+
+----
+Если Вам недостаточно предоставляемого функционала или нашли ошибку, то Вы можете:
+
+- Запросить сообщить об этом здесь, либо по `NETMouseProjects@yandex.ru`
+- Перейти на [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel)
