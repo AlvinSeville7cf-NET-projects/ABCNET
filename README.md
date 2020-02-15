@@ -73,6 +73,13 @@ namespace TestProgram
 # Перенос кода на ABCNET
 Как перенести код с `PABCSystem` на `ABCNET` смотрите [здесь](http://netmouseprojects.rusff.ru/viewtopic.php?id=10).
 
+# Дополнительные разработки
+- [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
+
+# Похожие продукты от NETMouse-projects
+- `NETSquirrel`
+- `PascalABCSquirrel`
+
 # Для разработчиков
 ## Жизненный цикл ABCNET
 Любая версия должна содержать не более 20 `Issue`.
@@ -88,9 +95,6 @@ namespace TestProgram
 
 Каждая major-версия закрывает в сумме ровно 50 `Issue` по `API`-библиотеки и состоит из двух minor-версий. Каждая сборка minor-версии закрывает в сумме ровно 5 `Issue` по `API`-библиотеки.
 
-# Дополнительно
-- [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
-
 # Инструменты разработки
 При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Не используйте `GitHub Desktop` при разработке данного продукта.
 
@@ -101,7 +105,4 @@ namespace TestProgram
 ![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
 
 ----
-Если Вам недостаточно предоставляемого функционала или нашли ошибку, то Вы можете:
-
-- Запросить сообщить об этом здесь, либо по `NETMouseProjects@yandex.ru`
-- Перейти на [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel)
+Сообщить о проблеме или запросить улучшение через: [`Yandex forms` (если Вы не знакомы с GitHub)](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/) | [`Google Groups` (если Вы отдаёте предпочтение сервисам `Google`)](https://groups.google.com/forum/#!forum/netmouse-projects)
