@@ -1,9 +1,13 @@
 # ABCNET
 
-`ABCNET` - альтернатива модулю `PABCSystem` для всего `NET`. Является чем-то средним между `PABCSystem` и [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel). Ориентирована на русскоязычную аудиторию. 
+`ABCNET` - альтернатива модулю `PABCSystem` для всего `NET`. Является чем-то средним между `PABCSystem` и [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel). Ориентирована на русскоязычную аудиторию.
 
 # Минимальные требования
 `NET Framework 4.0`
+
+# Организация проекта
+- [Alvin Seville](https://github.com/Alvin-Seville) (руководитель проекта и основатель `NETMouse-projects`)
+- [ProMix0](https://github.com/ProMix0) (главный разработчик)
 
 # Для разработчиков
 При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Не используйте `GitHub Desktop` при разработке данного продукта.
@@ -81,7 +85,7 @@ namespace TestProgram
 # Не хватает функционала - что делать? 
 Если Вам недостаточно предоставляемого функционала, то Вы можете:
 
-- Запросить его реализацию здесь, либо в [официальной группе поддержки](https://vk.com/topic-185875291_40077846)
+- Запросить его реализацию здесь, либо по `NETMouseProjects@yandex.ru`, либо в [официальной группе поддержки](https://vk.com/topic-185875291_40077846)
 - Перейти на [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel)
 
 # Система улучшений и исправлений
