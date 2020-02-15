@@ -1,8 +1,8 @@
 # ABCNET
-
+## Краткое описание
 `ABCNET` - альтернатива модулю `PABCSystem` для всего `NET`. Является чем-то средним между `PABCSystem` и [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel). Ориентирована на русскоязычную аудиторию.
 
-# Минимальные требования
+## Минимальные требования
 `NET Framework 4.0`
 
 # Организация проекта
@@ -82,8 +82,8 @@ namespace TestProgram
 - [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
 
 # Похожие продукты от NETMouse-projects
-- `NETSquirrel`
-- `PascalABCSquirrel`
+- [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel)
+- [`PascalABCSquirrel`](https://github.com/NETMouse-projects/PascalABCSquirrel)
 
 # Для разработчиков
 ## Жизненный цикл ABCNET
@@ -110,4 +110,4 @@ namespace TestProgram
 ![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
 
 ----
-Сообщить о проблеме или запросить улучшение через: [`Yandex forms` (если Вы не знакомы с GitHub)](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/) | [`Google Groups` (если Вы отдаёте предпочтение сервисам `Google`)](https://groups.google.com/forum/#!forum/netmouse-projects)
+Сообщить о проблеме или запросить улучшение через: [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/) | [`Google Groups`)](https://groups.google.com/forum/#!forum/netmouse-projects)
