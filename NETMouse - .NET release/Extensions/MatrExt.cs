@@ -1,5 +1,6 @@
 using ABCNET.Utils;
 using System;
+using System.Collections.Generic;
 
 namespace ABCNET.Extensions
 {
@@ -374,7 +375,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="index">Индекс столбца.</param>
-        /// <returns>Столбец.</returns>
+        /// <returns>Матрица.</returns>
         public static T[,] SetRow<T>(this T[,] matrix, T[] col, int index)
         {
             if (matrix == null)
@@ -395,7 +396,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="index">Индекс строки.</param>
-        /// <returns>Столбец.</returns>
+        /// <returns>Матрица.</returns>
         public static T[,] SetCol<T>(this T[,] matrix, T[] row, int index)
         {
             if (matrix == null)
@@ -409,6 +410,38 @@ namespace ABCNET.Extensions
                 matrixRes[i, index] = row[i];
 
             return matrixRes;
+        }
+
+        /// <summary>
+        /// Возвращает последовательность строк матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <returns>Строки.</returns>
+        public static IEnumerable<T[]> Cols<T>(this T[,] matrix)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+
+            for (int i=0; i<matrix.GetLength(0);i++)
+            {
+                yield return matrix.InternalGetCol(i);
+            }
+        }
+
+        /// <summary>
+        /// Возвращает последовательность столбцов матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <returns>Столбцы.</returns>
+        public static IEnumerable<T[]> Rows<T>(this T[,] matrix)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                yield return matrix.InternalGetRow(j);
+            }
         }
 
         #region Internal
