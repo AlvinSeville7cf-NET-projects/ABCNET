@@ -80,7 +80,7 @@ namespace TestProgram
 
 # Дополнительные разработки
 - [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
-- [Закладки для браузера](https://drive.google.com/open?id=1gjpJXqPLkSK2UCbpBrxBe4uN_H9BbzCF) [Закладки для проектов `NETMouse projects` и поолезных сайтов по программированию]
+- [Закладки для браузера](https://drive.google.com/open?id=1gjpJXqPLkSK2UCbpBrxBe4uN_H9BbzCF) [Закладки для проектов `NETMouse projects` и полезных сайтов по программированию]
 
 # Похожие продукты от NETMouse-projects
 - [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel)
