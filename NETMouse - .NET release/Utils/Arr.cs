@@ -7,288 +7,6 @@ namespace ABCNET.Utils
     /// </summary>
     public static class Arr
     {
-        #region Read2
-        /// <summary>
-        /// Заполняет 2 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<bool[], bool[]> ReadBoolean2(int count)
-        {
-            return Tuple.Create(ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 2 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<char[], char[]> ReadChar2(int count)
-        {
-            return Tuple.Create(ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 2 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<int[], int[]> ReadInteger2(int count)
-        {
-            return Tuple.Create(ReadInteger(count), ReadInteger(count));
-        }
-
-        /// <summary>
-        /// Заполняет 2 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<double[], double[]> ReadReal2(int count)
-        {
-            return Tuple.Create(ReadReal(count), ReadReal(count));
-        }
-
-        /// <summary>
-        /// Заполняет 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<string[], string[]> ReadString2(int count)
-        {
-            return Tuple.Create(ReadString(count), ReadString(count));
-        }
-        #endregion
-
-        #region Read3
-        /// <summary>
-        /// Заполняет 3 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<bool[], bool[], bool[]> ReadBoolean3(int count)
-        {
-            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 3 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<char[], char[], char[]> ReadChar3(int count)
-        {
-            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 3 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<int[], int[], int[]> ReadInteger3(int count)
-        {
-            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count));
-        }
-
-        /// <summary>
-        /// Заполняет 3 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<double[], double[], double[]> ReadReal3(int count)
-        {
-            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count));
-        }
-
-        /// <summary>
-        /// Заполняет 3 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<string[], string[], string[]> ReadString3(int count)
-        {
-            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count));
-        }
-        #endregion
-
-        #region Read4
-        /// <summary>
-        /// Заполняет 4 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<bool[], bool[], bool[], bool[]> ReadBoolean4(int count)
-        {
-            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<char[], char[], char[], char[]> ReadChar4(int count)
-        {
-            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<int[], int[], int[], int[]> ReadInteger4(int count)
-        {
-            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<double[], double[], double[], double[]> ReadReal4(int count)
-        {
-            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<string[], string[], string[], string[]> ReadString4(int count)
-        {
-            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count), ReadString(count));
-        }
-        #endregion
-
-        #region Read5
-        /// <summary>
-        /// Заполняет 5 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[]> ReadBoolean5(int count)
-        {
-            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<char[], char[], char[], char[], char[]> ReadChar5(int count)
-        {
-            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<int[], int[], int[], int[], int[]> ReadInteger5(int count)
-        {
-            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<double[], double[], double[], double[], double[]> ReadReal5(int count)
-        {
-            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<string[], string[], string[], string[], string[]> ReadString5(int count)
-        {
-            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
-        }
-        #endregion
-
-        #region Read6
-        /// <summary>
-        /// Заполняет 6 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[]> ReadBoolean6(int count)
-        {
-            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<char[], char[], char[], char[], char[], char[]> ReadChar6(int count)
-        {
-            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<int[], int[], int[], int[], int[], int[]> ReadInteger6(int count)
-        {
-            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<double[], double[], double[], double[], double[], double[]> ReadReal6(int count)
-        {
-            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<string[], string[], string[], string[], string[], string[]> ReadString6(int count)
-        {
-            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
-        }
-        #endregion
-
-        #region Read7
-        /// <summary>
-        /// Заполняет 7 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[], bool[]> ReadBoolean7(int count)
-        {
-            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<char[], char[], char[], char[], char[], char[], char[]> ReadChar7(int count)
-        {
-            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<int[], int[], int[], int[], int[], int[], int[]> ReadInteger7(int count)
-        {
-            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<double[], double[], double[], double[], double[], double[], double[]> ReadReal7(int count)
-        {
-            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        public static Tuple<string[], string[], string[], string[], string[], string[], string[]> ReadString7(int count)
-        {
-            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
-        }
-        #endregion
-
         /// <summary>
         /// Создаёт массив из указанных значений.
         /// </summary>
@@ -519,6 +237,276 @@ namespace ABCNET.Utils
             for (int i = 0; i < count; i++)
                 array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
             return array;
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<bool[], bool[]> ReadBoolean2(int count)
+        {
+            return Tuple.Create(ReadBoolean(count), ReadBoolean(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<char[], char[]> ReadChar2(int count)
+        {
+            return Tuple.Create(ReadChar(count), ReadChar(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<int[], int[]> ReadInteger2(int count)
+        {
+            return Tuple.Create(ReadInteger(count), ReadInteger(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<double[], double[]> ReadReal2(int count)
+        {
+            return Tuple.Create(ReadReal(count), ReadReal(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<string[], string[]> ReadString2(int count)
+        {
+            return Tuple.Create(ReadString(count), ReadString(count));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<bool[], bool[], bool[]> ReadBoolean3(int count)
+        {
+            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<char[], char[], char[]> ReadChar3(int count)
+        {
+            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<int[], int[], int[]> ReadInteger3(int count)
+        {
+            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<double[], double[], double[]> ReadReal3(int count)
+        {
+            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<string[], string[], string[]> ReadString3(int count)
+        {
+            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<bool[], bool[], bool[], bool[]> ReadBoolean4(int count)
+        {
+            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<char[], char[], char[], char[]> ReadChar4(int count)
+        {
+            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<int[], int[], int[], int[]> ReadInteger4(int count)
+        {
+            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<double[], double[], double[], double[]> ReadReal4(int count)
+        {
+            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<string[], string[], string[], string[]> ReadString4(int count)
+        {
+            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count), ReadString(count));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<bool[], bool[], bool[], bool[], bool[]> ReadBoolean5(int count)
+        {
+            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<char[], char[], char[], char[], char[]> ReadChar5(int count)
+        {
+            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<int[], int[], int[], int[], int[]> ReadInteger5(int count)
+        {
+            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<double[], double[], double[], double[], double[]> ReadReal5(int count)
+        {
+            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<string[], string[], string[], string[], string[]> ReadString5(int count)
+        {
+            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[]> ReadBoolean6(int count)
+        {
+            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<char[], char[], char[], char[], char[], char[]> ReadChar6(int count)
+        {
+            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<int[], int[], int[], int[], int[], int[]> ReadInteger6(int count)
+        {
+            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<double[], double[], double[], double[], double[], double[]> ReadReal6(int count)
+        {
+            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<string[], string[], string[], string[], string[], string[]> ReadString6(int count)
+        {
+            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
+        }
+
+        /// <summary>
+        /// Заполняет 7 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[], bool[]> ReadBoolean7(int count)
+        {
+            return Tuple.Create(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
+        }
+
+        /// <summary>
+        /// Заполняет 7 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<char[], char[], char[], char[], char[], char[], char[]> ReadChar7(int count)
+        {
+            return Tuple.Create(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
+        }
+
+        /// <summary>
+        /// Заполняет 7 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<int[], int[], int[], int[], int[], int[], int[]> ReadInteger7(int count)
+        {
+            return Tuple.Create(ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count), ReadInteger(count));
+        }
+
+        /// <summary>
+        /// Заполняет 7 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<double[], double[], double[], double[], double[], double[], double[]> ReadReal7(int count)
+        {
+            return Tuple.Create(ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count), ReadReal(count));
+        }
+
+        /// <summary>
+        /// Заполняет 7 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        public static Tuple<string[], string[], string[], string[], string[], string[], string[]> ReadString7(int count)
+        {
+            return Tuple.Create(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
     }
 }
