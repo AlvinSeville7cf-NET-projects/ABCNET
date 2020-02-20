@@ -7,6 +7,331 @@ namespace ABCNET.Utils
     /// </summary>
     public static class Matr
     {
+
+        #region Read2
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Bool. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<bool[,], bool[,]> ReadBool2(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<char[,], char[,]> ReadChar2(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<int[,], int[,]> ReadInteger2(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<double[,], double[,]> ReadReal2(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<string[,], string[,]> ReadString2(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadString(rows, cols), Matr.ReadString(rows, cols));
+        }
+
+        #endregion
+
+        #region Read3
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа Bool. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<bool[,], bool[,], bool[,]> ReadBool3(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<char[,], char[,], char[,]> ReadChar3(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<int[,], int[,], int[,]> ReadInteger3(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<double[,], double[,], double[,]> ReadReal3(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 3 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<string[,], string[,], string[,]> ReadString3(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols));
+        }
+
+        #endregion
+
+        #region Read4
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа Bool. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<bool[,], bool[,], bool[,], bool[,]> ReadBool4(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<char[,], char[,], char[,], char[,]> ReadChar4(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<int[,], int[,], int[,], int[,]> ReadInteger4(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<double[,], double[,], double[,], double[,]> ReadReal4(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 4 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<string[,], string[,], string[,], string[,]> ReadString4(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols));
+        }
+
+        #endregion
+
+        #region Read5
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа Bool. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBool5(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<char[,], char[,], char[,], char[,], char[,]> ReadChar5(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<int[,], int[,], int[,], int[,], int[,]> ReadInteger5(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<double[,], double[,], double[,], double[,], double[,]> ReadReal5(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 5 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<string[,], string[,], string[,], string[,], string[,]> ReadString5(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols));
+        }
+
+        #endregion
+
+        #region Read6
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Bool. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBool6(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<char[,], char[,], char[,], char[,], char[,], char[,]> ReadChar6(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<int[,], int[,], int[,], int[,], int[,], int[,]> ReadInteger6(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<double[,], double[,], double[,], double[,], double[,], double[,]> ReadReal6(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<string[,], string[,], string[,], string[,], string[,], string[,]> ReadString6(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols));
+        }
+
+        #endregion
+
+        #region Read7
+
+        /// <summary>
+        /// Заполняет 6 массива значениями типа Bool. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBool7(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols), Matr.ReadBoolean(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 7 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<char[,], char[,], char[,], char[,], char[,], char[,], char[,]> ReadChar7(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols), Matr.ReadChar(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 7 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<int[,], int[,], int[,], int[,], int[,], int[,], int[,]> ReadInteger7(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols), Matr.ReadInteger(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 7 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<double[,], double[,], double[,], double[,], double[,], double[,], double[,]> ReadReal7(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols), Matr.ReadReal(rows, cols));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rows">Количество строк.</param>
+        /// <param name="cols">Количество столбцов.</param>
+        public static Tuple<string[,], string[,], string[,], string[,], string[,], string[,], string[,]> ReadString7(int rows, int cols)
+        {
+            return Tuple.Create(Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols), Matr.ReadString(rows, cols));
+        }
+
+        #endregion
+
         /// <summary>
         /// Создаёт матрицу из указанных значений.
         /// </summary>
@@ -136,7 +461,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Boolean.
+        /// Читает матрицу значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
@@ -174,7 +499,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Char.
+        /// Читает матрицу значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
@@ -196,7 +521,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Real.
+        /// Читает матрицу значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
@@ -234,7 +559,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Integer.
+        /// Читает матрицу значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
@@ -272,7 +597,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа String.
+        /// Читает матрицу значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
