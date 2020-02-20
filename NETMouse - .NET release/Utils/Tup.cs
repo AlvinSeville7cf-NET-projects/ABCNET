@@ -153,7 +153,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из двух значений типа Boolean.
+        /// Читает кортеж из двух значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<bool, bool> ReadBoolean2(string prompt = EmptyStringHelper.Empty)
@@ -168,7 +168,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из трёх значений типа Boolean.
+        /// Читает кортеж из трёх значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<bool, bool, bool> ReadBoolean3(string prompt = EmptyStringHelper.Empty)
@@ -185,7 +185,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из двух значений типа Char.
+        /// Читает кортеж из двух значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<char, char> ReadChar2(string prompt = EmptyStringHelper.Empty)
@@ -195,7 +195,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из трёх значений типа Char.
+        /// Читает кортеж из трёх значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<char, char, char> ReadChar3(string prompt = EmptyStringHelper.Empty)
@@ -206,7 +206,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из двух значений типа Real.
+        /// Читает кортеж из двух значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double> ReadReal2(string prompt = EmptyStringHelper.Empty)
@@ -221,7 +221,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из трёх значений типа Real.
+        /// Читает кортеж из трёх значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double> ReadReal3(string prompt = EmptyStringHelper.Empty)
@@ -238,7 +238,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из двух значений типа Integer.
+        /// Читает кортеж из двух значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int> ReadInteger2(string prompt = EmptyStringHelper.Empty)
@@ -253,7 +253,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из трёх значений типа Integer.
+        /// Читает кортеж из трёх значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int> ReadInteger3(string prompt = EmptyStringHelper.Empty)
@@ -270,7 +270,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из двух значений типа String.
+        /// Читает кортеж из двух значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<string, string> ReadString2(string prompt = EmptyStringHelper.Empty)
@@ -280,7 +280,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из трёх значений типа String.
+        /// Читает кортеж из трёх значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
         public static Tuple<string, string, string> ReadString3(string prompt = EmptyStringHelper.Empty)

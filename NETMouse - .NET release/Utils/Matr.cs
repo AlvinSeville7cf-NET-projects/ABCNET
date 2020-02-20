@@ -461,7 +461,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает матрицу значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
@@ -499,7 +499,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает матрицу значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
@@ -521,7 +521,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает матрицу значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
@@ -559,7 +559,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает матрицу значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>
@@ -597,7 +597,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает матрицу значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="columnsCount">Количество столбцов.</param>

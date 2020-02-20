@@ -20,7 +20,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает значение типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -31,7 +31,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает значение типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -42,7 +42,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает значение типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -53,7 +53,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает значение типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -64,7 +64,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET].
+        /// Читает значение типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
