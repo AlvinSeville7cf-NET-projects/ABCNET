@@ -7,6 +7,11 @@ namespace ABCNET
         internal static T[] Empty { get; } = new T[0];
     }
 
+    internal static class NilStringHelper
+    {
+        internal const string Nil = "nil";
+    }
+
     internal static class EmptyStringHelper
     {
         internal const string Empty = "";
@@ -42,5 +47,13 @@ namespace ABCNET
     {
         internal const double Low = 0;
         internal const double High = double.MaxValue;
+    }
+
+    public static class ObjExt
+    {
+        internal static string NilOrString<T>(this T item)
+        {
+            return item == null ? NilStringHelper.Nil : item.ToString();
+        }
     }
 }

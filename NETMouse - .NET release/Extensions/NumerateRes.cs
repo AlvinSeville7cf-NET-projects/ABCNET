@@ -29,7 +29,7 @@
 
         public override string ToString()
         {
-            return $"[{Item} - {Index}]";
+            return $"[{Item.NilOrString()} - {Index.NilOrString()}]";
         }
     }
 }

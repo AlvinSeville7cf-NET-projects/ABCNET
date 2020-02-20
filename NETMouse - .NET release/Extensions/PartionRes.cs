@@ -34,7 +34,7 @@ namespace ABCNET.Extensions
 
         public override string ToString()
         {
-            return $"[{True} - {False}]";
+            return $"[{True.NilOrString()} - {False.NilOrString()}]";
         }
     }
 }

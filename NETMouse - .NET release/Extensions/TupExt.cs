@@ -51,7 +51,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> Print<T>(this Tuple<T, T> tuple)
         {
-            Console.Write(tuple);
+            Console.Write(Tuple.Create(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
             return tuple;
         }
 
@@ -67,7 +67,7 @@ namespace ABCNET.Extensions
 
             Tuple<T, T> tupleRes = new Tuple<T, T>(func(tuple.Item1), func(tuple.Item2));
 
-            Console.Write(tupleRes);
+            Console.Write(Tuple.Create(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString()));
             return tupleRes;
         }
 
@@ -81,7 +81,7 @@ namespace ABCNET.Extensions
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.Write(Tuple.Create(func(tuple.Item1), func(tuple.Item2)));
+            Console.Write(Tuple.Create(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString()));
             return tuple;
         }
 
@@ -92,7 +92,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> Println<T>(this Tuple<T, T> tuple)
         {
-            Console.Write(Tuple.Create(tuple.Item1, tuple.Item2));
+            Console.Write(Tuple.Create(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
             return tuple;
         }
 
@@ -108,7 +108,7 @@ namespace ABCNET.Extensions
 
             Tuple<T, T> tupleRes = new Tuple<T, T>(func(tuple.Item1), func(tuple.Item2));
 
-            Console.WriteLine(tupleRes);
+            Console.WriteLine(Tuple.Create(tupleRes.Item1.NilOrString(),tupleRes.Item2.NilOrString()));
             return tupleRes;
         }
 
@@ -122,7 +122,7 @@ namespace ABCNET.Extensions
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(Tuple.Create(func(tuple.Item1), func(tuple.Item2)));
+            Console.WriteLine(Tuple.Create(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString()));
             return tuple;
         }
 
@@ -133,8 +133,8 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> PrintLines<T>(this Tuple<T, T> tuple)
         {
-            Console.WriteLine(tuple.Item1);
-            Console.WriteLine(tuple.Item2);
+            Console.WriteLine(tuple.Item1.NilOrString());
+            Console.WriteLine(tuple.Item2.NilOrString());
             return tuple;
         }
 

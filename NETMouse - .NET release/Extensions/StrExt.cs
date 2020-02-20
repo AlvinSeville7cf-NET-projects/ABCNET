@@ -14,7 +14,7 @@ namespace ABCNET.Extensions
         /// <returns>Строка.</returns>
         public static string Print(this string input)
         {
-            Console.Write(input);
+            Console.Write(input.NilOrString());
             return input;
         }
 
@@ -25,7 +25,7 @@ namespace ABCNET.Extensions
         /// <returns>Строка.</returns>
         public static string Println(this string input)
         {
-            Console.WriteLine(input);
+            Console.WriteLine(input.NilOrString());
             return input;
         }
     }
