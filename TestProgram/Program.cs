@@ -9,10 +9,11 @@ namespace TestProgram
     {
         private static void Main(string[] args)
         {
-            int[] a = new int[5];
-            a.Fill(1);
-            a.ToTup5().PrintlnBy(d=>d+10).Println();
-            Console.Read();
+            new int[2, 2]
+            {
+                { 1, 2 },
+                { 3, 4 }
+            }.Println().SetCol(new int[] { -1, -3 }, 0).Println();
         }
     }
 }
