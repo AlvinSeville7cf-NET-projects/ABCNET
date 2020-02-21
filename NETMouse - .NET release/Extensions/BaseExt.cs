@@ -113,9 +113,9 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Выводит значение типа Real.
+        /// Выводит значение типа Double.
         /// </summary>
-        /// <param name="item">Real.</param>
+        /// <param name="item">Double.</param>
         /// <returns>Значение.</returns>
         public static double Print(this double item)
         {
@@ -124,9 +124,9 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Выводит значение типа Real и переходит на новую строку.
+        /// Выводит значение типа Double и переходит на новую строку.
         /// </summary>
-        /// <param name="item">Real.</param>
+        /// <param name="item">Double.</param>
         /// <returns>Значение.</returns>
         public static double Println(this double item)
         {
@@ -135,9 +135,9 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Выводит значение типа Integer.
+        /// Выводит значение типа Int32.
         /// </summary>
-        /// <param name="item">Integer.</param>
+        /// <param name="item">Int32.</param>
         /// <returns>Значение.</returns>
         public static int Print(this int item)
         {
@@ -146,9 +146,9 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Выводит значение типа Integer и переходит на новую строку.
+        /// Выводит значение типа Int32 и переходит на новую строку.
         /// </summary>
-        /// <param name="item">Integer.</param>
+        /// <param name="item">Int32.</param>
         /// <returns>Значение.</returns>
         public static int Println(this int item)
         {
@@ -205,9 +205,9 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Выводит значение типа Real?.
+        /// Выводит значение типа Double?.
         /// </summary>
-        /// <param name="item">Real.</param>
+        /// <param name="item">Double.</param>
         /// <returns>Значение.</returns>
         public static double? Print(this double? item)
         {
@@ -216,9 +216,9 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Выводит значение типа Real? и переходит на новую строку.
+        /// Выводит значение типа Double? и переходит на новую строку.
         /// </summary>
-        /// <param name="item">Real.</param>
+        /// <param name="item">Double.</param>
         /// <returns>Значение.</returns>
         public static double? Println(this double? item)
         {
@@ -227,9 +227,9 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Выводит значение типа Integer?.
+        /// Выводит значение типа Int32?.
         /// </summary>
-        /// <param name="item">Integer.</param>
+        /// <param name="item">Int32.</param>
         /// <returns>Значение.</returns>
         public static int? Print(this int? item)
         {
@@ -238,9 +238,9 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Выводит значение типа Integer? и переходит на новую строку.
+        /// Выводит значение типа Int32? и переходит на новую строку.
         /// </summary>
-        /// <param name="item">Integer.</param>
+        /// <param name="item">Int32.</param>
         /// <returns>Значение.</returns>
         public static int? Println(this int? item)
         {

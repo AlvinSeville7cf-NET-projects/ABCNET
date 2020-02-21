@@ -44,7 +44,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив случайными числами типа Integer.
+        /// Заполняет массив случайными числами типа Int32.
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
@@ -61,7 +61,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив случайными числами типа Real.
+        /// Заполняет массив случайными числами типа Double.
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
@@ -129,7 +129,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет массив значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -152,7 +152,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет массив значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>

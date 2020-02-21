@@ -196,7 +196,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу случайными числами типа Integer.
+        /// Заполняет матрицу случайными числами типа Int32.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
@@ -214,7 +214,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу случайными числами типа Real.
+        /// Заполняет матрицу случайными числами типа Double.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
@@ -294,7 +294,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет матрицу значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -325,7 +325,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет матрицу значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
