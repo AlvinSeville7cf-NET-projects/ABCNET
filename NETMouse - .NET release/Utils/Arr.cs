@@ -64,7 +64,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт массив случайных чисел типа Integer.
+        /// Создаёт массив случайных чисел типа Int32.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
@@ -85,7 +85,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт массив случайных чисел типа Real.
+        /// Создаёт массив случайных чисел типа Double.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
@@ -169,7 +169,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -196,7 +196,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -258,7 +258,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 2 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 2 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<int[], int[]> ReadInt32Tup2(int count)
@@ -267,7 +267,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 2 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 2 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<double[], double[]> ReadDoubleTup2(int count)
@@ -303,7 +303,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 3 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 3 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<int[], int[], int[]> ReadInt32Tup3(int count)
@@ -312,7 +312,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 3 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 3 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<double[], double[], double[]> ReadDoubleTup3(int count)
@@ -348,7 +348,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 4 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 4 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<int[], int[], int[], int[]> ReadInt32Tup4(int count)
@@ -357,7 +357,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 4 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 4 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<double[], double[], double[], double[]> ReadDoubleTup4(int count)
@@ -393,7 +393,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 5 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 5 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<int[], int[], int[], int[], int[]> ReadInt32Tup5(int count)
@@ -402,7 +402,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 5 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 5 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<double[], double[], double[], double[], double[]> ReadDoubleTup5(int count)
@@ -438,7 +438,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 6 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 6 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<int[], int[], int[], int[], int[], int[]> ReadInt32Tup6(int count)
@@ -447,7 +447,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 6 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 6 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<double[], double[], double[], double[], double[], double[]> ReadDoubleTup6(int count)
@@ -483,7 +483,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 7 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 7 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<int[], int[], int[], int[], int[], int[], int[]> ReadInt32Tup7(int count)
@@ -492,7 +492,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 7 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 7 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         public static Tuple<double[], double[], double[], double[], double[], double[], double[]> ReadDoubleTup7(int count)

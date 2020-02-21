@@ -42,7 +42,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -53,7 +53,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>

@@ -64,7 +64,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт матрицу случайных чисел типа Integer.
+        /// Создаёт матрицу случайных чисел типа Int32.
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -89,7 +89,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт матрицу случайных чисел типа Real.
+        /// Создаёт матрицу случайных чисел типа Double.
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -196,7 +196,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает матрицу значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -234,7 +234,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает матрицу значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -314,7 +314,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 2 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 2 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -324,7 +324,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 2 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 2 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -364,7 +364,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 3 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 3 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -374,7 +374,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 3 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 3 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -414,7 +414,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 4 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 4 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -424,7 +424,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 4 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 4 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -464,7 +464,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 5 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 5 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -474,7 +474,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 5 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 5 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -514,7 +514,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 6 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 6 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -524,7 +524,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 6 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 6 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -564,7 +564,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 7 массива значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 7 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
@@ -574,7 +574,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 7 массива значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 7 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
