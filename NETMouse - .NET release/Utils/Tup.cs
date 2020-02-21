@@ -7,9 +7,6 @@ namespace ABCNET.Utils
     /// </summary>
     public static class Tup
     {
-
-        #region Tup.New
-
         /// <summary>
         /// Создаёт кортеж из 2 значений.
         /// </summary>
@@ -86,10 +83,8 @@ namespace ABCNET.Utils
             return Tuple.Create(item1, item2, item3, item4, item5, item6, item7);
         }
 
-        #endregion
-
         /// <summary>
-        /// Создаёт кортеж из двух случайных значений типа Integer.
+        /// Создаёт кортеж из двух случайных значений типа Int32.
         /// </summary>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
@@ -100,7 +95,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт кортеж из трёх случайных значений типа Integer.
+        /// Создаёт кортеж из трёх случайных значений типа Int32.
         /// </summary>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
@@ -111,7 +106,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт кортеж из двух случайных значений типа Real.
+        /// Создаёт кортеж из двух случайных значений типа Double.
         /// </summary>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
@@ -122,7 +117,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт кортеж из трёх случайных значений типа Real.
+        /// Создаёт кортеж из трёх случайных значений типа Double.
         /// </summary>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
@@ -156,7 +151,7 @@ namespace ABCNET.Utils
         /// Читает кортеж из двух значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool, bool> ReadBoolean2(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<bool, bool> ReadBooleanTup2(string prompt = EmptyStringHelper.Empty)
         {
             bool a = default;
             bool b = default;
@@ -171,7 +166,7 @@ namespace ABCNET.Utils
         /// Читает кортеж из трёх значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool, bool, bool> ReadBoolean3(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<bool, bool, bool> ReadBooleanTup3(string prompt = EmptyStringHelper.Empty)
         {
             bool a = default;
             bool b = default;
@@ -188,7 +183,7 @@ namespace ABCNET.Utils
         /// Читает кортеж из двух значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<char, char> ReadChar2(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<char, char> ReadCharTup2(string prompt = EmptyStringHelper.Empty)
         {
             return new Tuple<char, char>(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)));
@@ -198,7 +193,7 @@ namespace ABCNET.Utils
         /// Читает кортеж из трёх значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<char, char, char> ReadChar3(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<char, char, char> ReadCharTup3(string prompt = EmptyStringHelper.Empty)
         {
             return new Tuple<char, char, char>(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)),
@@ -206,10 +201,10 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из двух значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из двух значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double> ReadReal2(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<double, double> ReadDoubleTup2(string prompt = EmptyStringHelper.Empty)
         {
             double a = default;
             double b = default;
@@ -221,10 +216,10 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из трёх значений типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из трёх значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double, double> ReadReal3(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<double, double, double> ReadDoubleTup3(string prompt = EmptyStringHelper.Empty)
         {
             double a = default;
             double b = default;
@@ -238,10 +233,10 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из двух значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из двух значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int> ReadInteger2(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<int, int> ReadInt32Tup2(string prompt = EmptyStringHelper.Empty)
         {
             int a = default;
             int b = default;
@@ -253,10 +248,10 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает кортеж из трёх значений типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из трёх значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int, int> ReadInteger3(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<int, int, int> ReadInt32Tup3(string prompt = EmptyStringHelper.Empty)
         {
             int a = default;
             int b = default;
@@ -273,7 +268,7 @@ namespace ABCNET.Utils
         /// Читает кортеж из двух значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<string, string> ReadString2(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<string, string> ReadStringTup2(string prompt = EmptyStringHelper.Empty)
         {
             return new Tuple<string, string>(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)));
@@ -283,14 +278,12 @@ namespace ABCNET.Utils
         /// Читает кортеж из трёх значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<string, string, string> ReadString3(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<string, string, string> ReadStringTup3(string prompt = EmptyStringHelper.Empty)
         {
             return new Tuple<string, string, string>(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 2)));
         }
-
-        #region Private
 
         private static void ReadBooleanTupleItem(ref bool field, int index, string prompt)
         {
@@ -311,7 +304,7 @@ namespace ABCNET.Utils
             while (true)
                 try
                 {
-                    field = Base.ReadInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
+                    field = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
                     return;
                 }
                 catch (Exception)
@@ -325,7 +318,7 @@ namespace ABCNET.Utils
             while (true)
                 try
                 {
-                    field = Base.ReadReal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
+                    field = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
                     return;
                 }
                 catch (Exception)
@@ -333,7 +326,5 @@ namespace ABCNET.Utils
                     Console.WriteLine(InputErrorHelper.Message);
                 }
         }
-
-        #endregion
     }
 }

@@ -42,22 +42,22 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static double ReadReal(string prompt = EmptyStringHelper.Empty)
+        public static double ReadDouble(string prompt = EmptyStringHelper.Empty)
         {
             Console.Write(prompt);
             return double.Parse(Console.ReadLine());
         }
 
         /// <summary>
-        /// Читает значение типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static int ReadInteger(string prompt = EmptyStringHelper.Empty)
+        public static int ReadInt32(string prompt = EmptyStringHelper.Empty)
         {
             Console.Write(prompt);
             return int.Parse(Console.ReadLine());
