@@ -298,7 +298,7 @@ namespace ABCNET.Extensions
                 while (j < matrix.GetLength(1))
                     try
                     {
-                        matrix[i, j] = Base.ReadReal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                        matrix[i, j] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
                         j++;
                     }
                     catch (Exception)
@@ -329,7 +329,7 @@ namespace ABCNET.Extensions
                 while (j < matrix.GetLength(1))
                     try
                     {
-                        matrix[i, j] = Base.ReadInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                        matrix[i, j] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
                         j++;
                     }
                     catch (Exception)

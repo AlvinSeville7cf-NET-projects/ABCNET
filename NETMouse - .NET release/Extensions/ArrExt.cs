@@ -142,7 +142,7 @@ namespace ABCNET.Extensions
             while (i < array.Length)
                 try
                 {
-                    array[i] = Base.ReadReal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    array[i] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
                     i++;
                 }
                 catch (Exception)
@@ -165,7 +165,7 @@ namespace ABCNET.Extensions
             while (i < array.Length)
                 try
                 {
-                    array[i] = Base.ReadInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    array[i] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
                     i++;
                 }
                 catch (Exception)

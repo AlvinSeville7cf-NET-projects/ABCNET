@@ -311,7 +311,7 @@ namespace ABCNET.Utils
             while (true)
                 try
                 {
-                    field = Base.ReadInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
+                    field = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
                     return;
                 }
                 catch (Exception)
@@ -325,7 +325,7 @@ namespace ABCNET.Utils
             while (true)
                 try
                 {
-                    field = Base.ReadReal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
+                    field = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
                     return;
                 }
                 catch (Exception)

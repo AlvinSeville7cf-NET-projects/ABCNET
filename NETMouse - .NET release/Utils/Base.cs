@@ -46,7 +46,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static double ReadReal(string prompt = EmptyStringHelper.Empty)
+        public static double ReadDouble(string prompt = EmptyStringHelper.Empty)
         {
             Console.Write(prompt);
             return double.Parse(Console.ReadLine());
@@ -57,7 +57,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static int ReadInteger(string prompt = EmptyStringHelper.Empty)
+        public static int ReadInt32(string prompt = EmptyStringHelper.Empty)
         {
             Console.Write(prompt);
             return int.Parse(Console.ReadLine());
