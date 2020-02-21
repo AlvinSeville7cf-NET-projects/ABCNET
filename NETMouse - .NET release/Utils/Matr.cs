@@ -71,7 +71,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Матрица.</returns>
-        public static int[,] Rand(int rowsCount, int colsCount, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
+        public static int[,] Rand(int rowsCount, int colsCount, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (rowsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
@@ -96,7 +96,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Матрица.</returns>
-        public static double[,] Rand(int rowsCount, int colsCount, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
+        public static double[,] Rand(int rowsCount, int colsCount, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (rowsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));

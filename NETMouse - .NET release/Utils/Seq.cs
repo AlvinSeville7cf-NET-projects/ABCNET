@@ -33,7 +33,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<int> Rand(int count, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
+        public static IEnumerable<int> Rand(int count, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
@@ -51,7 +51,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<double> Rand(int count, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
+        public static IEnumerable<double> Rand(int count, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));

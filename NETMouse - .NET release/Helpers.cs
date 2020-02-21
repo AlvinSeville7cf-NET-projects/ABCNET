@@ -37,19 +37,19 @@ namespace ABCNET
         internal static Random Random { get; } = new Random();
     }
 
-    internal static class IntegerBordersHelper
+    internal static class Int32BordersHelper
     {
         internal const int Low = 0;
         internal const int High = int.MaxValue - 1;
     }
 
-    internal static class RealBordersHelper
+    internal static class DoubleBordersHelper
     {
         internal const double Low = 0;
         internal const double High = double.MaxValue;
     }
 
-    public static class ObjExt
+    internal static class ObjExt
     {
         internal static string NilOrString<T>(this T item)
         {

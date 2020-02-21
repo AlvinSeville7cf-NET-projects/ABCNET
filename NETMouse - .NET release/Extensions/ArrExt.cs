@@ -49,7 +49,7 @@ namespace ABCNET.Extensions
         /// <param name="array">Массив.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
-        public static void Rand(this int[] array, int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
+        public static void Rand(this int[] array, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
@@ -66,7 +66,7 @@ namespace ABCNET.Extensions
         /// <param name="array">Массив.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
-        public static void Rand(this double[] array, double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
+        public static void Rand(this double[] array, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
