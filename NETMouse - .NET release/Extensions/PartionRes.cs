@@ -20,18 +20,31 @@ namespace ABCNET.Extensions
         /// </summary>
         public IEnumerable<T> False { get; }
 
+        /// <summary>
+        /// Конструктор для PartitionRes.
+        /// </summary>
+        /// <param name="trueCollection">Элементы, отвечающие условию.</param>
+        /// <param name="falseCollection">Элементы, неотвечающие условию.</param>
         public PartitionRes(IEnumerable<T> trueCollection, IEnumerable<T> falseCollection)
         {
             True = trueCollection;
             False = falseCollection;
         }
 
+        /// <summary>
+        /// Деконструктор для NumerateRes.
+        /// </summary>
+        /// <param name="trueCollection">Элементы, отвечающие условию.</param>
+        /// <param name="falseCollection">Элементы, неотвечающие условию.</param>
         public void Deconstruct(out IEnumerable<T> trueCollection, out IEnumerable<T> falseCollection)
         {
             trueCollection = True;
             falseCollection = False;
         }
 
+        /// <summary>
+        /// Метод для преобразования в строку.
+        /// </summary>
         public override string ToString()
         {
             return $"[{True.NilOrString()} - {False.NilOrString()}]";

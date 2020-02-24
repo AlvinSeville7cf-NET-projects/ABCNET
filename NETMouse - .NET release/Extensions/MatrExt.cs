@@ -140,7 +140,6 @@ namespace ABCNET.Extensions
         /// <param name="delimiter">Разделитель.</param>
         /// <param name="start">Первый выводимый символ строки.</param>
         /// <param name="end">Последний выводимый символ строки.</param>
-
         public static T[,] Println<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
         	if (matrix == null)
@@ -149,6 +148,13 @@ namespace ABCNET.Extensions
             return matrix.InternalPrintln(delimiter, start, end);
         }
 
+        /// <summary>
+        /// Выводит матрицу.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         public static T[,] Print<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             if (matrix == null)
@@ -165,7 +171,6 @@ namespace ABCNET.Extensions
         /// <param name="delimiter">Разделитель.</param>
         /// <param name="start">Первый выводимый символ строки.</param>
         /// <param name="end">Последний выводимый символ строки.</param>
-
         public static T[,] PrintlnBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
         	if (matrix == null)
@@ -374,6 +379,7 @@ namespace ABCNET.Extensions
         /// Изменяет столбец матрицы.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
+        /// <param name="col">Столбец.</param>
         /// <param name="index">Индекс столбца.</param>
         /// <returns>Матрица.</returns>
         public static T[,] SetRow<T>(this T[,] matrix, T[] col, int index)
@@ -395,6 +401,7 @@ namespace ABCNET.Extensions
         /// Изменяет строку матрицы.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
+        /// /// <param name="row">Строка.</param>
         /// <param name="index">Индекс строки.</param>
         /// <returns>Матрица.</returns>
         public static T[,] SetCol<T>(this T[,] matrix, T[] row, int index)

@@ -59,6 +59,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> Print<T>(this Tuple<T, T> tuple, Func<T, T> func)
         {
@@ -75,6 +76,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> PrintBy<T>(this Tuple<T, T> tuple, Func<T, T> func)
         {
@@ -100,6 +102,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> Println<T>(this Tuple<T, T> tuple, Func<T, T> func)
         {
@@ -116,6 +119,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> PrintlnBy<T>(this Tuple<T, T> tuple, Func<T, T> func)
         {
@@ -142,6 +146,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> PrintLines<T>(this Tuple<T, T> tuple, Func<T, T> func)
         {
@@ -159,6 +164,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T> PrintLinesBy<T>(this Tuple<T, T> tuple, Func<T, T> func)
         {
@@ -223,6 +229,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T> Print<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
         {
@@ -239,6 +246,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T> PrintBy<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
         {
@@ -264,6 +272,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T> Println<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
         {
@@ -280,6 +289,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T> PrintlnBy<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
         {
@@ -307,6 +317,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T> PrintLines<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
         {
@@ -325,6 +336,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T> PrintLinesBy<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
         {
@@ -391,6 +403,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T> Print<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
         {
@@ -407,6 +420,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T> PrintBy<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
         {
@@ -432,6 +446,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T> Println<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
         {
@@ -448,6 +463,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T> PrintlnBy<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
         {
@@ -476,6 +492,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
         {
@@ -495,6 +512,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T> PrintLinesBy<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
         {
@@ -563,6 +581,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -579,6 +598,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T> PrintBy<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -604,6 +624,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -620,6 +641,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T> PrintlnBy<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -649,6 +671,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -669,6 +692,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T> PrintLinesBy<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -739,6 +763,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -755,6 +780,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T> PrintBy<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -780,6 +806,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -796,6 +823,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T> PrintlnBy<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -826,6 +854,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -847,6 +876,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T> PrintLinesBy<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -897,6 +927,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -913,6 +944,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T, T> PrintBy<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -938,6 +970,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -954,6 +987,7 @@ namespace ABCNET.Extensions
         /// Выводит кортеж и переходит на новую строку.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T, T> PrintlnBy<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -985,6 +1019,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
         {
@@ -1007,6 +1042,7 @@ namespace ABCNET.Extensions
         /// Выводит каждый элемент на новой строке.
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
+        /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T, T> PrintLinesBy<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
         {
