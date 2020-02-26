@@ -110,7 +110,7 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine(InputErrorHelper.Message);
+                    InputErrorHelper.Message.Println();
                 }
         }
 
@@ -147,7 +147,7 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine(InputErrorHelper.Message);
+                    InputErrorHelper.Message.Println();
                 }
         }
 
@@ -170,10 +170,10 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine(InputErrorHelper.Message);
+                    InputErrorHelper.Message.Println();
                 }
         }
-
+        
         /// <summary>
         /// Заполняет массив значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>

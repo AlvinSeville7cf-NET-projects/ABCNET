@@ -40,6 +40,7 @@
         /// <summary>
         /// Метод для преобразования в строку.
         /// </summary>
+        /// <returns>Строка.</returns>
         public override string ToString()
         {
             return $"[{Item.NilOrString()} - {Projection.NilOrString()}]";

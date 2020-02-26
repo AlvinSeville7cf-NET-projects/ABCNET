@@ -9,8 +9,6 @@ namespace ABCNET.Extensions
     /// </summary>
     public static class SeqExt
     {
-        #region ToTup2-7
-
         /// <summary>
         /// ѕреобразует последовательность в кортеж.
         /// </summary>
@@ -256,8 +254,6 @@ namespace ABCNET.Extensions
             }
             throw new ArgumentException(nameof(collection));
         }
-
-        #endregion
 
         /// <summary>
         /// –азбивает последовательность на серии.
@@ -672,7 +668,7 @@ namespace ABCNET.Extensions
 
             while (enumerator.MoveNext())
                 Console.Write($"{delimiter}{enumerator.Current.NilOrString()}");
-
+            
             Console.Write(end);
 
             return collection;

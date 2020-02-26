@@ -451,8 +451,6 @@ namespace ABCNET.Extensions
             }
         }
 
-        #region Internal
-
         private static T[] InternalGetCol<T>(this T[,] matrix, int index)
         {
             int length = matrix.GetLength(0);
@@ -662,8 +660,5 @@ namespace ABCNET.Extensions
 			
 			return matrix;
         }
-
-        #endregion
-
     }
 }

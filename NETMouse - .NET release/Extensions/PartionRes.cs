@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace ABCNET.Extensions
 {
@@ -45,6 +42,7 @@ namespace ABCNET.Extensions
         /// <summary>
         /// Метод для преобразования в строку.
         /// </summary>
+        /// <returns>Строка.</returns>
         public override string ToString()
         {
             return $"[{True.NilOrString()} - {False.NilOrString()}]";

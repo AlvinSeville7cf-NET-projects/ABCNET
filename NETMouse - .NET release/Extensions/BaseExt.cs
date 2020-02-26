@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace ABCNET.Extensions
 {
@@ -66,8 +65,6 @@ namespace ABCNET.Extensions
             } while (true);
         }
 
-        #region Print/ln T
-
         /// <summary>
         /// Выводит значение типа Boolean.
         /// </summary>
@@ -75,7 +72,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static bool Print(this bool item)
         {
-            Console.Write(item.NilOrString());
+            Console.Write(item.ToString());
             return item;
         }
 
@@ -86,7 +83,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static bool Println(this bool item)
         {
-            Console.WriteLine(item.NilOrString());
+            Console.WriteLine(item.ToString());
             return item;
         }
 
@@ -97,7 +94,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static char Print(this char item)
         {
-            Console.Write(item.NilOrString());
+            Console.Write(item.ToString());
             return item;
         }
 
@@ -108,7 +105,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static char Println(this char item)
         {
-            Console.WriteLine(item.NilOrString());
+            Console.WriteLine(item.ToString());
             return item;
         }
 
@@ -119,7 +116,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static double Print(this double item)
         {
-            Console.Write(item.NilOrString());
+            Console.Write(item.ToString());
             return item;
         }
 
@@ -130,7 +127,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static double Println(this double item)
         {
-            Console.WriteLine(item.NilOrString());
+            Console.WriteLine(item.ToString());
             return item;
         }
 
@@ -141,7 +138,7 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static int Print(this int item)
         {
-            Console.Write(item.NilOrString());
+            Console.Write(item.ToString());
             return item;
         }
 
@@ -152,13 +149,9 @@ namespace ABCNET.Extensions
         /// <returns>Значение.</returns>
         public static int Println(this int item)
         {
-            Console.WriteLine(item.NilOrString());
+            Console.WriteLine(item.ToString());
             return item;
         }
-
-        #endregion
-
-        #region Print/ln T?
 
         /// <summary>
         /// Выводит значение типа Boolean?.
@@ -247,7 +240,5 @@ namespace ABCNET.Extensions
             Console.WriteLine(item.NilOrString());
             return item;
         }
-
-        #endregion
     }
 }

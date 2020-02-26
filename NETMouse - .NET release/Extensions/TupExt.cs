@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace ABCNET.Extensions
 {
@@ -9,8 +8,6 @@ namespace ABCNET.Extensions
     /// </summary>
     public static class TupExt
     {
-        #region Tuple2
-
         /// <summary>
         /// ѕреобразует кортеж в последовательность.
         /// </summary>
@@ -175,10 +172,6 @@ namespace ABCNET.Extensions
             Console.WriteLine(func(tuple.Item2));
             return tuple;
         }
-
-        #endregion
-
-        #region Tuple3
 
         /// <summary>
         /// ѕреобразует кортеж в последовательность.
@@ -348,10 +341,6 @@ namespace ABCNET.Extensions
             Console.WriteLine(func(tuple.Item3));
             return tuple;
         }
-
-        #endregion
-
-        #region Tuple4
 
         /// <summary>
         /// ѕреобразует кортеж в последовательность.
@@ -525,10 +514,6 @@ namespace ABCNET.Extensions
             Console.WriteLine(func(tuple.Item4));
             return tuple;
         }
-
-        #endregion
-
-        #region Tuple5
 
         /// <summary>
         /// ѕреобразует кортеж в последовательность.
@@ -706,10 +691,6 @@ namespace ABCNET.Extensions
             Console.WriteLine(func(tuple.Item5));
             return tuple;
         }
-
-        #endregion
-
-        #region Tuple6
 
         /// <summary>
         /// ѕреобразует кортеж в последовательность.
@@ -892,10 +873,6 @@ namespace ABCNET.Extensions
             return tuple;
         }
 
-        #endregion
-
-        #region Tuple7
-
         /// <summary>
         /// ѕреобразует кортеж в последовательность.
         /// </summary>
@@ -1058,7 +1035,5 @@ namespace ABCNET.Extensions
             Console.WriteLine(func(tuple.Item7));
             return tuple;
         }
-
-        #endregion
     }
 }
