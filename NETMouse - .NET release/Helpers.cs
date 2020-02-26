@@ -22,11 +22,6 @@ namespace ABCNET
         internal const string Message = "Неверный ввод. Введите элемент повторно.";
     }
 
-    internal static class ObsoleteMessageHelper
-    {
-        internal const string Message = "Данный функционал оставлен лишь для обратной совместимости с PABCSystem и не рекомендуется к использованию на платформе NET.";
-    }
-
     internal static class DefaultDelimiterHelper
     {
         internal const string Delimiter = " ";
