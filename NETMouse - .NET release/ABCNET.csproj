@@ -47,6 +47,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Examples\C#\Arrays_1.cs" />
+    <None Include="Examples\C#\Arrays_10.cs" />
+    <None Include="Examples\C#\Arrays_11.cs" />
+    <None Include="Examples\C#\Arrays_12.cs" />
+    <None Include="Examples\C#\Arrays_13.cs" />
+    <None Include="Examples\C#\Arrays_14.cs" />
+    <None Include="Examples\C#\Arrays_2.cs" />
+    <None Include="Examples\C#\Arrays_3.cs" />
+    <None Include="Examples\C#\Arrays_4.cs" />
+    <None Include="Examples\C#\Arrays_5.cs" />
+    <None Include="Examples\C#\Arrays_6.cs" />
+    <None Include="Examples\C#\Arrays_7.cs" />
+    <None Include="Examples\C#\Arrays_8.cs" />
+    <None Include="Examples\C#\Arrays_9.cs" />
+    <None Include="Examples\C#\Matrices_1.cs" />
+    <None Include="Examples\C#\Matrices_10.cs" />
+    <None Include="Examples\C#\Matrices_11.cs" />
+    <None Include="Examples\C#\Matrices_2.cs" />
+    <None Include="Examples\C#\Matrices_3.cs" />
+    <None Include="Examples\C#\Matrices_4.cs" />
+    <None Include="Examples\C#\Matrices_5.cs" />
+    <None Include="Examples\C#\Matrices_6.cs" />
+    <None Include="Examples\C#\Matrices_7.cs" />
+    <None Include="Examples\C#\Matrices_8.cs" />
+    <None Include="Examples\C#\Matrices_9.cs" />
     <Compile Include="Extensions\ArrExt.cs" />
     <Compile Include="Extensions\AssociateRes.cs" />
     <Compile Include="Extensions\PartionRes.cs" />
@@ -65,7 +90,46 @@
     <Compile Include="Utils\Tup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\C#\ABCNET.dll" />
+    <Content Include="Examples\C#\ABCNET.xml" />
+    <Content Include="Examples\PascalABC.NET\ABCNET.dll" />
+    <Content Include="Examples\PascalABC.NET\ABCNET.xml" />
     <Content Include="Для разработчиков.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Examples\PascalABC.NET\Arrays_1.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_10.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_11.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_12.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_13.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_14.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_2.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_3.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_4.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_5.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_6.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_7.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_8.pas" />
+    <None Include="Examples\PascalABC.NET\Arrays_9.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_1.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_10.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_11.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_2.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_3.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_4.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_5.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_6.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_7.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_8.pas" />
+    <None Include="Examples\PascalABC.NET\Matrices_9.pas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Actions\" />
+    <Folder Include="Prepared release\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

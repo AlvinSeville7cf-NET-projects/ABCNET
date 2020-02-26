@@ -9,6 +9,8 @@ namespace ABCNET.Extensions
     /// </summary>
     public static class SeqExt
     {
+        #region ToTup2-7
+
         /// <summary>
         /// Преобразует последовательность в кортеж.
         /// </summary>
@@ -60,11 +62,202 @@ namespace ABCNET.Extensions
                             throw new ArgumentException(nameof(collection));
                         return Tuple.Create(a, b, c);
                     }
+                    throw new ArgumentException(nameof(collection));
                 }
                 throw new ArgumentException(nameof(collection));
             }
             throw new ArgumentException(nameof(collection));
         }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T> ToTup4<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+            T d = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                        {
+                            d = en.Current;
+                            if (en.MoveNext())
+                                throw new ArgumentException(nameof(collection));
+                            return Tuple.Create(a, b, c, d);
+                        }
+                        throw new ArgumentException(nameof(collection));
+                    }
+                    throw new ArgumentException(nameof(collection));
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T> ToTup5<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+            T d = default;
+            T e = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                        {
+                            d = en.Current;
+                            if (en.MoveNext())
+                            {
+                                e = en.Current;
+                                if (en.MoveNext())
+                                    throw new ArgumentException(nameof(collection));
+                                return Tuple.Create(a, b, c, d, e);
+                            }
+                            throw new ArgumentException(nameof(collection));
+                        }
+                        throw new ArgumentException(nameof(collection));
+                    }
+                    throw new ArgumentException(nameof(collection));
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T> ToTup6<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+            T d = default;
+            T e = default;
+            T f = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                        {
+                            d = en.Current;
+                            if (en.MoveNext())
+                            {
+                                e = en.Current;
+                                if (en.MoveNext())
+                                {
+                                    f = en.Current;
+                                    if (en.MoveNext())
+                                        throw new ArgumentException(nameof(collection));
+                                    return Tuple.Create(a, b, c, d, e, f);
+                                }
+                                throw new ArgumentException(nameof(collection));
+                            }
+                            throw new ArgumentException(nameof(collection));
+                        }
+                        throw new ArgumentException(nameof(collection));
+                    }
+                    throw new ArgumentException(nameof(collection));
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        /// <summary>
+        /// Преобразует последовательность в кортеж.
+        /// </summary>
+        /// <param name="collection">Последовательность.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T, T> ToTup7<T>(this IEnumerable<T> collection)
+        {
+            T a = default;
+            T b = default;
+            T c = default;
+            T d = default;
+            T e = default;
+            T f = default;
+            T g = default;
+
+            IEnumerator<T> en = collection.GetEnumerator();
+            if (en.MoveNext())
+            {
+                a = en.Current;
+                if (en.MoveNext())
+                {
+                    b = en.Current;
+                    if (en.MoveNext())
+                    {
+                        c = en.Current;
+                        if (en.MoveNext())
+                        {
+                            d = en.Current;
+                            if (en.MoveNext())
+                            {
+                                e = en.Current;
+                                if (en.MoveNext())
+                                {
+                                    f = en.Current;
+                                    if (en.MoveNext())
+                                    {
+                                        g = en.Current;
+                                        if (en.MoveNext())
+                                            throw new ArgumentException(nameof(collection));
+                                        return Tuple.Create(a, b, c, d, e, f, g);
+                                    }
+                                    throw new ArgumentException(nameof(collection));
+                                }
+                                throw new ArgumentException(nameof(collection));
+                            }
+                            throw new ArgumentException(nameof(collection));
+                        }
+                        throw new ArgumentException(nameof(collection));
+                    }
+                    throw new ArgumentException(nameof(collection));
+                }
+                throw new ArgumentException(nameof(collection));
+            }
+            throw new ArgumentException(nameof(collection));
+        }
+
+        #endregion
 
         /// <summary>
         /// Разбивает последовательность на серии.
@@ -463,8 +656,10 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> Print<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter)
+        public static IEnumerable<T> Print<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -473,10 +668,12 @@ namespace ABCNET.Extensions
             if (!enumerator.MoveNext())
                 return collection;
 
-            Console.Write(enumerator.Current);
+            Console.Write(string.Format("{0}{1}", start, enumerator.Current));
 
             while (enumerator.MoveNext())
-                Console.Write($"{delimiter}{enumerator.Current}");
+                Console.Write($"{delimiter}{enumerator.Current.NilOrString()}");
+
+            Console.Write(end);
 
             return collection;
         }
@@ -486,11 +683,14 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> Println<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter)
+        public static IEnumerable<T> Println<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
+            Console.Write(start);
             collection.Print(delimiter);
-            Console.WriteLine();
+            Console.WriteLine(end);
             return collection;
         }
 
@@ -505,7 +705,7 @@ namespace ABCNET.Extensions
                 throw new ArgumentNullException(nameof(collection));
 
             foreach (T item in collection)
-                Console.WriteLine(item);
+                Console.WriteLine(item.NilOrString());
             return collection;
         }
 
@@ -515,8 +715,10 @@ namespace ABCNET.Extensions
         /// <param name="collection">Последовательность.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> PrintBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
+        public static IEnumerable<T> PrintBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -527,10 +729,12 @@ namespace ABCNET.Extensions
             if (!enumerator.MoveNext())
                 return ArrayHelper<T>.Empty;
 
-            Console.Write(selector(enumerator.Current));
+            Console.Write($"{start}{selector(enumerator.Current).NilOrString()}");
 
             while (enumerator.MoveNext())
-                Console.Write($"{delimiter}{selector(enumerator.Current)}");
+                Console.Write($"{delimiter}{selector(enumerator.Current).NilOrString()}");
+
+            Console.Write(end);
 
             return collection;
         }
@@ -541,10 +745,12 @@ namespace ABCNET.Extensions
         /// <param name="collection">Последовательность.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> PrintlnBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter)
+        public static IEnumerable<T> PrintlnBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
-            collection.PrintBy(selector, delimiter);
+            collection.PrintBy(selector, delimiter, start, end);
             Console.WriteLine();
             return collection;
         }
@@ -563,7 +769,7 @@ namespace ABCNET.Extensions
                 throw new ArgumentNullException(nameof(selector));
 
             foreach (T item in collection)
-                Console.WriteLine(selector(item));
+                Console.WriteLine(selector(item).NilOrString());
             return collection;
         }
 

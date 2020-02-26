@@ -74,13 +74,13 @@ namespace ABCNET.Utils
             return Console.ReadLine();
         }
 
-        /// <summary>
-        /// Генерирует случайное число [0..1).
-        /// </summary>
-        /// <returns>Число.</returns>
-        public static int Rand()
+        /// <summary> 
+        /// Генерирует случайное число [0..1). 
+        /// </summary> 
+        /// <returns>Число.</returns> 
+        public static double Rand()
         {
-            return RandomHelper.Random.Next();
+            return RandomHelper.Random.NextDouble();
         }
 
         /// <summary>

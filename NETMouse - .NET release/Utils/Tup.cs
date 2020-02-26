@@ -89,7 +89,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int> Rand2(int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
+        public static Tuple<int, int> Rand2(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             return new Tuple<int, int>(Base.Rand(low, high), Base.Rand(low, high));
         }
@@ -100,7 +100,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int, int> Rand3(int low = IntegerBordersHelper.Low, int high = IntegerBordersHelper.High)
+        public static Tuple<int, int, int> Rand3(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             return new Tuple<int, int, int>(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
         }
@@ -111,7 +111,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double> Rand2(double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
+        public static Tuple<double, double> Rand2(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             return new Tuple<double, double>(Base.Rand(low, high), Base.Rand(low, high));
         }
@@ -122,7 +122,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double, double> Rand3(double low = RealBordersHelper.Low, double high = RealBordersHelper.High)
+        public static Tuple<double, double, double> Rand3(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             return new Tuple<double, double, double>(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
         }
