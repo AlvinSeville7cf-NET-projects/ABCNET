@@ -1,3 +1,4 @@
+using ABCNET.Extensions;
 using System;
 
 namespace ABCNET.Utils
@@ -14,7 +15,7 @@ namespace ABCNET.Utils
         /// <returns>Значение.</returns>
         public static bool ReadBoolean(string prompt = EmptyStringHelper.Empty)
         {
-            Console.Write(prompt);
+            prompt.Print();
             return bool.Parse(Console.ReadLine());
         }
 
@@ -25,7 +26,7 @@ namespace ABCNET.Utils
         /// <returns>Значение.</returns>
         public static char ReadChar(string prompt = EmptyStringHelper.Empty)
         {
-            Console.Write(prompt);
+            prompt.Print();
             return Console.ReadKey().KeyChar;
         }
 
@@ -36,7 +37,7 @@ namespace ABCNET.Utils
         /// <returns>Значение.</returns>
         public static double ReadDouble(string prompt = EmptyStringHelper.Empty)
         {
-            Console.Write(prompt);
+            prompt.Print();
             return double.Parse(Console.ReadLine());
         }
 
@@ -47,7 +48,7 @@ namespace ABCNET.Utils
         /// <returns>Значение.</returns>
         public static int ReadInt32(string prompt = EmptyStringHelper.Empty)
         {
-            Console.Write(prompt);
+            prompt.Print();
             return int.Parse(Console.ReadLine());
         }
 
@@ -58,7 +59,7 @@ namespace ABCNET.Utils
         /// <returns>Значение.</returns>
         public static string ReadString(string prompt = EmptyStringHelper.Empty)
         {
-            Console.Write(prompt);
+            prompt.Print();
             return Console.ReadLine();
         }
 
@@ -81,6 +82,7 @@ namespace ABCNET.Utils
         {
             if (high < low)
                 Swap(ref low, ref high);
+
             return RandomHelper.Random.Next(low, high + 1);
         }
 
@@ -94,6 +96,7 @@ namespace ABCNET.Utils
         {
             if (high < low)
                 Swap(ref low, ref high);
+
             return low + Rand() * (high - low);
         }
     }
