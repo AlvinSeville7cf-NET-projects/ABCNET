@@ -146,6 +146,5 @@ namespace ABCNET.Utils
         {
             return new Tuple<T, T, T>(value, value, value);
         }
-
     }
 }

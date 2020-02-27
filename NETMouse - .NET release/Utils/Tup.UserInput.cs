@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABCNET.Extensions;
+using System;
 
 namespace ABCNET.Utils
 {
@@ -19,7 +20,7 @@ namespace ABCNET.Utils
             ReadBooleanTupleItem(ref a, 0, prompt);
             ReadBooleanTupleItem(ref b, 1, prompt);
 
-            return new Tuple<bool, bool>(a, b);
+            return New(a, b);
         }
 
         /// <summary>
@@ -36,7 +37,7 @@ namespace ABCNET.Utils
             ReadBooleanTupleItem(ref b, 1, prompt);
             ReadBooleanTupleItem(ref c, 2, prompt);
 
-            return new Tuple<bool, bool, bool>(a, b, c);
+            return New(a, b, c);
         }
 
         /// <summary>
@@ -45,7 +46,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char, char> ReadCharTup2(string prompt = EmptyStringHelper.Empty)
         {
-            return new Tuple<char, char>(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
+            return New(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)));
         }
 
@@ -55,7 +56,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char, char, char> ReadCharTup3(string prompt = EmptyStringHelper.Empty)
         {
-            return new Tuple<char, char, char>(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
+            return New(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)),
                 Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 2)));
         }
@@ -72,7 +73,7 @@ namespace ABCNET.Utils
             ReadRealTupleItem(ref a, 0, prompt);
             ReadRealTupleItem(ref b, 1, prompt);
 
-            return new Tuple<double, double>(a, b);
+            return New(a, b);
         }
 
         /// <summary>
@@ -89,7 +90,7 @@ namespace ABCNET.Utils
             ReadRealTupleItem(ref b, 1, prompt);
             ReadRealTupleItem(ref c, 2, prompt);
 
-            return new Tuple<double, double, double>(a, b, c);
+            return New(a, b, c);
         }
 
         /// <summary>
@@ -104,7 +105,7 @@ namespace ABCNET.Utils
             ReadIntegerTupleItem(ref a, 0, prompt);
             ReadIntegerTupleItem(ref b, 1, prompt);
 
-            return new Tuple<int, int>(a, b);
+            return New(a, b);
         }
 
         /// <summary>
@@ -121,7 +122,7 @@ namespace ABCNET.Utils
             ReadIntegerTupleItem(ref b, 1, prompt);
             ReadIntegerTupleItem(ref c, 2, prompt);
 
-            return new Tuple<int, int, int>(a, b, c);
+            return New(a, b, c);
         }
 
         /// <summary>
@@ -130,7 +131,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string, string> ReadStringTup2(string prompt = EmptyStringHelper.Empty)
         {
-            return new Tuple<string, string>(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
+            return New(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)));
         }
 
@@ -140,7 +141,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string, string, string> ReadStringTup3(string prompt = EmptyStringHelper.Empty)
         {
-            return new Tuple<string, string, string>(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
+            return New(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 2)));
         }
@@ -155,7 +156,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine(InputErrorHelper.Message);
+                    InputErrorHelper.Message.Println();
                 }
         }
 
@@ -169,7 +170,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine(InputErrorHelper.Message);
+                    InputErrorHelper.Message.Println();
                 }
         }
 
@@ -183,7 +184,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine(InputErrorHelper.Message);
+                    InputErrorHelper.Message.Println();
                 }
         }
     }
