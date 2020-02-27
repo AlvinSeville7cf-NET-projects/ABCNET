@@ -127,6 +127,8 @@ namespace ABCNET.Utils
             return new Tuple<double, double, double>(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
         }
 
+        // ToDo: Rand для кортежей длины 4-7 элементов.
+
         /// <summary>
         /// Создаёт кортеж из двух элементов, заполненный указанным значением.
         /// </summary>
@@ -146,5 +148,7 @@ namespace ABCNET.Utils
         {
             return new Tuple<T, T, T>(value, value, value);
         }
+
+        // ToDo: Fill для кортежей длины 4-7 элементов.
     }
 }
