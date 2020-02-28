@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using ABCNET.Utils;
 
 namespace ABCNET.Extensions
 {
+    /// <summary>
+    /// Предоставляет функционал для работы с массивами.
+    /// </summary>
     public static partial class ArrExt
     {
         /// <summary>

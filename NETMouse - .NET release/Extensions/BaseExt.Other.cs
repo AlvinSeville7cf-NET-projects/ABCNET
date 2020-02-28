@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ABCNET.Extensions
+﻿namespace ABCNET.Extensions
 {
+    /// <summary>
+    /// Предоставляет функционал для работы с базовыми типами.
+    /// </summary>
     public static partial class BaseExt
     {
         /// <summary>
