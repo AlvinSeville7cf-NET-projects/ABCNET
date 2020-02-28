@@ -47,7 +47,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utils\Tup.UserInput.cs">
+    <Compile Include="Utils\Arr.Input.cs">
+      <DependentUpon>Arr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Base.Input.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Matr.Input.cs">
+      <DependentUpon>Matr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Tup.Input.cs">
       <DependentUpon>Tup.cs</DependentUpon>
     </Compile>
     <None Include="Examples\C#\Arrays_1.cs" />
@@ -90,21 +99,12 @@
     <Compile Include="Utils\Arr.Generators.cs">
       <DependentUpon>Arr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Arr.UserInput.cs">
-      <DependentUpon>Arr.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Base.cs" />
     <Compile Include="Utils\Base.Other.cs">
       <DependentUpon>Base.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Base.UserInput.cs">
-      <DependentUpon>Base.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Matr.cs" />
     <Compile Include="Utils\Matr.Generators.cs">
-      <DependentUpon>Matr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Matr.UserInput.cs">
       <DependentUpon>Matr.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Seq.cs" />
