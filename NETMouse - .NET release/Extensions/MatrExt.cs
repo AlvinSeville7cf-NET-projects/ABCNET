@@ -164,6 +164,24 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Выводит матрицу.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="delimiter">Разделитель.</param>
+        /// <param name="start">Первый выводимый символ строки.</param>
+        /// <param name="end">Последний выводимый символ строки.</param>
+        public static T[,] PrintBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        {
+        	if (matrix == null)
+        		throw new ArgumentNullException(nameof(matrix));
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+
+            return matrix.InternalPrintBy(selector, delimiter, start, end);
+        }
+
+        /// <summary>
         /// Выводит матрицу и переходит на новую строку.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
@@ -173,12 +191,12 @@ namespace ABCNET.Extensions
         /// <param name="end">Последний выводимый символ строки.</param>
         public static T[,] PrintlnBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
-        	if (matrix == null)
-        		throw new ArgumentNullException(nameof(matrix));
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
 
-            return matrix.InternalPrintBy(selector, delimiter, start, end);
+            return matrix.InternalPrintlnBy(selector, delimiter, start, end);
         }
 
         /// <summary>
@@ -622,21 +640,57 @@ namespace ABCNET.Extensions
                         lengths[j] = itemLength;
                 }
 
-            for (int i = 0; i < rowsCount; i++)
+            for (int i = 0; i < rowsCount - 1; i++)
             {
                 Console.Write(start);
                 for (int j = 0; j < columnsCount; j++)
+                {
                     Console.Write(string.Format("{0}{1}", matrix[i, j].NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
-                if (i == rowsCount - 1)
-                    Console.Write(end);
-                else
                     Console.WriteLine(end);
+                }
             }
+            for (int j = 0; j < columnsCount; j++)
+            {
+                Console.Write(string.Format("{0}{1}", matrix[rowsCount, j].NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
+            }
+            Console.Write(end);
 
             return matrix;
         }
 
         private static T[,] InternalPrintBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        {
+            int rowsCount = matrix.GetLength(0);
+            int columnsCount = matrix.GetLength(1);
+            int[] lengths = new int[columnsCount];
+
+            for (int j = 0; j < columnsCount; j++)
+                for (int i = 0; i < rowsCount; i++)
+                {
+                    int itemLength = selector(matrix[i, j]).ToString().Length;
+                    if (itemLength > lengths[j])
+                        lengths[j] = itemLength;
+                }
+
+            for (int i = 0; i < rowsCount; i++)
+            {
+                Console.Write(start);
+                for (int j = 0; j < columnsCount - 1; j++)
+                {
+                    Console.Write(string.Format("{0}{1}", selector(matrix[i, j]).NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
+                    Console.WriteLine(end);
+                }
+            }
+            for (int j = 0; j < columnsCount; j++)
+            {
+                Console.Write(string.Format("{0}{1}", selector(matrix[rowsCount, j]).NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
+            }
+            Console.Write(end);
+
+            return matrix;
+        }
+
+        private static T[,] InternalPrintlnBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
         	int rowsCount = matrix.GetLength(0);
         	int columnsCount = matrix.GetLength(1);
