@@ -145,7 +145,9 @@ namespace ABCNET.Extensions
         	if (matrix == null)
         		throw new ArgumentNullException(nameof(matrix));
 
-            return matrix.InternalPrintln(delimiter, start, end);
+            matrix.InternalPrint(delimiter, start, end);
+            Console.WriteLine();
+            return matrix;
         }
 
         /// <summary>
@@ -196,7 +198,9 @@ namespace ABCNET.Extensions
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
 
-            return matrix.InternalPrintlnBy(selector, delimiter, start, end);
+            matrix.InternalPrintBy(selector, delimiter, start, end);
+            Console.WriteLine();
+            return matrix;
         }
 
         /// <summary>
