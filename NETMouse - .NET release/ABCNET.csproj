@@ -72,49 +72,49 @@
     <None Include="Examples\C#\Matrices_7.cs" />
     <None Include="Examples\C#\Matrices_8.cs" />
     <None Include="Examples\C#\Matrices_9.cs" />
-    <Compile Include="Extensions\Arr.Generators.cs">
-      <DependentUpon>ArrExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\Arr.Input.cs">
+    <Compile Include="Extensions\ArrExt.Generators.cs">
       <DependentUpon>ArrExt.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\ArrExt.cs" />
+    <Compile Include="Extensions\ArrExt.Input.cs">
+      <DependentUpon>ArrExt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\AssociateRes.cs" />
-    <Compile Include="Extensions\Base.Generators.cs">
+    <Compile Include="Extensions\BaseExt.Generators.cs">
       <DependentUpon>BaseExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Base.Other.cs">
-      <DependentUpon>BaseExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\Base.Output.cs">
+    <Compile Include="Extensions\BaseExt.Other.cs">
       <DependentUpon>BaseExt.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\BaseExt.cs" />
-    <Compile Include="Extensions\Matr.Generators.cs">
+    <Compile Include="Extensions\BaseExt.Output.cs">
+      <DependentUpon>BaseExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\MatrExt.Generators.cs">
       <DependentUpon>MatrExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Matr.Getters.cs">
+    <Compile Include="Extensions\MatrExt.Getters.cs">
       <DependentUpon>MatrExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Matr.Input.cs">
+    <Compile Include="Extensions\MatrExt.Input.cs">
       <DependentUpon>MatrExt.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\PartionRes.cs" />
     <Compile Include="Extensions\NumerateRes.cs" />
-    <Compile Include="Extensions\Seq.Getters.cs">
+    <Compile Include="Extensions\SeqExt.Getters.cs">
       <DependentUpon>SeqExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Seq.Output.cs">
+    <Compile Include="Extensions\SeqExt.Output.cs">
       <DependentUpon>SeqExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\Str.Output.cs">
-      <DependentUpon>StrExt.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\StrExt.cs" />
-    <Compile Include="Extensions\Tup.Getters.cs">
+    <Compile Include="Extensions\StrExt.Output.cs">
+      <DependentUpon>StrExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\TupExt.Getters.cs">
       <DependentUpon>TupExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Tup.Output.cs">
+    <Compile Include="Extensions\TupExt.Output.cs">
       <DependentUpon>TupExt.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers.cs" />
