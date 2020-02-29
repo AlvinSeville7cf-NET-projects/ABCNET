@@ -8,6 +8,9 @@ namespace ABCNET.Extensions
 {
     public static class Output1
     {
+
+        #region Public
+
         /// <summary>
         /// Выводит матрицу и переходит на новую строку.
         /// </summary>
@@ -203,7 +206,9 @@ namespace ABCNET.Extensions
                     matrix[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
         }
 
-        #region Internal
+        #endregion
+
+        #region Private
 
         private static T[,] InternalPrintln<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {

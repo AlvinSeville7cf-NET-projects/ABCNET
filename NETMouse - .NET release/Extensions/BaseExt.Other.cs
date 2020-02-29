@@ -5,6 +5,9 @@
     /// </summary>
     public static partial class BaseExt
     {
+
+        #region Public
+
         /// <summary>
         /// Проверяет лежит ли число между другими двумя.
         /// </summary>
@@ -18,5 +21,8 @@
                 Utils.Base.Swap(ref firstBorder, ref secondBorder);
             return (target >= firstBorder) && (target <= secondBorder);
         }
+
+        #endregion
+
     }
 }

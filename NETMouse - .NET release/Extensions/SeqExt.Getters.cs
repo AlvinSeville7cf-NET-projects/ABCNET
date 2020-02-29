@@ -7,6 +7,9 @@ namespace ABCNET.Extensions
 {
     public static partial class Seq
     {
+
+        #region Public
+
         /// <summary>
         /// Преобразует последовательность в кортеж.
         /// </summary>
@@ -702,5 +705,8 @@ namespace ABCNET.Extensions
 
             return new PartitionRes<T>(trueList, falseList);
         }
+
+        #endregion
+
     }
 }

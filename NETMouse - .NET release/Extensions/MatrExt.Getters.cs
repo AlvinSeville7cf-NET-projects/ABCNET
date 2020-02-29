@@ -8,6 +8,9 @@ namespace ABCNET.Extensions
 {
     public static partial class Matr
     {
+
+        #region Public
+
         /// <summary>
         /// Получает столбец матрицы.
         /// </summary>
@@ -210,7 +213,9 @@ namespace ABCNET.Extensions
             }
         }
 
-        #region Internal
+#endregion
+
+        #region Private
 
         private static T[] InternalGetCol<T>(this T[,] matrix, int index)
         {

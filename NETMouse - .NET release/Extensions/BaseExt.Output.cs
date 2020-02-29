@@ -7,6 +7,9 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class BaseExt
     {
+
+        #region Public
+
         /// <summary>
         /// Выводит значение типа Boolean.
         /// </summary>
@@ -182,5 +185,8 @@ namespace ABCNET.Extensions
             Console.WriteLine(item.NilOrString());
             return item;
         }
+
+        #endregion
+
     }
 }

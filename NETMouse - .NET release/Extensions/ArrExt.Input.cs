@@ -8,6 +8,9 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class ArrExt
     {
+
+        #region Public
+
         /// <summary>
         /// Заполняет массив значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -104,5 +107,8 @@ namespace ABCNET.Extensions
             for (int i = 0; i < array.Length; i++)
                 array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
         }
+
+        #endregion
+
     }
 }

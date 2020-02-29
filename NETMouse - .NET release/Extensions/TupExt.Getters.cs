@@ -7,6 +7,9 @@ namespace ABCNET.Extensions
 {
     public static partial class Tup
     {
+
+        #region Public
+
         /// <summary>
         /// Преобразует кортеж в последовательность.
         /// </summary>
@@ -207,5 +210,8 @@ namespace ABCNET.Extensions
             yield return tuple.Item6;
             yield return tuple.Item7;
         }
+
+        #endregion
+
     }
 }

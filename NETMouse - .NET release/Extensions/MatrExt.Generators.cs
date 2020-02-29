@@ -8,6 +8,9 @@ namespace ABCNET.Extensions
 {
     public static class Generator1
     {
+
+        #region Public
+
         /// <summary>
         /// Заполняет матрицу на основе функции селектора.
         /// </summary>
@@ -78,5 +81,8 @@ namespace ABCNET.Extensions
                 for (int j = 0; j < matrix.GetLength(1); j++)
                     matrix[i, j] = value;
         }
+
+        #endregion
+
     }
 }

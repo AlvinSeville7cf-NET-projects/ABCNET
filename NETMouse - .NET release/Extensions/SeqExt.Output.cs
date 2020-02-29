@@ -7,6 +7,9 @@ namespace ABCNET.Extensions
 {
     public static partial class Seq
     {
+
+        #region Public
+
         /// <summary>
         /// Выводит последовательность.
         /// </summary>
@@ -128,5 +131,8 @@ namespace ABCNET.Extensions
                 Console.WriteLine(selector(item).NilOrString());
             return collection;
         }
+
+        #endregion
+
     }
 }
