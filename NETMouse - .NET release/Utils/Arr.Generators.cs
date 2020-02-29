@@ -7,6 +7,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Arr
     {
+        #region public
         /// <summary>
         /// Создаёт массив из указанных значений.
         /// </summary>
@@ -122,5 +123,6 @@ namespace ABCNET.Utils
 
             return source;
         }
+        #endregion public
     }
 }

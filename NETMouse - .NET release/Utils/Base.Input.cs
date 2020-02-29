@@ -8,6 +8,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Base
     {
+        #region public
         /// <summary>
         /// Читает значение типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -99,5 +100,6 @@ namespace ABCNET.Utils
 
             return low + Rand() * (high - low);
         }
+        #endregion public
     }
 }

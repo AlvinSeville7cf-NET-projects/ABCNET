@@ -7,6 +7,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Matr
     {
+        #region public
         /// <summary>
         /// Создаёт матрицу из указанных значений.
         /// </summary>
@@ -134,5 +135,6 @@ namespace ABCNET.Utils
 
             return source;
         }
+        #endregion public
     }
 }

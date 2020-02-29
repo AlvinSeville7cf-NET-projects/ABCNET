@@ -7,6 +7,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Tup
     {
+        #region public
         /// <summary>
         /// Создаёт кортеж из 2 значений.
         /// </summary>
@@ -150,5 +151,6 @@ namespace ABCNET.Utils
         }
 
         // ToDo: Fill для кортежей длины 4-7 элементов.
+        #endregion public
     }
 }
