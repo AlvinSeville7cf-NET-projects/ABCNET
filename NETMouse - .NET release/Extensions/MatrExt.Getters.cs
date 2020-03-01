@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using ABCNET.Utils;
 
 namespace ABCNET.Extensions
 {
-    public static partial class Matr
+    /// <summary>
+    /// Предоставляет функционал для работы с матрицами.
+    /// </summary>
+    public static partial class MatrExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Получает столбец матрицы.
@@ -215,7 +216,7 @@ namespace ABCNET.Extensions
 
 #endregion
 
-        #region Private
+        #region private
 
         private static T[] InternalGetCol<T>(this T[,] matrix, int index)
         {

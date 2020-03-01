@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ABCNET.Extensions
 {
-    public static partial class Tup
+    /// <summary>
+    /// Предоставляет функционал для работы с кортежами.
+    /// </summary>
+    public static partial class TupExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Преобразует кортеж в последовательность.

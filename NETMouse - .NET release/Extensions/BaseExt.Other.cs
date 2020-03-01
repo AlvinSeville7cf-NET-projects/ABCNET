@@ -6,7 +6,7 @@
     public static partial class BaseExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Проверяет лежит ли число между другими двумя.

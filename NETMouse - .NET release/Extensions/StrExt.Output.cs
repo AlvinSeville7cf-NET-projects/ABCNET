@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ABCNET.Extensions
 {
-    public static partial class Str
+    /// <summary>
+    /// Предоставляет функционал для работы со строками.
+    /// </summary>
+    public static partial class StrExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Выводит строку на экран.

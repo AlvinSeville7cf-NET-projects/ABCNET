@@ -8,7 +8,7 @@ namespace ABCNET.Extensions
     public static partial class BaseExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Выводит значение типа Boolean.

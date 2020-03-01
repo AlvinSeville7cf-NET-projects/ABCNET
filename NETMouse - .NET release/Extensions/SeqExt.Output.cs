@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ABCNET.Extensions
 {
-    public static partial class Seq
+    /// <summary>
+    /// Предоставляет функционал для работы с последовательностями.
+    /// </summary>
+    public static partial class SeqExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Выводит последовательность.

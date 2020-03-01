@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using ABCNET.Utils;
 
 namespace ABCNET.Extensions
 {
-    public static class Generator1
+    /// <summary>
+    /// Предоставляет функционал для работы с матрицами.
+    /// </summary>
+    public static partial class MatrExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Заполняет матрицу на основе функции селектора.

@@ -9,7 +9,7 @@ namespace ABCNET.Extensions
     public static partial class ArrExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Заполняет массив на основе функции селектора.

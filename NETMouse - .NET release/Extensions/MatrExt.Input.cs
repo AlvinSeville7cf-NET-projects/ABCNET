@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using ABCNET.Utils;
 
 namespace ABCNET.Extensions
 {
-    public static class Output1
+    /// <summary>
+    /// Предоставляет функционал для работы с матрицами.
+    /// </summary>
+    public static partial class MatrExt
     {
 
-        #region Public
+        #region public
 
         /// <summary>
         /// Выводит матрицу и переходит на новую строку.
@@ -208,7 +208,7 @@ namespace ABCNET.Extensions
 
         #endregion
 
-        #region Private
+        #region private
 
         private static T[,] InternalPrintln<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
