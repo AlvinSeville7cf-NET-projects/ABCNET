@@ -8,9 +8,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class ArrExt
     {
-
         #region public
-
         /// <summary>
         /// Заполняет массив на основе функции селектора.
         /// </summary>
@@ -93,8 +91,6 @@ namespace ABCNET.Extensions
             for (int i = 0; i < array.Length; i++)
                 array[i] = value;
         }
-
-        #endregion
-
+        #endregion public
     }
 }

@@ -7,9 +7,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class TupExt
     {
-
         #region public
-
         /// <summary>
         /// Выводит кортеж.
         /// </summary>
@@ -846,8 +844,6 @@ namespace ABCNET.Extensions
             Console.WriteLine(func(tuple.Item7));
             return tuple;
         }
-
-        #endregion
-
+        #endregion public
     }
 }

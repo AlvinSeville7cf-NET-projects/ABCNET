@@ -8,9 +8,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class SeqExt
     {
-
         #region public
-
         /// <summary>
         /// Выводит последовательность.
         /// </summary>
@@ -132,8 +130,6 @@ namespace ABCNET.Extensions
                 Console.WriteLine(selector(item).NilOrString());
             return collection;
         }
-
-        #endregion
-
+        #endregion public
     }
 }

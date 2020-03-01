@@ -9,9 +9,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class MatrExt
     {
-
         #region public
-
         /// <summary>
         /// Получает столбец матрицы.
         /// </summary>
@@ -136,8 +134,6 @@ namespace ABCNET.Extensions
             return matrix.InternalSwapCols(firstIndex, secondIndex, selector);
         }
 
-
-
         /// <summary>
         /// Изменяет столбец матрицы.
         /// </summary>
@@ -213,11 +209,9 @@ namespace ABCNET.Extensions
                 yield return matrix.InternalGetRow(j);
             }
         }
-
-#endregion
+        #endregion public
 
         #region private
-
         private static T[] InternalGetCol<T>(this T[,] matrix, int index)
         {
             int length = matrix.GetLength(0);
@@ -349,8 +343,6 @@ namespace ABCNET.Extensions
 
             return newMatrix;
         }
-
-        #endregion
-
+        #endregion private
     }
 }

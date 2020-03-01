@@ -8,9 +8,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class TupExt
     {
-
         #region public
-
         /// <summary>
         /// Преобразует кортеж в последовательность.
         /// </summary>
@@ -194,8 +192,6 @@ namespace ABCNET.Extensions
             return new Tuple<T, T, T, T, T, T, T>(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6, item);
         }
 
-
-
         /// <summary>
         /// Преобразует кортеж в последовательность.
         /// </summary>
@@ -211,8 +207,6 @@ namespace ABCNET.Extensions
             yield return tuple.Item6;
             yield return tuple.Item7;
         }
-
-        #endregion
-
+        #endregion public
     }
 }

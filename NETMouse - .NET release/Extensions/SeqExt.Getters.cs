@@ -9,9 +9,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class SeqExt
     {
-
         #region public
-
         /// <summary>
         /// Преобразует последовательность в кортеж.
         /// </summary>
@@ -707,8 +705,6 @@ namespace ABCNET.Extensions
 
             return new PartitionRes<T>(trueList, falseList);
         }
-
-        #endregion
-
+        #endregion public
     }
 }

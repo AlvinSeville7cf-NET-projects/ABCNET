@@ -8,9 +8,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class MatrExt
     {
-
         #region public
-
         /// <summary>
         /// Выводит матрицу и переходит на новую строку.
         /// </summary>
@@ -205,11 +203,9 @@ namespace ABCNET.Extensions
                 for (int j = 0; j < matrix.GetLength(1); j++)
                     matrix[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
         }
-
-        #endregion
+        #endregion public
 
         #region private
-
         private static T[,] InternalPrintln<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             int rowsCount = matrix.GetLength(0);
@@ -323,8 +319,6 @@ namespace ABCNET.Extensions
 
             return matrix;
         }
-
-#endregion
-
+        #endregion private
     }
 }

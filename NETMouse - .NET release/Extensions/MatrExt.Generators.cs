@@ -8,9 +8,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class MatrExt
     {
-
         #region public
-
         /// <summary>
         /// Заполняет матрицу на основе функции селектора.
         /// </summary>
@@ -81,8 +79,6 @@ namespace ABCNET.Extensions
                 for (int j = 0; j < matrix.GetLength(1); j++)
                     matrix[i, j] = value;
         }
-
-        #endregion
-
+        #endregion public
     }
 }
