@@ -101,6 +101,7 @@ namespace ABCNET.Extensions
                     Console.Write(string.Format("{0}{1}", matrix[i, j].NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
                 Console.WriteLine(end);
             }
+            Console.Write(start);
             for (int j = 0; j < columnsCount; j++)
                 Console.Write(string.Format("{0}{1}", matrix[rowsCount - 1, j].NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
             Console.Write(end);
@@ -129,6 +130,7 @@ namespace ABCNET.Extensions
                     Console.Write(string.Format("{0}{1}", selector(matrix[i, j]).NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
                 Console.WriteLine(end);
             }
+            Console.Write(start);
             for (int j = 0; j < columnsCount; j++)
                 Console.Write(string.Format("{0}{1}", selector(matrix[rowsCount - 1, j]).NilOrString().PadLeft(lengths[j]), j < columnsCount - 1 ? delimiter : string.Empty));
             Console.Write(end);
