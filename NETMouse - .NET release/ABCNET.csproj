@@ -99,6 +99,9 @@
     <Compile Include="Extensions\MatrExt.Input.cs">
       <DependentUpon>MatrExt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\MatrExt.Output.cs">
+      <DependentUpon>MatrExt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\PartionRes.cs" />
     <Compile Include="Extensions\NumerateRes.cs" />
     <Compile Include="Extensions\SeqExt.Getters.cs">
