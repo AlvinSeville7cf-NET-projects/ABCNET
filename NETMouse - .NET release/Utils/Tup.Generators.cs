@@ -107,6 +107,50 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
+        /// Создаёт кортеж из четырёх случайных значений типа Int32.
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int, int, int, int> Rand4(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        {
+            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из пяти случайных значений типа Int32.
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int, int, int, int, int> Rand5(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        {
+            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из шести случайных значений типа Int32.
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int, int, int, int, int, int> Rand6(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        {
+            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из семи случайных значений типа Int32.
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int, int, int, int, int, int, int> Rand7(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        {
+            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+        }
+
+        /// <summary>
         /// Создаёт кортеж из двух случайных значений типа Double.
         /// </summary>
         /// <param name="low">Нижняя граница диапазона.</param>
@@ -128,7 +172,49 @@ namespace ABCNET.Utils
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
         }
 
-        // ToDo: Rand для кортежей длины 4-7 элементов.
+        /// <summary>
+        /// Создаёт кортеж из четырёх случайных значений типа Double.
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double, double, double, double> Rand4(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        {
+            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из пяти случайных значений типа Double.
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double, double, double, double, double> Rand5(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        {
+            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из шести случайных значений типа Double.
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double, double, double, double, double, double> Rand6(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        {
+            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из семи случайных значений типа Double.
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double, double, double, double, double, double, double> Rand7(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        {
+            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+        }
 
         /// <summary>
         /// Создаёт кортеж из двух элементов, заполненный указанным значением.
@@ -141,7 +227,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Создаёт кортеж из двух элементов, заполненный указанным значением.
+        /// Создаёт кортеж из трёх элементов, заполненный указанным значением.
         /// </summary>
         /// <param name="value">Значение.</param>
         /// <returns>Кортеж.</returns>
@@ -150,7 +236,46 @@ namespace ABCNET.Utils
             return New(value, value, value);
         }
 
-        // ToDo: Fill для кортежей длины 4-7 элементов.
+        /// <summary>
+        /// Создаёт кортеж из четырёх элементов, заполненный указанным значением.
+        /// </summary>
+        /// <param name="value">Значение.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T> Fill4<T>(T value)
+        {
+            return New(value, value, value, value);
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из пяти элементов, заполненный указанным значением.
+        /// </summary>
+        /// <param name="value">Значение.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T> Fill5<T>(T value)
+        {
+            return New(value, value, value, value, value);
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из шести элементов, заполненный указанным значением.
+        /// </summary>
+        /// <param name="value">Значение.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T> Fill6<T>(T value)
+        {
+            return New(value, value, value, value, value, value);
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из семи элементов, заполненный указанным значением.
+        /// </summary>
+        /// <param name="value">Значение.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T, T> Fill7<T>(T value)
+        {
+            return New(value, value, value, value, value, value, value);
+        }
+
         #endregion public
     }
 }
