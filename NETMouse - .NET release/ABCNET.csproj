@@ -53,6 +53,9 @@
     <Compile Include="Utils\Base.Input.cs">
       <DependentUpon>Base.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Base.Nullable.Input.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Matr.Input.cs">
       <DependentUpon>Matr.cs</DependentUpon>
     </Compile>
