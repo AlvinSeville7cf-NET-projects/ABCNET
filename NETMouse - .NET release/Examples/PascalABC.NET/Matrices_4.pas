@@ -24,6 +24,6 @@ begin
 end;
 
 begin
-  Matr.ReadInteger(Base.ReadInteger('N:'), Base.ReadInteger('M:'), 'Элемент ({0}, {1})-ый:').Min().Println();
+  Matr.ReadInt32(Base.ReadInt32('N:'), Base.ReadInt32('M:'), 'Элемент ({0}, {1})-ый:').Min().Println();
   Base.ReadChar();
 end.

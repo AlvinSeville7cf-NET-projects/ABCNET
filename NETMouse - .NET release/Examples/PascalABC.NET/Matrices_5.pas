@@ -17,6 +17,6 @@ begin
 end;
 
 begin
-  Matr.Rand(Base.ReadInteger('N:'), Base.ReadInteger('M:'), -19, 30).Print().Sum().Println();
+  Matr.Rand(Base.ReadInt32('N:'), Base.ReadInt32('M:'), -19, 30).Print().Sum().Println();
   Base.ReadChar();
 end.

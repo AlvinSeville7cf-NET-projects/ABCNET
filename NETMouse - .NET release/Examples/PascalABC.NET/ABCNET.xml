@@ -8,6 +8,9 @@
             <summary>
             Предоставляет функционал для работы с массивами.
             </summary>
+            <summary>
+            Предоставляет функционал для работы с массивами.
+            </summary>
         </member>
         <member name="M:ABCNET.Extensions.ArrExt.Gen``1(``0[],System.Func{System.Int32,``0},System.Int32)">
             <summary>
@@ -27,7 +30,7 @@
         </member>
         <member name="M:ABCNET.Extensions.ArrExt.Rand(System.Int32[],System.Int32,System.Int32)">
             <summary>
-            Заполняет массив случайными числами типа Integer.
+            Заполняет массив случайными числами типа Int32.
             </summary>
             <param name="array">Массив.</param>
             <param name="low">Нижняя граница диапазона.</param>
@@ -35,7 +38,7 @@
         </member>
         <member name="M:ABCNET.Extensions.ArrExt.Rand(System.Double[],System.Double,System.Double)">
             <summary>
-            Заполняет массив случайными числами типа Real.
+            Заполняет массив случайными числами типа Double.
             </summary>
             <param name="array">Массив.</param>
             <param name="low">Нижняя граница диапазона.</param>
@@ -64,14 +67,14 @@
         </member>
         <member name="M:ABCNET.Extensions.ArrExt.Read(System.Double[],System.String)">
             <summary>
-            Заполняет массив значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            Заполняет массив значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="array">Массив.</param>
             <param name="prompt">Приглашение к вводу.</param>
         </member>
         <member name="M:ABCNET.Extensions.ArrExt.Read(System.Int32[],System.String)">
             <summary>
-            Заполняет массив значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            Заполняет массив значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="array">Массив.</param>
             <param name="prompt">Приглашение к вводу.</param>
@@ -98,68 +101,36 @@
             Проекция элемента.
             </summary>
         </member>
-        <member name="T:ABCNET.Extensions.PartitionRes`1">
+        <member name="M:ABCNET.Extensions.AssociateRes`2.#ctor(`0,`1)">
             <summary>
-            Результат для Partition.
+            Конструктор для AssociateRes.
             </summary>
+            <param name="item">Элемент.</param>
+            <param name="projection">Проекция элемента.</param>
         </member>
-        <member name="P:ABCNET.Extensions.PartitionRes`1.True">
+        <member name="M:ABCNET.Extensions.AssociateRes`2.Deconstruct(`0@,`1@)">
             <summary>
-            Элементы, отвечающие условию.
+            Деконструктор для AssociateRes.
             </summary>
+            <param name="item">Элемент.</param>
+            <param name="projection">Проекция элемента.</param>
         </member>
-        <member name="P:ABCNET.Extensions.PartitionRes`1.False">
+        <member name="M:ABCNET.Extensions.AssociateRes`2.ToString">
             <summary>
-            Элементы, не отвечающие условию.
+            Метод для преобразования в строку.
             </summary>
-        </member>
-        <member name="T:ABCNET.Extensions.NumerateRes`1">
-            <summary>
-            Результат для Numerate.
-            </summary>
-        </member>
-        <member name="P:ABCNET.Extensions.NumerateRes`1.Item">
-            <summary>
-            Элемент.
-            </summary>
-        </member>
-        <member name="P:ABCNET.Extensions.NumerateRes`1.Index">
-            <summary>
-            Индекс.
-            </summary>
-        </member>
-        <member name="T:ABCNET.Extensions.StrExt">
-            <summary>
-            Предоставляет функционал для работы со строками.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Extensions.StrExt.Print(System.String)">
-            <summary>
-            Выводит строку на экран.
-            </summary>
-            <param name="input">Строка.</param>
-            <returns>Строка.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.StrExt.Println(System.String)">
-            <summary>
-            Выводит строку на экран и переходит на следующую строку.
-            </summary>
-            <param name="input">Строка.</param>
             <returns>Строка.</returns>
         </member>
         <member name="T:ABCNET.Extensions.BaseExt">
             <summary>
             Предоставляет функционал для работы с базовыми типами.
             </summary>
-        </member>
-        <member name="M:ABCNET.Extensions.BaseExt.IsBetween(System.Int32,System.Int32,System.Int32)">
             <summary>
-            Проверяет лежит ли число между другими двумя.
+            Предоставляет функционал для работы с базовыми типами.
             </summary>
-            <param name="target">Число.</param>
-            <param name="firstBorder">Первая граница.</param>
-            <param name="secondBorder">Вторая граница.</param>
-            <returns>Результат.</returns>
+            <summary>
+            Предоставляет функционал для работы с базовыми типами.
+            </summary>
         </member>
         <member name="M:ABCNET.Extensions.BaseExt.To(System.Int32,System.Int32)">
             <summary>
@@ -183,6 +154,15 @@
             <param name="from">Начальное число.</param>
             <param name="step">Шаг.</param>
             <returns>Последовательность.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.BaseExt.IsBetween(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Проверяет лежит ли число между другими двумя.
+            </summary>
+            <param name="target">Число.</param>
+            <param name="firstBorder">Первая граница.</param>
+            <param name="secondBorder">Вторая граница.</param>
+            <returns>Результат.</returns>
         </member>
         <member name="M:ABCNET.Extensions.BaseExt.Print(System.Boolean)">
             <summary>
@@ -214,33 +194,386 @@
         </member>
         <member name="M:ABCNET.Extensions.BaseExt.Print(System.Double)">
             <summary>
-            Выводит значение типа Real.
+            Выводит значение типа Double.
             </summary>
-            <param name="item">Real.</param>
+            <param name="item">Double.</param>
             <returns>Значение.</returns>
         </member>
         <member name="M:ABCNET.Extensions.BaseExt.Println(System.Double)">
             <summary>
-            Выводит значение типа Real и переходит на новую строку.
+            Выводит значение типа Double и переходит на новую строку.
             </summary>
-            <param name="item">Real.</param>
+            <param name="item">Double.</param>
             <returns>Значение.</returns>
         </member>
         <member name="M:ABCNET.Extensions.BaseExt.Print(System.Int32)">
             <summary>
-            Выводит значение типа Integer.
+            Выводит значение типа Int32.
             </summary>
-            <param name="item">Integer.</param>
+            <param name="item">Int32.</param>
             <returns>Значение.</returns>
         </member>
         <member name="M:ABCNET.Extensions.BaseExt.Println(System.Int32)">
             <summary>
-            Выводит значение типа Integer и переходит на новую строку.
+            Выводит значение типа Int32 и переходит на новую строку.
             </summary>
-            <param name="item">Integer.</param>
+            <param name="item">Int32.</param>
             <returns>Значение.</returns>
         </member>
+        <member name="M:ABCNET.Extensions.BaseExt.Print(System.Nullable{System.Boolean})">
+            <summary>
+            Выводит значение типа Boolean?.
+            </summary>
+            <param name="item">Boolean.</param>
+            <returns>Значение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.BaseExt.Println(System.Nullable{System.Boolean})">
+            <summary>
+            Выводит значение типа Boolean? и переходит на новую строку.
+            </summary>
+            <param name="item">Boolean.</param>
+            <returns>Значение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.BaseExt.Print(System.Nullable{System.Char})">
+            <summary>
+            Выводит значение типа Char?.
+            </summary>
+            <param name="item">Char.</param>
+            <returns>Значение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.BaseExt.Println(System.Nullable{System.Char})">
+            <summary>
+            Выводит значение типа Char? и переходит на новую строку.
+            </summary>
+            <param name="item">Char.</param>
+            <returns>Значение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.BaseExt.Print(System.Nullable{System.Double})">
+            <summary>
+            Выводит значение типа Double?.
+            </summary>
+            <param name="item">Double.</param>
+            <returns>Значение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.BaseExt.Println(System.Nullable{System.Double})">
+            <summary>
+            Выводит значение типа Double? и переходит на новую строку.
+            </summary>
+            <param name="item">Double.</param>
+            <returns>Значение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.BaseExt.Print(System.Nullable{System.Int32})">
+            <summary>
+            Выводит значение типа Int32?.
+            </summary>
+            <param name="item">Int32.</param>
+            <returns>Значение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.BaseExt.Println(System.Nullable{System.Int32})">
+            <summary>
+            Выводит значение типа Int32? и переходит на новую строку.
+            </summary>
+            <param name="item">Int32.</param>
+            <returns>Значение.</returns>
+        </member>
+        <member name="T:ABCNET.Extensions.MatrExt">
+            <summary>
+            Предоставляет функционал для работы с матрицами.
+            </summary>
+            <summary>
+            Предоставляет функционал для работы с матрицами.
+            </summary>
+            <summary>
+            Предоставляет функционал для работы с матрицами.
+            </summary>
+            <summary>
+            Предоставляет функционал для работы с матрицами.
+            </summary>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Gen``1(``0[0:,0:],System.Func{System.Int32,System.Int32,``0},System.Int32,System.Int32)">
+            <summary>
+            Заполняет матрицу на основе функции селектора.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="selector">Функция селектор.</param>
+            <param name="rowFirstIndex">Начальный индекс строки.</param>
+            <param name="columnFirstIndex">Начальный индекс столбца.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Rand(System.Int32[0:,0:],System.Int32,System.Int32)">
+            <summary>
+            Заполняет матрицу случайными числами типа Int32.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="low">Нижняя граница диапазона.</param>
+            <param name="high">Верхняя граница диапазона.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Rand(System.Double[0:,0:],System.Double,System.Double)">
+            <summary>
+            Заполняет матрицу случайными числами типа Double.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="low">Нижняя граница диапазона.</param>
+            <param name="high">Верхняя граница диапазона.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Fill``1(``0[0:,0:],``0)">
+            <summary>
+            Заполняет матрицу указанным значением.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="value">Значение.</param>
+            <returns>Массив.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Col``1(``0[0:,0:],System.Int32)">
+            <summary>
+            Получает столбец матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="index">Индекс столбца.</param>
+            <returns>Столбец.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Col``2(``0[0:,0:],System.Int32,System.Func{``0,``1})">
+            <summary>
+            Получает столбец матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="index">Индекс столбца.</param>
+            <param name="selector">Функция селектор.</param>
+            <returns>Столбец.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Row``1(``0[0:,0:],System.Int32)">
+            <summary>
+            Получает строку матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="index">Индекс строки.</param>
+            <returns>Строка.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Row``2(``0[0:,0:],System.Int32,System.Func{``0,``1})">
+            <summary>
+            Получает строку матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="index">Индекс строки.</param>
+            <param name="selector">Функция селектор.</param>
+            <returns>Строка.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.SwapRows``1(``0[0:,0:],System.Int32,System.Int32)">
+            <summary>
+            Меняет местами две строки матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="firstIndex">Индекс первой строки.</param>
+            <param name="secondIndex">Индекс второй строки.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.SwapRows``1(``0[0:,0:],System.Int32,System.Int32,System.Func{``0,``0})">
+            <summary>
+            Меняет местами две строки матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="firstIndex">Индекс первой строки.</param>
+            <param name="secondIndex">Индекс второй строки.</param>
+            <param name="selector">Функция селектор.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.SwapCols``1(``0[0:,0:],System.Int32,System.Int32)">
+            <summary>
+            Меняет местами два столбца матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="firstIndex">Индекс первого столбца.</param>
+            <param name="secondIndex">Индекс второго столбца.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.SwapCols``1(``0[0:,0:],System.Int32,System.Int32,System.Func{``0,``0})">
+            <summary>
+            Меняет местами два столбца матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="firstIndex">Индекс первого столбца.</param>
+            <param name="secondIndex">Индекс второго столбца.</param>
+            <param name="selector">Функция селектор.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.SetRow``1(``0[0:,0:],``0[],System.Int32)">
+            <summary>
+            Изменяет столбец матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="col">Столбец.</param>
+            <param name="index">Индекс столбца.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.SetCol``1(``0[0:,0:],``0[],System.Int32)">
+            <summary>
+            Изменяет строку матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            /// <param name="row">Строка.</param>
+            <param name="index">Индекс строки.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Cols``1(``0[0:,0:])">
+            <summary>
+            Возвращает последовательность строк матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <returns>Строки.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Rows``1(``0[0:,0:])">
+            <summary>
+            Возвращает последовательность столбцов матрицы.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <returns>Столбцы.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Read(System.Boolean[0:,0:],System.String)">
+            <summary>
+            Заполняет матрицу значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="prompt">Приглашение к вводу.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Read(System.Char[0:,0:],System.String)">
+            <summary>
+            Заполняет матрицу значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="prompt">Приглашение к вводу.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Read(System.Double[0:,0:],System.String)">
+            <summary>
+            Заполняет матрицу значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="prompt">Приглашение к вводу.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Read(System.Int32[0:,0:],System.String)">
+            <summary>
+            Заполняет матрицу значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="prompt">Приглашение к вводу.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Read(System.String[0:,0:],System.String)">
+            <summary>
+            Заполняет матрицу значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="prompt">Приглашение к вводу.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Print``1(``0[0:,0:],System.String,System.String,System.String)">
+            <summary>
+            Выводит матрицу.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.Println``1(``0[0:,0:],System.String,System.String,System.String)">
+            <summary>
+            Выводит матрицу и переходит на новую строку.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.PrintBy``2(``0[0:,0:],System.Func{``0,``1},System.String,System.String,System.String)">
+            <summary>
+            Выводит матрицу.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="selector">Функция селектор.</param>
+            <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.MatrExt.PrintlnBy``2(``0[0:,0:],System.Func{``0,``1},System.String,System.String,System.String)">
+            <summary>
+            Выводит матрицу и переходит на новую строку.
+            </summary>
+            <param name="matrix">Матрица.</param>
+            <param name="selector">Функция селектор.</param>
+            <param name="delimiter">Разделитель.</param>
+            <param name="start">Первый выводимый символ строки.</param>
+            <param name="end">Последний выводимый символ строки.</param>
+        </member>
+        <member name="T:ABCNET.Extensions.PartitionRes`1">
+            <summary>
+            Результат для Partition.
+            </summary>
+        </member>
+        <member name="P:ABCNET.Extensions.PartitionRes`1.True">
+            <summary>
+            Элементы, отвечающие условию.
+            </summary>
+        </member>
+        <member name="P:ABCNET.Extensions.PartitionRes`1.False">
+            <summary>
+            Элементы, не отвечающие условию.
+            </summary>
+        </member>
+        <member name="M:ABCNET.Extensions.PartitionRes`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Конструктор для PartitionRes.
+            </summary>
+            <param name="trueCollection">Элементы, отвечающие условию.</param>
+            <param name="falseCollection">Элементы, неотвечающие условию.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.PartitionRes`1.Deconstruct(System.Collections.Generic.IEnumerable{`0}@,System.Collections.Generic.IEnumerable{`0}@)">
+            <summary>
+            Деконструктор для NumerateRes.
+            </summary>
+            <param name="trueCollection">Элементы, отвечающие условию.</param>
+            <param name="falseCollection">Элементы, неотвечающие условию.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.PartitionRes`1.ToString">
+            <summary>
+            Метод для преобразования в строку.
+            </summary>
+            <returns>Строка.</returns>
+        </member>
+        <member name="T:ABCNET.Extensions.NumerateRes`1">
+            <summary>
+            Результат для Numerate.
+            </summary>
+        </member>
+        <member name="P:ABCNET.Extensions.NumerateRes`1.Item">
+            <summary>
+            Элемент.
+            </summary>
+        </member>
+        <member name="P:ABCNET.Extensions.NumerateRes`1.Index">
+            <summary>
+            Индекс.
+            </summary>
+        </member>
+        <member name="M:ABCNET.Extensions.NumerateRes`1.#ctor(`0,System.Int32)">
+            <summary>
+            Конструктор для NumerateRes.
+            </summary>
+            <param name="item">Элемент.</param>
+            <param name="index">Индекс элемента.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.NumerateRes`1.Deconstruct(`0@,System.Int32@)">
+            <summary>
+            Деконструктор для NumerateRes.
+            </summary>
+            <param name="item">Элемент.</param>
+            <param name="index">Индекс элемента.</param>
+        </member>
+        <member name="M:ABCNET.Extensions.NumerateRes`1.ToString">
+            <summary>
+            Метод для преобразования в строку.
+            </summary>
+            <returns>Строка.</returns>
+        </member>
         <member name="T:ABCNET.Extensions.SeqExt">
+            <summary>
+            Предоставляет функционал для работы с последовательностями.
+            </summary>
             <summary>
             Предоставляет функционал для работы с последовательностями.
             </summary>
@@ -436,6 +769,28 @@
             <param name="onlyPairs">Возвращать ли только пары элементов, или возвращать и оставшиеся элементы большей последовательности.</param>
             <returns>Последовательность.</returns>
         </member>
+        <member name="M:ABCNET.Extensions.SeqExt.Prod(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Произведение элементов последовательности.
+            </summary>
+            <param name="collection">Последовательность.</param>
+            <returns>Произведение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.SeqExt.Prod(System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Произведение элементов последовательности.
+            </summary>
+            <param name="collection">Последовательность.</param>
+            <returns>Произведение.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.SeqExt.Partition``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
+            <summary>
+            Разделяет последовательность на две по заданному условию.
+            </summary>
+            <param name="collection">Последовательность.</param>
+            <param name="predicate">Предикат.</param>
+            <returns>Пара последовательностей.</returns>
+        </member>
         <member name="M:ABCNET.Extensions.SeqExt.Print``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.String)">
             <summary>
             Выводит последовательность.
@@ -493,211 +848,31 @@
             <param name="selector">Функция селектор.</param>
             <returns>Последовательность.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.SeqExt.Prod(System.Collections.Generic.IEnumerable{System.Int32})">
+        <member name="T:ABCNET.Extensions.StrExt">
             <summary>
-            Произведение элементов последовательности.
-            </summary>
-            <param name="collection">Последовательность.</param>
-            <returns>Произведение.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.SeqExt.Prod(System.Collections.Generic.IEnumerable{System.Double})">
-            <summary>
-            Произведение элементов последовательности.
-            </summary>
-            <param name="collection">Последовательность.</param>
-            <returns>Произведение.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.SeqExt.Partition``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
-            <summary>
-            Разделяет последовательность на две по заданному условию.
-            </summary>
-            <param name="collection">Последовательность.</param>
-            <param name="predicate">Предикат.</param>
-            <returns>Пара последовательностей.</returns>
-        </member>
-        <member name="T:ABCNET.Extensions.MatrExt">
-            <summary>
-            Предоставляет функционал для работы с матрицами.
+            Предоставляет функционал для работы со строками.
             </summary>
         </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Col``1(``0[0:,0:],System.Int32)">
+        <member name="M:ABCNET.Extensions.StrExt.Print(System.String)">
             <summary>
-            Получает столбец матрицы.
+            Выводит строку на экран.
             </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="index">Индекс столбца.</param>
-            <returns>Столбец.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Col``2(``0[0:,0:],System.Int32,System.Func{``0,``1})">
-            <summary>
-            Получает столбец матрицы.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="index">Индекс столбца.</param>
-            <param name="selector">Функция селектор.</param>
-            <returns>Столбец.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Row``1(``0[0:,0:],System.Int32)">
-            <summary>
-            Получает строку матрицы.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="index">Индекс строки.</param>
+            <param name="input">Строка.</param>
             <returns>Строка.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Row``2(``0[0:,0:],System.Int32,System.Func{``0,``1})">
+        <member name="M:ABCNET.Extensions.StrExt.Println(System.String)">
             <summary>
-            Получает строку матрицы.
+            Выводит строку на экран и переходит на следующую строку.
             </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="index">Индекс строки.</param>
-            <param name="selector">Функция селектор.</param>
+            <param name="input">Строка.</param>
             <returns>Строка.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.SwapRows``1(``0[0:,0:],System.Int32,System.Int32)">
-            <summary>
-            Меняет местами две строки матрицы.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="firstIndex">Индекс первой строки.</param>
-            <param name="secondIndex">Индекс второй строки.</param>
-            <returns>Матрица.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.SwapRows``1(``0[0:,0:],System.Int32,System.Int32,System.Func{``0,``0})">
-            <summary>
-            Меняет местами две строки матрицы.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="firstIndex">Индекс первой строки.</param>
-            <param name="secondIndex">Индекс второй строки.</param>
-            <param name="selector">Функция селектор.</param>
-            <returns>Матрица.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.SwapCols``1(``0[0:,0:],System.Int32,System.Int32)">
-            <summary>
-            Меняет местами два столбца матрицы.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="firstIndex">Индекс первого столбца.</param>
-            <param name="secondIndex">Индекс второго столбца.</param>
-            <returns>Матрица.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.SwapCols``1(``0[0:,0:],System.Int32,System.Int32,System.Func{``0,``0})">
-            <summary>
-            Меняет местами два столбца матрицы.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="firstIndex">Индекс первого столбца.</param>
-            <param name="secondIndex">Индекс второго столбца.</param>
-            <param name="selector">Функция селектор.</param>
-            <returns>Матрица.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Println``1(``0[0:,0:],System.String,System.String,System.String)">
-            <summary>
-            Выводит матрицу и переходит на новую строку.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="delimiter">Разделитель.</param>
-            <param name="start">Первый выводимый символ строки.</param>
-            <param name="end">Последний выводимый символ строки.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.PrintBy``2(``0[0:,0:],System.Func{``0,``1},System.String,System.String,System.String)">
-            <summary>
-            Выводит матрицу и переходит на новую строку.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="selector">Функция селектор.</param>
-            <param name="delimiter">Разделитель.</param>
-            <param name="start">Первый выводимый символ строки.</param>
-            <param name="end">Последний выводимый символ строки.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Gen``1(``0[0:,0:],System.Func{System.Int32,System.Int32,``0},System.Int32,System.Int32)">
-            <summary>
-            Заполняет матрицу на основе функции селектора.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="selector">Функция селектор.</param>
-            <param name="rowFirstIndex">Начальный индекс строки.</param>
-            <param name="columnFirstIndex">Начальный индекс столбца.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Rand(System.Int32[0:,0:],System.Int32,System.Int32)">
-            <summary>
-            Заполняет матрицу случайными числами типа Integer.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="low">Нижняя граница диапазона.</param>
-            <param name="high">Верхняя граница диапазона.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Rand(System.Double[0:,0:],System.Double,System.Double)">
-            <summary>
-            Заполняет матрицу случайными числами типа Real.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="low">Нижняя граница диапазона.</param>
-            <param name="high">Верхняя граница диапазона.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Fill``1(``0[0:,0:],``0)">
-            <summary>
-            Заполняет матрицу указанным значением.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="value">Значение.</param>
-            <returns>Массив.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Read(System.Boolean[0:,0:],System.String)">
-            <summary>
-            Заполняет матрицу значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="prompt">Приглашение к вводу.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Read(System.Char[0:,0:],System.String)">
-            <summary>
-            Заполняет матрицу значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="prompt">Приглашение к вводу.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Read(System.Double[0:,0:],System.String)">
-            <summary>
-            Заполняет матрицу значениями типа Real. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="prompt">Приглашение к вводу.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Read(System.Int32[0:,0:],System.String)">
-            <summary>
-            Заполняет матрицу значениями типа Integer. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="prompt">Приглашение к вводу.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.Read(System.String[0:,0:],System.String)">
-            <summary>
-            Заполняет матрицу значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="prompt">Приглашение к вводу.</param>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.SetRow``1(``0[0:,0:],``0[],System.Int32)">
-            <summary>
-            Изменяет столбец матрицы.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="index">Индекс столбца.</param>
-            <returns>Столбец.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.MatrExt.SetCol``1(``0[0:,0:],``0[],System.Int32)">
-            <summary>
-            Изменяет строку матрицы.
-            </summary>
-            <param name="matrix">Матрица.</param>
-            <param name="index">Индекс строки.</param>
-            <returns>Столбец.</returns>
         </member>
         <member name="T:ABCNET.Extensions.TupExt">
             <summary>
-            Предоставляет функционал для работы с ссылочными кортежами.
+            Предоставляет функционал для работы с кортежами.
+            </summary>
+            <summary>
+            Предоставляет функционал для работы с кортежами.
             </summary>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0})">
@@ -723,69 +898,6 @@
             <param name="item">Элемент.</param>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
         <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0})">
             <summary>
             Преобразует кортеж в последовательность.
@@ -807,69 +919,6 @@
             </summary>
             <param name="tuple">Кортеж.</param>
             <param name="item">Элемент.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0})">
@@ -895,69 +944,6 @@
             <param name="item">Элемент.</param>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
         <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0,``0})">
             <summary>
             Преобразует кортеж в последовательность.
@@ -979,69 +965,6 @@
             </summary>
             <param name="tuple">Кортеж.</param>
             <param name="item">Элемент.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит кортеж и переходит на новую строку.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
-            <summary>
-            Выводит каждый элемент на новой строке.
-            </summary>
-            <param name="tuple">Кортеж.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0,``0,``0})">
@@ -1067,6 +990,289 @@
             <param name="item">Элемент.</param>
             <returns>Кортеж.</returns>
         </member>
+        <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
+            <summary>
+            Преобразует кортеж в последовательность.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Последовательность.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит кортеж и переходит на новую строку.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
+        <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0,``0},System.Func{``0,``0})">
+            <summary>
+            Выводит каждый элемент на новой строке.
+            </summary>
+            <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
+            <returns>Кортеж.</returns>
+        </member>
         <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0,``0})">
             <summary>
             Выводит кортеж.
@@ -1079,6 +1285,7 @@
             Выводит кортеж.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
@@ -1086,6 +1293,7 @@
             Выводит кортеж.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0,``0})">
@@ -1100,6 +1308,7 @@
             Выводит кортеж и переходит на новую строку.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
@@ -1107,6 +1316,7 @@
             Выводит кортеж и переходит на новую строку.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0,``0})">
@@ -1121,6 +1331,7 @@
             Выводит каждый элемент на новой строке.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
@@ -1128,14 +1339,8 @@
             Выводит каждый элемент на новой строке.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
-        </member>
-        <member name="M:ABCNET.Extensions.TupExt.ToSeq``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
-            <summary>
-            Преобразует кортеж в последовательность.
-            </summary>
-            <param name="tuple">Кортеж.</param>
-            <returns>Последовательность.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.Print``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
             <summary>
@@ -1149,6 +1354,7 @@
             Выводит кортеж.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.PrintBy``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
@@ -1156,6 +1362,7 @@
             Выводит кортеж.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.Println``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
@@ -1170,6 +1377,7 @@
             Выводит кортеж и переходит на новую строку.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.PrintlnBy``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
@@ -1177,6 +1385,7 @@
             Выводит кортеж и переходит на новую строку.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.PrintLines``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0})">
@@ -1191,6 +1400,7 @@
             Выводит каждый элемент на новой строке.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Extensions.TupExt.PrintLinesBy``1(System.Tuple{``0,``0,``0,``0,``0,``0,``0},System.Func{``0,``0})">
@@ -1198,6 +1408,7 @@
             Выводит каждый элемент на новой строке.
             </summary>
             <param name="tuple">Кортеж.</param>
+            <param name="func">Функция-селктор.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="T:ABCNET.Utils.Arr">
@@ -1232,7 +1443,7 @@
         </member>
         <member name="M:ABCNET.Utils.Arr.Rand(System.Int32,System.Int32,System.Int32)">
             <summary>
-            Создаёт массив случайных чисел типа Integer.
+            Создаёт массив случайных чисел типа Int32.
             </summary>
             <param name="count">Количество элементов.</param>
             <param name="low">Нижняя граница диапазона.</param>
@@ -1241,7 +1452,7 @@
         </member>
         <member name="M:ABCNET.Utils.Arr.Rand(System.Int32,System.Double,System.Double)">
             <summary>
-            Создаёт массив случайных чисел типа Real.
+            Создаёт массив случайных чисел типа Double.
             </summary>
             <param name="count">Количество элементов.</param>
             <param name="low">Нижняя граница диапазона.</param>
@@ -1258,7 +1469,7 @@
         </member>
         <member name="M:ABCNET.Utils.Arr.ReadBoolean(System.Int32,System.String)">
             <summary>
-            Читает массив значений типа Boolean.
+            Читает массив значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="count">Количество элементов.</param>
             <param name="prompt">Приглашение к вводу.</param>
@@ -1266,23 +1477,23 @@
         </member>
         <member name="M:ABCNET.Utils.Arr.ReadChar(System.Int32,System.String)">
             <summary>
-            Читает массив значений типа Char.
+            Читает массив значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="count">Количество элементов.</param>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Массив.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Arr.ReadReal(System.Int32,System.String)">
+        <member name="M:ABCNET.Utils.Arr.ReadDouble(System.Int32,System.String)">
             <summary>
-            Читает массив значений типа Real.
+            Читает массив значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="count">Количество элементов.</param>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Массив.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Arr.ReadInteger(System.Int32,System.String)">
+        <member name="M:ABCNET.Utils.Arr.ReadInt32(System.Int32,System.String)">
             <summary>
-            Читает массив значений типа Integer.
+            Читает массив значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="count">Количество элементов.</param>
             <param name="prompt">Приглашение к вводу.</param>
@@ -1290,11 +1501,191 @@
         </member>
         <member name="M:ABCNET.Utils.Arr.ReadString(System.Int32,System.String)">
             <summary>
-            Читает массив значений типа String.
+            Читает массив значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="count">Количество элементов.</param>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Массив.</returns>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadBooleanTup2(System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadCharTup2(System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadInt32Tup2(System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadDoubleTup2(System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadStringTup2(System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadBooleanTup3(System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadCharTup3(System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadInt32Tup3(System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadDoubleTup3(System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadStringTup3(System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadBooleanTup4(System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadCharTup4(System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadInt32Tup4(System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadDoubleTup4(System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadStringTup4(System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadBooleanTup5(System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadCharTup5(System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadInt32Tup5(System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadDoubleTup5(System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadStringTup5(System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadBooleanTup6(System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadCharTup6(System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadInt32Tup6(System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadDoubleTup6(System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadStringTup6(System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadBooleanTup7(System.Int32)">
+            <summary>
+            Заполняет 7 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadCharTup7(System.Int32)">
+            <summary>
+            Заполняет 7 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadInt32Tup7(System.Int32)">
+            <summary>
+            Заполняет 7 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadDoubleTup7(System.Int32)">
+            <summary>
+            Заполняет 7 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Arr.ReadStringTup7(System.Int32)">
+            <summary>
+            Заполняет 7 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="count">Размер массива.</param>
         </member>
         <member name="T:ABCNET.Utils.Base">
             <summary>
@@ -1310,35 +1701,35 @@
         </member>
         <member name="M:ABCNET.Utils.Base.ReadBoolean(System.String)">
             <summary>
-            Читает значение типа Boolean.
+            Читает значение типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Значение.</returns>
         </member>
         <member name="M:ABCNET.Utils.Base.ReadChar(System.String)">
             <summary>
-            Читает значение типа Char.
+            Читает значение типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Значение.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Base.ReadReal(System.String)">
+        <member name="M:ABCNET.Utils.Base.ReadDouble(System.String)">
             <summary>
-            Читает значение типа Real.
+            Читает значение типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Значение.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Base.ReadInteger(System.String)">
+        <member name="M:ABCNET.Utils.Base.ReadInt32(System.String)">
             <summary>
-            Читает значение типа Integer.
+            Читает значение типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Значение.</returns>
         </member>
         <member name="M:ABCNET.Utils.Base.ReadString(System.String)">
             <summary>
-            Читает значение типа String.
+            Читает значение типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Значение.</returns>
@@ -1364,66 +1755,6 @@
             <param name="low">Нижняя граница диапазона.</param>
             <param name="high">Верхняя граница диапазона.</param>
             <returns>Число.</returns>
-        </member>
-        <member name="T:ABCNET.Utils.PABCSystem">
-            <summary>
-            Добавлен ради совместимости с PABCSystem.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.Dict``2(System.Collections.Generic.KeyValuePair{``0,``1}[])">
-            <summary>
-            Возвращает словарь пар элементов (ключ, значение).
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.Dict``2(System.Tuple{``0,``1}[])">
-            <summary>
-            Возвращает словарь пар элементов (ключ, значение).
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.HSet``1(``0[])">
-            <summary>
-             Возвращает множество на базе хеш таблицы, заполненное указанными значениями.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.HSet``1(System.Collections.Generic.IEnumerable{``0})">
-            <summary>
-            Возвращает множество на базе хеш таблицы, заполненное значениями из последовательности.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.KV``2(``0,``1)">
-            <summary>
-            Возвращает пару элементов (ключ, значение).
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.LLst``1(``0[])">
-            <summary>
-            Возвращает двусвязный список, заполненный указанными значениями.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.LLst``1(System.Collections.Generic.IEnumerable{``0})">
-            <summary>
-            Возвращает двусвязный список, заполненный значениями из последовательности.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.Lst``1(``0[])">
-            <summary>
-            Возвращает список, заполненный указанными значениями.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.Lst``1(System.Collections.Generic.IEnumerable{``0})">
-            <summary>
-            Возвращает список, заполненный значениями из последовательности.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.SSet``1(``0[])">
-            <summary>
-            Возвращает множество на базе бинарного дерева поиска, заполненное указанными значениями.
-            </summary>
-        </member>
-        <member name="M:ABCNET.Utils.PABCSystem.SSet``1(System.Collections.Generic.IEnumerable{``0})">
-            <summary>
-            Возвращает множество на базе бинарного дерева поиска, заполненное значениями из последовательности.
-            </summary>
         </member>
         <member name="T:ABCNET.Utils.Seq">
             <summary>
@@ -1475,7 +1806,7 @@
             Создаёт матрицу из указанных значений.
             </summary>
              <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="values">Значения.</param>
             <returns>Матрица.</returns>
         </member>
@@ -1484,7 +1815,7 @@
             Создаёт матрицу на основе функции селектора.
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="selector">Функция селектор.</param>
             <param name="rowFirstIndex">Начальный индекс строки.</param>
             <param name="columnFirstIndex">Начальный индекс столбца.</param>
@@ -1492,20 +1823,20 @@
         </member>
         <member name="M:ABCNET.Utils.Matr.Rand(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
-            Создаёт матрицу случайных чисел типа Integer.
+            Создаёт матрицу случайных чисел типа Int32.
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="low">Нижняя граница диапазона.</param>
             <param name="high">Верхняя граница диапазона.</param>
             <returns>Матрица.</returns>
         </member>
         <member name="M:ABCNET.Utils.Matr.Rand(System.Int32,System.Int32,System.Double,System.Double)">
             <summary>
-            Создаёт матрицу случайных чисел типа Real.
+            Создаёт матрицу случайных чисел типа Double.
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="low">Нижняя граница диапазона.</param>
             <param name="high">Верхняя граница диапазона.</param>
             <returns>Матрица.</returns>
@@ -1515,54 +1846,264 @@
             Создаёт матрицу, заполненную указанным значением.
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="value">Значение.</param>
             <returns>Массив.</returns>
         </member>
         <member name="M:ABCNET.Utils.Matr.ReadBoolean(System.Int32,System.Int32,System.String)">
             <summary>
-            Читает матрицу значений типа Boolean.
+            Читает матрицу значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Матрица.</returns>
         </member>
         <member name="M:ABCNET.Utils.Matr.ReadChar(System.Int32,System.Int32,System.String)">
             <summary>
-            Читает матрицу значений типа Char.
+            Читает матрицу значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Матрица.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Matr.ReadReal(System.Int32,System.Int32,System.String)">
+        <member name="M:ABCNET.Utils.Matr.ReadDouble(System.Int32,System.Int32,System.String)">
             <summary>
-            Читает матрицу значений типа Real.
+            Читает матрицу значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Матрица.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Matr.ReadInteger(System.Int32,System.Int32,System.String)">
+        <member name="M:ABCNET.Utils.Matr.ReadInt32(System.Int32,System.Int32,System.String)">
             <summary>
-            Читает матрицу значений типа Integer.
+            Читает матрицу значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Матрица.</returns>
         </member>
         <member name="M:ABCNET.Utils.Matr.ReadString(System.Int32,System.Int32,System.String)">
             <summary>
-            Читает матрицу значений типа String.
+            Читает матрицу значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <param name="rowsCount">Количество строк.</param>
-            <param name="columnsCount">Количество столбцов.</param>
+            <param name="colsCount">Количество столбцов.</param>
             <param name="prompt">Приглашение к вводу.</param>
             <returns>Матрица.</returns>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadBooleanTup2(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadCharTup2(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadInt32Tup2(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadDoubleTup2(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadStringTup2(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadBooleanTup3(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadCharTup3(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadInt32Tup3(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadDoubleTup3(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadStringTup3(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 3 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadBooleanTup4(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadCharTup4(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadInt32Tup4(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadDoubleTup4(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadStringTup4(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 4 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadBooleanTup5(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadCharTup5(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadInt32Tup5(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadDoubleTup5(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadStringTup5(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 5 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadBooleanTup6(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadCharTup6(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadInt32Tup6(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadDoubleTup6(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadStringTup6(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadBooleanTup7(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 6 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadCharTup7(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 7 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadInt32Tup7(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 7 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadDoubleTup7(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 7 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Matr.ReadStringTup7(System.Int32,System.Int32)">
+            <summary>
+            Заполняет 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+            </summary>
+            <param name="rowsCount">Количество строк.</param>
+            <param name="colsCount">Количество столбцов.</param>
         </member>
         <member name="T:ABCNET.Utils.Tup">
             <summary>
@@ -1571,24 +2112,65 @@
         </member>
         <member name="M:ABCNET.Utils.Tup.New``2(``0,``1)">
             <summary>
-            Создаёт кортеж из двух значений.
+            Создаёт кортеж из 2 значений.
             </summary>
-            <param name="arg0">Первое значение.</param>
-            <param name="arg1">Второе значение.</param>
+            <param name="item1">Первое значение.</param>
+            <param name="item2">Второе значение.</param>
             <returns>Кортеж.</returns>
         </member>
         <member name="M:ABCNET.Utils.Tup.New``3(``0,``1,``2)">
             <summary>
-            Создаёт кортеж из трёх значений.
+            Создаёт кортеж из 3 значений.
             </summary>
-            <param name="arg0">Первое значение.</param>
-            <param name="arg1">Второе значение.</param>
-            <param name="arg2">Третье значение.</param>
-            <returns>Кортеж.</returns>
+            <param name="item1">Первое значение.</param>
+            <param name="item2">Второе значение.</param>
+            <param name="item3">Третье значение.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Tup.New``4(``0,``1,``2,``3)">
+            <summary>
+            Создаёт кортеж из 4 значений.
+            </summary>
+            <param name="item1">Первое значение.</param>
+            <param name="item2">Второе значение.</param>
+            <param name="item3">Третье значение.</param>
+            <param name="item4">Четвёртое значение.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Tup.New``5(``0,``1,``2,``3,``4)">
+            <summary>
+            Создаёт кортеж из 5 значений.
+            </summary>
+            <param name="item1">Первое значение.</param>
+            <param name="item2">Второе значение.</param>
+            <param name="item3">Третье значение.</param>
+            <param name="item4">Четвёртое значение.</param>
+            <param name="item5">Пятое значение.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Tup.New``6(``0,``1,``2,``3,``4,``5)">
+            <summary>
+            Создаёт кортеж из 6 значений.
+            </summary>
+            <param name="item1">Первое значение.</param>
+            <param name="item2">Второе значение.</param>
+            <param name="item3">Третье значение.</param>
+            <param name="item4">Четвёртое значение.</param>
+            <param name="item5">Пятое значение.</param>
+            <param name="item6">Шестое значение.</param>
+        </member>
+        <member name="M:ABCNET.Utils.Tup.New``7(``0,``1,``2,``3,``4,``5,``6)">
+            <summary>
+            Создаёт кортеж из 7 значений.
+            </summary>
+            <param name="item1">Первое значение.</param>
+            <param name="item2">Второе значение.</param>
+            <param name="item3">Третье значение.</param>
+            <param name="item4">Четвёртое значение.</param>
+            <param name="item5">Пятое значение.</param>
+            <param name="item6">Шестое значение.</param>
+            <param name="item7">Седьмое значение.</param>
         </member>
         <member name="M:ABCNET.Utils.Tup.Rand2(System.Int32,System.Int32)">
             <summary>
-            Создаёт кортеж из двух случайных значений типа Integer.
+            Создаёт кортеж из двух случайных значений типа Int32.
             </summary>
             <param name="low">Нижняя граница диапазона.</param>
             <param name="high">Верхняя граница диапазона.</param>
@@ -1596,7 +2178,7 @@
         </member>
         <member name="M:ABCNET.Utils.Tup.Rand3(System.Int32,System.Int32)">
             <summary>
-            Создаёт кортеж из трёх случайных значений типа Integer.
+            Создаёт кортеж из трёх случайных значений типа Int32.
             </summary>
             <param name="low">Нижняя граница диапазона.</param>
             <param name="high">Верхняя граница диапазона.</param>
@@ -1604,7 +2186,7 @@
         </member>
         <member name="M:ABCNET.Utils.Tup.Rand2(System.Double,System.Double)">
             <summary>
-            Создаёт кортеж из двух случайных значений типа Real.
+            Создаёт кортеж из двух случайных значений типа Double.
             </summary>
             <param name="low">Нижняя граница диапазона.</param>
             <param name="high">Верхняя граница диапазона.</param>
@@ -1612,7 +2194,7 @@
         </member>
         <member name="M:ABCNET.Utils.Tup.Rand3(System.Double,System.Double)">
             <summary>
-            Создаёт кортеж из трёх случайных значений типа Real.
+            Создаёт кортеж из трёх случайных значений типа Double.
             </summary>
             <param name="low">Нижняя граница диапазона.</param>
             <param name="high">Верхняя граница диапазона.</param>
@@ -1632,63 +2214,63 @@
             <param name="value">Значение.</param>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadBoolean2(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadBooleanTup2(System.String)">
             <summary>
-            Читает кортеж из двух значений типа Boolean.
+            Читает кортеж из двух значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadBoolean3(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadBooleanTup3(System.String)">
             <summary>
-            Читает кортеж из трёх значений типа Boolean.
+            Читает кортеж из трёх значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadChar2(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadCharTup2(System.String)">
             <summary>
-            Читает кортеж из двух значений типа Char.
+            Читает кортеж из двух значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadChar3(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadCharTup3(System.String)">
             <summary>
-            Читает кортеж из трёх значений типа Char.
+            Читает кортеж из трёх значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadReal2(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadDoubleTup2(System.String)">
             <summary>
-            Читает кортеж из двух значений типа Real.
+            Читает кортеж из двух значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadReal3(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadDoubleTup3(System.String)">
             <summary>
-            Читает кортеж из трёх значений типа Real.
+            Читает кортеж из трёх значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadInteger2(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadInt32Tup2(System.String)">
             <summary>
-            Читает кортеж из двух значений типа Integer.
+            Читает кортеж из двух значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadInteger3(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadInt32Tup3(System.String)">
             <summary>
-            Читает кортеж из трёх значений типа Integer.
+            Читает кортеж из трёх значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadString2(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadStringTup2(System.String)">
             <summary>
-            Читает кортеж из двух значений типа String.
+            Читает кортеж из двух значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>
-        <member name="M:ABCNET.Utils.Tup.ReadString3(System.String)">
+        <member name="M:ABCNET.Utils.Tup.ReadStringTup3(System.String)">
             <summary>
-            Читает кортеж из трёх значений типа String.
+            Читает кортеж из трёх значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             </summary>
             <returns>Кортеж.</returns>
         </member>

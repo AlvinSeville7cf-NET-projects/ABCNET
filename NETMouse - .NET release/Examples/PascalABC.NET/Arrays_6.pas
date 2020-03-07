@@ -2,7 +2,7 @@
 uses ABCNET.Utils;
 uses ABCNET.Extensions;
 begin
-  Arr.Rand(Base.ReadInteger('N:'), -19, 26).Println()
-    .Where((x, i) -> i mod 2 <> 0).Aggregate((a, b) -> a * b).Println();
+  Arr.Rand(Base.ReadInt32('N:'), -19, 26).Println()
+    .Where((x, i) -> i mod 2 <> 0).Prod().Println();
   Base.ReadChar();
 end.

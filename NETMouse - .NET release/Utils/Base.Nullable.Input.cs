@@ -1,14 +1,16 @@
 ﻿using ABCNET.Extensions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ABCNET.Utils
 {
+    /// <summary>
+    /// Предоставляет функционал для работы с базовыми типами.
+    /// </summary>
     public static partial class Base
     {
-
+        /// <summary>
+        /// Предоставляет функционал для работы с Nullable типами.
+        /// </summary>
         public static partial class Nullable
         {
 
