@@ -1,5 +1,6 @@
 using ABCNET.Extensions;
 using System;
+using System.Numerics;
 
 namespace ABCNET.Utils
 {
@@ -161,6 +162,17 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             return Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Читает значение типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Значение.</returns>
+        public static BigInteger ReadBigInteger(string prompt = EmptyStringHelper.Empty)
+        {
+            prompt.Print();
+            return BigInteger.Parse(Console.ReadLine());
         }
 
         /// <summary> 
