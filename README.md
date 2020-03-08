@@ -101,7 +101,10 @@ namespace TestProgram
 Каждая major-версия закрывает в сумме ровно 50 `Issue` по `API`-библиотеки и состоит из двух minor-версий. Каждая сборка minor-версии закрывает в сумме ровно 5 `Issue` по `API`-библиотеки.
 
 # Инструменты разработки
-При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Для автоматизации сборки версий применялся `Batch Script`. В качестве декомпилятора используется [`dotPeek`](https://www.jetbrains.com/decompiler/).
+- IDE - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/)
+- VCS - [`Git`](https://git-scm.com/download)
+- Язык автоматизации - `Batch Script`
+- Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
 
 Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
 
