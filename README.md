@@ -101,13 +101,13 @@ namespace TestProgram
 Каждая major-версия закрывает в сумме ровно 50 `Issue` по `API`-библиотеки и состоит из двух minor-версий. Каждая сборка minor-версии закрывает в сумме ровно 5 `Issue` по `API`-библиотеки.
 
 # Инструменты разработки
-При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Не используйте `GitHub Desktop` при разработке данного продукта.
-
-Для автоматизации сборки версий применялся `Batch Script`.
+При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Для автоматизации сборки версий применялся `Batch Script`.
 
 Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
 
 ![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
+
+Использование иных инструментов, кроме перечисленных выше, без соглосования с руководителем проекта запрещено.
 
 ----
 Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
