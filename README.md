@@ -101,19 +101,19 @@ namespace TestProgram
 Каждая major-версия закрывает в сумме ровно 50 `Issue` по `API`-библиотеки и состоит из двух minor-версий. Каждая сборка minor-версии закрывает в сумме ровно 5 `Issue` по `API`-библиотеки.
 
 # Инструменты разработки
-- IDE - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/)
-- VCS - [`Git`](https://git-scm.com/download)
-- Язык автоматизации - `Batch Script`
+- IDE - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и [Repl.it](https://repl.it/)
 - Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
+- VCS - [`Git`](https://git-scm.com/download) с [`Git Bash`](https://git-scm.com/download)
+- Язык автоматизации - `Bash`
 
 Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
 
 ![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
 
 Использование иных инструментов для разработки, кроме перечисленных выше, без соглосования с руководителем проекта запрещено. Следующие инструменты запрещены по-умолчанию:
-- `GitHub Desktop`
-- `TortoiseGit`
-- `PascalABC.NET`
+- `GitHub Desktop` (мало средств для работы с Git/GitHub)
+- `TortoiseGit` (интеграция с `Git` имеется в `Visual Studio`)
+- `PascalABC.NET` (нестабильная IDE со слабым компилятором)
 
 ----
 Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
