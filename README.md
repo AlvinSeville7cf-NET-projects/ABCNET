@@ -101,13 +101,13 @@ namespace TestProgram
 Каждая major-версия закрывает в сумме ровно 50 `Issue` по `API`-библиотеки и состоит из двух minor-версий. Каждая сборка minor-версии закрывает в сумме ровно 5 `Issue` по `API`-библиотеки.
 
 # Инструменты разработки
-При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Для автоматизации сборки версий применялся `Batch Script`.
+При разработке была использована [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и система контроля версий [`Git`](https://git-scm.com/download). Для автоматизации сборки версий применялся `Batch Script`. В качестве декомпилятора используется [`dotPeek`](https://www.jetbrains.com/decompiler/).
 
 Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
 
 ![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
 
-Использование иных инструментов для разработки, кроме перечисленных выше, без соглосования с руководителем проекта запрещено. Следующие инструменты запрещены:
+Использование иных инструментов для разработки, кроме перечисленных выше, без соглосования с руководителем проекта запрещено. Следующие инструменты запрещены по-умолчанию:
 - `GitHub Desktop`
 - `TortoiseGit`
 - `PascalABC.NET`
