@@ -108,8 +108,6 @@ namespace TestProgram
 
 Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
 
-![GitHub Actions](https://sun9-53.userapi.com/c857536/v857536261/169dac/lGIxo4kVWoc.jpg)
-
 Использование иных инструментов для разработки, кроме перечисленных выше, без соглосования с руководителем проекта запрещено. Следующие инструменты запрещены по-умолчанию:
 - `GitHub Desktop` (мало средств для работы с `Git`/`GitHub`)
 - `TortoiseGit` (интеграция с `Git` имеется в `Visual Studio`)
