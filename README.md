@@ -103,6 +103,7 @@ namespace TestProgram
 # Инструменты разработки
 - `IDE` - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) и [`Repl.it`](https://repl.it/)
 - Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
+- [`myCompiler`](https://www.mycompiler.io/)
 - `VCS` - [`Git`](https://git-scm.com/download) с [`Git Bash`](https://git-scm.com/download)
 - Язык автоматизации - [`Bash`](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
 
