@@ -1,3 +1,4 @@
+<!-- Используйте данный ReadMe.md как шаблон для русскоязычных проектов. -->
 # ABCNET
 ## Краткое описание
 `ABCNET` - альтернатива модулю [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) для всего `NET`. Является чем-то средним между [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) и [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel). Ориентирована на русскоязычную аудиторию.
