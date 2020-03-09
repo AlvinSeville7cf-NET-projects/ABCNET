@@ -108,11 +108,6 @@ namespace TestProgram
 
 Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
 
-Использование иных инструментов для разработки, кроме перечисленных выше, без соглосования с руководителем проекта запрещено. Следующие инструменты запрещены по-умолчанию:
-- `GitHub Desktop` (мало средств для работы с `Git`/`GitHub`)
-- `TortoiseGit` (интеграция с `Git` имеется в `Visual Studio`)
-- `PascalABC.NET` (нестабильная `IDE` со слабым компилятором)
-
 ----
 Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
 
