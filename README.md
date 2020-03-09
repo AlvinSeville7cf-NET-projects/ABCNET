@@ -21,8 +21,6 @@
 
 # Варианты использования
 ## PascalABC.NET
-Не используйте данную `IDE` для крупных проектов.
-
 ### Через скачивание архива напрямую
 Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию [`PascalABC.NET`](https://drive.google.com/open?id=1eHzHpHw7SYTCwefaxYPr4QbsB1bf6M41) из `Program Files (x86)`).
 
