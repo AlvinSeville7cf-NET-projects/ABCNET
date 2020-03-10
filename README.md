@@ -152,4 +152,4 @@ namespace TestProgram
 ----
 Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
 
-[![Discord](https://user-images.githubusercontent.com/42812113/76321598-4c9aa680-62f3-11ea-9c4c-10b70b0a17da.png)](https://discord.gg/AbG5X2)
+[![Discord](https://user-images.githubusercontent.com/42812113/76321598-4c9aa680-62f3-11ea-9c4c-10b70b0a17da.png)](https://discord.gg/j8Xf6Me)
