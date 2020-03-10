@@ -66,6 +66,11 @@ namespace TestProgram
 }
 ```
 
+# Порты
+- [`ABCPy`](https://github.com/NETMouse-projects/ABCPy) - для `Python`
+- [`ABCJava`](https://github.com/NETMouse-projects/ABCJava) - для `Java`
+- [`ABCCPlusPlus`](https://github.com/NETMouse-projects/ABCCPlusPlus) - для `C++`
+
 # Совместимость с похожими продуктами
 ## С PABCSystem
 Полная совместимость с [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) не гарантируется. Функционал хоть и похожий, но отличается и по-разному распределён. Единственное место, в котором гарантируется полная совместимость (до `v0.5.0`, не включая её) - класс `ABCNET.Utils.PABCSystem`, который предоставляет часть функционала [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) в его изначальном виде. На данный момент доступны лишь короткие функции `Lst`, `LLst`, `HSet`, `SSet`, `Dict`, `KV`.
