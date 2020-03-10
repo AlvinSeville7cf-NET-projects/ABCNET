@@ -78,10 +78,6 @@ namespace TestProgram
 ## С NETSquirrel
 Полная совместимость с [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel) не гарантируется.
 
-# Перенос кода на ABCNET
-## С PABCSystem
-Как перенести код с [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) на `ABCNET` смотрите [здесь](http://netmouseprojects.rusff.ru/viewtopic.php?id=10).
-
 # Дополнительные разработки
 - [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
 
