@@ -139,15 +139,20 @@ namespace TestProgram
 Каждая major-версия закрывает в сумме ровно 50 `Issue` по `API`-библиотеки и состоит из двух minor-версий. Каждая сборка minor-версии закрывает в сумме ровно 5 `Issue` по `API`-библиотеки.
 
 # Инструменты разработки
+## Обязательные инструменты
 <!--
-  Описание инструментов разработки для проекта.
+  Описание обязательных инструментов разработки для проекта.
 -->
 - `IDE` - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/), [`Repl.it`](https://repl.it/) и [`myCompiler`](https://www.mycompiler.io/)
 - Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
 - `VCS` - [`Git`](https://git-scm.com/download) с [`Git Bash`](https://git-scm.com/download)
 - Язык автоматизации - [`Bash`](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
 
-Для выполнения простых и рутинных задач в репозитории на `GitHub` использованы [`GitHub Actions`](https://help.github.com/en/actions/automating-your-workflow-with-github-actions).
+## Рекомендуемые инструменты
+<!--
+  Описание рекомендуемых инструментов разработки для проекта.
+-->
+- `IDE` - [`Repl.it`](https://repl.it/) и [`myCompiler`](https://www.mycompiler.io/)
 
 ----
 Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
