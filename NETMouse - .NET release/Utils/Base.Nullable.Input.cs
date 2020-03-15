@@ -1,6 +1,4 @@
-﻿using ABCNET.Extensions;
-using System;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace ABCNET.Utils
 {
