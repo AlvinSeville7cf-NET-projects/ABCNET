@@ -166,7 +166,7 @@ namespace ABCNET.Utils
                 string result = InternalReadTrimmedString(prompt);
                 return result == NilStringHelper.Nil ? null : new BigInteger?(BigInteger.Parse(result));
             }
-            #endregion
+            #endregion public
 
             #region private
             private static string InternalReadTrimmedString(string prompt)
