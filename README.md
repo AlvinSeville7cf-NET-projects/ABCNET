@@ -143,7 +143,7 @@ namespace TestProgram
 <!--
   Описание обязательных инструментов разработки для проекта.
 -->
-- `IDE` - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/), [`Repl.it`](https://repl.it/) и [`myCompiler`](https://www.mycompiler.io/)
+- `IDE` - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/), [`Repl.it`](https://repl.it/)
 - Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
 - `VCS` - [`Git`](https://git-scm.com/download) с [`Git Bash`](https://git-scm.com/download)
 - Язык автоматизации - [`Bash`](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
@@ -152,7 +152,7 @@ namespace TestProgram
 <!--
   Описание рекомендуемых инструментов разработки для проекта.
 -->
-- `IDE` - [`Repl.it`](https://repl.it/) и [`myCompiler`](https://www.mycompiler.io/)
+- `IDE` - [`myCompiler`](https://www.mycompiler.io/)
 
 ----
 Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
