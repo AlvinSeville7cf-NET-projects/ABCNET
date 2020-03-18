@@ -130,6 +130,7 @@
     <Compile Include="Utils\Seq.cs" />
     <Compile Include="Utils\Matr.cs" />
     <Compile Include="Utils\Tup.cs" />
+    <None Include="Presentations\ABCNET как продолжение PABCSystem.pptx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Examples\C#\ABCNET.dll" />
