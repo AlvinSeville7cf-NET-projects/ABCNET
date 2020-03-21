@@ -29,6 +29,7 @@
 -->
 - [Alvin Seville](https://github.com/Alvin-Seville) (руководитель проекта и основатель `NETMouse-projects`)
 - [ProMix0](https://github.com/ProMix0) (главный разработчик)
+- [egor2812](https://github.com/egor2812) (поддержка)
 
 [Правила работы с Issue и Pull Requests для пользователей](https://github.com/NETMouse-projects/ABCNET/blob/master/CONTRIBUTING.md)
 
