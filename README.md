@@ -17,6 +17,8 @@
 -->
 `ABCNET` - альтернатива модулю [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) для всего `NET`. Является чем-то средним между [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) и [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel). Ориентирована на русскоязычную аудиторию. Более подробно об `ABCNET` можно узнать в [презентации](https://github.com/NETMouse-projects/ABCNET/tree/master/NETMouse%20-%20.NET%20release/Presentations).
 
+[Правила работы с Issue и Pull Requests для пользователей](https://github.com/NETMouse-projects/ABCNET/blob/master/CONTRIBUTING.md)
+
 ## Минимальные требования
 <!--
   Требуемая версия framework'а и необходимые зависимости.
