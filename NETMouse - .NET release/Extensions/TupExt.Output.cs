@@ -13,7 +13,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> Print<T>(this Tuple<T, T> tuple)
+        public static Tuple<T, T1> Print<T, T1>(this Tuple<T, T1> tuple)
         {
             Console.Write(Tuple.Create(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
             return tuple;
@@ -56,9 +56,9 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> Println<T>(this Tuple<T, T> tuple)
+        public static Tuple<T, T1> Println<T, T1>(this Tuple<T, T1> tuple)
         {
-            Console.Write(Tuple.Create(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
+            Console.WriteLine(Tuple.Create(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
             return tuple;
         }
 
@@ -99,7 +99,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> PrintLines<T>(this Tuple<T, T> tuple)
+        public static Tuple<T, T1> PrintLines<T, T1>(this Tuple<T, T1> tuple)
         {
             Console.WriteLine(tuple.Item1.NilOrString());
             Console.WriteLine(tuple.Item2.NilOrString());
@@ -145,7 +145,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> Print<T>(this Tuple<T, T, T> tuple)
+        public static Tuple<T, T1, T2> Print<T, T1, T2>(this Tuple<T, T1, T2> tuple)
         {
             Console.Write(tuple);
             return tuple;
@@ -188,9 +188,9 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> Println<T>(this Tuple<T, T, T> tuple)
+        public static Tuple<T, T1, T2> Println<T, T1, T2>(this Tuple<T, T1, T2> tuple)
         {
-            Console.Write(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3));
+            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3));
             return tuple;
         }
 
@@ -231,7 +231,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> PrintLines<T>(this Tuple<T, T, T> tuple)
+        public static Tuple<T, T1, T2> PrintLines<T, T1, T2>(this Tuple<T, T1, T2> tuple)
         {
             Console.WriteLine(tuple.Item1);
             Console.WriteLine(tuple.Item2);
@@ -280,7 +280,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> Print<T>(this Tuple<T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3> Print<T, T1, T2, T3>(this Tuple<T, T1, T2, T3> tuple)
         {
             Console.Write(tuple);
             return tuple;
@@ -323,9 +323,9 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> Println<T>(this Tuple<T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3> Println<T, T1, T2, T3>(this Tuple<T, T1, T2, T3> tuple)
         {
-            Console.Write(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4));
+            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4));
             return tuple;
         }
 
@@ -366,7 +366,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3> PrintLines<T, T1, T2, T3>(this Tuple<T, T1, T2, T3> tuple)
         {
             Console.WriteLine(tuple.Item1);
             Console.WriteLine(tuple.Item2);
@@ -418,7 +418,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4> Print<T, T1, T2, T3, T4>(this Tuple<T, T1, T2, T3, T4> tuple)
         {
             Console.Write(tuple);
             return tuple;
@@ -461,9 +461,9 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4> Println<T, T1, T2, T3, T4>(this Tuple<T, T1, T2, T3, T4> tuple)
         {
-            Console.Write(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5));
+            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5));
             return tuple;
         }
 
@@ -504,7 +504,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4> PrintLines<T, T1, T2, T3, T4>(this Tuple<T, T1, T2, T3, T4> tuple)
         {
             Console.WriteLine(tuple.Item1);
             Console.WriteLine(tuple.Item2);
@@ -559,7 +559,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4, T5> Print<T, T1, T2, T3, T4, T5>(this Tuple<T, T1, T2, T3, T4, T5> tuple)
         {
             Console.Write(tuple);
             return tuple;
@@ -602,9 +602,9 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4, T5> Println<T, T1, T2, T3, T4, T5>(this Tuple<T, T1, T2, T3, T4, T5> tuple)
         {
-            Console.Write(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6));
+            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6));
             return tuple;
         }
 
@@ -645,7 +645,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4, T5> PrintLines<T, T1, T2, T3, T4, T5>(this Tuple<T, T1, T2, T3, T4, T5> tuple)
         {
             Console.WriteLine(tuple.Item1);
             Console.WriteLine(tuple.Item2);
@@ -703,7 +703,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4, T5, T6> Print<T, T1, T2, T3, T4, T5, T6>(this Tuple<T, T1, T2, T3, T4, T5, T6> tuple)
         {
             Console.Write(tuple);
             return tuple;
@@ -746,9 +746,9 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4, T5, T6> Println<T, T1, T2, T3, T4, T5, T6>(this Tuple<T, T1, T2, T3, T4, T5, T6> tuple)
         {
-            Console.Write(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6, tuple.Item7));
+            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6, tuple.Item7));
             return tuple;
         }
 
@@ -789,7 +789,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T, T, T> tuple)
+        public static Tuple<T, T1, T2, T3, T4, T5, T6> PrintLines<T, T1, T2, T3, T4, T5, T6>(this Tuple<T, T1, T2, T3, T4, T5, T6> tuple)
         {
             Console.WriteLine(tuple.Item1);
             Console.WriteLine(tuple.Item2);
