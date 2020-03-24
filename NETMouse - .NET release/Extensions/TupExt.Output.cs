@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABCNET.Utils;
+using System;
 
 namespace ABCNET.Extensions
 {
@@ -15,7 +16,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1> Print<T, T1>(this Tuple<T, T1> tuple)
         {
-            Console.Write(Tuple.Create(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
+            Console.Write(Tup.New(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
             return tuple;
         }
 
@@ -25,14 +26,14 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> Print<T>(this Tuple<T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1> Print<T, T1>(this Tuple<T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T> tupleRes = new Tuple<T, T>(func(tuple.Item1), func(tuple.Item2));
+            Tuple<T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2));
 
-            Console.Write(Tuple.Create(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString()));
+            Console.Write(Tup.New(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString()));
             return tupleRes;
         }
 
@@ -42,12 +43,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> PrintBy<T>(this Tuple<T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T> PrintBy<T, T1>(this Tuple<T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.Write(Tuple.Create(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString()));
+            Console.Write(Tup.New(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString()));
             return tuple;
         }
 
@@ -58,7 +59,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1> Println<T, T1>(this Tuple<T, T1> tuple)
         {
-            Console.WriteLine(Tuple.Create(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
+            Console.WriteLine(Tup.New(tuple.Item1.NilOrString(), tuple.Item2.NilOrString()));
             return tuple;
         }
 
@@ -68,14 +69,14 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> Println<T>(this Tuple<T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1> Println<T, T1>(this Tuple<T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T> tupleRes = new Tuple<T, T>(func(tuple.Item1), func(tuple.Item2));
+            Tuple<T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2));
 
-            Console.WriteLine(Tuple.Create(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString()));
+            Console.WriteLine(Tup.New(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString()));
             return tupleRes;
         }
 
@@ -85,12 +86,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> PrintlnBy<T>(this Tuple<T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T> PrintlnBy<T, T1>(this Tuple<T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(Tuple.Create(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString()));
+            Console.WriteLine(Tup.New(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString()));
             return tuple;
         }
 
@@ -112,15 +113,15 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> PrintLines<T>(this Tuple<T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1> PrintLines<T, T1>(this Tuple<T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T> tupleRes = new Tuple<T, T>(func(tuple.Item1), func(tuple.Item2));
+            Tuple<T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2));
 
-            Console.WriteLine(tupleRes.Item1);
-            Console.WriteLine(tupleRes.Item2);
+            Console.WriteLine(tupleRes.Item1.NilOrString());
+            Console.WriteLine(tupleRes.Item2.NilOrString());
             return tupleRes;
         }
 
@@ -130,13 +131,13 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> PrintLinesBy<T>(this Tuple<T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T> PrintLinesBy<T, T1>(this Tuple<T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(func(tuple.Item1));
-            Console.WriteLine(func(tuple.Item2));
+            Console.WriteLine(func(tuple.Item1).NilOrString());
+            Console.WriteLine(func(tuple.Item2).NilOrString());
             return tuple;
         }
 
@@ -147,7 +148,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2> Print<T, T1, T2>(this Tuple<T, T1, T2> tuple)
         {
-            Console.Write(tuple);
+            Console.Write(Tup.New(tuple.Item1.NilOrString(), tuple.Item2.NilOrString(), tuple.Item3.NilOrString()));
             return tuple;
         }
 
@@ -157,14 +158,14 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> Print<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1> Print<T, T1>(this Tuple<T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T> tupleRes = new Tuple<T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3));
+            Tuple<T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3));
 
-            Console.Write(tupleRes);
+            Console.Write(Tup.New(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString(), tupleRes.Item3.NilOrString()));
             return tupleRes;
         }
 
@@ -174,12 +175,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> PrintBy<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T> PrintBy<T, T1>(this Tuple<T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.Write(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3)));
+            Console.Write(Tup.New(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString(), func(tuple.Item3).NilOrString()));
             return tuple;
         }
 
@@ -190,7 +191,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2> Println<T, T1, T2>(this Tuple<T, T1, T2> tuple)
         {
-            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3));
+            Console.WriteLine(Tup.New(tuple.Item1.NilOrString(), tuple.Item2.NilOrString(), tuple.Item3.NilOrString()));
             return tuple;
         }
 
@@ -200,14 +201,14 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> Println<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1> Println<T, T1>(this Tuple<T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T> tupleRes = new Tuple<T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3));
+            Tuple<T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3));
 
-            Console.WriteLine(tupleRes);
+            Console.WriteLine(Tup.New(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString(), tupleRes.Item3.NilOrString()));
             return tupleRes;
         }
 
@@ -217,12 +218,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> PrintlnBy<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T> PrintlnBy<T, T1>(this Tuple<T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3)));
+            Console.WriteLine(Tup.New(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString(), func(tuple.Item3).NilOrString()));
             return tuple;
         }
 
@@ -233,9 +234,9 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2> PrintLines<T, T1, T2>(this Tuple<T, T1, T2> tuple)
         {
-            Console.WriteLine(tuple.Item1);
-            Console.WriteLine(tuple.Item2);
-            Console.WriteLine(tuple.Item3);
+            Console.WriteLine(tuple.Item1.NilOrString());
+            Console.WriteLine(tuple.Item2.NilOrString());
+            Console.WriteLine(tuple.Item3.NilOrString());
             return tuple;
         }
 
@@ -245,16 +246,16 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> PrintLines<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1> PrintLines<T, T1>(this Tuple<T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T> tupleRes = new Tuple<T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3));
+            Tuple<T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3));
 
-            Console.WriteLine(tupleRes.Item1);
-            Console.WriteLine(tupleRes.Item2);
-            Console.WriteLine(tupleRes.Item3);
+            Console.WriteLine(tupleRes.Item1.NilOrString());
+            Console.WriteLine(tupleRes.Item2.NilOrString());
+            Console.WriteLine(tupleRes.Item3.NilOrString());
             return tupleRes;
         }
 
@@ -264,14 +265,14 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> PrintLinesBy<T>(this Tuple<T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T> PrintLinesBy<T, T1>(this Tuple<T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(func(tuple.Item1));
-            Console.WriteLine(func(tuple.Item2));
-            Console.WriteLine(func(tuple.Item3));
+            Console.WriteLine(func(tuple.Item1).NilOrString());
+            Console.WriteLine(func(tuple.Item2).NilOrString());
+            Console.WriteLine(func(tuple.Item3).NilOrString());
             return tuple;
         }
 
@@ -282,7 +283,8 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2, T3> Print<T, T1, T2, T3>(this Tuple<T, T1, T2, T3> tuple)
         {
-            Console.Write(tuple);
+            Console.Write(Tup.New(tuple.Item1.NilOrString(), tuple.Item2.NilOrString(), tuple.Item3.NilOrString(),
+                tuple.Item4.NilOrString()));
             return tuple;
         }
 
@@ -292,14 +294,16 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> Print<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1> Print<T, T1>(this Tuple<T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T> tupleRes = new Tuple<T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4));
+            Tuple<T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3),
+                func(tuple.Item4));
 
-            Console.Write(tupleRes);
+            Console.Write(Tup.New(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString(), tupleRes.Item3.NilOrString(),
+                tupleRes.Item4.NilOrString()));
             return tupleRes;
         }
 
@@ -309,12 +313,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> PrintBy<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T> PrintBy<T, T1>(this Tuple<T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.Write(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4)));
+            Console.Write(Tup.New(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString(), func(tuple.Item3).NilOrString(), func(tuple.Item4).NilOrString()));
             return tuple;
         }
 
@@ -325,7 +329,8 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2, T3> Println<T, T1, T2, T3>(this Tuple<T, T1, T2, T3> tuple)
         {
-            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4));
+            Console.WriteLine(Tup.New(tuple.Item1.NilOrString(), tuple.Item2.NilOrString(), tuple.Item3.NilOrString(),
+                tuple.Item4.NilOrString()));
             return tuple;
         }
 
@@ -335,14 +340,15 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> Println<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1> Println<T, T1>(this Tuple<T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T> tupleRes = new Tuple<T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4));
+            Tuple<T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4));
 
-            Console.WriteLine(tupleRes);
+            Console.WriteLine(Tup.New(tupleRes.Item1.NilOrString(), tupleRes.Item2.NilOrString(), tupleRes.Item3.NilOrString(),
+                tupleRes.Item4.NilOrString()));
             return tupleRes;
         }
 
@@ -352,12 +358,13 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> PrintlnBy<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T> PrintlnBy<T, T1>(this Tuple<T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4)));
+            Console.WriteLine(Tup.New(func(tuple.Item1).NilOrString(), func(tuple.Item2).NilOrString(), func(tuple.Item3).NilOrString(),
+                func(tuple.Item4).NilOrString()));
             return tuple;
         }
 
@@ -368,10 +375,10 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2, T3> PrintLines<T, T1, T2, T3>(this Tuple<T, T1, T2, T3> tuple)
         {
-            Console.WriteLine(tuple.Item1);
-            Console.WriteLine(tuple.Item2);
-            Console.WriteLine(tuple.Item3);
-            Console.WriteLine(tuple.Item4);
+            Console.WriteLine(tuple.Item1.NilOrString());
+            Console.WriteLine(tuple.Item2.NilOrString());
+            Console.WriteLine(tuple.Item3.NilOrString());
+            Console.WriteLine(tuple.Item4.NilOrString());
             return tuple;
         }
 
@@ -381,17 +388,17 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1> PrintLines<T, T1>(this Tuple<T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T> tupleRes = new Tuple<T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4));
+            Tuple<T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4));
 
-            Console.WriteLine(tupleRes.Item1);
-            Console.WriteLine(tupleRes.Item2);
-            Console.WriteLine(tupleRes.Item3);
-            Console.WriteLine(tupleRes.Item4);
+            Console.WriteLine(tupleRes.Item1.NilOrString());
+            Console.WriteLine(tupleRes.Item2.NilOrString());
+            Console.WriteLine(tupleRes.Item3.NilOrString());
+            Console.WriteLine(tupleRes.Item4.NilOrString());
             return tupleRes;
         }
 
@@ -401,15 +408,15 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> PrintLinesBy<T>(this Tuple<T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T> PrintLinesBy<T, T1>(this Tuple<T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(func(tuple.Item1));
-            Console.WriteLine(func(tuple.Item2));
-            Console.WriteLine(func(tuple.Item3));
-            Console.WriteLine(func(tuple.Item4));
+            Console.WriteLine(func(tuple.Item1).NilOrString());
+            Console.WriteLine(func(tuple.Item2).NilOrString());
+            Console.WriteLine(func(tuple.Item3).NilOrString());
+            Console.WriteLine(func(tuple.Item4).NilOrString());
             return tuple;
         }
 
@@ -430,12 +437,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1> Print<T, T1>(this Tuple<T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5));
+            Tuple<T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5));
 
             Console.Write(tupleRes);
             return tupleRes;
@@ -447,12 +454,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> PrintBy<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T> PrintBy<T, T1>(this Tuple<T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.Write(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5)));
+            Console.Write(Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5)));
             return tuple;
         }
 
@@ -463,7 +470,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2, T3, T4> Println<T, T1, T2, T3, T4>(this Tuple<T, T1, T2, T3, T4> tuple)
         {
-            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5));
+            Console.WriteLine(Tup.New(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5));
             return tuple;
         }
 
@@ -473,12 +480,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1> Println<T, T1>(this Tuple<T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5));
+            Tuple<T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5));
 
             Console.WriteLine(tupleRes);
             return tupleRes;
@@ -490,12 +497,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> PrintlnBy<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T> PrintlnBy<T, T1>(this Tuple<T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5)));
+            Console.WriteLine(Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5)));
             return tuple;
         }
 
@@ -520,12 +527,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1> PrintLines<T, T1>(this Tuple<T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5));
+            Tuple<T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5));
 
             Console.WriteLine(tupleRes.Item1);
             Console.WriteLine(tupleRes.Item2);
@@ -541,7 +548,7 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> PrintLinesBy<T>(this Tuple<T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T> PrintLinesBy<T, T1>(this Tuple<T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
@@ -571,12 +578,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1, T1> Print<T, T1>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6));
+            Tuple<T1, T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6));
 
             Console.Write(tupleRes);
             return tupleRes;
@@ -588,12 +595,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> PrintBy<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T, T> PrintBy<T, T1>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.Write(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6)));
+            Console.Write(Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6)));
             return tuple;
         }
 
@@ -604,7 +611,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2, T3, T4, T5> Println<T, T1, T2, T3, T4, T5>(this Tuple<T, T1, T2, T3, T4, T5> tuple)
         {
-            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6));
+            Console.WriteLine(Tup.New(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6));
             return tuple;
         }
 
@@ -614,12 +621,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1, T1> Println<T, T1>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6));
+            Tuple<T1, T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6));
 
             Console.WriteLine(tupleRes);
             return tupleRes;
@@ -631,12 +638,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> PrintlnBy<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T, T> PrintlnBy<T, T1>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6)));
+            Console.WriteLine(Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6)));
             return tuple;
         }
 
@@ -662,12 +669,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1, T1> PrintLines<T, T1>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6));
+            Tuple<T1, T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6));
 
             Console.WriteLine(tupleRes.Item1);
             Console.WriteLine(tupleRes.Item2);
@@ -684,7 +691,7 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> PrintLinesBy<T>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T, T> PrintLinesBy<T, T1>(this Tuple<T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
@@ -715,12 +722,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> Print<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1, T1, T1> Print<T, T1>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7));
+            Tuple<T1, T1, T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7));
 
             Console.Write(tupleRes);
             return tupleRes;
@@ -732,12 +739,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> PrintBy<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T, T, T> PrintBy<T, T1>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.Write(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7)));
+            Console.Write(Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7)));
             return tuple;
         }
 
@@ -748,7 +755,7 @@ namespace ABCNET.Extensions
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T1, T2, T3, T4, T5, T6> Println<T, T1, T2, T3, T4, T5, T6>(this Tuple<T, T1, T2, T3, T4, T5, T6> tuple)
         {
-            Console.WriteLine(Tuple.Create(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6, tuple.Item7));
+            Console.WriteLine(Tup.New(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6, tuple.Item7));
             return tuple;
         }
 
@@ -758,12 +765,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> Println<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1, T1, T1> Println<T, T1>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7));
+            Tuple<T1, T1, T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7));
 
             Console.WriteLine(tupleRes);
             return tupleRes;
@@ -775,12 +782,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> PrintlnBy<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T, T, T> PrintlnBy<T, T1>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Console.WriteLine(Tuple.Create(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7)));
+            Console.WriteLine(Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7)));
             return tuple;
         }
 
@@ -807,12 +814,12 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> PrintLines<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T1, T1, T1, T1, T1, T1, T1> PrintLines<T, T1>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
 
-            Tuple<T, T, T, T, T, T, T> tupleRes = new Tuple<T, T, T, T, T, T, T>(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7));
+            Tuple<T1, T1, T1, T1, T1, T1, T1> tupleRes = Tup.New(func(tuple.Item1), func(tuple.Item2), func(tuple.Item3), func(tuple.Item4), func(tuple.Item5), func(tuple.Item6), func(tuple.Item7));
 
             Console.WriteLine(tupleRes.Item1);
             Console.WriteLine(tupleRes.Item2);
@@ -830,7 +837,7 @@ namespace ABCNET.Extensions
         /// <param name="tuple">Кортеж.</param>
         /// <param name="func">Функция-селктор.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> PrintLinesBy<T>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T> func)
+        public static Tuple<T, T, T, T, T, T, T> PrintLinesBy<T, T1>(this Tuple<T, T, T, T, T, T, T> tuple, Func<T, T1> func)
         {
             if (func == null)
                 throw new ArgumentNullException(nameof(func));
