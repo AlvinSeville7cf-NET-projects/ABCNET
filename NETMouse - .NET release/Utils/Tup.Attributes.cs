@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace ABCNET.Utils
 {
@@ -6,6 +7,7 @@ namespace ABCNET.Utils
     /// Предоставляет функционал для работы с ссылочными кортежами.
     /// </summary>
     [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
+    [EditorBrowsable(EditorBrowsableState.Never)]
     public static partial class Tup
     {
     }
