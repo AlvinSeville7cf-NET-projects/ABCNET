@@ -48,12 +48,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utils\Arr.Attributes.cs">
+      <DependentUpon>Arr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Arr.cs" />
     <Compile Include="Utils\Arr.Generators.cs">
       <DependentUpon>Arr.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Arr.Input.cs">
       <DependentUpon>Arr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Base.Attributes.cs">
+      <DependentUpon>Base.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Base.cs" />
     <Compile Include="Utils\Base.Input.cs">
@@ -65,6 +71,9 @@
     <Compile Include="Utils\Base.Other.cs">
       <DependentUpon>Base.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Matr.Attributes.cs">
+      <DependentUpon>Matr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Matr.cs" />
     <Compile Include="Utils\Matr.Generators.cs">
       <DependentUpon>Matr.cs</DependentUpon>
@@ -72,9 +81,15 @@
     <Compile Include="Utils\Matr.Input.cs">
       <DependentUpon>Matr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Seq.Attributes.cs">
+      <DependentUpon>Seq.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Seq.cs" />
     <Compile Include="Utils\Seq.Generators.cs">
       <DependentUpon>Seq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Tup.Attributes.cs">
+      <DependentUpon>Tup.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Tup.cs" />
     <Compile Include="Utils\Tup.Generators.cs">
