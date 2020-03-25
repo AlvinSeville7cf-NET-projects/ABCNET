@@ -15,6 +15,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Массив.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadBoolean.")]
         public static bool[] ReadBoolean(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
@@ -42,6 +43,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Массив.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadChar.")]
         public static char[] ReadChar(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
@@ -60,6 +62,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Массив.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadDouble.")]
         public static double[] ReadDouble(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
@@ -87,6 +90,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Массив.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadInt32.")]
         public static int[] ReadInt32(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
@@ -114,6 +118,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Массив.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadString.")]
         public static string[] ReadString(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
@@ -130,6 +135,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadBooleanTuple2.")]
         public static Tuple<bool[], bool[]> ReadBooleanTup2(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count));
@@ -140,6 +146,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadCharTuple2.")]
         public static Tuple<char[], char[]> ReadCharTup2(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count));
@@ -150,6 +157,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadInt32Tuple2.")]
         public static Tuple<int[], int[]> ReadInt32Tup2(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count));
@@ -160,6 +168,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadDoubleTuple2.")]
         public static Tuple<double[], double[]> ReadDoubleTup2(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count));
@@ -170,6 +179,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadStringTuple2.")]
         public static Tuple<string[], string[]> ReadStringTup2(int count)
         {
             return Tup.New(ReadString(count), ReadString(count));
@@ -180,6 +190,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadBooleanTuple3.")]
         public static Tuple<bool[], bool[], bool[]> ReadBooleanTup3(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
@@ -190,6 +201,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadCharTuple3.")]
         public static Tuple<char[], char[], char[]> ReadCharTup3(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count));
@@ -200,6 +212,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadInt32Tuple3.")]
         public static Tuple<int[], int[], int[]> ReadInt32Tup3(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count));
@@ -210,6 +223,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadDoubleTuple3.")]
         public static Tuple<double[], double[], double[]> ReadDoubleTup3(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count));
@@ -220,6 +234,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadStringTuple3.")]
         public static Tuple<string[], string[], string[]> ReadStringTup3(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count));
@@ -230,6 +245,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadBooleanTuple4.")]
         public static Tuple<bool[], bool[], bool[], bool[]> ReadBooleanTup4(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
@@ -240,6 +256,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadCharTuple4.")]
         public static Tuple<char[], char[], char[], char[]> ReadCharTup4(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
@@ -250,6 +267,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadInt32Tuple4.")]
         public static Tuple<int[], int[], int[], int[]> ReadInt32Tup4(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
@@ -260,6 +278,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadDoubleTuple4.")]
         public static Tuple<double[], double[], double[], double[]> ReadDoubleTup4(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
@@ -270,6 +289,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadStringTuple4.")]
         public static Tuple<string[], string[], string[], string[]> ReadStringTup4(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count), ReadString(count));
@@ -280,6 +300,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadBooleanTuple5.")]
         public static Tuple<bool[], bool[], bool[], bool[], bool[]> ReadBooleanTup5(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
@@ -290,6 +311,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadCharTuple5.")]
         public static Tuple<char[], char[], char[], char[], char[]> ReadCharTup5(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
@@ -300,6 +322,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadInt32Tuple5.")]
         public static Tuple<int[], int[], int[], int[], int[]> ReadInt32Tup5(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
@@ -310,6 +333,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadDoubleTuple5.")]
         public static Tuple<double[], double[], double[], double[], double[]> ReadDoubleTup5(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
@@ -320,6 +344,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadStringTuple5.")]
         public static Tuple<string[], string[], string[], string[], string[]> ReadStringTup5(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
@@ -330,6 +355,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadBooleanTuple6.")]
         public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[]> ReadBooleanTup6(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
@@ -340,6 +366,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadCharTuple6.")]
         public static Tuple<char[], char[], char[], char[], char[], char[]> ReadCharTup6(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
@@ -350,6 +377,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadInt32Tuple6.")]
         public static Tuple<int[], int[], int[], int[], int[], int[]> ReadInt32Tup6(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
@@ -360,6 +388,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadDoubleTuple6.")]
         public static Tuple<double[], double[], double[], double[], double[], double[]> ReadDoubleTup6(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
@@ -370,6 +399,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadStringTuple6.")]
         public static Tuple<string[], string[], string[], string[], string[], string[]> ReadStringTup6(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
@@ -380,6 +410,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadBooleanTuple7.")]
         public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[], bool[]> ReadBooleanTup7(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
@@ -390,6 +421,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadCharTuple7.")]
         public static Tuple<char[], char[], char[], char[], char[], char[], char[]> ReadCharTup7(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
@@ -400,6 +432,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadInt32Tuple7.")]
         public static Tuple<int[], int[], int[], int[], int[], int[], int[]> ReadInt32Tup7(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
@@ -410,6 +443,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadDoubleTuple7.")]
         public static Tuple<double[], double[], double[], double[], double[], double[], double[]> ReadDoubleTup7(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
@@ -420,6 +454,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Array.ReadStringTuple7.")]
         public static Tuple<string[], string[], string[], string[], string[], string[], string[]> ReadStringTup7(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
