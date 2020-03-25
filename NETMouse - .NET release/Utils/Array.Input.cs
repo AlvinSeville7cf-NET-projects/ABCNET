@@ -130,7 +130,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[]> ReadBooleanTup2(int count)
+        public static Tuple<bool[], bool[]> ReadBooleanTuple2(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count));
         }
@@ -140,7 +140,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[]> ReadCharTup2(int count)
+        public static Tuple<char[], char[]> ReadCharTuple2(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count));
         }
@@ -150,7 +150,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[]> ReadInt32Tup2(int count)
+        public static Tuple<int[], int[]> ReadInt32Tuple2(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count));
         }
@@ -160,7 +160,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[]> ReadDoubleTup2(int count)
+        public static Tuple<double[], double[]> ReadDoubleTuple2(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count));
         }
@@ -170,7 +170,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[]> ReadStringTup2(int count)
+        public static Tuple<string[], string[]> ReadStringTuple2(int count)
         {
             return Tup.New(ReadString(count), ReadString(count));
         }
@@ -180,7 +180,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[]> ReadBooleanTup3(int count)
+        public static Tuple<bool[], bool[], bool[]> ReadBooleanTuple3(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
@@ -190,7 +190,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[]> ReadCharTup3(int count)
+        public static Tuple<char[], char[], char[]> ReadCharTuple3(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count));
         }
@@ -200,7 +200,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[]> ReadInt32Tup3(int count)
+        public static Tuple<int[], int[], int[]> ReadInt32Tuple3(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
@@ -210,7 +210,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[]> ReadDoubleTup3(int count)
+        public static Tuple<double[], double[], double[]> ReadDoubleTuple3(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
@@ -220,7 +220,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[]> ReadStringTup3(int count)
+        public static Tuple<string[], string[], string[]> ReadStringTuple3(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count));
         }
@@ -230,7 +230,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[], bool[]> ReadBooleanTup4(int count)
+        public static Tuple<bool[], bool[], bool[], bool[]> ReadBooleanTuple4(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
@@ -240,7 +240,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[], char[]> ReadCharTup4(int count)
+        public static Tuple<char[], char[], char[], char[]> ReadCharTuple4(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
         }
@@ -250,7 +250,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[], int[]> ReadInt32Tup4(int count)
+        public static Tuple<int[], int[], int[], int[]> ReadInt32Tuple4(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
@@ -260,7 +260,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[], double[]> ReadDoubleTup4(int count)
+        public static Tuple<double[], double[], double[], double[]> ReadDoubleTuple4(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
@@ -270,7 +270,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[], string[]> ReadStringTup4(int count)
+        public static Tuple<string[], string[], string[], string[]> ReadStringTuple4(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
@@ -280,7 +280,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[]> ReadBooleanTup5(int count)
+        public static Tuple<bool[], bool[], bool[], bool[], bool[]> ReadBooleanTuple5(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
@@ -290,7 +290,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[], char[], char[]> ReadCharTup5(int count)
+        public static Tuple<char[], char[], char[], char[], char[]> ReadCharTuple5(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
         }
@@ -300,7 +300,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[], int[], int[]> ReadInt32Tup5(int count)
+        public static Tuple<int[], int[], int[], int[], int[]> ReadInt32Tuple5(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
@@ -310,7 +310,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[], double[], double[]> ReadDoubleTup5(int count)
+        public static Tuple<double[], double[], double[], double[], double[]> ReadDoubleTuple5(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
@@ -320,7 +320,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[], string[], string[]> ReadStringTup5(int count)
+        public static Tuple<string[], string[], string[], string[], string[]> ReadStringTuple5(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
@@ -330,7 +330,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[]> ReadBooleanTup6(int count)
+        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[]> ReadBooleanTuple6(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
@@ -340,7 +340,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[], char[], char[], char[]> ReadCharTup6(int count)
+        public static Tuple<char[], char[], char[], char[], char[], char[]> ReadCharTuple6(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
         }
@@ -350,7 +350,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[], int[], int[], int[]> ReadInt32Tup6(int count)
+        public static Tuple<int[], int[], int[], int[], int[], int[]> ReadInt32Tuple6(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
@@ -360,7 +360,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[], double[], double[], double[]> ReadDoubleTup6(int count)
+        public static Tuple<double[], double[], double[], double[], double[], double[]> ReadDoubleTuple6(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
@@ -370,7 +370,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[], string[], string[], string[]> ReadStringTup6(int count)
+        public static Tuple<string[], string[], string[], string[], string[], string[]> ReadStringTuple6(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
@@ -380,7 +380,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[], bool[]> ReadBooleanTup7(int count)
+        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[], bool[]> ReadBooleanTuple7(int count)
         {
             return Tup.New(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
@@ -390,7 +390,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[], char[], char[], char[], char[]> ReadCharTup7(int count)
+        public static Tuple<char[], char[], char[], char[], char[], char[], char[]> ReadCharTuple7(int count)
         {
             return Tup.New(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
         }
@@ -400,7 +400,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[], int[], int[], int[], int[]> ReadInt32Tup7(int count)
+        public static Tuple<int[], int[], int[], int[], int[], int[], int[]> ReadInt32Tuple7(int count)
         {
             return Tup.New(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
@@ -410,7 +410,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[], double[], double[], double[], double[]> ReadDoubleTup7(int count)
+        public static Tuple<double[], double[], double[], double[], double[], double[], double[]> ReadDoubleTuple7(int count)
         {
             return Tup.New(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
@@ -420,7 +420,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[], string[], string[], string[], string[]> ReadStringTup7(int count)
+        public static Tuple<string[], string[], string[], string[], string[], string[], string[]> ReadStringTuple7(int count)
         {
             return Tup.New(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
