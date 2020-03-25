@@ -8,12 +8,14 @@ namespace ABCNET.Utils
     public static partial class Tup
     {
         #region public
+
         /// <summary>
         /// Создаёт кортеж из 2 значений.
         /// </summary>
         /// <param name="item1">Первое значение.</param>
         /// <param name="item2">Второе значение.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T2> New<T, T2>(T item1, T2 item2)
         {
             return new Tuple<T, T2>(item1, item2);
@@ -25,6 +27,7 @@ namespace ABCNET.Utils
         /// <param name="item1">Первое значение.</param>
         /// <param name="item2">Второе значение.</param>
         /// <param name="item3">Третье значение.</param>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T2, T3> New<T,T2, T3>(T item1, T2 item2, T3 item3)
         {
             return new Tuple<T, T2, T3>(item1, item2, item3);
@@ -37,6 +40,7 @@ namespace ABCNET.Utils
         /// <param name="item2">Второе значение.</param>
         /// <param name="item3">Третье значение.</param>
         /// <param name="item4">Четвёртое значение.</param>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T2, T3, T4> New<T, T2, T3, T4>(T item1, T2 item2, T3 item3, T4 item4)
         {
             return new Tuple<T, T2, T3, T4>(item1, item2, item3, item4);
@@ -50,6 +54,7 @@ namespace ABCNET.Utils
         /// <param name="item3">Третье значение.</param>
         /// <param name="item4">Четвёртое значение.</param>
         /// <param name="item5">Пятое значение.</param>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T2, T3, T4, T5> New<T, T2, T3, T4, T5>(T item1, T2 item2, T3 item3, T4 item4, T5 item5)
         {
             return new Tuple<T, T2, T3, T4, T5>(item1, item2, item3, item4, item5);
@@ -64,6 +69,7 @@ namespace ABCNET.Utils
         /// <param name="item4">Четвёртое значение.</param>
         /// <param name="item5">Пятое значение.</param>
         /// <param name="item6">Шестое значение.</param>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T2, T3, T4, T5, T6> New<T, T2, T3, T4, T5, T6>(T item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6)
         {
             return new Tuple<T, T2, T3, T4, T5, T6>(item1, item2, item3, item4, item5, item6);
@@ -79,6 +85,7 @@ namespace ABCNET.Utils
         /// <param name="item5">Пятое значение.</param>
         /// <param name="item6">Шестое значение.</param>
         /// <param name="item7">Седьмое значение.</param>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T2, T3, T4, T5, T6, T7> New<T, T2, T3, T4, T5, T6, T7>(T item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7)
         {
             return new Tuple<T, T2, T3, T4, T5, T6, T7>(item1, item2, item3, item4, item5, item6, item7);
@@ -90,6 +97,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<int, int> Rand2(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high));
@@ -101,6 +109,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<int, int, int> Rand3(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -112,6 +121,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<int, int, int, int> Rand4(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -123,6 +133,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<int, int, int, int, int> Rand5(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -134,6 +145,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<int, int, int, int, int, int> Rand6(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -145,6 +157,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<int, int, int, int, int, int, int> Rand7(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -156,6 +169,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<double, double> Rand2(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high));
@@ -167,6 +181,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<double, double, double> Rand3(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -178,6 +193,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<double, double, double, double> Rand4(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -189,6 +205,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<double, double, double, double, double> Rand5(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -200,6 +217,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<double, double, double, double, double, double> Rand6(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -211,6 +229,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<double, double, double, double, double, double, double> Rand7(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
@@ -221,6 +240,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="value">Значение.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T> Fill2<T>(T value)
         {
             return New(value, value);
@@ -231,6 +251,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="value">Значение.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T, T> Fill3<T>(T value)
         {
             return New(value, value, value);
@@ -241,6 +262,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="value">Значение.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T, T, T> Fill4<T>(T value)
         {
             return New(value, value, value, value);
@@ -251,6 +273,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="value">Значение.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T, T, T, T> Fill5<T>(T value)
         {
             return New(value, value, value, value, value);
@@ -261,6 +284,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="value">Значение.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T, T, T, T, T> Fill6<T>(T value)
         {
             return New(value, value, value, value, value, value);
@@ -271,10 +295,12 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="value">Значение.</param>
         /// <returns>Кортеж.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Tuple.")]
         public static Tuple<T, T, T, T, T, T, T> Fill7<T>(T value)
         {
             return New(value, value, value, value, value, value, value);
         }
+
         #endregion public
     }
 }
