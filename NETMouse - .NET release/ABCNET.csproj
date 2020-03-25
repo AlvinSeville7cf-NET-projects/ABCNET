@@ -58,6 +58,13 @@
     <Compile Include="Utils\Arr.Input.cs">
       <DependentUpon>Arr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Array.cs" />
+    <Compile Include="Utils\Array.Generators.cs">
+      <DependentUpon>Array.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Array.Input.cs">
+      <DependentUpon>Array.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Base.Attributes.cs">
       <DependentUpon>Base.cs</DependentUpon>
     </Compile>
@@ -81,6 +88,7 @@
     <Compile Include="Utils\Matr.Input.cs">
       <DependentUpon>Matr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Matrix.cs" />
     <Compile Include="Utils\Seq.Attributes.cs">
       <DependentUpon>Seq.cs</DependentUpon>
     </Compile>
@@ -88,6 +96,7 @@
     <Compile Include="Utils\Seq.Generators.cs">
       <DependentUpon>Seq.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Sequence.cs" />
     <Compile Include="Utils\Tup.Attributes.cs">
       <DependentUpon>Tup.cs</DependentUpon>
     </Compile>
@@ -98,6 +107,7 @@
     <Compile Include="Utils\Tup.Input.cs">
       <DependentUpon>Tup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Tuple.cs" />
     <None Include="Examples\C#\Arrays_1.cs" />
     <None Include="Examples\C#\Arrays_10.cs" />
     <None Include="Examples\C#\Arrays_11.cs" />
