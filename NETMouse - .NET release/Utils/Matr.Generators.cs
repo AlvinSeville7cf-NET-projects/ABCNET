@@ -8,6 +8,7 @@ namespace ABCNET.Utils
     public static partial class Matr
     {
         #region public
+
         /// <summary>
         /// Создаёт матрицу из указанных значений.
         /// </summary>
@@ -15,6 +16,7 @@ namespace ABCNET.Utils
         /// <param name="colsCount">Количество столбцов.</param>
         /// <param name="values">Значения.</param>
         /// <returns>Матрица.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Matr.")]
         public static T[,] New<T>(int rowsCount, int colsCount, params T[] values)
         {
             if (values == null)
@@ -47,6 +49,7 @@ namespace ABCNET.Utils
         /// <param name="rowFirstIndex">Начальный индекс строки.</param>
         /// <param name="columnFirstIndex">Начальный индекс столбца.</param>
         /// <returns>Матрица.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Matr.")]
         public static T[,] Gen<T>(int rowsCount, int colsCount, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
         {
             if (rowsCount < 0)
@@ -72,6 +75,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Матрица.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Matr.")]
         public static int[,] Rand(int rowsCount, int colsCount, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (rowsCount < 0)
@@ -97,6 +101,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Матрица.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Matr.")]
         public static double[,] Rand(int rowsCount, int colsCount, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (rowsCount < 0)
@@ -121,6 +126,7 @@ namespace ABCNET.Utils
         /// <param name="colsCount">Количество столбцов.</param>
         /// <param name="value">Значение.</param>
         /// <returns>Массив.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Matr.")]
         public static T[,] Fill<T>(int rowsCount, int colsCount, T value)
         {
             if (rowsCount < 0)
@@ -135,6 +141,7 @@ namespace ABCNET.Utils
 
             return source;
         }
+
         #endregion public
     }
 }

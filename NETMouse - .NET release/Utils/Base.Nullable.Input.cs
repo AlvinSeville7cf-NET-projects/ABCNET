@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System;
 
 namespace ABCNET.Utils
 {
@@ -13,11 +14,13 @@ namespace ABCNET.Utils
         public static partial class Nullable
         {
             #region public
+
             /// <summary>
             /// Читает значение типа Boolean?. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static bool? ReadBoolean(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -29,6 +32,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static byte? ReadByte(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -40,6 +44,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static sbyte? ReadSByte(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -51,6 +56,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static char? ReadChar(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -62,6 +68,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static decimal? ReadDecimal(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -73,6 +80,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static double? ReadDouble(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -84,6 +92,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static float? ReadSingle(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -95,6 +104,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static int? ReadInt32(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -106,6 +116,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static uint? ReadUInt32(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -117,6 +128,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static long? ReadInt64(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -128,6 +140,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static ulong? ReadUInt64(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -139,6 +152,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static short? ReadInt16(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -150,6 +164,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static ushort? ReadUInt16(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
@@ -161,11 +176,13 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="prompt">Приглашение к вводу.</param>
             /// <returns>Значение.</returns>
+            [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
             public static BigInteger? ReadBigInteger(string prompt = EmptyStringHelper.Empty)
             {
                 string result = InternalReadTrimmedString(prompt);
                 return result == NilStringHelper.Nil ? null : new BigInteger?(BigInteger.Parse(result));
             }
+
             #endregion public
 
             #region private
@@ -173,6 +190,7 @@ namespace ABCNET.Utils
             {
                 return ReadString(prompt).Trim().ToLower();
             }
+
             #endregion private
         }
     }

@@ -9,6 +9,7 @@ namespace ABCNET.Utils
     public static partial class Seq
     {
         #region public
+
         /// <summary>
         /// Создаёт последовательность на основе функции селектора.
         /// </summary>
@@ -16,6 +17,7 @@ namespace ABCNET.Utils
         /// <param name="selector">Функция селектор.</param>
         /// <param name="firstIndex">Начальный индекс.</param>
         /// <returns>Последовательность.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Sequence.")]
         public static IEnumerable<T> Gen<T>(int count, Func<int, T> selector, int firstIndex = 0)
         {
             if (count < 0)
@@ -34,6 +36,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Последовательность.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Sequence.")]
         public static IEnumerable<int> Rand(int count, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (count < 0)
@@ -52,6 +55,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Последовательность.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Sequence.")]
         public static IEnumerable<double> Rand(int count, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (count < 0)
@@ -69,6 +73,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="value">Значение.</param>
         /// <returns>Последовательность.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Sequence.")]
         public static IEnumerable<T> Fill<T>(int count, T value)
         {
             if (count < 0)
@@ -77,6 +82,7 @@ namespace ABCNET.Utils
             for (int i = 0; i < count; i++)
                 yield return value;
         }
+
         #endregion public
     }
 }

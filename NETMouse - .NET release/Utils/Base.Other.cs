@@ -1,4 +1,6 @@
-﻿namespace ABCNET.Utils
+﻿using System;
+
+namespace ABCNET.Utils
 {
     /// <summary>
     /// Предоставляет функционал для работы с базовыми типами.
@@ -6,17 +8,20 @@
     public static partial class Base
     {
         #region public
+
         /// <summary>
         /// Меняет местами значения двух переменных.
         /// </summary>
         /// <param name="x">Первая переменная.</param>
         /// <param name="y">Вторая переменная.</param>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static void Swap<T>(ref T x, ref T y)
         {
             T z = x;
             x = y;
             y = z;
         }
+
         #endregion public
     }
 }
