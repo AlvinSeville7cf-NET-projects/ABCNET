@@ -41,12 +41,48 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utils\Arr.cs" />
+    <Compile Include="Utils\Arr.Generators.cs">
+      <DependentUpon>Arr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Arr.Input.cs">
+      <DependentUpon>Arr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Base.cs" />
+    <Compile Include="Utils\Base.Input.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Base.Nullable.Input.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Base.Other.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Matr.cs" />
+    <Compile Include="Utils\Matr.Generators.cs">
+      <DependentUpon>Matr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Matr.Input.cs">
+      <DependentUpon>Matr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Seq.cs" />
+    <Compile Include="Utils\Seq.Generators.cs">
+      <DependentUpon>Seq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Tup.cs" />
+    <Compile Include="Utils\Tup.Generators.cs">
+      <DependentUpon>Tup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Tup.Input.cs">
+      <DependentUpon>Tup.cs</DependentUpon>
+    </Compile>
     <None Include="Examples\C#\Arrays_1.cs" />
     <None Include="Examples\C#\Arrays_10.cs" />
     <None Include="Examples\C#\Arrays_11.cs" />
@@ -125,11 +161,6 @@
     <Compile Include="Extensions\MatrExt.cs" />
     <Compile Include="Extensions\TupExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\Arr.cs" />
-    <Compile Include="Utils\Base.cs" />
-    <Compile Include="Utils\Seq.cs" />
-    <Compile Include="Utils\Matr.cs" />
-    <Compile Include="Utils\Tup.cs" />
     <None Include="Presentations\ABCNET как продолжение PABCSystem.pptx" />
   </ItemGroup>
   <ItemGroup>
