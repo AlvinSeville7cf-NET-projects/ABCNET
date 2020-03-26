@@ -150,7 +150,7 @@ namespace TestProgram
 - Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
 - `VCS` - [`Git`](https://git-scm.com/download) с [`Git Bash`](https://git-scm.com/download)
 - Язык автоматизации - [`Bash`](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
-- Фреймворки - `NET Framework 4.0`, `NUnit`
+- Фреймворки - `NET Framework 4.0`, [`NUnit`](https://nunit.org/)
 
 ## Рекомендуемые инструменты
 <!--
