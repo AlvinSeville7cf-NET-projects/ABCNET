@@ -65,9 +65,6 @@
     <Compile Include="Utils\Array.Input.cs">
       <DependentUpon>Array.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Base.Attributes.cs">
-      <DependentUpon>Base.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Base.cs" />
     <Compile Include="Utils\Base.Input.cs">
       <DependentUpon>Base.cs</DependentUpon>

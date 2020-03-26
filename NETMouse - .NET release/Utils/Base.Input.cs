@@ -10,13 +10,11 @@ namespace ABCNET.Utils
     public static partial class Base
     {
         #region public
-
         /// <summary>
         /// Читает значение типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static bool ReadBoolean(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -28,7 +26,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static byte ReadByte(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -40,7 +37,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static sbyte ReadSByte(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -52,7 +48,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static char ReadChar(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -64,7 +59,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static decimal ReadDecimal(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -76,7 +70,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static double ReadDouble(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -88,7 +81,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static float ReadSingle(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -100,7 +92,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static int ReadInt32(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -112,7 +103,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static uint ReadUInt32(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -124,7 +114,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static long ReadInt64(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -136,7 +125,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static ulong ReadUInt64(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -148,7 +136,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static short ReadInt16(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -160,7 +147,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static ushort ReadUInt16(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -172,7 +158,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static string ReadString(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -184,7 +169,6 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
         public static BigInteger ReadBigInteger(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
@@ -204,7 +188,7 @@ namespace ABCNET.Utils
         /// Генерирует случайное число [0;1). 
         /// </summary> 
         /// <returns>Число.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
         public static double Rand()
         {
             return RandomHelper.Random.NextDouble();
@@ -230,7 +214,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Число.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
         public static int Rand(int low, int high)
         {
             if (high < low)
@@ -250,7 +234,7 @@ namespace ABCNET.Utils
             if (high < low)
                 Swap(ref low, ref high);
 
-            return low + Rand() * (high - low);
+            return low + Random() * (high - low);
         }
 
         /// <summary>
@@ -259,7 +243,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Число.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.")]
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
         public static double Rand(double low, double high)
         {
             if (high < low)
@@ -267,7 +251,6 @@ namespace ABCNET.Utils
 
             return low + Rand() * (high - low);
         }
-
         #endregion public
     }
 }
