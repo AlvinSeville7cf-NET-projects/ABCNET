@@ -14,7 +14,6 @@ namespace ABCNET.Utils
         public static partial class Nullable
         {
             #region public
-
             /// <summary>
             /// Читает значение типа Boolean?. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             /// </summary>

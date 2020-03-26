@@ -80,7 +80,7 @@ namespace ABCNET.Utils
 
             int[] source = new int[count];
             for (int i = 0; i < source.Length; i++)
-                source[i] = Base.Rand(low, high);
+                source[i] = Base.Random(low, high);
 
             return source;
         }
@@ -101,7 +101,7 @@ namespace ABCNET.Utils
 
             double[] source = new double[count];
             for (int i = 0; i < source.Length; i++)
-                source[i] = Base.Rand(low, high);
+                source[i] = Base.Random(low, high);
 
             return source;
         }

@@ -113,9 +113,6 @@
       <DependentUpon>Tup.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Tup.cs" />
-    <Compile Include="Utils\Tuple.Attributes.cs">
-      <DependentUpon>Tuple.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Tup.Generators.cs">
       <DependentUpon>Tup.cs</DependentUpon>
     </Compile>

@@ -22,7 +22,7 @@ namespace ABCNET.Utils
             ReadBooleanTupleItem(ref a, 0, prompt);
             ReadBooleanTupleItem(ref b, 1, prompt);
 
-            return New(a, b);
+            return Of(a, b);
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace ABCNET.Utils
             ReadBooleanTupleItem(ref b, 1, prompt);
             ReadBooleanTupleItem(ref c, 2, prompt);
 
-            return New(a, b, c);
+            return Of(a, b, c);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char, char> ReadCharTup2(string prompt = EmptyStringHelper.Empty)
         {
-            return New(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
+            return Of(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)));
         }
 
@@ -58,7 +58,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char, char, char> ReadCharTup3(string prompt = EmptyStringHelper.Empty)
         {
-            return New(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
+            return Of(Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)),
                 Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 2)));
         }
@@ -75,7 +75,7 @@ namespace ABCNET.Utils
             ReadRealTupleItem(ref a, 0, prompt);
             ReadRealTupleItem(ref b, 1, prompt);
 
-            return New(a, b);
+            return Of(a, b);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace ABCNET.Utils
             ReadRealTupleItem(ref b, 1, prompt);
             ReadRealTupleItem(ref c, 2, prompt);
 
-            return New(a, b, c);
+            return Of(a, b, c);
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace ABCNET.Utils
             ReadIntegerTupleItem(ref a, 0, prompt);
             ReadIntegerTupleItem(ref b, 1, prompt);
 
-            return New(a, b);
+            return Of(a, b);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace ABCNET.Utils
             ReadIntegerTupleItem(ref b, 1, prompt);
             ReadIntegerTupleItem(ref c, 2, prompt);
 
-            return New(a, b, c);
+            return Of(a, b, c);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string, string> ReadStringTup2(string prompt = EmptyStringHelper.Empty)
         {
-            return New(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
+            return Of(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)));
         }
 
@@ -143,7 +143,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string, string, string> ReadStringTup3(string prompt = EmptyStringHelper.Empty)
         {
-            return New(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
+            return Of(Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 0)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 2)));
         }
