@@ -6,7 +6,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с массивами.
     /// </summary>
-    public static partial class ArrExt
+    public static partial class ArrayE
     {
         #region public
         /// <summary>
