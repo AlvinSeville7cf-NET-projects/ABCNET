@@ -8,7 +8,6 @@ namespace ABCNET.Utils
     public static partial class Tuple
     {
         #region public
-
         /// <summary>
         /// Создаёт кортеж из 2 значений.
         /// </summary>
@@ -276,7 +275,6 @@ namespace ABCNET.Utils
         {
             return Of(value, value, value, value, value, value, value);
         }
-
         #endregion public
     }
 }

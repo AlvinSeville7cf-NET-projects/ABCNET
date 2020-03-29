@@ -9,7 +9,6 @@ namespace ABCNET.Utils
     public static partial class Tup
     {
         #region public
-
         /// <summary>
         /// Читает кортеж из двух значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -157,7 +156,6 @@ namespace ABCNET.Utils
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 1)),
                 Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, 2)));
         }
-
         #endregion public
 
         #region private
@@ -202,7 +200,6 @@ namespace ABCNET.Utils
                     InputErrorHelper.Message.Println();
                 }
         }
-
         #endregion private
     }
 }

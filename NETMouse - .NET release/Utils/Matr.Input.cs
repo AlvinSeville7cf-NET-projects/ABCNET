@@ -9,7 +9,6 @@ namespace ABCNET.Utils
     public static partial class Matr
     {
         #region public
-
         /// <summary>
         /// Читает матрицу значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -532,7 +531,6 @@ namespace ABCNET.Utils
         {
             return Tup.New(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
         }
-
         #endregion public
     }
 }
