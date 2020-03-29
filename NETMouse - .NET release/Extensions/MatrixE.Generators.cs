@@ -9,6 +9,7 @@ namespace ABCNET.Extensions
     public static partial class MatrixE
     {
         #region public
+
         /// <summary>
         /// Заполняет матрицу на основе функции селектора.
         /// </summary>
@@ -16,7 +17,7 @@ namespace ABCNET.Extensions
         /// <param name="selector">Функция селектор.</param>
         /// <param name="rowFirstIndex">Начальный индекс строки.</param>
         /// <param name="columnFirstIndex">Начальный индекс столбца.</param>
-        public static void Gen<T>(this T[,] matrix, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
+        public static void By<T>(this T[,] matrix, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -34,7 +35,7 @@ namespace ABCNET.Extensions
         /// <param name="matrix">Матрица.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
-        public static void Rand(this int[,] matrix, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static void Random(this int[,] matrix, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -43,7 +44,7 @@ namespace ABCNET.Extensions
 
             for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
-                    matrix[i, j] = Base.Rand(low, high);
+                    matrix[i, j] = Base.Random(low, high);
         }
 
         /// <summary>
@@ -52,7 +53,7 @@ namespace ABCNET.Extensions
         /// <param name="matrix">Матрица.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
-        public static void Rand(this double[,] matrix, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static void Random(this double[,] matrix, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -61,7 +62,7 @@ namespace ABCNET.Extensions
 
             for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
-                    matrix[i, j] = Base.Rand(low, high);
+                    matrix[i, j] = Base.Random(low, high);
         }
 
         /// <summary>
@@ -79,6 +80,7 @@ namespace ABCNET.Extensions
                 for (int j = 0; j < matrix.GetLength(1); j++)
                     matrix[i, j] = value;
         }
+
         #endregion public
     }
 }

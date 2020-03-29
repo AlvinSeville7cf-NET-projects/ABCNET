@@ -10,6 +10,7 @@ namespace ABCNET.Extensions
     public static partial class MatrixE
     {
         #region public
+
         /// <summary>
         /// Получает столбец матрицы.
         /// </summary>
@@ -209,6 +210,7 @@ namespace ABCNET.Extensions
                 yield return matrix.InternalGetRow(j);
             }
         }
+
         #endregion public
 
         #region private
@@ -343,6 +345,7 @@ namespace ABCNET.Extensions
 
             return newMatrix;
         }
+
         #endregion private
     }
 }
