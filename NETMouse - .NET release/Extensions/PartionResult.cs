@@ -5,7 +5,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Результат для Partition.
     /// </summary>
-    public class PartitionRes<T>
+    public class PartitionResult<T>
     {
         /// <summary>
         /// Элементы, отвечающие условию.
@@ -22,7 +22,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="trueCollection">Элементы, отвечающие условию.</param>
         /// <param name="falseCollection">Элементы, неотвечающие условию.</param>
-        public PartitionRes(IEnumerable<T> trueCollection, IEnumerable<T> falseCollection)
+        public PartitionResult(IEnumerable<T> trueCollection, IEnumerable<T> falseCollection)
         {
             True = trueCollection;
             False = falseCollection;

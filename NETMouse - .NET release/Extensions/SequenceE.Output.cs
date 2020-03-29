@@ -6,7 +6,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с последовательностями.
     /// </summary>
-    public static partial class SeqExt
+    public static partial class SequenceE
     {
         #region public
         /// <summary>
@@ -44,7 +44,7 @@ namespace ABCNET.Extensions
         /// <param name="start">Первый выводимый символ строки.</param>
         /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> Println<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        public static IEnumerable<T> PrintLine<T>(this IEnumerable<T> collection, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             Console.Write(start);
             collection.Print(delimiter);
@@ -106,7 +106,7 @@ namespace ABCNET.Extensions
         /// <param name="start">Первый выводимый символ строки.</param>
         /// <param name="end">Последний выводимый символ строки.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> PrintlnBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        public static IEnumerable<T> PrintLineBy<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             collection.PrintBy(selector, delimiter, start, end);
             Console.WriteLine();

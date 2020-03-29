@@ -5,7 +5,7 @@ namespace ABCNET.Utils
     /// <summary>
     /// Предоставляет функционал для работы с матрицами.
     /// </summary>
-    public static partial class Matr
+    public static partial class Matrix
     {
         #region public
         /// <summary>
@@ -15,7 +15,7 @@ namespace ABCNET.Utils
         /// <param name="colsCount">Количество столбцов.</param>
         /// <param name="values">Значения.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] New<T>(int rowsCount, int colsCount, params T[] values)
+        public static T[,] Of<T>(int rowsCount, int colsCount, params T[] values)
         {
             if (values == null)
                 throw new ArgumentNullException(nameof(values));
@@ -47,7 +47,7 @@ namespace ABCNET.Utils
         /// <param name="rowFirstIndex">Начальный индекс строки.</param>
         /// <param name="columnFirstIndex">Начальный индекс столбца.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] Gen<T>(int rowsCount, int colsCount, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
+        public static T[,] By<T>(int rowsCount, int colsCount, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
         {
             if (rowsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
@@ -72,7 +72,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Матрица.</returns>
-        public static int[,] Rand(int rowsCount, int colsCount, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static int[,] Random(int rowsCount, int colsCount, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (rowsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
@@ -84,7 +84,7 @@ namespace ABCNET.Utils
             int[,] source = new int[rowsCount, colsCount];
             for (int i = 0; i < source.GetLength(0); i++)
                 for (int j = 0; j < source.GetLength(1); j++)
-                    source[i, j] = Base.Rand(low, high);
+                    source[i, j] = Base.Random(low, high);
 
             return source;
         }
@@ -97,7 +97,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Матрица.</returns>
-        public static double[,] Rand(int rowsCount, int colsCount, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static double[,] Random(int rowsCount, int colsCount, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (rowsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
@@ -109,7 +109,7 @@ namespace ABCNET.Utils
             double[,] source = new double[rowsCount, colsCount];
             for (int i = 0; i < source.GetLength(0); i++)
                 for (int j = 0; j < source.GetLength(1); j++)
-                    source[i, j] = Base.Rand(low, high);
+                    source[i, j] = Base.Random(low, high);
 
             return source;
         }

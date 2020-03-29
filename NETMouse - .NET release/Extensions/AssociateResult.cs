@@ -3,7 +3,7 @@
     /// <summary>
     /// Результат для Associate.
     /// </summary>
-    public class AssociateRes<T, TOutput>
+    public class AssociateResult<T, TOutput>
     {
         /// <summary>
         /// Элемент.
@@ -20,7 +20,7 @@
         /// </summary>
         /// <param name="item">Элемент.</param>
         /// <param name="projection">Проекция элемента.</param>
-        public AssociateRes(T item, TOutput projection)
+        public AssociateResult(T item, TOutput projection)
         {
             Item = item;
             Projection = projection;

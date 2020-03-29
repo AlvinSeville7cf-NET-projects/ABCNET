@@ -6,7 +6,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с кортежами.
     /// </summary>
-    public static partial class TupExt
+    public static partial class TupleE
     {
         #region public
         /// <summary>
@@ -14,7 +14,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> ToSeq<T>(this Tuple<T, T> tuple)
+        public static IEnumerable<T> ToSequence<T>(this Tuple<T, T> tuple)
         {
             yield return tuple.Item1;
             yield return tuple.Item2;
@@ -49,7 +49,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> ToSeq<T>(this Tuple<T, T, T> tuple)
+        public static IEnumerable<T> ToSequence<T>(this Tuple<T, T, T> tuple)
         {
             yield return tuple.Item1;
             yield return tuple.Item2;
@@ -85,7 +85,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> ToSeq<T>(this Tuple<T, T, T, T> tuple)
+        public static IEnumerable<T> ToSequence<T>(this Tuple<T, T, T, T> tuple)
         {
             yield return tuple.Item1;
             yield return tuple.Item2;
@@ -122,7 +122,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> ToSeq<T>(this Tuple<T, T, T, T, T> tuple)
+        public static IEnumerable<T> ToSequence<T>(this Tuple<T, T, T, T, T> tuple)
         {
             yield return tuple.Item1;
             yield return tuple.Item2;
@@ -160,7 +160,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> ToSeq<T>(this Tuple<T, T, T, T, T, T> tuple)
+        public static IEnumerable<T> ToSequence<T>(this Tuple<T, T, T, T, T, T> tuple)
         {
             yield return tuple.Item1;
             yield return tuple.Item2;
@@ -197,7 +197,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="tuple">Кортеж.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> ToSeq<T>(this Tuple<T, T, T, T, T, T, T> tuple)
+        public static IEnumerable<T> ToSequence<T>(this Tuple<T, T, T, T, T, T, T> tuple)
         {
             yield return tuple.Item1;
             yield return tuple.Item2;

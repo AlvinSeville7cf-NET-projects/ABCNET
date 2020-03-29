@@ -7,7 +7,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с матрицами.
     /// </summary>
-    public static partial class MatrExt
+    public static partial class MatrixE
     {
         #region public
         /// <summary>
@@ -16,7 +16,7 @@ namespace ABCNET.Extensions
         /// <param name="matrix">Матрица.</param>
         /// <param name="index">Индекс столбца.</param>
         /// <returns>Столбец.</returns>
-        public static T[] Col<T>(this T[,] matrix, int index)
+        public static T[] Column<T>(this T[,] matrix, int index)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -31,7 +31,7 @@ namespace ABCNET.Extensions
         /// <param name="index">Индекс столбца.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <returns>Столбец.</returns>
-        public static TOutput[] Col<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
+        public static TOutput[] Column<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -69,6 +69,39 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Меняет местами два столбца матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="firstIndex">Индекс первого столбца.</param>
+        /// <param name="secondIndex">Индекс второго столбца.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] SwapColumns<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+
+            return matrix.InternalSwapCols(firstIndex, secondIndex);
+        }
+
+        /// <summary>
+        /// Меняет местами два столбца матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="firstIndex">Индекс первого столбца.</param>
+        /// <param name="secondIndex">Индекс второго столбца.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] SwapColumns<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+
+            return matrix.InternalSwapCols(firstIndex, secondIndex, selector);
+        }
+
+        /// <summary>
         /// Меняет местами две строки матрицы.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
@@ -102,36 +135,25 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Меняет местами два столбца матрицы.
+        /// Изменяет строку матрицы.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
-        /// <param name="firstIndex">Индекс первого столбца.</param>
-        /// <param name="secondIndex">Индекс второго столбца.</param>
+        /// /// <param name="row">Строка.</param>
+        /// <param name="index">Индекс строки.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        public static T[,] SetColumn<T>(this T[,] matrix, T[] row, int index)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+            if (matrix.GetLength(0) != row.Length)
+                throw new ArgumentException(nameof(row));
 
-            return matrix.InternalSwapCols(firstIndex, secondIndex);
-        }
+            T[,] matrixRes = (T[,])matrix.Clone();
 
-        /// <summary>
-        /// Меняет местами два столбца матрицы.
-        /// </summary>
-        /// <param name="matrix">Матрица.</param>
-        /// <param name="firstIndex">Индекс первого столбца.</param>
-        /// <param name="secondIndex">Индекс второго столбца.</param>
-        /// <param name="selector">Функция селектор.</param>
-        /// <returns>Матрица.</returns>
-        public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
-        {
-            if (selector == null)
-                throw new ArgumentNullException(nameof(selector));
-            if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
+            for (int i = 0; i < matrixRes.GetLength(1); i++)
+                matrixRes[i, index] = row[i];
 
-            return matrix.InternalSwapCols(firstIndex, secondIndex, selector);
+            return matrixRes;
         }
 
         /// <summary>
@@ -157,33 +179,11 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Изменяет строку матрицы.
-        /// </summary>
-        /// <param name="matrix">Матрица.</param>
-        /// /// <param name="row">Строка.</param>
-        /// <param name="index">Индекс строки.</param>
-        /// <returns>Матрица.</returns>
-        public static T[,] SetCol<T>(this T[,] matrix, T[] row, int index)
-        {
-            if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
-            if (matrix.GetLength(0) != row.Length)
-                throw new ArgumentException(nameof(row));
-
-            T[,] matrixRes = (T[,])matrix.Clone();
-
-            for (int i = 0; i < matrixRes.GetLength(1); i++)
-                matrixRes[i, index] = row[i];
-
-            return matrixRes;
-        }
-
-        /// <summary>
         /// Возвращает последовательность строк матрицы.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <returns>Строки.</returns>
-        public static IEnumerable<T[]> Cols<T>(this T[,] matrix)
+        public static IEnumerable<T[]> Columns<T>(this T[,] matrix)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));

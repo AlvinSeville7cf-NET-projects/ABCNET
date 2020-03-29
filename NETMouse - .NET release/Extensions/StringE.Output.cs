@@ -5,7 +5,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы со строками.
     /// </summary>
-    public static partial class StrExt
+    public static partial class StringE
     {
         #region public
         /// <summary>
@@ -24,7 +24,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="input">Строка.</param>
         /// <returns>Строка.</returns>
-        public static string Println(this string input)
+        public static string PrintLine(this string input)
         {
             Console.WriteLine(input.NilOrString());
             return input;

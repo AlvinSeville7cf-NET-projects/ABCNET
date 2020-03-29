@@ -5,9 +5,10 @@ namespace ABCNET.Utils
     /// <summary>
     /// Предоставляет функционал для работы с ссылочными кортежами.
     /// </summary>
-    public static partial class Tup
+    public static partial class Tuple
     {
         #region public
+
         /// <summary>
         /// Создаёт кортеж из 2 значений.
         /// </summary>
@@ -90,9 +91,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int> Rand2(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static Tuple<int, int> Random2(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -101,9 +102,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int, int> Rand3(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static Tuple<int, int, int> Random3(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -112,9 +113,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int, int, int> Rand4(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static Tuple<int, int, int, int> Random4(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -123,9 +124,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int, int, int, int> Rand5(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static Tuple<int, int, int, int, int> Random5(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -134,9 +135,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int, int, int, int, int> Rand6(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static Tuple<int, int, int, int, int, int> Random6(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -145,9 +146,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int, int, int, int, int, int, int> Rand7(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static Tuple<int, int, int, int, int, int, int> Random7(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -156,9 +157,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double> Rand2(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static Tuple<double, double> Random2(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -167,9 +168,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double, double> Rand3(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static Tuple<double, double, double> Random3(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -178,9 +179,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double, double, double> Rand4(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static Tuple<double, double, double, double> Random4(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -189,9 +190,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double, double, double, double> Rand5(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static Tuple<double, double, double, double, double> Random5(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -200,9 +201,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double, double, double, double, double> Rand6(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static Tuple<double, double, double, double, double, double> Random6(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -211,9 +212,9 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<double, double, double, double, double, double, double> Rand7(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static Tuple<double, double, double, double, double, double, double> Random7(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return New(Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high), Base.Rand(low, high));
+            return New(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -275,6 +276,7 @@ namespace ABCNET.Utils
         {
             return New(value, value, value, value, value, value, value);
         }
+
         #endregion public
     }
 }

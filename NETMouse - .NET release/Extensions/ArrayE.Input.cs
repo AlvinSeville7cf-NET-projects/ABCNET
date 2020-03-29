@@ -6,7 +6,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с массивами.
     /// </summary>
-    public static partial class ArrExt
+    public static partial class ArrayE
     {
         #region public
         /// <summary>
@@ -28,7 +28,7 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
 
@@ -65,7 +65,7 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
 
@@ -88,7 +88,7 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
 

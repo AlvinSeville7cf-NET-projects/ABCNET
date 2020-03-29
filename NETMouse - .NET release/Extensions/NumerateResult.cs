@@ -3,7 +3,7 @@
     /// <summary>
     /// Результат для Numerate.
     /// </summary>
-    public class NumerateRes<T>
+    public class NumerateResult<T>
     {
         /// <summary>
         /// Элемент.
@@ -20,7 +20,7 @@
         /// </summary>
         /// <param name="item">Элемент.</param>
         /// <param name="index">Индекс элемента.</param>
-        public NumerateRes(T item, int index)
+        public NumerateResult(T item, int index)
         {
             Item = item;
             Index = index;

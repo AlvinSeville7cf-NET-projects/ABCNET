@@ -6,7 +6,7 @@ namespace ABCNET.Utils
     /// <summary>
     /// Предоставляет функционал для работы с последовательностями.
     /// </summary>
-    public static partial class Seq
+    public static partial class Sequence
     {
         #region public
         /// <summary>
@@ -16,7 +16,7 @@ namespace ABCNET.Utils
         /// <param name="selector">Функция селектор.</param>
         /// <param name="firstIndex">Начальный индекс.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> Gen<T>(int count, Func<int, T> selector, int firstIndex = 0)
+        public static IEnumerable<T> By<T>(int count, Func<int, T> selector, int firstIndex = 0)
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
@@ -34,7 +34,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<int> Rand(int count, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
+        public static IEnumerable<int> Random(int count, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
@@ -42,7 +42,7 @@ namespace ABCNET.Utils
                 throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < count; i++)
-                yield return Base.Rand(low, high);
+                yield return Base.Random(low, high);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<double> Rand(int count, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
+        public static IEnumerable<double> Random(int count, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
@@ -60,7 +60,7 @@ namespace ABCNET.Utils
                 throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < count; i++)
-                yield return Base.Rand(low, high);
+                yield return Base.Random(low, high);
         }
 
         /// <summary>

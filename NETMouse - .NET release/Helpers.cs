@@ -2,6 +2,11 @@ using System;
 
 namespace ABCNET
 {
+    internal static class ObsoletePABCSystemStyleHelper
+    {
+        internal const string Message = "Данный класс или метод является устаревшим. Используйте его современный аналог: ";
+    }
+
     internal static class ArrayHelper<T>
     {
         internal static T[] Empty { get; } = new T[0];
