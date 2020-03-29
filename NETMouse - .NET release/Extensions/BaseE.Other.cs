@@ -3,7 +3,7 @@
     /// <summary>
     /// Предоставляет функционал для работы с базовыми типами.
     /// </summary>
-    public static partial class BaseExt
+    public static partial class BaseE
     {
         #region public
         /// <summary>
