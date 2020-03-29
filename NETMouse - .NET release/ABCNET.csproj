@@ -48,12 +48,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\Array.cs" />
-    <Compile Include="Extensions\Array.Generators.cs">
-      <DependentUpon>Array.cs</DependentUpon>
+    <Compile Include="Extensions\ArrayE.cs" />
+    <Compile Include="Extensions\ArrayE.Generators.cs">
+      <DependentUpon>ArrayE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Array.Input.cs">
-      <DependentUpon>Array.cs</DependentUpon>
+    <Compile Include="Extensions\ArrayE.Input.cs">
+      <DependentUpon>ArrayE.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\ArrExt.Generators.cs">
       <DependentUpon>ArrExt.cs</DependentUpon>
@@ -61,15 +61,15 @@
     <Compile Include="Extensions\ArrExt.Input.cs">
       <DependentUpon>ArrExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Base.cs" />
-    <Compile Include="Extensions\Base.Generators.cs">
-      <DependentUpon>Base.cs</DependentUpon>
+    <Compile Include="Extensions\BaseE.cs" />
+    <Compile Include="Extensions\BaseE.Generators.cs">
+      <DependentUpon>BaseE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Base.Other.cs">
-      <DependentUpon>Base.cs</DependentUpon>
+    <Compile Include="Extensions\BaseE.Other.cs">
+      <DependentUpon>BaseE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Base.Output.cs">
-      <DependentUpon>Base.cs</DependentUpon>
+    <Compile Include="Extensions\BaseE.Output.cs">
+      <DependentUpon>BaseE.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\BaseExt.Generators.cs">
       <DependentUpon>BaseExt.cs</DependentUpon>
@@ -83,60 +83,60 @@
     <Compile Include="Extensions\MatrExt.Generators.cs">
       <DependentUpon>MatrExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Matrix.Generators.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extensions\MatrExt.Getters.cs">
       <DependentUpon>MatrExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\Matrix.Getters.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\MatrExt.Input.cs">
       <DependentUpon>MatrExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Matrix.Input.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
+    <Compile Include="Extensions\MatrixE.Generators.cs">
+      <DependentUpon>MatrixE.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\MatrExt.Output.cs">
       <DependentUpon>MatrExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Matrix.cs" />
-    <Compile Include="Extensions\Matrix.Output.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
+    <Compile Include="Extensions\MatrixE.Getters.cs">
+      <DependentUpon>MatrixE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\MatrixE.Input.cs">
+      <DependentUpon>MatrixE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\MatrixE.cs" />
+    <Compile Include="Extensions\MatrixE.Output.cs">
+      <DependentUpon>MatrixE.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\SeqExt.Getters.cs">
       <DependentUpon>SeqExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Sequence.Getters.cs">
-      <DependentUpon>Sequence.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extensions\SeqExt.Output.cs">
       <DependentUpon>SeqExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Sequence.cs" />
-    <Compile Include="Extensions\Sequence.Output.cs">
-      <DependentUpon>Sequence.cs</DependentUpon>
+    <Compile Include="Extensions\SequenceE.Getters.cs">
+      <DependentUpon>SequenceE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\SequenceE.cs" />
+    <Compile Include="Extensions\SequenceE.Output.cs">
+      <DependentUpon>SequenceE.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\StrExt.Output.cs">
       <DependentUpon>StrExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\String.cs" />
-    <Compile Include="Extensions\String.Output.cs">
-      <DependentUpon>String.cs</DependentUpon>
+    <Compile Include="Extensions\StringE.cs" />
+    <Compile Include="Extensions\StringE.Output.cs">
+      <DependentUpon>StringE.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\TupExt.Getters.cs">
       <DependentUpon>TupExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Tuple.Getters.cs">
-      <DependentUpon>Tuple.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extensions\TupExt.Output.cs">
       <DependentUpon>TupExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\Tuple.cs" />
-    <Compile Include="Extensions\Tuple.Output.cs">
-      <DependentUpon>Tuple.cs</DependentUpon>
+    <Compile Include="Extensions\TupleE.Getters.cs">
+      <DependentUpon>TupleE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\TupleE.cs" />
+    <Compile Include="Extensions\TupleE.Output.cs">
+      <DependentUpon>TupleE.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Arr.Attributes.cs">
       <DependentUpon>Arr.cs</DependentUpon>

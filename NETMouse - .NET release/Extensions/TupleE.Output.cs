@@ -6,7 +6,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с кортежами.
     /// </summary>
-    public static partial class TupExt
+    public static partial class TupleE
     {
         #region public
         /// <summary>
