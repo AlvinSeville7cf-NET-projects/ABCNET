@@ -6,7 +6,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы с матрицами.
     /// </summary>
-    public static partial class MatrExt
+    public static partial class MatrixE
     {
         #region public
         /// <summary>
