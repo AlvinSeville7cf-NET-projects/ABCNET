@@ -55,12 +55,6 @@
     <Compile Include="Extensions\ArrayE.Input.cs">
       <DependentUpon>ArrayE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\ArrExt.Generators.cs">
-      <DependentUpon>ArrExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\ArrExt.Input.cs">
-      <DependentUpon>ArrExt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extensions\BaseE.cs" />
     <Compile Include="Extensions\BaseE.Generators.cs">
       <DependentUpon>BaseE.cs</DependentUpon>
@@ -71,29 +65,8 @@
     <Compile Include="Extensions\BaseE.Output.cs">
       <DependentUpon>BaseE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\BaseExt.Generators.cs">
-      <DependentUpon>BaseExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\BaseExt.Other.cs">
-      <DependentUpon>BaseExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\BaseExt.Output.cs">
-      <DependentUpon>BaseExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\MatrExt.Generators.cs">
-      <DependentUpon>MatrExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\MatrExt.Getters.cs">
-      <DependentUpon>MatrExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\MatrExt.Input.cs">
-      <DependentUpon>MatrExt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extensions\MatrixE.Generators.cs">
       <DependentUpon>MatrixE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\MatrExt.Output.cs">
-      <DependentUpon>MatrExt.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\MatrixE.Getters.cs">
       <DependentUpon>MatrixE.cs</DependentUpon>
@@ -105,12 +78,6 @@
     <Compile Include="Extensions\MatrixE.Output.cs">
       <DependentUpon>MatrixE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\SeqExt.Getters.cs">
-      <DependentUpon>SeqExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\SeqExt.Output.cs">
-      <DependentUpon>SeqExt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extensions\SequenceE.Getters.cs">
       <DependentUpon>SequenceE.cs</DependentUpon>
     </Compile>
@@ -118,18 +85,9 @@
     <Compile Include="Extensions\SequenceE.Output.cs">
       <DependentUpon>SequenceE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\StrExt.Output.cs">
-      <DependentUpon>StrExt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Extensions\StringE.cs" />
     <Compile Include="Extensions\StringE.Output.cs">
       <DependentUpon>StringE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\TupExt.Getters.cs">
-      <DependentUpon>TupExt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\TupExt.Output.cs">
-      <DependentUpon>TupExt.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\TupleE.Getters.cs">
       <DependentUpon>TupleE.cs</DependentUpon>
@@ -137,16 +95,6 @@
     <Compile Include="Extensions\TupleE.cs" />
     <Compile Include="Extensions\TupleE.Output.cs">
       <DependentUpon>TupleE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Arr.Attributes.cs">
-      <DependentUpon>Arr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Arr.cs" />
-    <Compile Include="Utils\Arr.Generators.cs">
-      <DependentUpon>Arr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Arr.Input.cs">
-      <DependentUpon>Arr.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Array.cs" />
     <Compile Include="Utils\Array.Generators.cs">
@@ -165,16 +113,6 @@
     <Compile Include="Utils\Base.Other.cs">
       <DependentUpon>Base.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Matr.Attributes.cs">
-      <DependentUpon>Matr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Matr.cs" />
-    <Compile Include="Utils\Matr.Generators.cs">
-      <DependentUpon>Matr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Matr.Input.cs">
-      <DependentUpon>Matr.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Matrix.cs" />
     <Compile Include="Utils\Matrix.Generators.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
@@ -182,29 +120,12 @@
     <Compile Include="Utils\Matrix.Input.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Seq.Attributes.cs">
-      <DependentUpon>Seq.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Seq.cs" />
-    <Compile Include="Utils\Seq.Generators.cs">
-      <DependentUpon>Seq.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Sequence.cs" />
     <Compile Include="Utils\Sequence.Generators.cs">
       <DependentUpon>Sequence.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Tup.Attributes.cs">
-      <DependentUpon>Tup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Tup.cs" />
-    <Compile Include="Utils\Tup.Generators.cs">
-      <DependentUpon>Tup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Tuple.Generators.cs">
       <DependentUpon>Tuple.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Tup.Input.cs">
-      <DependentUpon>Tup.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Tuple.cs" />
     <Compile Include="Utils\Tuple.Input.cs">
@@ -235,16 +156,10 @@
     <None Include="Examples\C#\Matrices_7.cs" />
     <None Include="Examples\C#\Matrices_8.cs" />
     <None Include="Examples\C#\Matrices_9.cs" />
-    <Compile Include="Extensions\ArrExt.cs" />
     <Compile Include="Extensions\AssociateResult.cs" />
-    <Compile Include="Extensions\BaseExt.cs" />
     <Compile Include="Extensions\PartionResult.cs" />
     <Compile Include="Extensions\NumerateResult.cs" />
-    <Compile Include="Extensions\StrExt.cs" />
     <Compile Include="Helpers.cs" />
-    <Compile Include="Extensions\SeqExt.cs" />
-    <Compile Include="Extensions\MatrExt.cs" />
-    <Compile Include="Extensions\TupExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Presentations\ABCNET как продолжение PABCSystem.pptx" />
   </ItemGroup>
