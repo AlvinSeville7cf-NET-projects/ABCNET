@@ -10,7 +10,6 @@ namespace ABCNET.Extensions
     public static partial class SequenceE
     {
         #region public
-
         /// <summary>
         /// Преобразует последовательность в кортеж.
         /// </summary>
@@ -409,14 +408,14 @@ namespace ABCNET.Extensions
         /// <param name="collection">Последовательность.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<AssociateRes<T, TOutput>> Associate<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
+        public static IEnumerable<AssociateResult<T, TOutput>> Associate<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            return collection.Select(delegate (T x) { return new AssociateRes<T, TOutput>(x, selector(x)); });
+            return collection.Select(delegate (T x) { return new AssociateResult<T, TOutput>(x, selector(x)); });
         }
 
         /// <summary>
@@ -454,12 +453,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<NumerateRes<T>> Numerate<T>(this IEnumerable<T> collection)
+        public static IEnumerable<NumerateResult<T>> Numerate<T>(this IEnumerable<T> collection)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            return collection.Select(delegate (T x, int i) { return new NumerateRes<T>(x, i); });
+            return collection.Select(delegate (T x, int i) { return new NumerateResult<T>(x, i); });
         }
 
         /// <summary>
@@ -468,14 +467,14 @@ namespace ABCNET.Extensions
         /// <param name="collection">Последовательность.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<NumerateRes<TOutput>> Numerate<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
+        public static IEnumerable<NumerateResult<TOutput>> Numerate<T, TOutput>(this IEnumerable<T> collection, Func<T, TOutput> selector)
         {
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            return collection.Select(delegate (T x, int i) { return new NumerateRes<TOutput>(selector(x), i); });
+            return collection.Select(delegate (T x, int i) { return new NumerateResult<TOutput>(selector(x), i); });
         }
 
         /// <summary>
@@ -496,7 +495,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Последовательность.</returns>
-        public static IOrderedEnumerable<T> SortDesc<T>(this IEnumerable<T> collection)
+        public static IOrderedEnumerable<T> SortDescendng<T>(this IEnumerable<T> collection)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -654,7 +653,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Произведение.</returns>
-        public static int Prod(this IEnumerable<int> collection)
+        public static int Product(this IEnumerable<int> collection)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -671,7 +670,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Произведение.</returns>
-        public static double Prod(this IEnumerable<double> collection)
+        public static double Product(this IEnumerable<double> collection)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -689,7 +688,7 @@ namespace ABCNET.Extensions
         /// <param name="collection">Последовательность.</param>
         /// <param name="predicate">Предикат.</param>
         /// <returns>Пара последовательностей.</returns>
-        public static PartitionRes<T> Partition<T>(this IEnumerable<T> collection, Predicate<T> predicate)
+        public static PartitionResult<T> Partition<T>(this IEnumerable<T> collection, Predicate<T> predicate)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
@@ -704,9 +703,8 @@ namespace ABCNET.Extensions
                 else
                     falseList.Add(item);
 
-            return new PartitionRes<T>(trueList, falseList);
+            return new PartitionResult<T>(trueList, falseList);
         }
-
         #endregion public
     }
 }

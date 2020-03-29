@@ -10,14 +10,13 @@ namespace ABCNET.Extensions
     public static partial class MatrixE
     {
         #region public
-
         /// <summary>
         /// Получает столбец матрицы.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="index">Индекс столбца.</param>
         /// <returns>Столбец.</returns>
-        public static T[] Col<T>(this T[,] matrix, int index)
+        public static T[] Column<T>(this T[,] matrix, int index)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -32,7 +31,7 @@ namespace ABCNET.Extensions
         /// <param name="index">Индекс столбца.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <returns>Столбец.</returns>
-        public static TOutput[] Col<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
+        public static TOutput[] Column<T, TOutput>(this T[,] matrix, int index, Func<T, TOutput> selector)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -109,7 +108,7 @@ namespace ABCNET.Extensions
         /// <param name="firstIndex">Индекс первого столбца.</param>
         /// <param name="secondIndex">Индекс второго столбца.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex)
+        public static T[,] SwapColumns<T>(this T[,] matrix, int firstIndex, int secondIndex)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -125,7 +124,7 @@ namespace ABCNET.Extensions
         /// <param name="secondIndex">Индекс второго столбца.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] SwapCols<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        public static T[,] SwapColumns<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
         {
             if (selector == null)
                 throw new ArgumentNullException(nameof(selector));
@@ -164,7 +163,7 @@ namespace ABCNET.Extensions
         /// /// <param name="row">Строка.</param>
         /// <param name="index">Индекс строки.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] SetCol<T>(this T[,] matrix, T[] row, int index)
+        public static T[,] SetColumn<T>(this T[,] matrix, T[] row, int index)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -184,7 +183,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <returns>Строки.</returns>
-        public static IEnumerable<T[]> Cols<T>(this T[,] matrix)
+        public static IEnumerable<T[]> Columns<T>(this T[,] matrix)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -210,7 +209,6 @@ namespace ABCNET.Extensions
                 yield return matrix.InternalGetRow(j);
             }
         }
-
         #endregion public
 
         #region private
@@ -345,7 +343,6 @@ namespace ABCNET.Extensions
 
             return newMatrix;
         }
-
         #endregion private
     }
 }

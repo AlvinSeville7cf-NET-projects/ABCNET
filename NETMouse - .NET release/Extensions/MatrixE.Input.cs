@@ -9,7 +9,6 @@ namespace ABCNET.Extensions
     public static partial class MatrixE
     {
         #region public
-
         /// <summary>
         /// Заполняет матрицу значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -132,7 +131,6 @@ namespace ABCNET.Extensions
                 for (int j = 0; j < matrix.GetLength(1); j++)
                     matrix[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
         }
-
         #endregion public
     }
 }

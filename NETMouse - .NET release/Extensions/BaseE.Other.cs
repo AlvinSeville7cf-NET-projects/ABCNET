@@ -6,7 +6,6 @@
     public static partial class BaseE
     {
         #region public
-
         /// <summary>
         /// Проверяет лежит ли число между другими двумя.
         /// </summary>
@@ -20,7 +19,6 @@
                 Utils.Base.Swap(ref firstBorder, ref secondBorder);
             return (target >= firstBorder) && (target <= secondBorder);
         }
-
         #endregion public
     }
 }

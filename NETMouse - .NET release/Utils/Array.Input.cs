@@ -30,7 +30,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
 
             return array;
@@ -75,7 +75,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
 
             return array;
@@ -102,7 +102,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
 
             return array;

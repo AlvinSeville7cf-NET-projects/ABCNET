@@ -8,7 +8,6 @@ namespace ABCNET.Extensions
     public static partial class BaseE
     {
         #region public
-
         /// <summary>
         /// Создаёт последовательность от начального числа до конечного.
         /// </summary>
@@ -51,7 +50,6 @@ namespace ABCNET.Extensions
                 from += step;
             } while (true);
         }
-
         #endregion public
     }
 }

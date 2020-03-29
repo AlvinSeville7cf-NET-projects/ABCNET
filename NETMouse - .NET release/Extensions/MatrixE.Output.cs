@@ -8,7 +8,6 @@ namespace ABCNET.Extensions
     public static partial class MatrixE
     {
         #region public
-
         /// <summary>
         /// Выводит матрицу.
         /// </summary>
@@ -31,7 +30,7 @@ namespace ABCNET.Extensions
         /// <param name="delimiter">Разделитель.</param>
         /// <param name="start">Первый выводимый символ строки.</param>
         /// <param name="end">Последний выводимый символ строки.</param>
-        public static T[,] Println<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        public static T[,] PrintLine<T>(this T[,] matrix, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -67,7 +66,7 @@ namespace ABCNET.Extensions
         /// <param name="delimiter">Разделитель.</param>
         /// <param name="start">Первый выводимый символ строки.</param>
         /// <param name="end">Последний выводимый символ строки.</param>
-        public static T[,] PrintlnBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
+        public static T[,] PrintLineBy<T, TOutput>(this T[,] matrix, Func<T, TOutput> selector, string delimiter = DefaultDelimiterHelper.Delimiter, string start = EmptyStringHelper.Empty, string end = EmptyStringHelper.Empty)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
@@ -78,7 +77,6 @@ namespace ABCNET.Extensions
             Console.WriteLine();
             return matrix;
         }
-
         #endregion public
 
         #region private
@@ -139,7 +137,6 @@ namespace ABCNET.Extensions
 
             return matrix;
         }
-
         #endregion private
     }
 }

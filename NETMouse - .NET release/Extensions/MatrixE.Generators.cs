@@ -9,7 +9,6 @@ namespace ABCNET.Extensions
     public static partial class MatrixE
     {
         #region public
-
         /// <summary>
         /// Заполняет матрицу на основе функции селектора.
         /// </summary>
@@ -80,7 +79,6 @@ namespace ABCNET.Extensions
                 for (int j = 0; j < matrix.GetLength(1); j++)
                     matrix[i, j] = value;
         }
-
         #endregion public
     }
 }

@@ -159,7 +159,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
 
@@ -173,7 +173,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
 
@@ -187,7 +187,7 @@ namespace ABCNET.Utils
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
         #endregion private

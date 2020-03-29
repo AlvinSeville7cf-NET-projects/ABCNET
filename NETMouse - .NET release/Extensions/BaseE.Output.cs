@@ -8,7 +8,6 @@ namespace ABCNET.Extensions
     public static partial class BaseE
     {
         #region public
-
         /// <summary>
         /// Выводит значение типа Boolean.
         /// </summary>
@@ -25,7 +24,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="item">Boolean.</param>
         /// <returns>Значение.</returns>
-        public static bool Println(this bool item)
+        public static bool PrintLine(this bool item)
         {
             Console.WriteLine(item.ToString());
             return item;
@@ -47,7 +46,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="item">Char.</param>
         /// <returns>Значение.</returns>
-        public static char Println(this char item)
+        public static char PrintLine(this char item)
         {
             Console.WriteLine(item.ToString());
             return item;
@@ -69,7 +68,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="item">Double.</param>
         /// <returns>Значение.</returns>
-        public static double Println(this double item)
+        public static double PrintLine(this double item)
         {
             Console.WriteLine(item.ToString());
             return item;
@@ -91,7 +90,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="item">Int32.</param>
         /// <returns>Значение.</returns>
-        public static int Println(this int item)
+        public static int PrintLine(this int item)
         {
             Console.WriteLine(item.ToString());
             return item;
@@ -113,7 +112,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="item">Boolean.</param>
         /// <returns>Значение.</returns>
-        public static bool? Println(this bool? item)
+        public static bool? PrintLine(this bool? item)
         {
             Console.WriteLine(item.NilOrString());
             return item;
@@ -135,7 +134,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="item">Char.</param>
         /// <returns>Значение.</returns>
-        public static char? Println(this char? item)
+        public static char? PrintLine(this char? item)
         {
             Console.WriteLine(item.NilOrString());
             return item;
@@ -157,7 +156,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="item">Double.</param>
         /// <returns>Значение.</returns>
-        public static double? Println(this double? item)
+        public static double? PrintLine(this double? item)
         {
             Console.WriteLine(item.NilOrString());
             return item;
@@ -179,12 +178,11 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="item">Int32.</param>
         /// <returns>Значение.</returns>
-        public static int? Println(this int? item)
+        public static int? PrintLine(this int? item)
         {
             Console.WriteLine(item.NilOrString());
             return item;
         }
-
         #endregion public
     }
 }

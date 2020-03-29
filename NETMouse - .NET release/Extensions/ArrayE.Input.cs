@@ -9,7 +9,6 @@ namespace ABCNET.Extensions
     public static partial class ArrayE
     {
         #region public
-
         /// <summary>
         /// Заполняет массив значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -29,7 +28,7 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
 
@@ -66,7 +65,7 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
 
@@ -89,7 +88,7 @@ namespace ABCNET.Extensions
                 }
                 catch (Exception)
                 {
-                    InputErrorHelper.Message.Println();
+                    InputErrorHelper.Message.PrintLine();
                 }
         }
 
@@ -106,7 +105,6 @@ namespace ABCNET.Extensions
             for (int i = 0; i < array.Length; i++)
                 array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
         }
-
         #endregion public
     }
 }
