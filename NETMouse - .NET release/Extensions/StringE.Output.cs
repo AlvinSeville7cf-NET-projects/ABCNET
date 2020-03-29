@@ -5,7 +5,7 @@ namespace ABCNET.Extensions
     /// <summary>
     /// Предоставляет функционал для работы со строками.
     /// </summary>
-    public static partial class StrExt
+    public static partial class StringE
     {
         #region public
         /// <summary>
