@@ -9,6 +9,7 @@ namespace ABCNET.Utils
     public static partial class Array
     {
         #region public
+
         /// <summary>
         /// Читает массив значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -424,6 +425,7 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
+
         #endregion public
     }
 }
