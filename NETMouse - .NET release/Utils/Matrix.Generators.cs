@@ -16,7 +16,7 @@ namespace ABCNET.Utils
         /// <param name="colsCount">Количество столбцов.</param>
         /// <param name="values">Значения.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] New<T>(int rowsCount, int colsCount, params T[] values)
+        public static T[,] Of<T>(int rowsCount, int colsCount, params T[] values)
         {
             if (values == null)
                 throw new ArgumentNullException(nameof(values));
@@ -48,7 +48,7 @@ namespace ABCNET.Utils
         /// <param name="rowFirstIndex">Начальный индекс строки.</param>
         /// <param name="columnFirstIndex">Начальный индекс столбца.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] Generate<T>(int rowsCount, int colsCount, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
+        public static T[,] By<T>(int rowsCount, int colsCount, Func<int, int, T> selector, int rowFirstIndex = 0, int columnFirstIndex = 0)
         {
             if (rowsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
