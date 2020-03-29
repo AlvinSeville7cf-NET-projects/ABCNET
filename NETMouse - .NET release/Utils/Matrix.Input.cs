@@ -9,7 +9,6 @@ namespace ABCNET.Utils
     public static partial class Matrix
     {
         #region public
-
         /// <summary>
         /// Читает матрицу значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -497,7 +496,6 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
         }
-
         #endregion public
     }
 }

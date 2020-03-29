@@ -8,7 +8,6 @@ namespace ABCNET.Utils
     public static partial class Matr
     {
         #region public
-
         /// <summary>
         /// Создаёт матрицу из указанных значений.
         /// </summary>
@@ -126,7 +125,7 @@ namespace ABCNET.Utils
         /// <param name="colsCount">Количество столбцов.</param>
         /// <param name="value">Значение.</param>
         /// <returns>Массив.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Matrix.Of")]
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Matrix.Fill")]
         public static T[,] Fill<T>(int rowsCount, int colsCount, T value)
         {
             if (rowsCount < 0)
@@ -141,7 +140,6 @@ namespace ABCNET.Utils
 
             return source;
         }
-
         #endregion public
     }
 }

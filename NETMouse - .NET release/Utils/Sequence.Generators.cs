@@ -9,7 +9,6 @@ namespace ABCNET.Utils
     public static partial class Sequence
     {
         #region public
-
         /// <summary>
         /// Создаёт последовательность на основе функции селектора.
         /// </summary>
@@ -70,7 +69,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="value">Значение.</param>
         /// <returns>Последовательность.</returns>
-        public static IEnumerable<T> Of<T>(int count, T value)
+        public static IEnumerable<T> Fill<T>(int count, T value)
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
@@ -78,7 +77,6 @@ namespace ABCNET.Utils
             for (int i = 0; i < count; i++)
                 yield return value;
         }
-
         #endregion public
     }
 }

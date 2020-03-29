@@ -175,9 +175,6 @@
     <Compile Include="Utils\Matr.Input.cs">
       <DependentUpon>Matr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Matrix.Attributes.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Matrix.cs" />
     <Compile Include="Utils\Matrix.Generators.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
@@ -191,9 +188,6 @@
     <Compile Include="Utils\Seq.cs" />
     <Compile Include="Utils\Seq.Generators.cs">
       <DependentUpon>Seq.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils\Sequence.Attributes.cs">
-      <DependentUpon>Sequence.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Sequence.cs" />
     <Compile Include="Utils\Sequence.Generators.cs">

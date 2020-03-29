@@ -14,7 +14,6 @@ namespace ABCNET.Utils
         public static partial class Nullable
         {
             #region public
-
             /// <summary>
             /// Читает значение типа Boolean?. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
             /// </summary>
@@ -168,7 +167,6 @@ namespace ABCNET.Utils
                 string result = InternalReadTrimmedString(prompt);
                 return result == NilStringHelper.Nil ? null : new BigInteger?(BigInteger.Parse(result));
             }
-
             #endregion public
 
             #region private
@@ -176,7 +174,6 @@ namespace ABCNET.Utils
             {
                 return ReadString(prompt).Trim().ToLower();
             }
-
             #endregion private
         }
     }
