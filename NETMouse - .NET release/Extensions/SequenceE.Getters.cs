@@ -10,12 +10,13 @@ namespace ABCNET.Extensions
     public static partial class SequenceE
     {
         #region public
+
         /// <summary>
         /// Преобразует последовательность в кортеж.
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T> ToTup2<T>(this IEnumerable<T> collection)
+        public static Tuple<T, T> ToTuple2<T>(this IEnumerable<T> collection)
         {
             T a = default;
             T b = default;
@@ -41,7 +42,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T> ToTup3<T>(this IEnumerable<T> collection)
+        public static Tuple<T, T, T> ToTuple3<T>(this IEnumerable<T> collection)
         {
             T a = default;
             T b = default;
@@ -73,7 +74,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T> ToTup4<T>(this IEnumerable<T> collection)
+        public static Tuple<T, T, T, T> ToTuple4<T>(this IEnumerable<T> collection)
         {
             T a = default;
             T b = default;
@@ -111,7 +112,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T> ToTup5<T>(this IEnumerable<T> collection)
+        public static Tuple<T, T, T, T, T> ToTuple5<T>(this IEnumerable<T> collection)
         {
             T a = default;
             T b = default;
@@ -155,7 +156,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T> ToTup6<T>(this IEnumerable<T> collection)
+        public static Tuple<T, T, T, T, T, T> ToTuple6<T>(this IEnumerable<T> collection)
         {
             T a = default;
             T b = default;
@@ -205,7 +206,7 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="collection">Последовательность.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<T, T, T, T, T, T, T> ToTup7<T>(this IEnumerable<T> collection)
+        public static Tuple<T, T, T, T, T, T, T> ToTuple7<T>(this IEnumerable<T> collection)
         {
             T a = default;
             T b = default;
@@ -705,6 +706,7 @@ namespace ABCNET.Extensions
 
             return new PartitionRes<T>(trueList, falseList);
         }
+
         #endregion public
     }
 }

@@ -9,6 +9,7 @@ namespace ABCNET.Extensions
     public static partial class SequenceE
     {
         #region public
+        
         /// <summary>
         /// Выводит последовательность.
         /// </summary>
@@ -130,6 +131,7 @@ namespace ABCNET.Extensions
                 Console.WriteLine(selector(item).NilOrString());
             return collection;
         }
+
         #endregion public
     }
 }
