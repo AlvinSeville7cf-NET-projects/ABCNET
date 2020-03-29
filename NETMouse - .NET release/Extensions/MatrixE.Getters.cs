@@ -69,39 +69,6 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Меняет местами две строки матрицы.
-        /// </summary>
-        /// <param name="matrix">Матрица.</param>
-        /// <param name="firstIndex">Индекс первой строки.</param>
-        /// <param name="secondIndex">Индекс второй строки.</param>
-        /// <returns>Матрица.</returns>
-        public static T[,] SwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex)
-        {
-            if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
-
-            return matrix.InternalSwapRows(firstIndex, secondIndex);
-        }
-
-        /// <summary>
-        /// Меняет местами две строки матрицы.
-        /// </summary>
-        /// <param name="matrix">Матрица.</param>
-        /// <param name="firstIndex">Индекс первой строки.</param>
-        /// <param name="secondIndex">Индекс второй строки.</param>
-        /// <param name="selector">Функция селектор.</param>
-        /// <returns>Матрица.</returns>
-        public static T[,] SwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
-        {
-            if (selector == null)
-                throw new ArgumentNullException(nameof(selector));
-            if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix));
-
-            return matrix.InternalSwapRows(firstIndex, secondIndex, selector);
-        }
-
-        /// <summary>
         /// Меняет местами два столбца матрицы.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
@@ -135,25 +102,36 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Изменяет столбец матрицы.
+        /// Меняет местами две строки матрицы.
         /// </summary>
         /// <param name="matrix">Матрица.</param>
-        /// <param name="col">Столбец.</param>
-        /// <param name="index">Индекс столбца.</param>
+        /// <param name="firstIndex">Индекс первой строки.</param>
+        /// <param name="secondIndex">Индекс второй строки.</param>
         /// <returns>Матрица.</returns>
-        public static T[,] SetRow<T>(this T[,] matrix, T[] col, int index)
+        public static T[,] SwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
-            if (matrix.GetLength(1) != col.Length)
-                throw new ArgumentException(nameof(col));
 
-            T[,] matrixRes = (T[,])matrix.Clone();
+            return matrix.InternalSwapRows(firstIndex, secondIndex);
+        }
 
-            for (int i = 0; i < matrixRes.GetLength(1); i++)
-                matrixRes[index, i] = col[i];
+        /// <summary>
+        /// Меняет местами две строки матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="firstIndex">Индекс первой строки.</param>
+        /// <param name="secondIndex">Индекс второй строки.</param>
+        /// <param name="selector">Функция селектор.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] SwapRows<T>(this T[,] matrix, int firstIndex, int secondIndex, Func<T, T> selector)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
 
-            return matrixRes;
+            return matrix.InternalSwapRows(firstIndex, secondIndex, selector);
         }
 
         /// <summary>
@@ -174,6 +152,28 @@ namespace ABCNET.Extensions
 
             for (int i = 0; i < matrixRes.GetLength(1); i++)
                 matrixRes[i, index] = row[i];
+
+            return matrixRes;
+        }
+
+        /// <summary>
+        /// Изменяет столбец матрицы.
+        /// </summary>
+        /// <param name="matrix">Матрица.</param>
+        /// <param name="col">Столбец.</param>
+        /// <param name="index">Индекс столбца.</param>
+        /// <returns>Матрица.</returns>
+        public static T[,] SetRow<T>(this T[,] matrix, T[] col, int index)
+        {
+            if (matrix == null)
+                throw new ArgumentNullException(nameof(matrix));
+            if (matrix.GetLength(1) != col.Length)
+                throw new ArgumentException(nameof(col));
+
+            T[,] matrixRes = (T[,])matrix.Clone();
+
+            for (int i = 0; i < matrixRes.GetLength(1); i++)
+                matrixRes[index, i] = col[i];
 
             return matrixRes;
         }
