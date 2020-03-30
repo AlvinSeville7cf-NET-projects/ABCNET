@@ -65,6 +65,7 @@
     <Compile Include="Extensions\BaseE.Output.cs">
       <DependentUpon>BaseE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\IntRange.cs" />
     <Compile Include="Extensions\MatrixE.Generators.cs">
       <DependentUpon>MatrixE.cs</DependentUpon>
     </Compile>
