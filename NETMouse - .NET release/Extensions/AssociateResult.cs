@@ -16,7 +16,7 @@
         public TOutput Projection { get; }
 
         /// <summary>
-        /// Конструктор для AssociateRes.
+        /// Конструктор для AssociateResult.
         /// </summary>
         /// <param name="item">Элемент.</param>
         /// <param name="projection">Проекция элемента.</param>
@@ -27,7 +27,7 @@
         }
 
         /// <summary>
-        /// Деконструктор для AssociateRes.
+        /// Деконструктор для AssociateResult.
         /// </summary>
         /// <param name="item">Элемент.</param>
         /// <param name="projection">Проекция элемента.</param>
