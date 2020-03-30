@@ -2,8 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ABCNET.Extensions
 {
@@ -16,32 +14,12 @@ namespace ABCNET.Extensions
         /// <summary>
         /// Нижняя граница.
         /// </summary>
-        public int Low
-        {
-            get => low;
-            set
-            {
-                low = value;
-
-                if (low > high)
-                    Base.Swap(ref low, ref high);
-            }
-        }
+        public int Low { get; }
 
         /// <summary>
         /// Верхняя граница.
         /// </summary>
-        public int High
-        {
-            get => high;
-            set
-            {
-                high = value;
-
-                if (high < low)
-                    Base.Swap(ref high, ref low);
-            }
-        }
+        public int High { get; }
 
         /// <summary>
         /// Конструктор для IntRange.
@@ -50,7 +28,9 @@ namespace ABCNET.Extensions
         /// <param name="high">Верхняя граница.</param>
         public IntRange(int low, int high) : this()
         {
-            this.low = low;
+            if (low > high)
+                Base.Swap(ref low, ref high);
+            Low = low;
             High = high;
         }
 
@@ -61,7 +41,7 @@ namespace ABCNET.Extensions
         /// <returns>Результат сравнения.</returns>
         public bool Equals(IntRange other)
         {
-            return (low == other.Low) && (high == other.High);
+            return (Low == other.Low) && (High == other.High);
         }
 
         /// <summary>
@@ -80,7 +60,7 @@ namespace ABCNET.Extensions
         /// <returns>Перечислитель.</returns>
         public IEnumerator<int> GetEnumerator()
         {
-            return low.To(high).GetEnumerator();
+            return Low.To(High).GetEnumerator();
         }
 
         /// <summary>
@@ -101,8 +81,8 @@ namespace ABCNET.Extensions
             unchecked
             {
                 int hashCode = 2082053542;
-                hashCode = hashCode * -1521134295 + low.GetHashCode();
-                hashCode = hashCode * -1521134295 + high.GetHashCode();
+                hashCode = hashCode * -1521134295 + Low.GetHashCode();
+                hashCode = hashCode * -1521134295 + High.GetHashCode();
                 return hashCode;
             }
         }
@@ -116,8 +96,5 @@ namespace ABCNET.Extensions
         {
             return !(left == right);
         }
-
-        private int low;
-        private int high;
     }
 }
