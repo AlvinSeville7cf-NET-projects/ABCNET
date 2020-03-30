@@ -18,7 +18,7 @@ namespace ABCNET.Extensions
         public IEnumerable<T> False { get; }
 
         /// <summary>
-        /// Конструктор для PartitionRes.
+        /// Конструктор для PartitionResult.
         /// </summary>
         /// <param name="trueCollection">Элементы, отвечающие условию.</param>
         /// <param name="falseCollection">Элементы, неотвечающие условию.</param>
@@ -29,7 +29,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Деконструктор для NumerateRes.
+        /// Деконструктор для NumerateResult.
         /// </summary>
         /// <param name="trueCollection">Элементы, отвечающие условию.</param>
         /// <param name="falseCollection">Элементы, неотвечающие условию.</param>
