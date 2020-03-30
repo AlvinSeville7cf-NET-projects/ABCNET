@@ -16,7 +16,7 @@
         public int Index { get; }
 
         /// <summary>
-        /// Конструктор для NumerateRes.
+        /// Конструктор для NumerateResult.
         /// </summary>
         /// <param name="item">Элемент.</param>
         /// <param name="index">Индекс элемента.</param>
@@ -27,7 +27,7 @@
         }
 
         /// <summary>
-        /// Деконструктор для NumerateRes.
+        /// Деконструктор для NumerateResult.
         /// </summary>
         /// <param name="item">Элемент.</param>
         /// <param name="index">Индекс элемента.</param>
