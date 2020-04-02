@@ -37,9 +37,11 @@ namespace ABCNET.Utils
         /// <param name="item2">Второе значение.</param>
         /// <param name="item3">Третье значение.</param>
         /// <param name="item4">Четвёртое значение.</param>
-        public static Tuple<T, T2, T3, T4> Of<T, T2, T3, T4>(T item1, T2 item2, T3 item3, T4 item4)
+        public static Tuple<T, T2, T3, T4> Of<T, T2, T3, T4>(T item1, T2 item2, T3 item3,
+            T4 item4)
         {
-            return new Tuple<T, T2, T3, T4>(item1, item2, item3, item4);
+            return new Tuple<T, T2, T3, T4>(item1, item2, item3,
+                item4);
         }
 
         /// <summary>
@@ -50,9 +52,11 @@ namespace ABCNET.Utils
         /// <param name="item3">Третье значение.</param>
         /// <param name="item4">Четвёртое значение.</param>
         /// <param name="item5">Пятое значение.</param>
-        public static Tuple<T, T2, T3, T4, T5> Of<T, T2, T3, T4, T5>(T item1, T2 item2, T3 item3, T4 item4, T5 item5)
+        public static Tuple<T, T2, T3, T4, T5> Of<T, T2, T3, T4, T5>(T item1, T2 item2, T3 item3,
+            T4 item4, T5 item5)
         {
-            return new Tuple<T, T2, T3, T4, T5>(item1, item2, item3, item4, item5);
+            return new Tuple<T, T2, T3, T4, T5>(item1, item2, item3,
+                item4, item5);
         }
 
         /// <summary>
@@ -64,9 +68,11 @@ namespace ABCNET.Utils
         /// <param name="item4">Четвёртое значение.</param>
         /// <param name="item5">Пятое значение.</param>
         /// <param name="item6">Шестое значение.</param>
-        public static Tuple<T, T2, T3, T4, T5, T6> Of<T, T2, T3, T4, T5, T6>(T item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6)
+        public static Tuple<T, T2, T3, T4, T5, T6> Of<T, T2, T3, T4, T5, T6>(T item1, T2 item2, T3 item3,
+            T4 item4, T5 item5, T6 item6)
         {
-            return new Tuple<T, T2, T3, T4, T5, T6>(item1, item2, item3, item4, item5, item6);
+            return new Tuple<T, T2, T3, T4, T5, T6>(item1, item2, item3,
+                item4, item5, item6);
         }
 
         /// <summary>
@@ -79,9 +85,13 @@ namespace ABCNET.Utils
         /// <param name="item5">Пятое значение.</param>
         /// <param name="item6">Шестое значение.</param>
         /// <param name="item7">Седьмое значение.</param>
-        public static Tuple<T, T2, T3, T4, T5, T6, T7> Of<T, T2, T3, T4, T5, T6, T7>(T item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7)
+        public static Tuple<T, T2, T3, T4, T5, T6, T7> Of<T, T2, T3, T4, T5, T6, T7>(T item1, T2 item2, T3 item3,
+            T4 item4, T5 item5, T6 item6,
+            T7 item7)
         {
-            return new Tuple<T, T2, T3, T4, T5, T6, T7>(item1, item2, item3, item4, item5, item6, item7);
+            return new Tuple<T, T2, T3, T4, T5, T6, T7>(item1, item2, item3,
+                item4, item5, item6,
+                item7);
         }
 
         /// <summary>
@@ -184,9 +194,9 @@ namespace ABCNET.Utils
             if (next == null)
                 throw new ArgumentNullException(nameof(next));
 
-            var a = first;
-            var b = next(a);
-            return Of(a, b);
+            T item1 = first;
+            T item2 = next(item1);
+            return Of(item1, item2);
         }
 
         /// <summary>
@@ -200,10 +210,10 @@ namespace ABCNET.Utils
             if (next == null)
                 throw new ArgumentNullException(nameof(next));
 
-            var a = first;
-            var b = next(a);
-            var c = next(b);
-            return Of(a, b, c);
+            T item1 = first;
+            T item2 = next(item1);
+            T item3 = next(item2);
+            return Of(item1, item2, item3);
         }
 
         /// <summary>
@@ -217,11 +227,11 @@ namespace ABCNET.Utils
             if (next == null)
                 throw new ArgumentNullException(nameof(next));
 
-            var a = first;
-            var b = next(a);
-            var c = next(b);
-            var d = next(c);
-            return Of(a, b, c, d);
+            T item1 = first;
+            T item2 = next(item1);
+            T item3 = next(item2);
+            T item4 = next(item3);
+            return Of(item1, item2, item3, item4);
         }
 
         /// <summary>
@@ -235,12 +245,12 @@ namespace ABCNET.Utils
             if (next == null)
                 throw new ArgumentNullException(nameof(next));
 
-            var a = first;
-            var b = next(a);
-            var c = next(b);
-            var d = next(c);
-            var e = next(d);
-            return Of(a, b, c, d, e);
+            T item1 = first;
+            T item2 = next(item1);
+            T item3 = next(item2);
+            T item4 = next(item3);
+            T item5 = next(item4);
+            return Of(item1, item2, item3, item4, item5);
         }
 
         /// <summary>
@@ -254,13 +264,13 @@ namespace ABCNET.Utils
             if (next == null)
                 throw new ArgumentNullException(nameof(next));
 
-            var a = first;
-            var b = next(a);
-            var c = next(b);
-            var d = next(c);
-            var e = next(d);
-            var f = next(e);
-            return Of(a, b, c, d, e, f);
+            T item1 = first;
+            T item2 = next(item1);
+            T item3 = next(item2);
+            T item4 = next(item3);
+            T item5 = next(item4);
+            T item6 = next(item5);
+            return Of(item1, item2, item3, item4, item5, item6);
         }
 
         /// <summary>
@@ -274,14 +284,14 @@ namespace ABCNET.Utils
             if (next == null)
                 throw new ArgumentNullException(nameof(next));
 
-            var a = first;
-            var b = next(a);
-            var c = next(b);
-            var d = next(c);
-            var e = next(d);
-            var f = next(e);
-            var g = next(f);
-            return Of(a, b, c, d, e, f, g);
+            T item1 = first;
+            T item2 = next(item1);
+            T item3 = next(item2);
+            T item4 = next(item3);
+            T item5 = next(item4);
+            T item6 = next(item5);
+            T item7 = next(item6);
+            return Of(item1, item2, item3, item4, item5, item6, item7);
         }
 
         /// <summary>
@@ -314,7 +324,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int, int> Random4(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high));
         }
 
         /// <summary>
@@ -325,7 +336,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int, int, int> Random5(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -336,7 +348,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int, int, int, int> Random6(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -347,7 +360,9 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int, int, int, int, int> Random7(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high));
         }
 
         /// <summary>
@@ -380,7 +395,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double, double> Random4(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high));
         }
 
         /// <summary>
@@ -391,7 +407,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double, double, double> Random5(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -402,7 +419,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double, double, double, double> Random6(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
         }
 
         /// <summary>
@@ -413,7 +431,9 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double, double, double, double, double> Random7(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
+                Base.Random(low, high));
         }
 
         /// <summary>
@@ -443,7 +463,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T> Fill4<T>(T value)
         {
-            return Of(value, value, value, value);
+            return Of(value, value, value,
+                value);
         }
 
         /// <summary>
@@ -453,7 +474,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T> Fill5<T>(T value)
         {
-            return Of(value, value, value, value, value);
+            return Of(value, value, value,
+                value, value);
         }
 
         /// <summary>
@@ -463,7 +485,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T> Fill6<T>(T value)
         {
-            return Of(value, value, value, value, value, value);
+            return Of(value, value, value,
+                value, value, value);
         }
 
         /// <summary>
@@ -473,7 +496,9 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<T, T, T, T, T, T, T> Fill7<T>(T value)
         {
-            return Of(value, value, value, value, value, value, value);
+            return Of(value, value, value,
+                value, value, value,
+                value);
         }
         #endregion public
     }
