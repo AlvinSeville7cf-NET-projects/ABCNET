@@ -174,6 +174,117 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
+        /// Создаёт кортеж из 2 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="first">Первый элемент.</param>
+        /// <param name="next">Функция получения следующего элемента.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T> By2<T>(T first, Func<T, T> next)
+        {
+            if (next == null)
+                throw new ArgumentNullException(nameof(next));
+
+            var a = first;
+            var b = next(a);
+            return Of(a, b);
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 3 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="first">Первый элемент.</param>
+        /// <param name="next">Функция получения следующего элемента.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T> By3<T>(T first, Func<T, T> next)
+        {
+            if (next == null)
+                throw new ArgumentNullException(nameof(next));
+
+            var a = first;
+            var b = next(a);
+            var c = next(b);
+            return Of(a, b, c);
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 4 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="first">Первый элемент.</param>
+        /// <param name="next">Функция получения следующего элемента.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T> By4<T>(T first, Func<T, T> next)
+        {
+            if (next == null)
+                throw new ArgumentNullException(nameof(next));
+
+            var a = first;
+            var b = next(a);
+            var c = next(b);
+            var d = next(c);
+            return Of(a, b, c, d);
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 5 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="first">Первый элемент.</param>
+        /// <param name="next">Функция получения следующего элемента.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T> By5<T>(T first, Func<T, T> next)
+        {
+            if (next == null)
+                throw new ArgumentNullException(nameof(next));
+
+            var a = first;
+            var b = next(a);
+            var c = next(b);
+            var d = next(c);
+            var e = next(d);
+            return Of(a, b, c, d, e);
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 6 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="first">Первый элемент.</param>
+        /// <param name="next">Функция получения следующего элемента.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T> By6<T>(T first, Func<T, T> next)
+        {
+            if (next == null)
+                throw new ArgumentNullException(nameof(next));
+
+            var a = first;
+            var b = next(a);
+            var c = next(b);
+            var d = next(c);
+            var e = next(d);
+            var f = next(e);
+            return Of(a, b, c, d, e, f);
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 7 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="first">Первый элемент.</param>
+        /// <param name="next">Функция получения следующего элемента.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T, T> By7<T>(T first, Func<T, T> next)
+        {
+            if (next == null)
+                throw new ArgumentNullException(nameof(next));
+
+            var a = first;
+            var b = next(a);
+            var c = next(b);
+            var d = next(c);
+            var e = next(d);
+            var f = next(e);
+            var g = next(f);
+            return Of(a, b, c, d, e, f, g);
+        }
+
+        /// <summary>
         /// Создаёт кортеж из двух случайных значений типа Int32.
         /// </summary>
         /// <param name="low">Нижняя граница диапазона.</param>
