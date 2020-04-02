@@ -85,6 +85,95 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
+        /// Создаёт кортеж из 2 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="firstIndex">Начальный индекс.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T> By2<T>(Func<int, T> selector, int firstIndex = 0)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+
+            return Of(selector(firstIndex), selector(firstIndex + 1));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 3 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="firstIndex">Начальный индекс.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T> By3<T>(Func<int, T> selector, int firstIndex = 0)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+
+            return Of(selector(firstIndex), selector(firstIndex + 1), selector(firstIndex + 2));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 4 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="firstIndex">Начальный индекс.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T> By4<T>(Func<int, T> selector, int firstIndex = 0)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+
+            return Of(selector(firstIndex), selector(firstIndex + 1), selector(firstIndex + 2),
+                selector(firstIndex + 3));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 5 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="firstIndex">Начальный индекс.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T> By5<T>(Func<int, T> selector, int firstIndex = 0)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+
+            return Of(selector(firstIndex), selector(firstIndex + 1), selector(firstIndex + 2),
+                selector(firstIndex + 3), selector(firstIndex + 4));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 6 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="firstIndex">Начальный индекс.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T> By6<T>(Func<int, T> selector, int firstIndex = 0)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+
+            return Of(selector(firstIndex), selector(firstIndex + 1), selector(firstIndex + 2),
+                selector(firstIndex + 3), selector(firstIndex + 4), selector(firstIndex + 5));
+        }
+
+        /// <summary>
+        /// Создаёт кортеж из 7 значений на основе функции селектора.
+        /// </summary>
+        /// <param name="selector">Функция селектор.</param>
+        /// <param name="firstIndex">Начальный индекс.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<T, T, T, T, T, T, T> By7<T>(Func<int, T> selector, int firstIndex = 0)
+        {
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+
+            return Of(selector(firstIndex), selector(firstIndex + 1), selector(firstIndex + 2),
+                selector(firstIndex + 3), selector(firstIndex + 4), selector(firstIndex + 5),
+                selector(firstIndex + 6));
+        }
+
+        /// <summary>
         /// Создаёт кортеж из двух случайных значений типа Int32.
         /// </summary>
         /// <param name="low">Нижняя граница диапазона.</param>
