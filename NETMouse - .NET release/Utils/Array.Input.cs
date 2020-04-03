@@ -11,6 +11,8 @@ namespace ABCNET.Utils
     {
         #region public
 
+        #region Read
+
         /// <summary>
         /// Читает массив значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -407,6 +409,10 @@ namespace ABCNET.Utils
             return array;
         }
 
+        #endregion
+
+        #region ReadTuple2
+
         /// <summary>
         /// Заполняет 2 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -557,6 +563,9 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadString(count), ReadString(count));
         }
 
+        #endregion
+
+        #region ReadTuple3
 
         /// <summary>
         /// Заполняет 3 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
@@ -708,6 +717,10 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count));
         }
 
+        #endregion
+
+        #region ReadTuple4
+
         /// <summary>
         /// Заполняет 4 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -857,6 +870,10 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
+
+        #endregion
+
+        #region ReadTuple5
 
         /// <summary>
         /// Заполняет 5 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
@@ -1008,6 +1025,10 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
 
+        #endregion
+
+        #region ReadTuple6
+
         /// <summary>
         /// Заполняет 6 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -1157,6 +1178,10 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
 
+        #endregion
+
+        #region ReadTuple7
+
         /// <summary>
         /// Заполняет 7 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -1305,6 +1330,8 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
+
+        #endregion
 
         #endregion public
     }
