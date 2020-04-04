@@ -21,7 +21,6 @@ namespace ABCNET.Utils
             prompt.Print();
             return bool.Parse(Console.ReadLine());
         }
-
         /// <summary>
         /// Читает значение типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -32,18 +31,16 @@ namespace ABCNET.Utils
             prompt.Print();
             return byte.Parse(Console.ReadLine());
         }
-
         /// <summary>
-        /// Читает значение типа Sbyte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static sbyte ReadSbyte(string prompt = EmptyStringHelper.Empty)
+        public static sbyte ReadSByte(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
             return sbyte.Parse(Console.ReadLine());
         }
-
         /// <summary>
         /// Читает значение типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -54,7 +51,6 @@ namespace ABCNET.Utils
             prompt.Print();
             return char.Parse(Console.ReadLine());
         }
-
         /// <summary>
         /// Читает значение типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -65,7 +61,6 @@ namespace ABCNET.Utils
             prompt.Print();
             return decimal.Parse(Console.ReadLine());
         }
-
         /// <summary>
         /// Читает значение типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -76,84 +71,76 @@ namespace ABCNET.Utils
             prompt.Print();
             return double.Parse(Console.ReadLine());
         }
-
         /// <summary>
-        /// Читает значение типа Float. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static float ReadFloat(string prompt = EmptyStringHelper.Empty)
+        public static float ReadSingle(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
             return float.Parse(Console.ReadLine());
         }
-
         /// <summary>
-        /// Читает значение типа Int. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static int ReadInt(string prompt = EmptyStringHelper.Empty)
+        public static int ReadInt32(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
             return int.Parse(Console.ReadLine());
         }
-
         /// <summary>
-        /// Читает значение типа Uint. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static uint ReadUint(string prompt = EmptyStringHelper.Empty)
+        public static uint ReadUint32(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
             return uint.Parse(Console.ReadLine());
         }
-
         /// <summary>
-        /// Читает значение типа Long. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static long ReadLong(string prompt = EmptyStringHelper.Empty)
+        public static long ReadInt64(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
             return long.Parse(Console.ReadLine());
         }
-
         /// <summary>
-        /// Читает значение типа Ulong. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static ulong ReadUlong(string prompt = EmptyStringHelper.Empty)
+        public static ulong ReadUInt64(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
             return ulong.Parse(Console.ReadLine());
         }
-
         /// <summary>
-        /// Читает значение типа Short. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static short ReadShort(string prompt = EmptyStringHelper.Empty)
+        public static short ReadInt16(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
             return short.Parse(Console.ReadLine());
         }
-
         /// <summary>
-        /// Читает значение типа Ushort. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static ushort ReadUshort(string prompt = EmptyStringHelper.Empty)
+        public static ushort ReadUInt16(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
             return ushort.Parse(Console.ReadLine());
         }
-
         /// <summary>
         /// Читает значение типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -164,7 +151,6 @@ namespace ABCNET.Utils
             prompt.Print();
             return BigInteger.Parse(Console.ReadLine());
         }
-
         /// <summary>
         /// Читает значение типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
