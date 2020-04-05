@@ -18,7 +18,13 @@ namespace ABCNET.Utils
         public static bool ReadBoolean(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return bool.Parse(Console.ReadLine());
+            bool result;
+            while (bool.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -29,7 +35,13 @@ namespace ABCNET.Utils
         public static byte ReadByte(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return byte.Parse(Console.ReadLine());
+            byte result;
+            while (byte.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -40,7 +52,13 @@ namespace ABCNET.Utils
         public static sbyte ReadSByte(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return sbyte.Parse(Console.ReadLine());
+            sbyte result;
+            while (sbyte.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -62,7 +80,13 @@ namespace ABCNET.Utils
         public static decimal ReadDecimal(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return decimal.Parse(Console.ReadLine());
+            decimal result;
+            while (decimal.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -73,7 +97,13 @@ namespace ABCNET.Utils
         public static double ReadDouble(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return double.Parse(Console.ReadLine());
+            double result;
+            while (double.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -84,7 +114,13 @@ namespace ABCNET.Utils
         public static float ReadSingle(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return float.Parse(Console.ReadLine());
+            float result;
+            while (float.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -95,7 +131,13 @@ namespace ABCNET.Utils
         public static int ReadInt32(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return int.Parse(Console.ReadLine());
+            int result;
+            while (int.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -106,7 +148,13 @@ namespace ABCNET.Utils
         public static uint ReadUInt32(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return uint.Parse(Console.ReadLine());
+            uint result;
+            while (uint.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -117,7 +165,13 @@ namespace ABCNET.Utils
         public static long ReadInt64(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return long.Parse(Console.ReadLine());
+            long result;
+            while (long.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -128,7 +182,13 @@ namespace ABCNET.Utils
         public static ulong ReadUInt64(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return ulong.Parse(Console.ReadLine());
+            ulong result;
+            while (ulong.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -139,7 +199,13 @@ namespace ABCNET.Utils
         public static short ReadInt16(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return short.Parse(Console.ReadLine());
+            short result;
+            while (short.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -150,7 +216,13 @@ namespace ABCNET.Utils
         public static ushort ReadUInt16(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return ushort.Parse(Console.ReadLine());
+            ushort result;
+            while (ushort.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
