@@ -9,6 +9,7 @@ namespace ABCNET.Extensions
     public static partial class TupleE
     {
         #region public
+
         /// <summary>
         /// Преобразует кортеж в последовательность.
         /// </summary>
@@ -41,8 +42,6 @@ namespace ABCNET.Extensions
         {
             return new Tuple<T, T1, T2>(tuple.Item1, tuple.Item2, item);
         }
-
-
 
         /// <summary>
         /// Преобразует кортеж в последовательность.
@@ -77,8 +76,6 @@ namespace ABCNET.Extensions
         {
             return new Tuple<T, T, T, T>(tuple.Item1, tuple.Item2, tuple.Item3, item);
         }
-
-
 
         /// <summary>
         /// Преобразует кортеж в последовательность.
@@ -115,8 +112,6 @@ namespace ABCNET.Extensions
             return new Tuple<T, T, T, T, T>(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, item);
         }
 
-
-
         /// <summary>
         /// Преобразует кортеж в последовательность.
         /// </summary>
@@ -152,8 +147,6 @@ namespace ABCNET.Extensions
         {
             return new Tuple<T, T, T, T, T, T>(tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, item);
         }
-
-
 
         /// <summary>
         /// Преобразует кортеж в последовательность.
@@ -207,6 +200,7 @@ namespace ABCNET.Extensions
             yield return tuple.Item6;
             yield return tuple.Item7;
         }
+
         #endregion public
     }
 }
