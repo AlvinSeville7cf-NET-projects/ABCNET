@@ -8,6 +8,7 @@ namespace ABCNET.Extensions
     public static partial class StringE
     {
         #region public
+
         /// <summary>
         /// Выводит строку на экран.
         /// </summary>
@@ -29,6 +30,7 @@ namespace ABCNET.Extensions
             Console.WriteLine(input.NilOrString());
             return input;
         }
+
         #endregion public
     }
 }
