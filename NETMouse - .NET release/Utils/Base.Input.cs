@@ -171,16 +171,6 @@ namespace ABCNET.Utils
             return RandomHelper.Random.NextDouble();
         }
 
-        /// <summary> 
-        /// Генерирует случайное число [0;1). 
-        /// </summary> 
-        /// <returns>Число.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
-        public static double Rand()
-        {
-            return RandomHelper.Random.NextDouble();
-        }
-
         /// <summary>
         /// Генерирует случайное число [low;high].
         /// </summary>
@@ -188,21 +178,6 @@ namespace ABCNET.Utils
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Число.</returns>
         public static int Random(int low, int high)
-        {
-            if (high < low)
-                Swap(ref low, ref high);
-
-            return RandomHelper.Random.Next(low, high + 1);
-        }
-
-        /// <summary>
-        /// Генерирует случайное число [low;high].
-        /// </summary>
-        /// <param name="low">Нижняя граница диапазона.</param>
-        /// <param name="high">Верхняя граница диапазона.</param>
-        /// <returns>Число.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
-        public static int Rand(int low, int high)
         {
             if (high < low)
                 Swap(ref low, ref high);
@@ -224,20 +199,6 @@ namespace ABCNET.Utils
             return low + Random() * (high - low);
         }
 
-        /// <summary>
-        /// Генерирует случайное число [low;high].
-        /// </summary>
-        /// <param name="low">Нижняя граница диапазона.</param>
-        /// <param name="high">Верхняя граница диапазона.</param>
-        /// <returns>Число.</returns>
-        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
-        public static double Rand(double low, double high)
-        {
-            if (high < low)
-                Swap(ref low, ref high);
-
-            return low + Rand() * (high - low);
-        }
         #endregion public
     }
 }
