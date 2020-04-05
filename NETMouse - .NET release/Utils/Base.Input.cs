@@ -20,7 +20,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             bool result;
-            while (bool.TryParse(Console.ReadLine(), out result))
+            while (!bool.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -37,7 +37,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             byte result;
-            while (byte.TryParse(Console.ReadLine(), out result))
+            while (!byte.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -54,7 +54,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             sbyte result;
-            while (sbyte.TryParse(Console.ReadLine(), out result))
+            while (!sbyte.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -82,7 +82,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             decimal result;
-            while (decimal.TryParse(Console.ReadLine(), out result))
+            while (!decimal.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -99,7 +99,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             double result;
-            while (double.TryParse(Console.ReadLine(), out result))
+            while (!double.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -116,7 +116,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             float result;
-            while (float.TryParse(Console.ReadLine(), out result))
+            while (!float.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -133,7 +133,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             int result;
-            while (int.TryParse(Console.ReadLine(), out result))
+            while (!int.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -150,7 +150,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             uint result;
-            while (uint.TryParse(Console.ReadLine(), out result))
+            while (!uint.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -167,7 +167,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             long result;
-            while (long.TryParse(Console.ReadLine(), out result))
+            while (!long.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -184,7 +184,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             ulong result;
-            while (ulong.TryParse(Console.ReadLine(), out result))
+            while (!ulong.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -201,7 +201,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             short result;
-            while (short.TryParse(Console.ReadLine(), out result))
+            while (!short.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -218,7 +218,7 @@ namespace ABCNET.Utils
         {
             prompt.Print();
             ushort result;
-            while (ushort.TryParse(Console.ReadLine(), out result))
+            while (!ushort.TryParse(Console.ReadLine(), out result))
             {
                 InputErrorHelper.Message.PrintLine();
                 prompt.Print();
@@ -245,7 +245,13 @@ namespace ABCNET.Utils
         public static BigInteger ReadBigInteger(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return BigInteger.Parse(Console.ReadLine());
+            BigInteger result;
+            while (!BigInteger.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary> 
