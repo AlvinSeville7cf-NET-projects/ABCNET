@@ -8,6 +8,7 @@ namespace ABCNET.Utils
     public static partial class Array
     {
         #region public
+
         /// <summary>
         /// Создаёт массив из указанных значений.
         /// </summary>
@@ -123,6 +124,7 @@ namespace ABCNET.Utils
 
             return source;
         }
+
         #endregion public
     }
 }
