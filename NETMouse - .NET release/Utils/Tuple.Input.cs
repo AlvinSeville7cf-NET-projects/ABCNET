@@ -878,7 +878,7 @@ namespace ABCNET.Utils
 
         #endregion
 
-        #region ReadInt
+        #region ReadInt32
 
         /// <summary>
         /// Читает кортеж из двух значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
@@ -1002,7 +1002,7 @@ namespace ABCNET.Utils
 
         #endregion
 
-        #region ReadUint
+        #region ReadUint32
 
         /// <summary>
         /// Читает кортеж из двух значений типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
@@ -1126,7 +1126,7 @@ namespace ABCNET.Utils
 
         #endregion
 
-        #region ReadLong
+        #region ReadInt64
 
         /// <summary>
         /// Читает кортеж из двух значений типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
@@ -1250,7 +1250,7 @@ namespace ABCNET.Utils
 
         #endregion
 
-        #region ReadUlong
+        #region ReadUInt64
 
         /// <summary>
         /// Читает кортеж из двух значений типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
@@ -1374,7 +1374,7 @@ namespace ABCNET.Utils
 
         #endregion
 
-        #region ReadShort
+        #region ReadInt16
 
         /// <summary>
         /// Читает кортеж из двух значений типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
@@ -1498,7 +1498,7 @@ namespace ABCNET.Utils
 
         #endregion
 
-        #region ReadUshort
+        #region ReadUInt16
 
         /// <summary>
         /// Читает кортеж из двух значений типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
