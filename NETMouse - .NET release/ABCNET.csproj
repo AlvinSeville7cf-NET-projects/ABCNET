@@ -124,6 +124,7 @@
     <Compile Include="Utils\Matrix.Input.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Queue.cs" />
     <Compile Include="Utils\Sequence.cs" />
     <Compile Include="Utils\Sequence.Generators.cs">
       <DependentUpon>Sequence.cs</DependentUpon>
