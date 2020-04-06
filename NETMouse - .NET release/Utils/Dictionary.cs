@@ -8,6 +8,8 @@ namespace ABCNET.Utils
     /// </summary>
     public static class Dictionary
     {
+        #region public
+
         /// <summary>
         /// Создаёт словарь из указанных значений.
         /// </summary>
@@ -78,5 +80,7 @@ namespace ABCNET.Utils
 
             return result;
         }
+
+        #endregion public
     }
 }
