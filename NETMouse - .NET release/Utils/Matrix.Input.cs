@@ -338,7 +338,7 @@ namespace ABCNET.Utils
                 while (j < colsCount)
                     try
                     {
-                        source[i, j] = Base.ReadUint32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                        source[i, j] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
                         j++;
                     }
                     catch (Exception)

@@ -235,7 +235,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Массив.</returns>
-        public static uint[] ReadUint32(int count, string prompt = EmptyStringHelper.Empty)
+        public static uint[] ReadUInt32(int count, string prompt = EmptyStringHelper.Empty)
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
@@ -245,7 +245,7 @@ namespace ABCNET.Utils
             while (i < count)
                 try
                 {
-                    array[i] = Base.ReadUint32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    array[i] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
                     i++;
                 }
                 catch (Exception)

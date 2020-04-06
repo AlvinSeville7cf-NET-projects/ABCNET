@@ -260,7 +260,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет матрицу значениями типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет матрицу значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -277,7 +277,7 @@ namespace ABCNET.Extensions
                 while (j < matrix.GetLength(1))
                     try
                     {
-                        matrix[i, j] = Base.ReadUint32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                        matrix[i, j] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
                         j++;
                     }
                     catch (Exception)

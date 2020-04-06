@@ -196,7 +196,7 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
-        /// Заполняет массив значениями типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет массив значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -209,7 +209,7 @@ namespace ABCNET.Extensions
             while (i < array.Length)
                 try
                 {
-                    array[i] = Base.ReadUint32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    array[i] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
                     i++;
                 }
                 catch (Exception)

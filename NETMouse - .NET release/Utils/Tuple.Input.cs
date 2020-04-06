@@ -1002,64 +1002,64 @@ namespace ABCNET.Utils
 
         #endregion
 
-        #region ReadUint32
+        #region ReadUInt32
 
         /// <summary>
-        /// Читает кортеж из двух значений типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из двух значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<uint, uint> ReadUint32Tuple2(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<uint, uint> ReadUInt32Tuple2(string prompt = EmptyStringHelper.Empty)
         {
             uint a = default;
             uint b = default;
 
-            ReadUint32TupleItem(ref a, 0, prompt);
-            ReadUint32TupleItem(ref b, 1, prompt);
+            ReadUInt32TupleItem(ref a, 0, prompt);
+            ReadUInt32TupleItem(ref b, 1, prompt);
 
             return Of(a, b);
         }
 
         /// <summary>
-        /// Читает кортеж из трёх значений типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из трёх значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<uint, uint, uint> ReadUint32Tuple3(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<uint, uint, uint> ReadUInt32Tuple3(string prompt = EmptyStringHelper.Empty)
         {
             uint a = default;
             uint b = default;
             uint c = default;
 
-            ReadUint32TupleItem(ref a, 0, prompt);
-            ReadUint32TupleItem(ref b, 1, prompt);
-            ReadUint32TupleItem(ref c, 2, prompt);
+            ReadUInt32TupleItem(ref a, 0, prompt);
+            ReadUInt32TupleItem(ref b, 1, prompt);
+            ReadUInt32TupleItem(ref c, 2, prompt);
 
             return Of(a, b, c);
         }
 
         /// <summary>
-        /// Читает кортеж из четырёх значений типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из четырёх значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<uint, uint, uint, uint> ReadUint32Tuple4(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<uint, uint, uint, uint> ReadUInt32Tuple4(string prompt = EmptyStringHelper.Empty)
         {
             uint a = default;
             uint b = default;
             uint c = default;
             uint d = default;
 
-            ReadUint32TupleItem(ref a, 0, prompt);
-            ReadUint32TupleItem(ref b, 1, prompt);
-            ReadUint32TupleItem(ref c, 2, prompt);
-            ReadUint32TupleItem(ref d, 3, prompt);
+            ReadUInt32TupleItem(ref a, 0, prompt);
+            ReadUInt32TupleItem(ref b, 1, prompt);
+            ReadUInt32TupleItem(ref c, 2, prompt);
+            ReadUInt32TupleItem(ref d, 3, prompt);
 
             return Of(a, b, c, d);
         }
 
         /// <summary>
-        /// Читает кортеж из пяти значений типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из пяти значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<uint, uint, uint, uint, uint> ReadUint32Tuple5(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<uint, uint, uint, uint, uint> ReadUInt32Tuple5(string prompt = EmptyStringHelper.Empty)
         {
             uint a = default;
             uint b = default;
@@ -1067,20 +1067,20 @@ namespace ABCNET.Utils
             uint d = default;
             uint e = default;
 
-            ReadUint32TupleItem(ref a, 0, prompt);
-            ReadUint32TupleItem(ref b, 1, prompt);
-            ReadUint32TupleItem(ref c, 2, prompt);
-            ReadUint32TupleItem(ref d, 3, prompt);
-            ReadUint32TupleItem(ref e, 4, prompt);
+            ReadUInt32TupleItem(ref a, 0, prompt);
+            ReadUInt32TupleItem(ref b, 1, prompt);
+            ReadUInt32TupleItem(ref c, 2, prompt);
+            ReadUInt32TupleItem(ref d, 3, prompt);
+            ReadUInt32TupleItem(ref e, 4, prompt);
 
             return Of(a, b, c, d, e);
         }
 
         /// <summary>
-        /// Читает кортеж из шести значений типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из шести значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<uint, uint, uint, uint, uint, uint> ReadUint32Tuple6(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<uint, uint, uint, uint, uint, uint> ReadUInt32Tuple6(string prompt = EmptyStringHelper.Empty)
         {
             uint a = default;
             uint b = default;
@@ -1089,21 +1089,21 @@ namespace ABCNET.Utils
             uint e = default;
             uint f = default;
 
-            ReadUint32TupleItem(ref a, 0, prompt);
-            ReadUint32TupleItem(ref b, 1, prompt);
-            ReadUint32TupleItem(ref c, 2, prompt);
-            ReadUint32TupleItem(ref d, 3, prompt);
-            ReadUint32TupleItem(ref e, 4, prompt);
-            ReadUint32TupleItem(ref f, 5, prompt);
+            ReadUInt32TupleItem(ref a, 0, prompt);
+            ReadUInt32TupleItem(ref b, 1, prompt);
+            ReadUInt32TupleItem(ref c, 2, prompt);
+            ReadUInt32TupleItem(ref d, 3, prompt);
+            ReadUInt32TupleItem(ref e, 4, prompt);
+            ReadUInt32TupleItem(ref f, 5, prompt);
 
             return Of(a, b, c, d, e, f);
         }
 
         /// <summary>
-        /// Читает кортеж из семи значений типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает кортеж из семи значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <returns>Кортеж.</returns>
-        public static Tuple<uint, uint, uint, uint, uint, uint, uint> ReadUint32Tuple7(string prompt = EmptyStringHelper.Empty)
+        public static Tuple<uint, uint, uint, uint, uint, uint, uint> ReadUInt32Tuple7(string prompt = EmptyStringHelper.Empty)
         {
             uint a = default;
             uint b = default;
@@ -1113,13 +1113,13 @@ namespace ABCNET.Utils
             uint f = default;
             uint g = default;
 
-            ReadUint32TupleItem(ref a, 0, prompt);
-            ReadUint32TupleItem(ref b, 1, prompt);
-            ReadUint32TupleItem(ref c, 2, prompt);
-            ReadUint32TupleItem(ref d, 3, prompt);
-            ReadUint32TupleItem(ref e, 4, prompt);
-            ReadUint32TupleItem(ref f, 5, prompt);
-            ReadUint32TupleItem(ref g, 6, prompt);
+            ReadUInt32TupleItem(ref a, 0, prompt);
+            ReadUInt32TupleItem(ref b, 1, prompt);
+            ReadUInt32TupleItem(ref c, 2, prompt);
+            ReadUInt32TupleItem(ref d, 3, prompt);
+            ReadUInt32TupleItem(ref e, 4, prompt);
+            ReadUInt32TupleItem(ref f, 5, prompt);
+            ReadUInt32TupleItem(ref g, 6, prompt);
 
             return Of(a, b, c, d, e, f, g);
         }
@@ -1986,12 +1986,12 @@ namespace ABCNET.Utils
                 }
         }
 
-        private static void ReadUint32TupleItem(ref uint field, int index, string prompt)
+        private static void ReadUInt32TupleItem(ref uint field, int index, string prompt)
         {
             while (true)
                 try
                 {
-                    field = Base.ReadUint32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
+                    field = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, index));
                     return;
                 }
                 catch (Exception)
