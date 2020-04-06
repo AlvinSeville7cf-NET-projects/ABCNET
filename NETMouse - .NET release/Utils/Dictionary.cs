@@ -38,7 +38,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            if (selector == null)
+            if (selector is null)
                 throw new ArgumentNullException(nameof(selector));
 
             Dictionary<TKey, TValue> result = new Dictionary<TKey, TValue>();
