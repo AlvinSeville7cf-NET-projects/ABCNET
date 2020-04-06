@@ -131,6 +131,7 @@
     </Compile>
     <Compile Include="Utils\SortedDictionary.cs" />
     <Compile Include="Utils\SortedList.cs" />
+    <Compile Include="Utils\SortedSet.cs" />
     <Compile Include="Utils\Stack.cs" />
     <Compile Include="Utils\Tuple.Generators.cs">
       <DependentUpon>Tuple.cs</DependentUpon>
