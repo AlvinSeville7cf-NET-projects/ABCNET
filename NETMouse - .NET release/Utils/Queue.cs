@@ -14,7 +14,7 @@ namespace ABCNET.Utils
         /// Создаёт очередь из указанных значений.
         /// </summary>
         /// <param name="values">Значения.</param>
-        /// <returns>Список.</returns>
+        /// <returns>Очередь.</returns>
         public static Queue<T> Of<T>(params T[] values)
         {
             if (values is null)
@@ -29,7 +29,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="selector">Функция селектор.</param>
         /// <param name="firstIndex">Начальный индекс.</param>
-        /// <returns>Список.</returns>
+        /// <returns>Очередь.</returns>
         public static Queue<T> By<T>(int count, Func<int, T> selector, int firstIndex = 0)
         {
             if (count < 0)
@@ -50,7 +50,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="first">Первый элемент.</param>
         /// <param name="next">Функция получения следующего элемента.</param>
-        /// <returns>Список.</returns>
+        /// <returns>Очередь.</returns>
         public static Queue<T> By<T>(int count, T first, Func<T, T> next)
         {
             if (count < 0)
@@ -78,7 +78,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
-        /// <returns>Список.</returns>
+        /// <returns>Очередь.</returns>
         public static Queue<int> Random(int count, int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
             if (count < 0)
@@ -99,7 +99,7 @@ namespace ABCNET.Utils
         /// <param name="count">Количество элементов.</param>
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
-        /// <returns>Список.</returns>
+        /// <returns>Очередь.</returns>
         public static Queue<double> Random(int count, double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
             if (count < 0)
@@ -119,7 +119,7 @@ namespace ABCNET.Utils
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="value">Значение.</param>
-        /// <returns>Список.</returns>
+        /// <returns>Очередь.</returns>
         public static Queue<T> Fill<T>(int count, T value)
         {
             if (count < 0)
