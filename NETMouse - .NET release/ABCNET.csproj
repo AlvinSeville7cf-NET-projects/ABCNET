@@ -130,6 +130,7 @@
       <DependentUpon>Sequence.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\SortedDictionary.cs" />
+    <Compile Include="Utils\SortedList.cs" />
     <Compile Include="Utils\Stack.cs" />
     <Compile Include="Utils\Tuple.Generators.cs">
       <DependentUpon>Tuple.cs</DependentUpon>
