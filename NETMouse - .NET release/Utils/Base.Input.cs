@@ -21,6 +21,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return bool.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -31,6 +32,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return byte.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -41,6 +43,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return sbyte.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -51,6 +54,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return char.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -61,6 +65,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return decimal.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -71,6 +76,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return double.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -81,6 +87,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return float.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -91,6 +98,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return int.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -101,6 +109,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return uint.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -111,6 +120,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return long.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -121,6 +131,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return ulong.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -131,6 +142,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return short.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -141,6 +153,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return ushort.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -151,6 +164,7 @@ namespace ABCNET.Utils
             prompt.Print();
             return BigInteger.Parse(Console.ReadLine());
         }
+
         /// <summary>
         /// Читает значение типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
