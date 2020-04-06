@@ -19,7 +19,13 @@ namespace ABCNET.Utils
         public static bool ReadBoolean(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return bool.Parse(Console.ReadLine());
+            bool result;
+            while (!bool.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -30,7 +36,13 @@ namespace ABCNET.Utils
         public static byte ReadByte(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return byte.Parse(Console.ReadLine());
+            byte result;
+            while (!byte.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -41,7 +53,13 @@ namespace ABCNET.Utils
         public static sbyte ReadSByte(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return sbyte.Parse(Console.ReadLine());
+            sbyte result;
+            while (!sbyte.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -52,7 +70,7 @@ namespace ABCNET.Utils
         public static char ReadChar(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return char.Parse(Console.ReadLine());
+            return Console.ReadKey().KeyChar;
         }
 
         /// <summary>
@@ -63,7 +81,13 @@ namespace ABCNET.Utils
         public static decimal ReadDecimal(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return decimal.Parse(Console.ReadLine());
+            decimal result;
+            while (!decimal.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -74,7 +98,13 @@ namespace ABCNET.Utils
         public static double ReadDouble(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return double.Parse(Console.ReadLine());
+            double result;
+            while (!double.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -85,7 +115,13 @@ namespace ABCNET.Utils
         public static float ReadSingle(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return float.Parse(Console.ReadLine());
+            float result;
+            while (!float.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -96,18 +132,30 @@ namespace ABCNET.Utils
         public static int ReadInt32(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return int.Parse(Console.ReadLine());
+            int result;
+            while (!int.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
-        /// Читает значение типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
-        public static uint ReadUint32(string prompt = EmptyStringHelper.Empty)
+        public static uint ReadUInt32(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return uint.Parse(Console.ReadLine());
+            uint result;
+            while (!uint.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -118,7 +166,13 @@ namespace ABCNET.Utils
         public static long ReadInt64(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return long.Parse(Console.ReadLine());
+            long result;
+            while (!long.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -129,7 +183,13 @@ namespace ABCNET.Utils
         public static ulong ReadUInt64(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return ulong.Parse(Console.ReadLine());
+            ulong result;
+            while (!ulong.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -140,7 +200,13 @@ namespace ABCNET.Utils
         public static short ReadInt16(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return short.Parse(Console.ReadLine());
+            short result;
+            while (!short.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -151,18 +217,13 @@ namespace ABCNET.Utils
         public static ushort ReadUInt16(string prompt = EmptyStringHelper.Empty)
         {
             prompt.Print();
-            return ushort.Parse(Console.ReadLine());
-        }
-
-        /// <summary>
-        /// Читает значение типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="prompt">Приглашение к вводу.</param>
-        /// <returns>Значение.</returns>
-        public static BigInteger ReadBigInteger(string prompt = EmptyStringHelper.Empty)
-        {
-            prompt.Print();
-            return BigInteger.Parse(Console.ReadLine());
+            ushort result;
+            while (!ushort.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
         }
 
         /// <summary>
@@ -176,11 +237,38 @@ namespace ABCNET.Utils
             return Console.ReadLine();
         }
 
+        /// <summary>
+        /// Читает значение типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Значение.</returns>
+        public static BigInteger ReadBigInteger(string prompt = EmptyStringHelper.Empty)
+        {
+            prompt.Print();
+            BigInteger result;
+            while (!BigInteger.TryParse(Console.ReadLine(), out result))
+            {
+                InputErrorHelper.Message.PrintLine();
+                prompt.Print();
+            }
+            return result;
+        }
+
         /// <summary> 
         /// Генерирует случайное число [0;1). 
         /// </summary> 
         /// <returns>Число.</returns>
         public static double Random()
+        {
+            return RandomHelper.Random.NextDouble();
+        }
+
+        /// <summary> 
+        /// Генерирует случайное число [0;1). 
+        /// </summary> 
+        /// <returns>Число.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
+        public static double Rand()
         {
             return RandomHelper.Random.NextDouble();
         }
@@ -205,12 +293,42 @@ namespace ABCNET.Utils
         /// <param name="low">Нижняя граница диапазона.</param>
         /// <param name="high">Верхняя граница диапазона.</param>
         /// <returns>Число.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
+        public static int Rand(int low, int high)
+        {
+            if (high < low)
+                Swap(ref low, ref high);
+
+            return RandomHelper.Random.Next(low, high + 1);
+        }
+
+        /// <summary>
+        /// Генерирует случайное число [low;high].
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Число.</returns>
         public static double Random(double low, double high)
         {
             if (high < low)
                 Swap(ref low, ref high);
 
             return low + Random() * (high - low);
+        }
+
+        /// <summary>
+        /// Генерирует случайное число [low;high].
+        /// </summary>
+        /// <param name="low">Нижняя граница диапазона.</param>
+        /// <param name="high">Верхняя граница диапазона.</param>
+        /// <returns>Число.</returns>
+        [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
+        public static double Rand(double low, double high)
+        {
+            if (high < low)
+                Swap(ref low, ref high);
+
+            return low + Rand() * (high - low);
         }
 
         #endregion public
