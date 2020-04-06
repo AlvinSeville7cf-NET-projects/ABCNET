@@ -115,6 +115,7 @@
     </Compile>
     <Compile Include="Utils\Dictionary.cs" />
     <Compile Include="Utils\HashSet.cs" />
+    <Compile Include="Utils\LinkedList.cs" />
     <Compile Include="Utils\Matrix.cs" />
     <Compile Include="Utils\Matrix.Generators.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
