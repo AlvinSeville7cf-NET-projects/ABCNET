@@ -1,5 +1,6 @@
 ﻿using ABCNET.Extensions;
 using System;
+using System.Numerics;
 
 namespace ABCNET.Utils
 {
@@ -257,6 +258,24 @@ namespace ABCNET.Utils
             string[] array = new string[count];
             for (int i = 0; i < count; i++)
                 array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static BigInteger[] ReadBigInteger(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            BigInteger[] array = new BigInteger[count];
+            for (int i = 0; i < count; i++)
+                array[i] = Base.ReadBigInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
 
             return array;
         }
