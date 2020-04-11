@@ -23,15 +23,54 @@ namespace ABCNET.Utils
             bool[] array = new bool[count];
             int i = 0;
             while (i < count)
-                try
-                {
-                    array[i] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static byte[] ReadByte(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            byte[] array = new byte[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static sbyte[] ReadSByte(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            sbyte[] array = new sbyte[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadSByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
 
             return array;
         }
@@ -48,8 +87,34 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             char[] array = new char[count];
-            for (int i = 0; i < count; i++)
+            int i = 0;
+            while (i < count)
+            {
                 array[i] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static decimal[] ReadDecimal(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            decimal[] array = new decimal[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadDecimal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
 
             return array;
         }
@@ -68,15 +133,32 @@ namespace ABCNET.Utils
             double[] array = new double[count];
             int i = 0;
             while (i < count)
-                try
-                {
-                    array[i] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static float[] ReadSingle(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            float[] array = new float[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadSingle(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
 
             return array;
         }
@@ -95,15 +177,120 @@ namespace ABCNET.Utils
             int[] array = new int[count];
             int i = 0;
             while (i < count)
-                try
-                {
-                    array[i] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static uint[] ReadUInt32(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            uint[] array = new uint[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static long[] ReadInt64(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            long[] array = new long[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static ulong[] ReadUInt64(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            ulong[] array = new ulong[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static short[] ReadInt16(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            short[] array = new short[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Читает массив значений типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Количество элементов.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        /// <returns>Массив.</returns>
+        public static ushort[] ReadUInt16(int count, string prompt = EmptyStringHelper.Empty)
+        {
+            if (count < 0)
+                throw new ArgumentOutOfRangeException(nameof(count));
+
+            ushort[] array = new ushort[count];
+            int i = 0;
+            while (i < count)
+            {
+                array[i] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
 
             return array;
         }
@@ -120,8 +307,13 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             string[] array = new string[count];
-            for (int i = 0; i < count; i++)
+            int i = 0;
+            while (i < count)
+            {
                 array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                i++;
+            }
+
             return array;
         }
 
