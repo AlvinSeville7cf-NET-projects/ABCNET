@@ -21,12 +21,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             bool[] array = new bool[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -43,12 +39,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             byte[] array = new byte[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -65,12 +57,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             sbyte[] array = new sbyte[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadSByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -87,12 +75,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             char[] array = new char[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -109,12 +93,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             decimal[] array = new decimal[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadDecimal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -131,12 +111,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             double[] array = new double[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -153,12 +129,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             float[] array = new float[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadSingle(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -175,12 +147,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             int[] array = new int[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -197,12 +165,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             uint[] array = new uint[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -219,12 +183,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             long[] array = new long[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -241,12 +201,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             ulong[] array = new ulong[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -263,12 +219,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             short[] array = new short[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
@@ -285,12 +237,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             ushort[] array = new ushort[count];
-            int i = 0;
-            while (i < count)
-            {
-                array[i] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
+            for (int i = 0; i < count; i++)
+                array[i] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
 
             return array;
         }
@@ -307,12 +255,8 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(count));
 
             string[] array = new string[count];
-            int i = 0;
-            while (i < count)
-            {
+            for (int i = 0; i < count; i++)
                 array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                i++;
-            }
 
             return array;
         }
