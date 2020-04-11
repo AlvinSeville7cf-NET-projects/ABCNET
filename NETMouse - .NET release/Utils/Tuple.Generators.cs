@@ -8,6 +8,9 @@ namespace ABCNET.Utils
     public static partial class Tuple
     {
         #region public
+
+        #region OfOverloads
+
         /// <summary>
         /// Создаёт кортеж из 2 значений.
         /// </summary>
@@ -294,6 +297,10 @@ namespace ABCNET.Utils
             return Of(item1, item2, item3, item4, item5, item6, item7);
         }
 
+        #endregion
+
+        #region RandomInt
+
         /// <summary>
         /// Создаёт кортеж из двух случайных значений типа Int32.
         /// </summary>
@@ -364,6 +371,10 @@ namespace ABCNET.Utils
                 Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
                 Base.Random(low, high));
         }
+
+        #endregion
+
+        #region RandomDouble
 
         /// <summary>
         /// Создаёт кортеж из двух случайных значений типа Double.
@@ -436,6 +447,10 @@ namespace ABCNET.Utils
                 Base.Random(low, high));
         }
 
+        #endregion
+
+        #region Fill
+
         /// <summary>
         /// Создаёт кортеж из двух элементов, заполненный указанным значением.
         /// </summary>
@@ -500,6 +515,9 @@ namespace ABCNET.Utils
                 value, value, value,
                 value);
         }
+
+        #endregion
+
         #endregion public
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using ABCNET.Utils;
 
 namespace ABCNET.Extensions
@@ -9,6 +10,7 @@ namespace ABCNET.Extensions
     public static partial class ArrayE
     {
         #region public
+
         /// <summary>
         /// Заполняет массив значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -33,6 +35,52 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Заполняет массив значениями типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this byte[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
+        /// Заполняет массив значениями типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this sbyte[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadSByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
         /// Заполняет массив значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
@@ -42,8 +90,40 @@ namespace ABCNET.Extensions
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
-            for (int i = 0; i < array.Length; i++)
-                array[i] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
+        /// Заполняет массив значениями типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this decimal[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadDecimal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
         }
 
         /// <summary>
@@ -61,6 +141,29 @@ namespace ABCNET.Extensions
                 try
                 {
                     array[i] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
+        /// Заполняет массив значениями типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this float[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadSingle(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
                     i++;
                 }
                 catch (Exception)
@@ -93,6 +196,144 @@ namespace ABCNET.Extensions
         }
 
         /// <summary>
+        /// Заполняет массив значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this uint[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
+        /// Заполняет массив значениями типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this long[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
+        /// Заполняет массив значениями типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this ulong[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
+        /// Заполняет массив значениями типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this short[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
+        /// Заполняет массив значениями типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this ushort[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
+        /// Заполняет массив значениями типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="array">Массив.</param>
+        /// <param name="prompt">Приглашение к вводу.</param>
+        public static void Read(this BigInteger[] array, string prompt = EmptyStringHelper.Empty)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadBigInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
+        }
+
+        /// <summary>
         /// Заполняет массив значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="array">Массив.</param>
@@ -102,9 +343,19 @@ namespace ABCNET.Extensions
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
-            for (int i = 0; i < array.Length; i++)
-                array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+            int i = 0;
+            while (i < array.Length)
+                try
+                {
+                    array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                    i++;
+                }
+                catch (Exception)
+                {
+                    InputErrorHelper.Message.PrintLine();
+                }
         }
+
         #endregion public
     }
 }

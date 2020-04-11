@@ -8,6 +8,7 @@ namespace ABCNET.Extensions
     public static partial class BaseE
     {
         #region public
+
         /// <summary>
         /// Выводит значение типа Boolean.
         /// </summary>
@@ -183,6 +184,7 @@ namespace ABCNET.Extensions
             Console.WriteLine(item.NilOrString());
             return item;
         }
+
         #endregion public
     }
 }

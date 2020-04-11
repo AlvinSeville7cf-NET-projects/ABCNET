@@ -6,6 +6,7 @@
     public static partial class Base
     {
         #region public
+
         /// <summary>
         /// Меняет местами значения двух переменных.
         /// </summary>
@@ -17,6 +18,7 @@
             x = y;
             y = z;
         }
+
         #endregion public
     }
 }

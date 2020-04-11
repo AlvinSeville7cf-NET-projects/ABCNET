@@ -8,6 +8,7 @@ namespace ABCNET.Extensions
     public static partial class TupleE
     {
         #region public
+
         /// <summary>
         /// Выводит кортеж.
         /// </summary>
@@ -786,6 +787,7 @@ namespace ABCNET.Extensions
                 func(tuple.Item7)).PrintLines();
             return tuple;
         }
+
         #endregion public
     }
 }

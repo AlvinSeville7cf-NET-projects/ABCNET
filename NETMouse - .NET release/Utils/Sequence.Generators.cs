@@ -9,6 +9,7 @@ namespace ABCNET.Utils
     public static partial class Sequence
     {
         #region public
+
         /// <summary>
         /// Создаёт последовательность на основе функции селектора.
         /// </summary>
@@ -77,6 +78,7 @@ namespace ABCNET.Utils
             for (int i = 0; i < count; i++)
                 yield return value;
         }
+
         #endregion public
     }
 }

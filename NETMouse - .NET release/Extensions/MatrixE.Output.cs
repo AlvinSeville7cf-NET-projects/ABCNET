@@ -8,6 +8,7 @@ namespace ABCNET.Extensions
     public static partial class MatrixE
     {
         #region public
+
         /// <summary>
         /// Выводит матрицу.
         /// </summary>
@@ -77,6 +78,7 @@ namespace ABCNET.Extensions
             Console.WriteLine();
             return matrix;
         }
+
         #endregion public
 
         #region private
@@ -137,6 +139,7 @@ namespace ABCNET.Extensions
 
             return matrix;
         }
+
         #endregion private
     }
 }

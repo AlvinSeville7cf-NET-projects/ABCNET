@@ -10,6 +10,7 @@ namespace ABCNET.Extensions
     public static partial class SequenceE
     {
         #region public
+
         /// <summary>
         /// Преобразует последовательность в кортеж.
         /// </summary>
@@ -705,6 +706,7 @@ namespace ABCNET.Extensions
 
             return new PartitionResult<T>(trueList, falseList);
         }
+
         #endregion public
     }
 }

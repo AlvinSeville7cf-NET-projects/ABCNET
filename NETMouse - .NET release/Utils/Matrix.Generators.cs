@@ -8,6 +8,7 @@ namespace ABCNET.Utils
     public static partial class Matrix
     {
         #region public
+
         /// <summary>
         /// Создаёт матрицу из указанных значений.
         /// </summary>
@@ -135,6 +136,7 @@ namespace ABCNET.Utils
 
             return source;
         }
+
         #endregion public
     }
 }
