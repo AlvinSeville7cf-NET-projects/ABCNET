@@ -239,7 +239,7 @@ namespace ABCNET.Utils
 
             ushort[] array = new ushort[count];
             for (int i = 0; i < count; i++)
-                array[i] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
+                array[i] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
 
             return array;
         }
@@ -291,6 +291,26 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
+        /// Заполняет 2 массива значениями типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<byte[], byte[]> ReadByteTuple2(int count)
+        {
+            return Tuple.Of(ReadByte(count), ReadByte(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<sbyte[], sbyte[]> ReadSByteTuple2(int count)
+        {
+            return Tuple.Of(ReadSByte(count), ReadSByte(count));
+        }
+
+        /// <summary>
         /// Заполняет 2 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
@@ -301,13 +321,13 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 2 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 2 массива значениями типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[]> ReadInt32Tuple2(int count)
+        public static Tuple<decimal[], decimal[]> ReadDecimalTuple2(int count)
         {
-            return Tuple.Of(ReadInt32(count), ReadInt32(count));
+            return Tuple.Of(ReadDecimal(count), ReadDecimal(count));
         }
 
         /// <summary>
@@ -321,6 +341,76 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
+        /// Заполняет 2 массива значениями типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<float[], float[]> ReadSingleTuple2(int count)
+        {
+            return Tuple.Of(ReadSingle(count), ReadSingle(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int[], int[]> ReadInt32Tuple2(int count)
+        {
+            return Tuple.Of(ReadInt32(count), ReadInt32(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<uint[], uint[]> ReadUInt32Tuple2(int count)
+        {
+            return Tuple.Of(ReadUInt32(count), ReadUInt32(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<long[], long[]> ReadInt64Tuple2(int count)
+        {
+            return Tuple.Of(ReadInt64(count), ReadInt64(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ulong[], ulong[]> ReadUInt64Tuple2(int count)
+        {
+            return Tuple.Of(ReadUInt64(count), ReadUInt64(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<short[], short[]> ReadInt16Tuple2(int count)
+        {
+            return Tuple.Of(ReadInt16(count), ReadInt16(count));
+        }
+
+        /// <summary>
+        /// Заполняет 2 массива значениями типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="count">Размер массива.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ushort[], ushort[]> ReadUInt16Tuple2(int count)
+        {
+            return Tuple.Of(ReadUInt16(count), ReadUInt16(count));
+        }
+
+        /// <summary>
         /// Заполняет 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
@@ -331,254 +421,16 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Заполняет 3 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Заполняет 2 массива значениями типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[]> ReadBooleanTuple3(int count)
+        public static Tuple<BigInteger[], BigInteger[]> ReadBigIntegerTuple2(int count)
         {
-            return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
+            return Tuple.Of(ReadBigInteger(count), ReadBigInteger(count));
         }
 
-        /// <summary>
-        /// Заполняет 3 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[]> ReadCharTuple3(int count)
-        {
-            return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 3 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[]> ReadInt32Tuple3(int count)
-        {
-            return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count));
-        }
-
-        /// <summary>
-        /// Заполняет 3 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[]> ReadDoubleTuple3(int count)
-        {
-            return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count));
-        }
-
-        /// <summary>
-        /// Заполняет 3 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[]> ReadStringTuple3(int count)
-        {
-            return Tuple.Of(ReadString(count), ReadString(count), ReadString(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[], bool[]> ReadBooleanTuple4(int count)
-        {
-            return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[], char[]> ReadCharTuple4(int count)
-        {
-            return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[], int[]> ReadInt32Tuple4(int count)
-        {
-            return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[], double[]> ReadDoubleTuple4(int count)
-        {
-            return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
-        }
-
-        /// <summary>
-        /// Заполняет 4 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[], string[]> ReadStringTuple4(int count)
-        {
-            return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[]> ReadBooleanTuple5(int count)
-        {
-            return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[], char[], char[]> ReadCharTuple5(int count)
-        {
-            return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[], int[], int[]> ReadInt32Tuple5(int count)
-        {
-            return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[], double[], double[]> ReadDoubleTuple5(int count)
-        {
-            return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
-        }
-
-        /// <summary>
-        /// Заполняет 5 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[], string[], string[]> ReadStringTuple5(int count)
-        {
-            return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[]> ReadBooleanTuple6(int count)
-        {
-            return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[], char[], char[], char[]> ReadCharTuple6(int count)
-        {
-            return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[], int[], int[], int[]> ReadInt32Tuple6(int count)
-        {
-            return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[], double[], double[], double[]> ReadDoubleTuple6(int count)
-        {
-            return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
-        }
-
-        /// <summary>
-        /// Заполняет 6 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[], string[], string[], string[]> ReadStringTuple6(int count)
-        {
-            return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<bool[], bool[], bool[], bool[], bool[], bool[], bool[]> ReadBooleanTuple7(int count)
-        {
-            return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<char[], char[], char[], char[], char[], char[], char[]> ReadCharTuple7(int count)
-        {
-            return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<int[], int[], int[], int[], int[], int[], int[]> ReadInt32Tuple7(int count)
-        {
-            return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<double[], double[], double[], double[], double[], double[], double[]> ReadDoubleTuple7(int count)
-        {
-            return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
-        }
-
-        /// <summary>
-        /// Заполняет 7 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
-        /// </summary>
-        /// <param name="count">Размер массива.</param>
-        /// <returns>Кортеж.</returns>
-        public static Tuple<string[], string[], string[], string[], string[], string[], string[]> ReadStringTuple7(int count)
-        {
-            return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
-        }
+        // ToDo: Доделать для кортежей длины ддо 7-ми элементов и Nullable<T>.
         #endregion public
     }
 }
