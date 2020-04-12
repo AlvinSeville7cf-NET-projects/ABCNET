@@ -16,10 +16,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this bool[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this bool[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -27,15 +29,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadBoolean(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -47,10 +44,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this byte[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this byte[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -58,15 +57,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadByte(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -78,10 +72,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this sbyte[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this sbyte[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -89,15 +85,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadSByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadSByte(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -109,10 +100,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this char[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this char[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -120,15 +113,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadChar(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -140,10 +128,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this decimal[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this decimal[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -151,15 +141,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadDecimal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadDecimal(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -171,10 +156,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this double[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this double[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -182,15 +169,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadDouble(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -202,10 +184,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this float[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this float[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -213,15 +197,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadSingle(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadSingle(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -233,10 +212,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this int[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this int[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -244,15 +225,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadInt32(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -264,10 +240,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this uint[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this uint[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -275,15 +253,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadUInt32(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -295,10 +268,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this long[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this long[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -306,15 +281,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadInt64(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -326,10 +296,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this ulong[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this ulong[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -337,15 +309,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadUInt64(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -357,10 +324,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this short[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this short[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -368,15 +337,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadInt16(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -388,10 +352,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this ushort[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this ushort[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -399,15 +365,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadUInt16(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -419,10 +380,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this BigInteger[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this BigInteger[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -430,15 +393,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadBigInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadBigInteger(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
@@ -450,10 +408,12 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="matrix">Матрица.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this string[,] matrix, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this string[,] matrix, string prompt = null)
         {
             if (matrix == null)
                 throw new ArgumentNullException(nameof(matrix));
+
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int i = 0;
             int j = 0;
@@ -461,15 +421,10 @@ namespace ABCNET.Extensions
             while (i < matrix.GetLength(0))
             {
                 while (j < matrix.GetLength(1))
-                    try
-                    {
-                        matrix[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine(InputErrorHelper.Message);
-                    }
+                {
+                    matrix[i, j] = Base.ReadString(string.Format(prompt, i, j));
+                    j++;
+                }
 
                 i++;
                 j = 0;
