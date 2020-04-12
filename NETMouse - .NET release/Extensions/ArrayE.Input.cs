@@ -16,22 +16,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this bool[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this bool[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadBoolean(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -39,22 +36,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this byte[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this byte[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadByte(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -62,22 +56,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this sbyte[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this sbyte[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadSByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadSByte(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -85,22 +76,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this char[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this char[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadChar(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -108,22 +96,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this decimal[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this decimal[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadDecimal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadDecimal(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -131,22 +116,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this double[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this double[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadDouble(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -154,22 +136,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this float[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this float[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadSingle(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadSingle(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -177,22 +156,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this int[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this int[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadInt32(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -200,22 +176,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this uint[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this uint[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadUInt32(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -223,22 +196,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this long[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this long[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadInt64(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -246,22 +216,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this ulong[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this ulong[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadUInt64(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -269,22 +236,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this short[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this short[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadInt16(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -292,22 +256,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this ushort[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this ushort[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadUInt16(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -315,22 +276,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this BigInteger[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this BigInteger[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadBigInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadBigInteger(string.Format(prompt, i));
+                i++;
+            }
         }
 
         /// <summary>
@@ -338,22 +296,19 @@ namespace ABCNET.Extensions
         /// </summary>
         /// <param name="array">Массив.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
-        public static void Read(this string[] array, string prompt = EmptyStringHelper.Empty)
+        public static void Read(this string[] array, string prompt = null)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
+            prompt = prompt ?? EmptyStringHelper.Empty;
+
             int i = 0;
             while (i < array.Length)
-                try
-                {
-                    array[i] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i));
-                    i++;
-                }
-                catch (Exception)
-                {
-                    InputErrorHelper.Message.PrintLine();
-                }
+            {
+                array[i] = Base.ReadString(string.Format(prompt, i));
+                i++;
+            }
         }
 
         #endregion public
