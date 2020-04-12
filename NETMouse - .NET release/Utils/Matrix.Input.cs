@@ -32,16 +32,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -70,16 +64,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -108,16 +96,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadSByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadSByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -146,16 +128,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -184,16 +160,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadDecimal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadDecimal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -222,16 +192,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -260,16 +224,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadSingle(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadSingle(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -298,16 +256,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -316,13 +268,13 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает матрицу значений типа Uint32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает матрицу значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
         /// <param name="rowsCount">Количество строк.</param>
         /// <param name="colsCount">Количество столбцов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Матрица.</returns>
-        public static uint[,] ReadUint32(int rowsCount, int colsCount, string prompt = EmptyStringHelper.Empty)
+        public static uint[,] ReadUInt32(int rowsCount, int colsCount, string prompt = EmptyStringHelper.Empty)
         {
             if (rowsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
@@ -336,16 +288,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -374,16 +320,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -412,16 +352,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -450,16 +384,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -488,16 +416,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -526,16 +448,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadBigInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadBigInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
@@ -564,16 +480,10 @@ namespace ABCNET.Utils
             while (i < rowsCount)
             {
                 while (j < colsCount)
-                    try
-                    {
-                        source[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                        j++;
-                    }
-                    catch (Exception)
-                    {
-                        InputErrorHelper.Message.PrintLine();
-                    }
-
+                {
+                    source[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
+                    j++;
+                }
                 i++;
                 j = 0;
             }
