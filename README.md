@@ -158,6 +158,7 @@ namespace TestProgram
   Описание рекомендуемых инструментов разработки для проекта.
 -->
 - `IDE` - [`myCompiler`](https://www.mycompiler.io/)
+- пллагины - [`CodeMaid`](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)
 
 ----
 Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
