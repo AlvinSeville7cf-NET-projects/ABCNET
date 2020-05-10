@@ -15,7 +15,7 @@
 <!--
   Краткое описание продукта с возможными ссылками на похожие и указание аудитории, на которую он рассчитан.
 -->
-`ABCNET` - альтернатива модулю [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) для всего `NET`. Является чем-то средним между [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) и [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel). Ориентирована на русскоязычную аудиторию. Более подробно об `ABCNET` можно узнать в [презентации](https://github.com/NETMouse-projects/ABCNET/tree/master/NETMouse%20-%20.NET%20release/Presentations) (желательно просматривать через `Power Point`).
+`ABCNET` - альтернатива модулю [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) для всего `NET`. Ориентирована на русскоязычную аудиторию. Более подробно об `ABCNET` можно узнать в [презентации](https://github.com/NETMouse-projects/ABCNET/tree/master/NETMouse%20-%20.NET%20release/Presentations) (желательно просматривать через `Power Point`).
 
 ## Минимальные требования
 <!--
@@ -110,9 +110,6 @@ namespace TestProgram
 ## С PABCSystem
 Полная совместимость с [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) не гарантируется. Функционал хоть и похожий, но отличается и по-разному распределён. Единственное место, в котором гарантируется полная совместимость (до `v0.5.0`, не включая её) - класс `ABCNET.Utils.PABCSystem`, который предоставляет часть функционала [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) в его изначальном виде. На данный момент доступны лишь короткие функции `Lst`, `LLst`, `HSet`, `SSet`, `Dict`, `KV`.
 
-## С NETSquirrel
-Полная совместимость с [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel) не гарантируется.
-
 # Дополнительные разработки
 - [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
 
@@ -120,7 +117,6 @@ namespace TestProgram
 <!--
   Список похожих проктов NETMouse projects.
 -->
-- [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel)
 - [`PascalABCSquirrel`](https://github.com/NETMouse-projects/PascalABCSquirrel)
 
 # Для разработчиков
