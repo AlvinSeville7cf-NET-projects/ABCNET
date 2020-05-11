@@ -144,7 +144,7 @@ namespace TestProgram
   Описание обязательных инструментов разработки для проекта.
 -->
 - `IDE` - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/), [`Repl.it`](https://repl.it/)
-- пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`File Nesting`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileNesting)
+- Пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`File Nesting`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileNesting)
 - Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
 - `VCS` - [`Git`](https://git-scm.com/download) с [`Git Bash`](https://git-scm.com/download)
 - Язык автоматизации - [`Bash`](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
@@ -155,7 +155,7 @@ namespace TestProgram
   Описание рекомендуемых инструментов разработки для проекта.
 -->
 - `IDE` - [`myCompiler`](https://www.mycompiler.io/)
-- пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`Roslynator 2019`](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019), [`CodeMaid`](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid), [`Markdown Editor`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor), [`File Icons`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileIcons), [`Trailing Whitespace Visualizer`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.TrailingWhitespaceVisualizer)
+- Пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`Roslynator 2019`](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019), [`CodeMaid`](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid), [`Markdown Editor`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor), [`File Icons`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileIcons), [`Trailing Whitespace Visualizer`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.TrailingWhitespaceVisualizer)
 
 ----
 Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
