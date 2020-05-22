@@ -1,12 +1,4 @@
-﻿/*
- * Сделано в SharpDevelop.
- * Пользователь: Миша
- * Дата: 10.05.2020
- * Время: 16:08
- * 
- * Для изменения этого шаблона используйте Сервис | Настройка | Кодирование | Правка стандартных заголовков.
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -17,6 +9,7 @@ namespace ABCNET.Utils
 	/// </summary>
 	public static partial class Sequence
 	{
+
 		#region public
 		
 		#region Read1
@@ -1563,5 +1556,6 @@ namespace ABCNET.Utils
         #endregion
 		
 		#endregion
-	}
+	
+    }
 }
