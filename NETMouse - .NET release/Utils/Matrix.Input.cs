@@ -10,6 +10,8 @@ namespace ABCNET.Utils
     public static partial class Matrix
     {
         #region public
+        
+        #region Read1
 
         /// <summary>
         /// Читает матрицу значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
@@ -24,25 +26,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             bool[,] source = new bool[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadBoolean(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadBoolean(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -56,25 +54,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             byte[,] source = new byte[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadByte(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -88,25 +82,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             sbyte[,] source = new sbyte[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadSByte(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadSByte(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -120,25 +110,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             char[,] source = new char[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadChar(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadChar(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -152,25 +138,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             decimal[,] source = new decimal[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadDecimal(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadDecimal(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -184,25 +166,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             double[,] source = new double[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadDouble(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadDouble(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -216,25 +194,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             float[,] source = new float[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadSingle(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadSingle(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -248,25 +222,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             int[,] source = new int[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadInt32(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -280,25 +250,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             uint[,] source = new uint[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadUInt32(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadUInt32(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -312,25 +278,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             long[,] source = new long[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadInt64(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -344,25 +306,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             ulong[,] source = new ulong[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadUInt64(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadUInt64(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -376,25 +334,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             short[,] source = new short[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadInt16(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -408,25 +362,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             ushort[,] source = new ushort[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadUInt16(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadUInt16(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -440,25 +390,21 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             BigInteger[,] source = new BigInteger[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadBigInteger(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadBigInteger(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+ 
         /// <summary>
         /// Читает матрицу значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
         /// </summary>
@@ -472,25 +418,1037 @@ namespace ABCNET.Utils
                 throw new ArgumentOutOfRangeException(nameof(rowsCount));
             if (colsCount < 0)
                 throw new ArgumentOutOfRangeException(nameof(colsCount));
+            
+            prompt = prompt ?? EmptyStringHelper.Empty;
 
             string[,] source = new string[rowsCount, colsCount];
-            int i = 0;
-            int j = 0;
-
-            while (i < rowsCount)
+            for (int i = 0; i < rowsCount; i++)
             {
-                while (j < colsCount)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadString(prompt is null ? EmptyStringHelper.Empty : string.Format(prompt, i, j));
-                    j++;
+                    source[i, j] = Base.ReadString(string.Format(prompt, i, j));
                 }
-                i++;
-                j = 0;
             }
 
             return source;
         }
-
+        
+        #endregion
+        
+        #region Read2
+        
+        /// <summary>
+        /// Читает 2 матрицы типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<bool[,], bool[,]> ReadBooleanTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<byte[,], byte[,]> ReadByteTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<sbyte[,], sbyte[,]> ReadSByteTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<char[,], char[,]> ReadCharTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<decimal[,], decimal[,]> ReadDecimalTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double[,], double[,]> ReadDoubleTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<float[,], float[,]> ReadSingleTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int[,], int[,]> ReadInt32Tuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<uint[,], uint[,]> ReadUInt32Tuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<long[,], long[,]> ReadInt64Tuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ulong[,], ulong[,]> ReadUInt64Tuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<short[,], short[,]> ReadInt16Tuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ushort[,], ushort[,]> ReadUInt16Tuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<BigInteger[,], BigInteger[,]> ReadBigIntegerTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 2 матрицы типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<string[,], string[,]> ReadStringTuple2(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+        }
+        
+        #endregion
+        
+        #region Read3
+        
+        /// <summary>
+        /// Читает 3 матрицы типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<bool[,], bool[,], bool[,]> ReadBooleanTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<byte[,], byte[,], byte[,]> ReadByteTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<char[,], char[,], char[,]> ReadCharTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<decimal[,], decimal[,], decimal[,]> ReadDecimalTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double[,], double[,], double[,]> ReadDoubleTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<float[,], float[,], float[,]> ReadSingleTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int[,], int[,], int[,]> ReadInt32Tuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<uint[,], uint[,], uint[,]> ReadUInt32Tuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<long[,], long[,], long[,]> ReadInt64Tuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<short[,], short[,], short[,]> ReadInt16Tuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 3 матрицы типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<string[,], string[,], string[,]> ReadStringTuple3(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+        }
+        
+        #endregion
+        
+        #region Read4
+        
+        /// <summary>
+        /// Читает 4 матрицы типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<bool[,], bool[,], bool[,], bool[,]> ReadBooleanTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<byte[,], byte[,], byte[,], byte[,]> ReadByteTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<sbyte[,], sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<char[,], char[,], char[,], char[,]> ReadCharTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<decimal[,], decimal[,], decimal[,], decimal[,]> ReadDecimalTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double[,], double[,], double[,], double[,]> ReadDoubleTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<float[,], float[,], float[,], float[,]> ReadSingleTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int[,], int[,], int[,], int[,]> ReadInt32Tuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<uint[,], uint[,], uint[,], uint[,]> ReadUInt32Tuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<long[,], long[,], long[,], long[,]> ReadInt64Tuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ulong[,], ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<short[,], short[,], short[,], short[,]> ReadInt16Tuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ushort[,], ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 4 матрицы типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<string[,], string[,], string[,], string[,]> ReadStringTuple4(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+        }
+        
+        #endregion
+        
+        #region Read5
+        
+        /// <summary>
+        /// Читает 5 матриц типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBooleanTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<byte[,], byte[,], byte[,], byte[,], byte[,]> ReadByteTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<char[,], char[,], char[,], char[,], char[,]> ReadCharTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<decimal[,], decimal[,], decimal[,], decimal[,], decimal[,]> ReadDecimalTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double[,], double[,], double[,], double[,], double[,]> ReadDoubleTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<float[,], float[,], float[,], float[,], float[,]> ReadSingleTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int[,], int[,], int[,], int[,], int[,]> ReadInt32Tuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<uint[,], uint[,], uint[,], uint[,], uint[,]> ReadUInt32Tuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<long[,], long[,], long[,], long[,], long[,]> ReadInt64Tuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ulong[,], ulong[,], ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<short[,], short[,], short[,], short[,], short[,]> ReadInt16Tuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ushort[,], ushort[,], ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 5 матриц типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<string[,], string[,], string[,], string[,], string[,]> ReadStringTuple5(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+        }
+        
+        #endregion
+        
+        #region Read6
+        
+        /// <summary>
+        /// Читает 6 матриц типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBooleanTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<byte[,], byte[,], byte[,], byte[,], byte[,], byte[,]> ReadByteTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<char[,], char[,], char[,], char[,], char[,], char[,]> ReadCharTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<decimal[,], decimal[,], decimal[,], decimal[,], decimal[,], decimal[,]> ReadDecimalTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double[,], double[,], double[,], double[,], double[,], double[,]> ReadDoubleTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<float[,], float[,], float[,], float[,], float[,], float[,]> ReadSingleTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int[,], int[,], int[,], int[,], int[,], int[,]> ReadInt32Tuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<uint[,], uint[,], uint[,], uint[,], uint[,], uint[,]> ReadUInt32Tuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<long[,], long[,], long[,], long[,], long[,], long[,]> ReadInt64Tuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ulong[,], ulong[,], ulong[,], ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<short[,], short[,], short[,], short[,], short[,], short[,]> ReadInt16Tuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ushort[,], ushort[,], ushort[,], ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 6 матриц типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<string[,], string[,], string[,], string[,], string[,], string[,]> ReadStringTuple6(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+        }
+        
+        #endregion
+        
+        #region Read7
+        
+        /// <summary>
+        /// Читает 7 матриц типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBooleanTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<byte[,], byte[,], byte[,], byte[,], byte[,], byte[,], byte[,]> ReadByteTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<char[,], char[,], char[,], char[,], char[,], char[,], char[,]> ReadCharTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<decimal[,], decimal[,], decimal[,], decimal[,], decimal[,], decimal[,], decimal[,]> ReadDecimalTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<double[,], double[,], double[,], double[,], double[,], double[,], double[,]> ReadDoubleTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<float[,], float[,], float[,], float[,], float[,], float[,], float[,]> ReadSingleTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<int[,], int[,], int[,], int[,], int[,], int[,], int[,]> ReadInt32Tuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<uint[,], uint[,], uint[,], uint[,], uint[,], uint[,], uint[,]> ReadUInt32Tuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<long[,], long[,], long[,], long[,], long[,], long[,], long[,]> ReadInt64Tuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ulong[,], ulong[,], ulong[,], ulong[,], ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<short[,], short[,], short[,], short[,], short[,], short[,], short[,]> ReadInt16Tuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<ushort[,], ushort[,], ushort[,], ushort[,], ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+        }
+ 
+        /// <summary>
+        /// Читает 7 матриц типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// </summary>
+        /// <param name="rowsCount">Количество строк.</param>
+        /// <param name="colsCount">Количество столбцов.</param>
+        /// <returns>Кортеж.</returns>
+        public static Tuple<string[,], string[,], string[,], string[,], string[,], string[,], string[,]> ReadStringTuple7(int rowsCount, int colsCount)
+        {
+            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+        }
+        
+        #endregion
+ 
         #endregion public
     }
 }
