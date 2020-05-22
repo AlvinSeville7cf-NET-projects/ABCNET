@@ -8,6 +8,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class TupleE
     {
+
         #region public
         
         #region ToSequence
@@ -214,5 +215,6 @@ namespace ABCNET.Extensions
         #endregion
 
         #endregion public
+    
     }
 }
