@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
 
 namespace ABCNET.Utils
 {
@@ -16,6 +13,7 @@ namespace ABCNET.Utils
         /// </summary>
         public static partial class Nullable
         {
+
             #region public
             
             #region Read1
@@ -1167,6 +1165,7 @@ namespace ABCNET.Utils
             #endregion
             
             #endregion
+        
         }
     }
 }
