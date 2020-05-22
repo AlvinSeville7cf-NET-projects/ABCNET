@@ -14,6 +14,7 @@ namespace ABCNET.Utils
         /// </summary>
         public static partial class Nullable
         {
+
             #region public
 
             /// <summary>
@@ -284,6 +285,7 @@ namespace ABCNET.Utils
             }
 
             #endregion private
+        
         }
     }
 }
