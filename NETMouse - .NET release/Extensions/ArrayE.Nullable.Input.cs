@@ -12,9 +12,6 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class ArrayE
     {
-    	
-    	public static partial class Nullable
-    	{
 
         #region public
 
@@ -299,7 +296,6 @@ namespace ABCNET.Extensions
         }
 
         #endregion
-    	}
-
+    
     }
 }
