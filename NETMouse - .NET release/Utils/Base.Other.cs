@@ -5,6 +5,7 @@
     /// </summary>
     public static partial class Base
     {
+
         #region public
 
         /// <summary>
@@ -20,5 +21,6 @@
         }
 
         #endregion public
+    
     }
 }
