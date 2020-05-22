@@ -55,6 +55,9 @@
     <Compile Include="Extensions\ArrayE.Input.cs">
       <DependentUpon>ArrayE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\ArrayE.Nullable.Input.cs">
+      <DependentUpon>ArrayE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\BaseE.cs" />
     <Compile Include="Extensions\BaseE.Generators.cs">
       <DependentUpon>BaseE.cs</DependentUpon>
@@ -75,6 +78,9 @@
       <DependentUpon>MatrixE.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\MatrixE.cs" />
+    <Compile Include="Extensions\MatrixE.Nullable.Input.cs">
+      <DependentUpon>MatrixE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\MatrixE.Output.cs">
       <DependentUpon>MatrixE.cs</DependentUpon>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="Utils\Array.Input.cs">
       <DependentUpon>Array.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Array.Nullable.Input.cs">
+      <DependentUpon>Array.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Base.cs" />
     <Compile Include="Utils\Base.Input.cs">
       <DependentUpon>Base.cs</DependentUpon>
@@ -113,6 +122,9 @@
     <Compile Include="Utils\Base.Other.cs">
       <DependentUpon>Base.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Sequence.Input.cs">
+      <DependentUpon>Sequence.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Matrix.cs" />
     <Compile Include="Utils\Matrix.Generators.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
@@ -120,8 +132,14 @@
     <Compile Include="Utils\Matrix.Input.cs">
       <DependentUpon>Matrix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Matrix.Nullable.Input.cs">
+      <DependentUpon>Matrix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Sequence.cs" />
     <Compile Include="Utils\Sequence.Generators.cs">
+      <DependentUpon>Sequence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Sequence.Nullable.Input.cs">
       <DependentUpon>Sequence.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Tuple.Generators.cs">
@@ -129,6 +147,9 @@
     </Compile>
     <Compile Include="Utils\Tuple.cs" />
     <Compile Include="Utils\Tuple.Input.cs">
+      <DependentUpon>Tuple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Tuple.Nullable.Input.cs">
       <DependentUpon>Tuple.cs</DependentUpon>
     </Compile>
     <None Include="Examples\C#\Arrays_1.cs" />
