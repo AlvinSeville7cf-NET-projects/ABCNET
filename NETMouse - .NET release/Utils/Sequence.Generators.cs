@@ -8,6 +8,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Sequence
     {
+
         #region public
 
         /// <summary>
@@ -80,5 +81,6 @@ namespace ABCNET.Utils
         }
 
         #endregion public
+    
     }
 }
