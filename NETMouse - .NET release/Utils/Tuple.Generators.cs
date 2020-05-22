@@ -9,7 +9,7 @@ namespace ABCNET.Utils
     {
         #region public
 
-        #region OfOverloads
+        #region Of
 
         /// <summary>
         /// Создаёт кортеж из 2 значений.
