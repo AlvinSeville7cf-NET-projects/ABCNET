@@ -7,6 +7,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Matrix
     {
+
         #region public
 
         /// <summary>
@@ -138,5 +139,6 @@ namespace ABCNET.Utils
         }
 
         #endregion public
+    
     }
 }
