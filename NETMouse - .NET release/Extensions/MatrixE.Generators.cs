@@ -8,6 +8,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class MatrixE
     {
+
         #region public
 
         /// <summary>
@@ -82,5 +83,6 @@ namespace ABCNET.Extensions
         }
 
         #endregion public
+    
     }
 }
