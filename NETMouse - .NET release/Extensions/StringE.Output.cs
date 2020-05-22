@@ -7,6 +7,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class StringE
     {
+
         #region public
 
         /// <summary>
@@ -32,5 +33,6 @@ namespace ABCNET.Extensions
         }
 
         #endregion public
+
     }
 }
