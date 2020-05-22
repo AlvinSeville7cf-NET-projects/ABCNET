@@ -7,6 +7,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Array
     {
+
         #region public
 
         /// <summary>
@@ -126,5 +127,6 @@ namespace ABCNET.Utils
         }
 
         #endregion public
+    
     }
 }
