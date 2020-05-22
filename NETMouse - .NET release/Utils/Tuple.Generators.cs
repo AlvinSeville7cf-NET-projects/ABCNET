@@ -7,6 +7,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Tuple
     {
+
         #region public
 
         #region Of
@@ -519,5 +520,6 @@ namespace ABCNET.Utils
         #endregion
 
         #endregion public
+    
     }
 }
