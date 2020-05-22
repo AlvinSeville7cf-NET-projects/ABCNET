@@ -7,6 +7,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class TupleE
     {
+
         #region public
 
         /// <summary>
@@ -789,5 +790,6 @@ namespace ABCNET.Extensions
         }
 
         #endregion public
+    
     }
 }
