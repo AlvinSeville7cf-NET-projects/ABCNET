@@ -10,11 +10,11 @@ namespace ABCNET.Utils
 	public static partial class Sequence
 	{
 
-		#region public
-		
-		#region Read1
-		
-		/// <summary>
+        #region public
+
+        #region Read1
+
+        /// <summary>
         /// Читает последовательность типа Boolean с клавиатуры.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
@@ -27,10 +27,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            bool[] result = new bool[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadBoolean(string.Format(prompt, i));
+                result[i] = Base.ReadBoolean(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа Byte с клавиатуры.
         /// </summary>
@@ -44,10 +47,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            byte[] result = new byte[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadByte(string.Format(prompt, i));
+                result[i] = Base.ReadByte(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа SByte с клавиатуры.
         /// </summary>
@@ -61,10 +67,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            sbyte[] result = new sbyte[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadSByte(string.Format(prompt, i));
+                result[i] = Base.ReadSByte(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа Char с клавиатуры.
         /// </summary>
@@ -78,10 +87,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            char[] result = new char[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadChar(string.Format(prompt, i));
+                result[i] = Base.ReadChar(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа Decimal с клавиатуры.
         /// </summary>
@@ -95,10 +107,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            decimal[] result = new decimal[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadDecimal(string.Format(prompt, i));
+                result[i] = Base.ReadDecimal(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа Double с клавиатуры.
         /// </summary>
@@ -112,10 +127,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            double[] result = new double[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadDouble(string.Format(prompt, i));
+                result[i] = Base.ReadDouble(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа Single с клавиатуры.
         /// </summary>
@@ -129,10 +147,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            float[] result = new float[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadSingle(string.Format(prompt, i));
+                result[i] = Base.ReadSingle(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа Int32 с клавиатуры.
         /// </summary>
@@ -146,10 +167,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            int[] result = new int[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadInt32(string.Format(prompt, i));
+                result[i] = Base.ReadInt32(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа UInt32 с клавиатуры.
         /// </summary>
@@ -163,10 +187,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            uint[] result = new uint[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadUInt32(string.Format(prompt, i));
+                result[i] = Base.ReadUInt32(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа Int64 с клавиатуры.
         /// </summary>
@@ -180,10 +207,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            long[] result = new long[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadInt64(string.Format(prompt, i));
+                result[i] = Base.ReadInt64(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа UInt64 с клавиатуры.
         /// </summary>
@@ -197,10 +227,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            ulong[] result = new ulong[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadUInt64(string.Format(prompt, i));
+                result[i] = Base.ReadUInt64(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа Int16 с клавиатуры.
         /// </summary>
@@ -214,10 +247,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            short[] result = new short[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadInt16(string.Format(prompt, i));
+                result[i] = Base.ReadInt16(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа UInt16 с клавиатуры.
         /// </summary>
@@ -231,10 +267,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            ushort[] result = new ushort[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadUInt16(string.Format(prompt, i));
+                result[i] = Base.ReadUInt16(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа BigInteger с клавиатуры.
         /// </summary>
@@ -248,10 +287,13 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            BigInteger[] result = new BigInteger[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadBigInteger(string.Format(prompt, i));
+                result[i] = Base.ReadBigInteger(string.Format(prompt, i));
+
+            return result;
         }
- 
+
         /// <summary>
         /// Читает последовательность типа String с клавиатуры.
         /// </summary>
@@ -265,14 +307,17 @@ namespace ABCNET.Utils
 
             prompt = prompt ?? EmptyStringHelper.Empty;
 
+            string[] result = new string[count];
             for (int i = 0; i < count; i++)
-                yield return Base.ReadString(string.Format(prompt, i));
+                result[i] = Base.ReadString(string.Format(prompt, i));
+
+            return result;
         }
-        
+
         #endregion
-        
+
         #region Read2
-        
+
         /// <summary>
         /// Читает 2 последовательности типа Boolean с клавиатуры.
         /// </summary>

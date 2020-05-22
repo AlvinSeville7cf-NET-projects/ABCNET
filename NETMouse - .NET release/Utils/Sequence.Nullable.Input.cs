@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Numerics;
 
 namespace ABCNET.Utils
 {
@@ -28,8 +30,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                bool?[] result = new bool?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadBoolean(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadBoolean(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -45,8 +50,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                byte?[] result = new byte?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadByte(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadByte(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -62,8 +70,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                sbyte?[] result = new sbyte?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadSByte(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadSByte(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -79,8 +90,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                char?[] result = new char?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadChar(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadChar(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -96,8 +110,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                decimal?[] result = new decimal?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadDecimal(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadDecimal(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -113,8 +130,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                double?[] result = new double?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadDouble(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadDouble(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -130,8 +150,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                float?[] result = new float?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadSingle(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadSingle(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -147,8 +170,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                int?[] result = new int?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadInt32(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadInt32(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -164,8 +190,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                uint?[] result = new uint?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadUInt32(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadUInt32(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -181,8 +210,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                long?[] result = new long?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadInt64(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadInt64(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -198,8 +230,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                ulong?[] result = new ulong?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadUInt64(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadUInt64(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -215,8 +250,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                short?[] result = new short?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadInt16(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadInt16(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -232,8 +270,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                ushort?[] result = new ushort?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadUInt16(string.Format(prompt, i));
+                    result[i] = Base.Nullable.ReadUInt16(string.Format(prompt, i));
+
+                return result;
             }
 
             /// <summary>
@@ -249,25 +290,11 @@ namespace ABCNET.Utils
 
                 prompt = prompt ?? EmptyStringHelper.Empty;
 
+                BigInteger?[] result = new BigInteger?[count];
                 for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadBigInteger(string.Format(prompt, i));
-            }
+                    result[i] = Base.Nullable.ReadBigInteger(string.Format(prompt, i));
 
-            /// <summary>
-            /// Читает последовательность типа String? с клавиатуры.
-            /// </summary>
-            /// <param name="count">Количество элементов.</param>
-            /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
-            public static IEnumerable<string?> ReadString(int count, string prompt = EmptyStringHelper.Empty)
-            {
-                if (count < 0)
-                    throw new ArgumentOutOfRangeException(nameof(count));
-
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                for (int i = 0; i < count; i++)
-                    yield return Base.Nullable.ReadString(string.Format(prompt, i));
+                return result;
             }
 
             #endregion
