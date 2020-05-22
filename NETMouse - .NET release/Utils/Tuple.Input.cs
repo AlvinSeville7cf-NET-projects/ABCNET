@@ -1,5 +1,4 @@
-﻿using ABCNET.Extensions;
-using System;
+﻿using System;
 using System.Numerics;
 
 namespace ABCNET.Utils
@@ -9,6 +8,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Tuple
     {
+
         #region public
 
         #region ReadBoolean
