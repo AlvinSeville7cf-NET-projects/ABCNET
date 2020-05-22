@@ -9,6 +9,7 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Base
     {
+
         #region public
 
         /// <summary>
@@ -332,5 +333,6 @@ namespace ABCNET.Utils
         }
 
         #endregion public
+    
     }
 }
