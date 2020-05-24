@@ -158,6 +158,6 @@ namespace TestProgram
 - Пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`Roslynator 2019`](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019), [`CodeMaid`](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid), [`Markdown Editor`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor), [`File Icons`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileIcons), [`Trailing Whitespace Visualizer`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.TrailingWhitespaceVisualizer)
 
 ----
-Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
+Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`данной формой`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
 
 [![Discord](https://user-images.githubusercontent.com/42812113/76321598-4c9aa680-62f3-11ea-9c4c-10b70b0a17da.png)](https://discord.gg/j8Xf6Me)
