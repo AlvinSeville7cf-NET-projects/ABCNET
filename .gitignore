@@ -677,3 +677,9 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 
 healthchecksdb
+
+
+
+# Repl.it specific files
+
+*.replit
