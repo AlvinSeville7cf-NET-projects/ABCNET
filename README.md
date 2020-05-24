@@ -15,7 +15,7 @@
 <!--
   Краткое описание продукта с возможными ссылками на похожие и указание аудитории, на которую он рассчитан.
 -->
-`ABCNET` - альтернатива модулю [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) для всего `NET`. Является чем-то средним между [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) и [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel). Ориентирована на русскоязычную аудиторию. Более подробно об `ABCNET` можно узнать в [презентации](https://github.com/NETMouse-projects/ABCNET/tree/master/NETMouse%20-%20.NET%20release/Presentations).
+`ABCNET` - альтернатива модулю [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) для всего `NET`. Ориентирована на русскоязычную аудиторию. Более подробно об `ABCNET` можно узнать в [презентации](https://github.com/NETMouse-projects/ABCNET/tree/master/NETMouse%20-%20.NET%20release/Presentations) (желательно просматривать через `Power Point`).
 
 ## Минимальные требования
 <!--
@@ -110,9 +110,6 @@ namespace TestProgram
 ## С PABCSystem
 Полная совместимость с [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) не гарантируется. Функционал хоть и похожий, но отличается и по-разному распределён. Единственное место, в котором гарантируется полная совместимость (до `v0.5.0`, не включая её) - класс `ABCNET.Utils.PABCSystem`, который предоставляет часть функционала [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) в его изначальном виде. На данный момент доступны лишь короткие функции `Lst`, `LLst`, `HSet`, `SSet`, `Dict`, `KV`.
 
-## С NETSquirrel
-Полная совместимость с [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel) не гарантируется.
-
 # Дополнительные разработки
 - [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
 
@@ -120,7 +117,6 @@ namespace TestProgram
 <!--
   Список похожих проктов NETMouse projects.
 -->
-- [`NETSquirrel`](https://github.com/NETMouse-projects/NETSquirrel)
 - [`PascalABCSquirrel`](https://github.com/NETMouse-projects/PascalABCSquirrel)
 
 # Для разработчиков
@@ -148,6 +144,7 @@ namespace TestProgram
   Описание обязательных инструментов разработки для проекта.
 -->
 - `IDE` - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/), [`Repl.it`](https://repl.it/)
+- Пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`File Nesting`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileNesting)
 - Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
 - `VCS` - [`Git`](https://git-scm.com/download) с [`Git Bash`](https://git-scm.com/download)
 - Язык автоматизации - [`Bash`](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
@@ -158,8 +155,9 @@ namespace TestProgram
   Описание рекомендуемых инструментов разработки для проекта.
 -->
 - `IDE` - [`myCompiler`](https://www.mycompiler.io/)
+- Пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`Roslynator 2019`](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019), [`CodeMaid`](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid), [`Markdown Editor`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor), [`File Icons`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileIcons), [`Trailing Whitespace Visualizer`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.TrailingWhitespaceVisualizer)
 
 ----
-Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`Yandex forms`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
+Если Вы не знакомы с `GitHub`, но Вам есть что сообщить или предложить нам, пожалуйста, воспользуйтесь [`данной формой`](https://forms.yandex.ru/u/5e1de81b0733df0bb13408e3/). 
 
 [![Discord](https://user-images.githubusercontent.com/42812113/76321598-4c9aa680-62f3-11ea-9c4c-10b70b0a17da.png)](https://discord.gg/j8Xf6Me)
