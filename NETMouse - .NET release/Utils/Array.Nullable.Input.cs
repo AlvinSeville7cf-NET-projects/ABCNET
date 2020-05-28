@@ -1163,7 +1163,7 @@ namespace ABCNET.Utils
 
             #endregion seven-arrays
 
-            #endregion
+            #endregion public
         }
     }
 }
