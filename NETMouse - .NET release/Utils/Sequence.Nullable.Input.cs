@@ -223,7 +223,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<bool?>, IEnumerable<bool?>> ReadBooleanTuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -237,7 +237,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<byte?>, IEnumerable<byte?>> ReadByteTuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -251,7 +251,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<sbyte?>, IEnumerable<sbyte?>> ReadSByteTuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -265,7 +265,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<char?>, IEnumerable<char?>> ReadCharTuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -279,7 +279,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<decimal?>, IEnumerable<decimal?>> ReadDecimalTuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -293,7 +293,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<double?>, IEnumerable<double?>> ReadDoubleTuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -307,7 +307,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<float?>, IEnumerable<float?>> ReadSingleTuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -321,7 +321,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<int?>, IEnumerable<int?>> ReadInt32Tuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -335,7 +335,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<uint?>, IEnumerable<uint?>> ReadUInt32Tuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -349,7 +349,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<long?>, IEnumerable<long?>> ReadInt64Tuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -363,7 +363,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ulong?>, IEnumerable<ulong?>> ReadUInt64Tuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -377,7 +377,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<short?>, IEnumerable<short?>> ReadInt16Tuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -391,7 +391,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ushort?>, IEnumerable<ushort?>> ReadUInt16Tuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -405,7 +405,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<BigInteger?>, IEnumerable<BigInteger?>> ReadBigIntegerTuple2(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -423,7 +423,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>> ReadBooleanTuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -437,7 +437,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>> ReadByteTuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -451,7 +451,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>> ReadSByteTuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -465,7 +465,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>> ReadCharTuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -479,7 +479,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>> ReadDecimalTuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -493,7 +493,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>> ReadDoubleTuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -507,7 +507,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>> ReadSingleTuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -521,7 +521,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>> ReadInt32Tuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -535,7 +535,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>> ReadUInt32Tuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -549,7 +549,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>> ReadInt64Tuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -563,7 +563,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>> ReadUInt64Tuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -577,7 +577,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>> ReadInt16Tuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -591,7 +591,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>> ReadUInt16Tuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -605,7 +605,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>> ReadBigIntegerTuple3(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -623,7 +623,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>> ReadBooleanTuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -637,7 +637,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>> ReadByteTuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -651,7 +651,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>> ReadSByteTuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -665,7 +665,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>> ReadCharTuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -679,7 +679,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>> ReadDecimalTuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -693,7 +693,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>> ReadDoubleTuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -707,7 +707,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>> ReadSingleTuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -721,7 +721,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>> ReadInt32Tuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -735,7 +735,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>> ReadUInt32Tuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -749,7 +749,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>> ReadInt64Tuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -763,7 +763,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>> ReadUInt64Tuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -777,7 +777,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>> ReadInt16Tuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -791,7 +791,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>> ReadUInt16Tuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -805,7 +805,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>> ReadBigIntegerTuple4(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -823,7 +823,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>> ReadBooleanTuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -837,7 +837,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>> ReadByteTuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -851,7 +851,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>> ReadSByteTuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -865,7 +865,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>> ReadCharTuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -879,7 +879,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>> ReadDecimalTuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -893,7 +893,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>> ReadDoubleTuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -907,7 +907,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>> ReadSingleTuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -921,7 +921,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>> ReadInt32Tuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -935,7 +935,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>> ReadUInt32Tuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -949,7 +949,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>> ReadInt64Tuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -963,7 +963,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>> ReadUInt64Tuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -977,7 +977,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>> ReadInt16Tuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -991,7 +991,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>> ReadUInt16Tuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1005,7 +1005,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>> ReadBigIntegerTuple5(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1023,7 +1023,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>> ReadBooleanTuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1037,7 +1037,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>> ReadByteTuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1051,7 +1051,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>> ReadSByteTuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1065,7 +1065,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>> ReadCharTuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1079,7 +1079,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>> ReadDecimalTuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1093,7 +1093,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>> ReadDoubleTuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1107,7 +1107,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>> ReadSingleTuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1121,7 +1121,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>> ReadInt32Tuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1135,7 +1135,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>> ReadUInt32Tuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1149,7 +1149,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>> ReadInt64Tuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1163,7 +1163,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>> ReadUInt64Tuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1177,7 +1177,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>> ReadInt16Tuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1191,7 +1191,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>> ReadUInt16Tuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1205,7 +1205,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>> ReadBigIntegerTuple6(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1223,7 +1223,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>, IEnumerable<bool?>> ReadBooleanTuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1237,7 +1237,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>, IEnumerable<byte?>> ReadByteTuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1251,7 +1251,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>, IEnumerable<sbyte?>> ReadSByteTuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1265,7 +1265,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>, IEnumerable<char?>> ReadCharTuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1279,7 +1279,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>, IEnumerable<decimal?>> ReadDecimalTuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1293,7 +1293,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>, IEnumerable<double?>> ReadDoubleTuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1307,7 +1307,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>, IEnumerable<float?>> ReadSingleTuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1321,7 +1321,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>, IEnumerable<int?>> ReadInt32Tuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1335,7 +1335,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>, IEnumerable<uint?>> ReadUInt32Tuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1349,7 +1349,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>, IEnumerable<long?>> ReadInt64Tuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1363,7 +1363,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>, IEnumerable<ulong?>> ReadUInt64Tuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1377,7 +1377,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>, IEnumerable<short?>> ReadInt16Tuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1391,7 +1391,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>, IEnumerable<ushort?>> ReadUInt16Tuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
@@ -1405,7 +1405,7 @@ namespace ABCNET.Utils
             /// </summary>
             /// <param name="count">Количество элементов.</param>
             /// <param name="prompt">Приглашение к вводу.</param>
-            /// <returns>Последовательность.</returns>
+            /// <returns>Кортеж.</returns>
             public static Tuple<IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>, IEnumerable<BigInteger?>> ReadBigIntegerTuple7(int count, string prompt = EmptyStringHelper.Empty)
             {
                 if (count < 0)
