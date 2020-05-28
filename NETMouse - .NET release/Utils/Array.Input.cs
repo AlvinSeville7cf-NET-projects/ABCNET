@@ -8,13 +8,12 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Array
     {
-
         #region public
-        
-        #region Read1
+
+        #region one-array
 
         /// <summary>
-        /// Читает массив значений типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Boolean.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -23,7 +22,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             bool[] array = new bool[count];
@@ -34,7 +33,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Byte.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -43,7 +42,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             byte[] array = new byte[count];
@@ -54,7 +53,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа SByte.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -63,7 +62,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             sbyte[] array = new sbyte[count];
@@ -74,7 +73,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Char.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -83,7 +82,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             char[] array = new char[count];
@@ -94,7 +93,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Decimal.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -103,7 +102,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             decimal[] array = new decimal[count];
@@ -114,7 +113,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Double.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -123,7 +122,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             double[] array = new double[count];
@@ -134,7 +133,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Single.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -143,7 +142,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             float[] array = new float[count];
@@ -154,7 +153,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Int32.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -163,7 +162,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             int[] array = new int[count];
@@ -174,7 +173,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа UInt32.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -183,7 +182,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             uint[] array = new uint[count];
@@ -194,7 +193,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Int64.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -203,7 +202,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             long[] array = new long[count];
@@ -214,7 +213,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа UInt64.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -223,7 +222,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             ulong[] array = new ulong[count];
@@ -234,7 +233,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа Int16.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -243,7 +242,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             short[] array = new short[count];
@@ -254,7 +253,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа UInt16.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -263,7 +262,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             ushort[] array = new ushort[count];
@@ -274,7 +273,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа String.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -283,7 +282,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             string[] array = new string[count];
@@ -294,7 +293,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает массив значений типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает массив значений типа BigInteger.
         /// </summary>
         /// <param name="count">Количество элементов.</param>
         /// <param name="prompt">Приглашение к вводу.</param>
@@ -303,7 +302,7 @@ namespace ABCNET.Utils
         {
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
-            
+
             prompt = prompt ?? EmptyStringHelper.Empty;
 
             BigInteger[] array = new BigInteger[count];
@@ -312,13 +311,13 @@ namespace ABCNET.Utils
 
             return array;
         }
-        
-        #endregion
-        
-        #region Read2
+
+        #endregion one-array
+
+        #region two-arrays
 
         /// <summary>
-        /// Читает 2 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Boolean.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -327,9 +326,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBoolean(count), ReadBoolean(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Byte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -338,9 +336,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadByte(count), ReadByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа SByte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -349,9 +346,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSByte(count), ReadSByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Char.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -360,9 +356,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadChar(count), ReadChar(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Decimal.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -371,9 +366,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDecimal(count), ReadDecimal(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Double.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -382,9 +376,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDouble(count), ReadDouble(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Single.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -393,9 +386,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSingle(count), ReadSingle(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Int32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -404,9 +396,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt32(count), ReadInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа UInt32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -415,9 +406,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt32(count), ReadUInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Int64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -426,9 +416,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt64(count), ReadInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа UInt64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -437,9 +426,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt64(count), ReadUInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа Int16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -448,9 +436,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt16(count), ReadInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа UInt16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -459,9 +446,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt16(count), ReadUInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа BigInteger.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -470,9 +456,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBigInteger(count), ReadBigInteger(count));
         }
 
-        
         /// <summary>
-        /// Читает 2 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 2 массива значений типа String.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -481,12 +466,12 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadString(count), ReadString(count));
         }
 
-        #endregion
-        
-        #region Read3
-        
+        #endregion two-arrays
+
+        #region three-arrays
+
         /// <summary>
-        /// Читает 3 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Boolean.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -495,9 +480,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Byte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -506,9 +490,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadByte(count), ReadByte(count), ReadByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа SByte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -517,9 +500,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSByte(count), ReadSByte(count), ReadSByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Char.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -528,9 +510,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Decimal.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -539,9 +520,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDecimal(count), ReadDecimal(count), ReadDecimal(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Double.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -550,9 +530,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Single.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -561,9 +540,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSingle(count), ReadSingle(count), ReadSingle(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Int32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -572,9 +550,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа UInt32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -583,9 +560,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt32(count), ReadUInt32(count), ReadUInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Int64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -594,9 +570,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt64(count), ReadInt64(count), ReadInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа UInt64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -605,9 +580,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt64(count), ReadUInt64(count), ReadUInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа Int16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -616,9 +590,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt16(count), ReadInt16(count), ReadInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа UInt16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -627,9 +600,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt16(count), ReadUInt16(count), ReadUInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа BigInteger.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -638,9 +610,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count));
         }
 
-        
         /// <summary>
-        /// Читает 3 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 3 массива значений типа String.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -648,13 +619,13 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count));
         }
-        
-        #endregion
-        
-        #region Read4
-        
+
+        #endregion three-arrays
+
+        #region four-arrays
+
         /// <summary>
-        /// Читает 4 массива значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Boolean.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -663,9 +634,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Byte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -674,9 +644,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа SByte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -685,9 +654,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Char.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -696,9 +664,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Decimal.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -707,9 +674,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Double.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -718,9 +684,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Single.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -729,9 +694,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Int32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -740,9 +704,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа UInt32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -751,9 +714,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Int64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -762,9 +724,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа UInt64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -773,9 +734,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа Int16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -784,9 +744,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа UInt16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -795,9 +754,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа BigInteger.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -806,9 +764,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count));
         }
 
-        
         /// <summary>
-        /// Читает 4 массива значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 4 массива значений типа String.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -816,13 +773,13 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
-        
-        #endregion
-        
-        #region Read5
-        
+
+        #endregion four-arrays
+
+        #region five-arrays
+
         /// <summary>
-        /// Читает 5 массивов значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Boolean.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -831,9 +788,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Byte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -842,9 +798,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа SByte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -853,9 +808,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Char.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -864,9 +818,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Decimal.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -875,9 +828,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Double.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -886,9 +838,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Single.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -897,9 +848,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Int32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -908,9 +858,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа UInt32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -919,9 +868,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Int64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -930,9 +878,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа UInt64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -941,9 +888,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа Int16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -952,9 +898,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа UInt16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -963,9 +908,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа BigInteger.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -974,9 +918,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count));
         }
 
-        
         /// <summary>
-        /// Читает 5 массивов значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 5 массивов значений типа String.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -984,13 +927,13 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
-        
-        #endregion
-        
-        #region Read6
-        
+
+        #endregion five-arrays
+
+        #region six-arrays
+
         /// <summary>
-        /// Читает 6 массивов значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Boolean.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -999,9 +942,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Byte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1010,9 +952,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа SByte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1021,9 +962,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Char.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1032,9 +972,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Decimal.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1043,9 +982,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Double.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1054,9 +992,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Single.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1065,9 +1002,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Int32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1076,9 +1012,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа UInt32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1087,9 +1022,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Int64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1098,9 +1032,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа UInt64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1109,9 +1042,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа Int16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1120,9 +1052,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа UInt16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1131,9 +1062,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа BigInteger.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1142,9 +1072,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count));
         }
 
-        
         /// <summary>
-        /// Читает 6 массивов значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 6 массивов значений типа String.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1152,13 +1081,13 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
-        
-        #endregion
-        
-        #region Read7
-        
+
+        #endregion six-arrays
+
+        #region seven-arrays
+
         /// <summary>
-        /// Читает 7 массивов значениями типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Boolean.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1167,9 +1096,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count), ReadBoolean(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Byte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1178,9 +1106,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count), ReadByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа SByte.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1189,9 +1116,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count), ReadSByte(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Char.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1200,9 +1126,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count), ReadChar(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Decimal.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1211,9 +1136,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count), ReadDecimal(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Double.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1222,9 +1146,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count), ReadDouble(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Single.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1233,9 +1156,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count), ReadSingle(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Int32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1244,9 +1166,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count), ReadInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа UInt32.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1255,9 +1176,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count), ReadUInt32(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Int64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1266,9 +1186,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count), ReadInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа UInt64.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1277,9 +1196,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count), ReadUInt64(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа Int16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1288,9 +1206,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count), ReadInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа UInt16.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1299,9 +1216,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count), ReadUInt16(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа BigInteger.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1310,9 +1226,8 @@ namespace ABCNET.Utils
             return Tuple.Of(ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count), ReadBigInteger(count));
         }
 
-        
         /// <summary>
-        /// Читает 7 массивов значениями типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает 7 массивов значений типа String.
         /// </summary>
         /// <param name="count">Размер массива.</param>
         /// <returns>Кортеж.</returns>
@@ -1320,10 +1235,9 @@ namespace ABCNET.Utils
         {
             return Tuple.Of(ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count), ReadString(count));
         }
-        
-        #endregion
+
+        #endregion seven-arrays
 
         #endregion public
-    
     }
 }
