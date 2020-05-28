@@ -74,9 +74,6 @@ namespace TestProgram
 - [`ABCJava`](https://github.com/NETMouse-projects/ABCJava) (для `Java`)
 - [`ABCCPlusPlus`](https://github.com/NETMouse-projects/ABCCPlusPlus) (для `C++`)
 
-# Совместимость с похожими продуктами
-
-
 # Для разработчиков
 ## Жизненный цикл ABCNET
 Любая версия должна содержать не более 25 `Issue`.
