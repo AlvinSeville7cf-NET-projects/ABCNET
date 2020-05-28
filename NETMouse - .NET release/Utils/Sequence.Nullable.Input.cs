@@ -4,18 +4,19 @@ using System.Numerics;
 
 namespace ABCNET.Utils
 {
-	/// <summary>
-	/// Description of Sequence_Nullable_Input.
-	/// </summary>
+    /// <summary>
+    /// Предоставляет функционал для работы с последовательностями.
+    /// </summary>
 	public static partial class Sequence
 	{
-
-        public static class Nullable
+        /// <summary>
+        /// Предоставляет функционал для работы с Nullable типами.
+        /// </summary>
+        public static partial class Nullable
         {
-
             #region public
 
-            #region Read1
+            #region one-sequence
 
             /// <summary>
             /// Читает последовательность типа Boolean? с клавиатуры.
@@ -28,13 +29,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                bool?[] result = new bool?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadBoolean(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadBoolean(count, prompt);
             }
 
             /// <summary>
@@ -48,13 +43,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                byte?[] result = new byte?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadByte(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadByte(count, prompt);
             }
 
             /// <summary>
@@ -68,13 +57,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                sbyte?[] result = new sbyte?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadSByte(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadSByte(count, prompt);
             }
 
             /// <summary>
@@ -88,13 +71,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                char?[] result = new char?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadChar(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadChar(count, prompt);
             }
 
             /// <summary>
@@ -108,13 +85,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                decimal?[] result = new decimal?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadDecimal(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadDecimal(count, prompt);
             }
 
             /// <summary>
@@ -128,13 +99,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                double?[] result = new double?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadDouble(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadDouble(count, prompt);
             }
 
             /// <summary>
@@ -148,13 +113,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                float?[] result = new float?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadSingle(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadSingle(count, prompt);
             }
 
             /// <summary>
@@ -168,13 +127,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                int?[] result = new int?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadInt32(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadInt32(count, prompt);
             }
 
             /// <summary>
@@ -188,13 +141,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                uint?[] result = new uint?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadUInt32(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadUInt32(count, prompt);
             }
 
             /// <summary>
@@ -208,13 +155,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                long?[] result = new long?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadInt64(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadInt64(count, prompt);
             }
 
             /// <summary>
@@ -228,13 +169,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                ulong?[] result = new ulong?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadUInt64(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadUInt64(count, prompt);
             }
 
             /// <summary>
@@ -248,13 +183,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                short?[] result = new short?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadInt16(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadInt16(count, prompt);
             }
 
             /// <summary>
@@ -268,13 +197,7 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                ushort?[] result = new ushort?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadUInt16(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadUInt16(count, prompt);
             }
 
             /// <summary>
@@ -288,18 +211,12 @@ namespace ABCNET.Utils
                 if (count < 0)
                     throw new ArgumentOutOfRangeException(nameof(count));
 
-                prompt = prompt ?? EmptyStringHelper.Empty;
-
-                BigInteger?[] result = new BigInteger?[count];
-                for (int i = 0; i < count; i++)
-                    result[i] = Base.Nullable.ReadBigInteger(string.Format(prompt, i));
-
-                return result;
+                return Array.Nullable.ReadBigInteger(count, prompt);
             }
 
-            #endregion
+            #endregion one-sequence
 
-            #region Read2
+            #region two-sequences
 
             /// <summary>
             /// Читает 2 последовательности типа Boolean? с клавиатуры.
@@ -497,9 +414,9 @@ namespace ABCNET.Utils
                 return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
             }
 
-            #endregion
+            #endregion two-sequences
 
-            #region Read3
+            #region three-sequences
 
             /// <summary>
             /// Читает 3 последовательности типа Boolean? с клавиатуры.
@@ -697,9 +614,9 @@ namespace ABCNET.Utils
                 return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
             }
 
-            #endregion
+            #endregion three-sequences
 
-            #region Read4
+            #region four-sequences
 
             /// <summary>
             /// Читает 4 последовательности типа Boolean? с клавиатуры.
@@ -897,9 +814,9 @@ namespace ABCNET.Utils
                 return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
             }
 
-            #endregion
+            #endregion four-sequences
 
-            #region Read5
+            #region five-sequences
 
             /// <summary>
             /// Читает 5 последовательностей типа Boolean? с клавиатуры.
@@ -1097,9 +1014,9 @@ namespace ABCNET.Utils
                 return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
             }
 
-            #endregion
+            #endregion five-sequences
 
-            #region Read6
+            #region six-sequences
 
             /// <summary>
             /// Читает 6 последовательностей типа Boolean? с клавиатуры.
@@ -1297,9 +1214,9 @@ namespace ABCNET.Utils
                 return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
             }
 
-            #endregion
+            #endregion six-sequences
 
-            #region Read7
+            #region seven-sequences
 
             /// <summary>
             /// Читает 7 последовательностей типа Boolean? с клавиатуры.
@@ -1497,10 +1414,9 @@ namespace ABCNET.Utils
                 return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
             }
 
-            #endregion
+            #endregion seven-sequences
 
-            #endregion
-
+            #endregion public
         }
-	}
+    }
 }

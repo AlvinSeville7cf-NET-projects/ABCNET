@@ -4,15 +4,14 @@ using System.Numerics;
 
 namespace ABCNET.Utils
 {
-	/// <summary>
-	/// Description of Class1.
-	/// </summary>
+    /// <summary>
+    /// Предоставляет функционал для работы с последовательностями.
+    /// </summary>
 	public static partial class Sequence
 	{
-
         #region public
 
-        #region Read1
+        #region one-sequence
 
         /// <summary>
         /// Читает последовательность типа Boolean с клавиатуры.
@@ -25,13 +24,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            bool[] result = new bool[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadBoolean(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadBoolean(count, prompt);
         }
 
         /// <summary>
@@ -45,13 +38,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            byte[] result = new byte[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadByte(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadByte(count, prompt);
         }
 
         /// <summary>
@@ -65,13 +52,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            sbyte[] result = new sbyte[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadSByte(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadSByte(count, prompt);
         }
 
         /// <summary>
@@ -85,13 +66,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            char[] result = new char[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadChar(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadChar(count, prompt);
         }
 
         /// <summary>
@@ -105,13 +80,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            decimal[] result = new decimal[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadDecimal(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadDecimal(count, prompt);
         }
 
         /// <summary>
@@ -125,13 +94,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            double[] result = new double[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadDouble(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadDouble(count, prompt);
         }
 
         /// <summary>
@@ -145,13 +108,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            float[] result = new float[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadSingle(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadSingle(count, prompt);
         }
 
         /// <summary>
@@ -165,13 +122,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            int[] result = new int[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadInt32(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadInt32(count, prompt);
         }
 
         /// <summary>
@@ -185,13 +136,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            uint[] result = new uint[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadUInt32(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadUInt32(count, prompt);
         }
 
         /// <summary>
@@ -205,13 +150,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            long[] result = new long[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadInt64(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadInt64(count, prompt);
         }
 
         /// <summary>
@@ -225,13 +164,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            ulong[] result = new ulong[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadUInt64(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadUInt64(count, prompt);
         }
 
         /// <summary>
@@ -245,13 +178,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            short[] result = new short[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadInt16(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadInt16(count, prompt);
         }
 
         /// <summary>
@@ -265,13 +192,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            ushort[] result = new ushort[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadUInt16(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadUInt16(count, prompt);
         }
 
         /// <summary>
@@ -285,13 +206,7 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            BigInteger[] result = new BigInteger[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadBigInteger(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadBigInteger(count, prompt);
         }
 
         /// <summary>
@@ -305,18 +220,12 @@ namespace ABCNET.Utils
             if (count < 0)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            prompt = prompt ?? EmptyStringHelper.Empty;
-
-            string[] result = new string[count];
-            for (int i = 0; i < count; i++)
-                result[i] = Base.ReadString(string.Format(prompt, i));
-
-            return result;
+            return Array.ReadString(count, prompt);
         }
 
-        #endregion
+        #endregion one-sequence
 
-        #region Read2
+        #region two-sequences
 
         /// <summary>
         /// Читает 2 последовательности типа Boolean с клавиатуры.
@@ -331,7 +240,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBoolean(count, prompt), ReadBoolean(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа Byte с клавиатуры.
         /// </summary>
@@ -345,7 +254,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadByte(count, prompt), ReadByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа SByte с клавиатуры.
         /// </summary>
@@ -359,7 +268,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSByte(count, prompt), ReadSByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа Char с клавиатуры.
         /// </summary>
@@ -373,7 +282,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadChar(count, prompt), ReadChar(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа Decimal с клавиатуры.
         /// </summary>
@@ -387,7 +296,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDecimal(count, prompt), ReadDecimal(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа Double с клавиатуры.
         /// </summary>
@@ -401,7 +310,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDouble(count, prompt), ReadDouble(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа Single с клавиатуры.
         /// </summary>
@@ -415,7 +324,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSingle(count, prompt), ReadSingle(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа Int32 с клавиатуры.
         /// </summary>
@@ -429,7 +338,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt32(count, prompt), ReadInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа UInt32 с клавиатуры.
         /// </summary>
@@ -443,7 +352,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt32(count, prompt), ReadUInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа Int64 с клавиатуры.
         /// </summary>
@@ -457,7 +366,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt64(count, prompt), ReadInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа UInt64 с клавиатуры.
         /// </summary>
@@ -471,7 +380,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt64(count, prompt), ReadUInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа Int16 с клавиатуры.
         /// </summary>
@@ -485,7 +394,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt16(count, prompt), ReadInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа UInt16 с клавиатуры.
         /// </summary>
@@ -499,7 +408,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt16(count, prompt), ReadUInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа BigInteger с клавиатуры.
         /// </summary>
@@ -513,7 +422,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 2 последовательности типа String с клавиатуры.
         /// </summary>
@@ -527,11 +436,11 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadString(count, prompt), ReadString(count, prompt));
         }
-        
-        #endregion
-        
-        #region Read3
-        
+
+        #endregion two-sequences
+
+        #region three-sequences
+
         /// <summary>
         /// Читает 3 последовательности типа Boolean с клавиатуры.
         /// </summary>
@@ -545,7 +454,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа Byte с клавиатуры.
         /// </summary>
@@ -559,7 +468,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа SByte с клавиатуры.
         /// </summary>
@@ -573,7 +482,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа Char с клавиатуры.
         /// </summary>
@@ -587,7 +496,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа Decimal с клавиатуры.
         /// </summary>
@@ -601,7 +510,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа Double с клавиатуры.
         /// </summary>
@@ -615,7 +524,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа Single с клавиатуры.
         /// </summary>
@@ -629,7 +538,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа Int32 с клавиатуры.
         /// </summary>
@@ -643,7 +552,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа UInt32 с клавиатуры.
         /// </summary>
@@ -657,7 +566,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа Int64 с клавиатуры.
         /// </summary>
@@ -671,7 +580,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа UInt64 с клавиатуры.
         /// </summary>
@@ -685,7 +594,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа Int16 с клавиатуры.
         /// </summary>
@@ -699,7 +608,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа UInt16 с клавиатуры.
         /// </summary>
@@ -713,7 +622,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа BigInteger с клавиатуры.
         /// </summary>
@@ -727,7 +636,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 3 последовательности типа String с клавиатуры.
         /// </summary>
@@ -741,11 +650,11 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt));
         }
-        
-        #endregion
-        
-        #region Read4
-        
+
+        #endregion three-sequences
+
+        #region four-sequences
+
         /// <summary>
         /// Читает 4 последовательности типа Boolean с клавиатуры.
         /// </summary>
@@ -759,7 +668,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа Byte с клавиатуры.
         /// </summary>
@@ -773,7 +682,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа SByte с клавиатуры.
         /// </summary>
@@ -787,7 +696,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа Char с клавиатуры.
         /// </summary>
@@ -801,7 +710,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа Decimal с клавиатуры.
         /// </summary>
@@ -815,7 +724,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа Double с клавиатуры.
         /// </summary>
@@ -829,7 +738,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа Single с клавиатуры.
         /// </summary>
@@ -843,7 +752,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа Int32 с клавиатуры.
         /// </summary>
@@ -857,7 +766,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа UInt32 с клавиатуры.
         /// </summary>
@@ -871,7 +780,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа Int64 с клавиатуры.
         /// </summary>
@@ -885,7 +794,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа UInt64 с клавиатуры.
         /// </summary>
@@ -899,7 +808,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа Int16 с клавиатуры.
         /// </summary>
@@ -913,7 +822,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа UInt16 с клавиатуры.
         /// </summary>
@@ -927,7 +836,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа BigInteger с клавиатуры.
         /// </summary>
@@ -941,7 +850,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 4 последовательности типа String с клавиатуры.
         /// </summary>
@@ -955,11 +864,11 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt));
         }
-        
-        #endregion
-        
-        #region Read5
-        
+
+        #endregion four-sequences
+
+        #region five-sequences
+
         /// <summary>
         /// Читает 5 последовательностей типа Boolean с клавиатуры.
         /// </summary>
@@ -973,7 +882,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа Byte с клавиатуры.
         /// </summary>
@@ -987,7 +896,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа SByte с клавиатуры.
         /// </summary>
@@ -1001,7 +910,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа Char с клавиатуры.
         /// </summary>
@@ -1015,7 +924,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа Decimal с клавиатуры.
         /// </summary>
@@ -1029,7 +938,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа Double с клавиатуры.
         /// </summary>
@@ -1043,7 +952,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа Single с клавиатуры.
         /// </summary>
@@ -1057,7 +966,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа Int32 с клавиатуры.
         /// </summary>
@@ -1071,7 +980,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа UInt32 с клавиатуры.
         /// </summary>
@@ -1085,7 +994,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа Int64 с клавиатуры.
         /// </summary>
@@ -1099,7 +1008,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа UInt64 с клавиатуры.
         /// </summary>
@@ -1113,7 +1022,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа Int16 с клавиатуры.
         /// </summary>
@@ -1127,7 +1036,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа UInt16 с клавиатуры.
         /// </summary>
@@ -1141,7 +1050,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа BigInteger с клавиатуры.
         /// </summary>
@@ -1155,7 +1064,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 5 последовательностей типа String с клавиатуры.
         /// </summary>
@@ -1169,11 +1078,11 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt));
         }
-        
-        #endregion
-        
-        #region Read6
-        
+
+        #endregion five-sequences
+
+        #region six-sequences
+
         /// <summary>
         /// Читает 6 последовательностей типа Boolean с клавиатуры.
         /// </summary>
@@ -1187,7 +1096,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа Byte с клавиатуры.
         /// </summary>
@@ -1201,7 +1110,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа SByte с клавиатуры.
         /// </summary>
@@ -1215,7 +1124,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа Char с клавиатуры.
         /// </summary>
@@ -1229,7 +1138,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа Decimal с клавиатуры.
         /// </summary>
@@ -1243,7 +1152,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа Double с клавиатуры.
         /// </summary>
@@ -1257,7 +1166,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа Single с клавиатуры.
         /// </summary>
@@ -1271,7 +1180,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа Int32 с клавиатуры.
         /// </summary>
@@ -1285,7 +1194,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа UInt32 с клавиатуры.
         /// </summary>
@@ -1299,7 +1208,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа Int64 с клавиатуры.
         /// </summary>
@@ -1313,7 +1222,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа UInt64 с клавиатуры.
         /// </summary>
@@ -1327,7 +1236,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа Int16 с клавиатуры.
         /// </summary>
@@ -1341,7 +1250,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа UInt16 с клавиатуры.
         /// </summary>
@@ -1355,7 +1264,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа BigInteger с клавиатуры.
         /// </summary>
@@ -1369,7 +1278,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 6 последовательностей типа String с клавиатуры.
         /// </summary>
@@ -1383,11 +1292,11 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt));
         }
-        
-        #endregion
-        
-        #region Read7
-        
+
+        #endregion six-sequences
+
+        #region seven-sequences
+
         /// <summary>
         /// Читает 7 последовательностей типа Boolean с клавиатуры.
         /// </summary>
@@ -1401,7 +1310,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt), ReadBoolean(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа Byte с клавиатуры.
         /// </summary>
@@ -1415,7 +1324,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt), ReadByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа SByte с клавиатуры.
         /// </summary>
@@ -1429,7 +1338,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt), ReadSByte(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа Char с клавиатуры.
         /// </summary>
@@ -1443,7 +1352,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt), ReadChar(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа Decimal с клавиатуры.
         /// </summary>
@@ -1457,7 +1366,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt), ReadDecimal(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа Double с клавиатуры.
         /// </summary>
@@ -1471,7 +1380,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt), ReadDouble(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа Single с клавиатуры.
         /// </summary>
@@ -1485,7 +1394,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt), ReadSingle(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа Int32 с клавиатуры.
         /// </summary>
@@ -1499,7 +1408,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt), ReadInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа UInt32 с клавиатуры.
         /// </summary>
@@ -1513,7 +1422,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt), ReadUInt32(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа Int64 с клавиатуры.
         /// </summary>
@@ -1527,7 +1436,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt), ReadInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа UInt64 с клавиатуры.
         /// </summary>
@@ -1541,7 +1450,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt), ReadUInt64(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа Int16 с клавиатуры.
         /// </summary>
@@ -1555,7 +1464,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt), ReadInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа UInt16 с клавиатуры.
         /// </summary>
@@ -1569,7 +1478,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt), ReadUInt16(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа BigInteger с клавиатуры.
         /// </summary>
@@ -1583,7 +1492,7 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt), ReadBigInteger(count, prompt));
         }
- 
+
         /// <summary>
         /// Читает 7 последовательностей типа String с клавиатуры.
         /// </summary>
@@ -1597,10 +1506,9 @@ namespace ABCNET.Utils
 
             return Tuple.Of(ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt), ReadString(count, prompt));
         }
-        
-        #endregion
-		
-		#endregion
-	
+
+        #endregion seven-sequences
+
+        #endregion public
     }
 }
