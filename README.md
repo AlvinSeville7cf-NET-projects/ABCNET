@@ -1,32 +1,12 @@
-<!--
-  Используйте данный ReadMe.md как шаблон для русскоязычных проектов в NETMouse projects. Форматирование в ReadMe.md, сделанных на основе данного должно точно соответствовать текущему. Любые отступления от этого - не допускаются.
 
-  Удалять комментарии из ReadMe.md запрещается - они могут быть полезны редакторам.
-
-  Некоторые оговорки по поводу оформления:
-  - По умолчанию используются ненумерованные списки, если не оговорено иное
-    - По умолчанию пояснения для элементов списка запрещены, если не оговорено иное
-    - Если в списке один элемент, то можно его писать без списка, если не оговорено иное
-    - Пояснения для элементов списка даются в скобках, если не оговорено иное
-  - Если имеется программный продукт X, то везде где встречается его названия должна быть ссыллка на его официальную страницу, либо иную другую для его преобретения. Такие ссылки должны быть везде и быть везде одинаковыми.
--->
 # ABCNET
 ## Краткое описание
-<!--
-  Краткое описание продукта с возможными ссылками на похожие и указание аудитории, на которую он рассчитан.
--->
-`ABCNET` - альтернатива модулю [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) для всего `NET`. Ориентирована на русскоязычную аудиторию. Более подробно об `ABCNET` можно узнать в [презентации](https://github.com/NETMouse-projects/ABCNET/tree/master/NETMouse%20-%20.NET%20release/Presentations) (желательно просматривать через `Power Point`).
+`ABCNET` - альтернатива модулю `PABCSystem` для всего `NET`. Ориентирована на русскоязычную аудиторию. Более подробно об `ABCNET` можно узнать в [презентации](https://github.com/NETMouse-projects/ABCNET/tree/master/NETMouse%20-%20.NET%20release/Presentations) (желательно просматривать через `Power Point`).
 
 ## Минимальные требования
-<!--
-  Требуемая версия framework'а и необходимые зависимости.
--->
 `NET Framework 4.0`
 
 # Организация проекта
-<!--
-  Участники команды, принявшие участие в работе над проектом. В скобках - роль в команде. А также и правила работы над проектом.
--->
 - [Alvin Seville](https://github.com/Alvin-Seville) (руководитель проекта и основатель `NETMouse-projects`)
 - [ProMix0](https://github.com/ProMix0) (главный разработчик)
 - [egor2812](https://github.com/egor2812) (поддержка)
@@ -34,17 +14,11 @@
 [Правила работы с Issue и Pull Requests для пользователей](https://github.com/NETMouse-projects/ABCNET/blob/master/CONTRIBUTING.md)
 
 # Цель проекта
-<!--
-  Краткое описание цели проекта. В конце - возможен лозунг.
--->
-Обеспечить пользователей [`PascalABC.NET 3.5.1.2277`](https://drive.google.com/open?id=1eHzHpHw7SYTCwefaxYPr4QbsB1bf6M41) [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o)-подобным функционалом за пределами данного языка. Но, в то же время, не предоставлять множество обёрток для работы с типами `NET`, а стимулировать обучающихся изучать данную платформу.
+Обеспечить пользователей `PascalABC.NET` `PABCSystem`-подобным функционалом за пределами данного языка. Но, в то же время, не предоставлять множество обёрток для работы с типами `NET`, а стимулировать обучающихся изучать данную платформу.
 
 Выучите одну библиотеку один раз и используйте её на любом `NET`-языке!
 
 # Принципы проекта
-<!--
-  Принципы проекта.
--->
 - Оптимизация важна
 - Простота функционала
 - Избегание использования специфических возможностей компиляторов
@@ -52,7 +26,7 @@
 # Варианты использования
 ## PascalABC.NET
 ### Через скачивание архива напрямую
-Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию [`PascalABC.NET`](https://drive.google.com/open?id=1eHzHpHw7SYTCwefaxYPr4QbsB1bf6M41) из `Program Files (x86)`).
+Скачайте архив `ABCNET.rar` и разархивируйте его в папку с программой (не в директорию `PascalABC.NET` из `Program Files (x86)`).
 
 ### Через пакетный менеджер `NuGet` в режиме проекта
 ![PascalABC.NET - NuGet package installation](https://sun9-29.userapi.com/c204828/v204828716/488d3/eFcKpAIwcP8.jpg)
@@ -96,34 +70,15 @@ namespace TestProgram
 ```
 
 # Порты
-<!--
-  Список проектов-портов данного.
--->
 - [`ABCPy`](https://github.com/NETMouse-projects/ABCPy) (для `Python`)
 - [`ABCJava`](https://github.com/NETMouse-projects/ABCJava) (для `Java`)
 - [`ABCCPlusPlus`](https://github.com/NETMouse-projects/ABCCPlusPlus) (для `C++`)
 
 # Совместимость с похожими продуктами
-<!--
-  Краткое описание совместимости с похожими продуктами, указанными в разделе "Похожие продукты от NETMouse-projects".
--->
-## С PABCSystem
-Полная совместимость с [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) не гарантируется. Функционал хоть и похожий, но отличается и по-разному распределён. Единственное место, в котором гарантируется полная совместимость (до `v0.5.0`, не включая её) - класс `ABCNET.Utils.PABCSystem`, который предоставляет часть функционала [`PABCSystem`](https://drive.google.com/open?id=1s2YX42HM8fKtah6blWmMkNZ9Z8Kfxn_BW4QSH6JY11o) в его изначальном виде. На данный момент доступны лишь короткие функции `Lst`, `LLst`, `HSet`, `SSet`, `Dict`, `KV`.
 
-# Дополнительные разработки
-- [Образцы кода](https://drive.google.com/open?id=1B_TWBw_gMT4meQXyrBhWiivk7KTrUhti) [Замените одноимённый файл данным в директории `C:\Program Files (x86)\PascalABC.NET`]
-
-# Похожие продукты от NETMouse-projects
-<!--
-  Список похожих проктов NETMouse projects.
--->
-- [`PascalABCSquirrel`](https://github.com/NETMouse-projects/PascalABCSquirrel)
 
 # Для разработчиков
 ## Жизненный цикл ABCNET
-<!--
-  Описание правил разработки проекта. Сначала - разбиение на версии, потом формат версий.
--->
 Любая версия должна содержать не более 25 `Issue`.
 - Первые 5 `Issue` затрагивают `API` библиотеки (по их количеству ведётся версионирование).
 - Вторые 5 `Issue` (необязательные) затрагивают `API` библиотеки.
@@ -140,9 +95,6 @@ namespace TestProgram
 
 # Инструменты разработки
 ## Обязательные инструменты
-<!--
-  Описание обязательных инструментов разработки для проекта.
--->
 - `IDE` - [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/), [`Repl.it`](https://repl.it/)
 - Пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`File Nesting`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileNesting)
 - Декомпилятор - [`dotPeek`](https://www.jetbrains.com/decompiler/)
@@ -151,9 +103,6 @@ namespace TestProgram
 - Фреймворки - `NET Framework 4.0`, [`NUnit`](https://nunit.org/)
 
 ## Рекомендуемые инструменты
-<!--
-  Описание рекомендуемых инструментов разработки для проекта.
--->
 - `IDE` - [`myCompiler`](https://www.mycompiler.io/)
 - Пллагины для [`Visual Studio 2019`](https://visualstudio.microsoft.com/vs/) - [`Roslynator 2019`](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019), [`CodeMaid`](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid), [`Markdown Editor`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor), [`File Icons`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileIcons), [`Trailing Whitespace Visualizer`](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.TrailingWhitespaceVisualizer)
 
