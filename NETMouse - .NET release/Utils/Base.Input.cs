@@ -9,11 +9,10 @@ namespace ABCNET.Utils
     /// </summary>
     public static partial class Base
     {
-
         #region public
 
         /// <summary>
-        /// Читает значение типа Boolean. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Boolean.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -30,7 +29,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Byte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Byte.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -47,7 +46,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа SByte. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа SByte.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -64,7 +63,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Char. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Char.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -75,7 +74,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Decimal. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Decimal.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -92,7 +91,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Double. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Double.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -109,7 +108,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Single. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Single.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -126,7 +125,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Int32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Int32.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -143,7 +142,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа UInt32. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа UInt32.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -160,7 +159,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Int64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Int64.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -177,7 +176,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа UInt64. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа UInt64.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -194,7 +193,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа Int16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа Int16.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -211,7 +210,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа UInt16. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа UInt16.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -228,7 +227,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа String. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа String.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -239,7 +238,7 @@ namespace ABCNET.Utils
         }
 
         /// <summary>
-        /// Читает значение типа BigInteger. [Не работает при запуске из под оболочки в IDE PascalABC.NET.]
+        /// Читает значение типа BigInteger.
         /// </summary>
         /// <param name="prompt">Приглашение к вводу.</param>
         /// <returns>Значение.</returns>
@@ -255,18 +254,18 @@ namespace ABCNET.Utils
             return result;
         }
 
-        /// <summary> 
-        /// Генерирует случайное число [0;1). 
-        /// </summary> 
+        /// <summary>
+        /// Генерирует случайное число [0;1).
+        /// </summary>
         /// <returns>Число.</returns>
         public static double Random()
         {
             return RandomHelper.Random.NextDouble();
         }
 
-        /// <summary> 
-        /// Генерирует случайное число [0;1). 
-        /// </summary> 
+        /// <summary>
+        /// Генерирует случайное число [0;1).
+        /// </summary>
         /// <returns>Число.</returns>
         [Obsolete(ObsoletePABCSystemStyleHelper.Message + "Base.Random.")]
         public static double Rand()
@@ -333,6 +332,5 @@ namespace ABCNET.Utils
         }
 
         #endregion public
-    
     }
 }
