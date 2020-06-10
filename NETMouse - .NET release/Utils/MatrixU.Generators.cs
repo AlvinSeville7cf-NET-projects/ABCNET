@@ -5,7 +5,7 @@ namespace ABCNET.Utils
     /// <summary>
     /// Предоставляет функционал для работы с матрицами.
     /// </summary>
-    public static partial class Matrix
+    public static partial class MatrixU
     {
 
         #region public
