@@ -34,7 +34,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadBoolean(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadBoolean(string.Format(prompt, i, j));
                 }
             }
 
@@ -62,7 +62,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadByte(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadByte(string.Format(prompt, i, j));
                 }
             }
 
@@ -90,7 +90,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadSByte(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadSByte(string.Format(prompt, i, j));
                 }
             }
 
@@ -118,7 +118,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadChar(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadChar(string.Format(prompt, i, j));
                 }
             }
 
@@ -146,7 +146,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadDecimal(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadDecimal(string.Format(prompt, i, j));
                 }
             }
 
@@ -174,7 +174,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadDouble(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadDouble(string.Format(prompt, i, j));
                 }
             }
 
@@ -202,7 +202,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadSingle(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadSingle(string.Format(prompt, i, j));
                 }
             }
 
@@ -230,7 +230,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadInt32(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadInt32(string.Format(prompt, i, j));
                 }
             }
 
@@ -258,7 +258,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadUInt32(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadUInt32(string.Format(prompt, i, j));
                 }
             }
 
@@ -286,7 +286,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadInt64(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadInt64(string.Format(prompt, i, j));
                 }
             }
 
@@ -314,7 +314,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadUInt64(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadUInt64(string.Format(prompt, i, j));
                 }
             }
 
@@ -342,7 +342,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadInt16(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadInt16(string.Format(prompt, i, j));
                 }
             }
 
@@ -370,7 +370,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadUInt16(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadUInt16(string.Format(prompt, i, j));
                 }
             }
 
@@ -398,7 +398,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadBigInteger(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadBigInteger(string.Format(prompt, i, j));
                 }
             }
 
@@ -426,7 +426,7 @@ namespace ABCNET.Utils
             {
                 for (int j = 0; j < colsCount; j++)
                 {
-                    source[i, j] = Base.ReadString(string.Format(prompt, i, j));
+                    source[i, j] = BaseU.ReadString(string.Format(prompt, i, j));
                 }
             }
 
@@ -445,7 +445,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<bool[,], bool[,]> ReadBooleanTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+            return TupleU.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -456,7 +456,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<byte[,], byte[,]> ReadByteTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+            return TupleU.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -467,7 +467,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<sbyte[,], sbyte[,]> ReadSByteTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+            return TupleU.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -478,7 +478,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char[,], char[,]> ReadCharTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+            return TupleU.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -489,7 +489,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<decimal[,], decimal[,]> ReadDecimalTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+            return TupleU.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -500,7 +500,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double[,], double[,]> ReadDoubleTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+            return TupleU.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -511,7 +511,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<float[,], float[,]> ReadSingleTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+            return TupleU.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -522,7 +522,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int[,], int[,]> ReadInt32Tuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -533,7 +533,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<uint[,], uint[,]> ReadUInt32Tuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -544,7 +544,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<long[,], long[,]> ReadInt64Tuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -555,7 +555,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ulong[,], ulong[,]> ReadUInt64Tuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -566,7 +566,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<short[,], short[,]> ReadInt16Tuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -577,7 +577,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ushort[,], ushort[,]> ReadUInt16Tuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -588,7 +588,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<BigInteger[,], BigInteger[,]> ReadBigIntegerTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+            return TupleU.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -599,7 +599,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string[,], string[,]> ReadStringTuple2(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+            return TupleU.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
         }
         
         #endregion
@@ -614,7 +614,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<bool[,], bool[,], bool[,]> ReadBooleanTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+            return TupleU.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -625,7 +625,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<byte[,], byte[,], byte[,]> ReadByteTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+            return TupleU.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -636,7 +636,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+            return TupleU.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -647,7 +647,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char[,], char[,], char[,]> ReadCharTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+            return TupleU.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -658,7 +658,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<decimal[,], decimal[,], decimal[,]> ReadDecimalTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+            return TupleU.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -669,7 +669,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double[,], double[,], double[,]> ReadDoubleTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+            return TupleU.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -680,7 +680,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<float[,], float[,], float[,]> ReadSingleTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+            return TupleU.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -691,7 +691,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int[,], int[,], int[,]> ReadInt32Tuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -702,7 +702,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<uint[,], uint[,], uint[,]> ReadUInt32Tuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -713,7 +713,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<long[,], long[,], long[,]> ReadInt64Tuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -724,7 +724,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -735,7 +735,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<short[,], short[,], short[,]> ReadInt16Tuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -746,7 +746,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -757,7 +757,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+            return TupleU.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -768,7 +768,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string[,], string[,], string[,]> ReadStringTuple3(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+            return TupleU.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
         }
         
         #endregion
@@ -783,7 +783,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<bool[,], bool[,], bool[,], bool[,]> ReadBooleanTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+            return TupleU.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -794,7 +794,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<byte[,], byte[,], byte[,], byte[,]> ReadByteTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+            return TupleU.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -805,7 +805,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<sbyte[,], sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+            return TupleU.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -816,7 +816,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char[,], char[,], char[,], char[,]> ReadCharTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+            return TupleU.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -827,7 +827,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<decimal[,], decimal[,], decimal[,], decimal[,]> ReadDecimalTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+            return TupleU.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -838,7 +838,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double[,], double[,], double[,], double[,]> ReadDoubleTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+            return TupleU.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -849,7 +849,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<float[,], float[,], float[,], float[,]> ReadSingleTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+            return TupleU.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -860,7 +860,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int[,], int[,], int[,], int[,]> ReadInt32Tuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -871,7 +871,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<uint[,], uint[,], uint[,], uint[,]> ReadUInt32Tuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -882,7 +882,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<long[,], long[,], long[,], long[,]> ReadInt64Tuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -893,7 +893,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ulong[,], ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -904,7 +904,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<short[,], short[,], short[,], short[,]> ReadInt16Tuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -915,7 +915,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ushort[,], ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -926,7 +926,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+            return TupleU.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -937,7 +937,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string[,], string[,], string[,], string[,]> ReadStringTuple4(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+            return TupleU.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
         }
         
         #endregion
@@ -952,7 +952,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBooleanTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+            return TupleU.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -963,7 +963,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<byte[,], byte[,], byte[,], byte[,], byte[,]> ReadByteTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+            return TupleU.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -974,7 +974,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+            return TupleU.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -985,7 +985,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char[,], char[,], char[,], char[,], char[,]> ReadCharTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+            return TupleU.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -996,7 +996,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<decimal[,], decimal[,], decimal[,], decimal[,], decimal[,]> ReadDecimalTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+            return TupleU.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1007,7 +1007,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double[,], double[,], double[,], double[,], double[,]> ReadDoubleTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+            return TupleU.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1018,7 +1018,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<float[,], float[,], float[,], float[,], float[,]> ReadSingleTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+            return TupleU.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1029,7 +1029,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int[,], int[,], int[,], int[,], int[,]> ReadInt32Tuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1040,7 +1040,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<uint[,], uint[,], uint[,], uint[,], uint[,]> ReadUInt32Tuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1051,7 +1051,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<long[,], long[,], long[,], long[,], long[,]> ReadInt64Tuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1062,7 +1062,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ulong[,], ulong[,], ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1073,7 +1073,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<short[,], short[,], short[,], short[,], short[,]> ReadInt16Tuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1084,7 +1084,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ushort[,], ushort[,], ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1095,7 +1095,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+            return TupleU.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1106,7 +1106,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string[,], string[,], string[,], string[,], string[,]> ReadStringTuple5(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+            return TupleU.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
         }
         
         #endregion
@@ -1121,7 +1121,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBooleanTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+            return TupleU.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1132,7 +1132,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<byte[,], byte[,], byte[,], byte[,], byte[,], byte[,]> ReadByteTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+            return TupleU.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1143,7 +1143,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+            return TupleU.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1154,7 +1154,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char[,], char[,], char[,], char[,], char[,], char[,]> ReadCharTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+            return TupleU.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1165,7 +1165,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<decimal[,], decimal[,], decimal[,], decimal[,], decimal[,], decimal[,]> ReadDecimalTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+            return TupleU.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1176,7 +1176,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double[,], double[,], double[,], double[,], double[,], double[,]> ReadDoubleTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+            return TupleU.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1187,7 +1187,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<float[,], float[,], float[,], float[,], float[,], float[,]> ReadSingleTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+            return TupleU.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1198,7 +1198,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int[,], int[,], int[,], int[,], int[,], int[,]> ReadInt32Tuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1209,7 +1209,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<uint[,], uint[,], uint[,], uint[,], uint[,], uint[,]> ReadUInt32Tuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1220,7 +1220,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<long[,], long[,], long[,], long[,], long[,], long[,]> ReadInt64Tuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1231,7 +1231,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ulong[,], ulong[,], ulong[,], ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1242,7 +1242,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<short[,], short[,], short[,], short[,], short[,], short[,]> ReadInt16Tuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1253,7 +1253,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ushort[,], ushort[,], ushort[,], ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1264,7 +1264,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+            return TupleU.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1275,7 +1275,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string[,], string[,], string[,], string[,], string[,], string[,]> ReadStringTuple6(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+            return TupleU.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
         }
         
         #endregion
@@ -1290,7 +1290,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<bool[,], bool[,], bool[,], bool[,], bool[,], bool[,], bool[,]> ReadBooleanTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
+            return TupleU.Of(ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount), ReadBoolean(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1301,7 +1301,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<byte[,], byte[,], byte[,], byte[,], byte[,], byte[,], byte[,]> ReadByteTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
+            return TupleU.Of(ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount), ReadByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1312,7 +1312,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,], sbyte[,]> ReadSByteTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
+            return TupleU.Of(ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount), ReadSByte(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1323,7 +1323,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<char[,], char[,], char[,], char[,], char[,], char[,], char[,]> ReadCharTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
+            return TupleU.Of(ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount), ReadChar(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1334,7 +1334,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<decimal[,], decimal[,], decimal[,], decimal[,], decimal[,], decimal[,], decimal[,]> ReadDecimalTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
+            return TupleU.Of(ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount), ReadDecimal(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1345,7 +1345,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double[,], double[,], double[,], double[,], double[,], double[,], double[,]> ReadDoubleTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
+            return TupleU.Of(ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount), ReadDouble(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1356,7 +1356,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<float[,], float[,], float[,], float[,], float[,], float[,], float[,]> ReadSingleTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
+            return TupleU.Of(ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount), ReadSingle(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1367,7 +1367,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int[,], int[,], int[,], int[,], int[,], int[,], int[,]> ReadInt32Tuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount), ReadInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1378,7 +1378,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<uint[,], uint[,], uint[,], uint[,], uint[,], uint[,], uint[,]> ReadUInt32Tuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount), ReadUInt32(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1389,7 +1389,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<long[,], long[,], long[,], long[,], long[,], long[,], long[,]> ReadInt64Tuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount), ReadInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1400,7 +1400,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ulong[,], ulong[,], ulong[,], ulong[,], ulong[,], ulong[,], ulong[,]> ReadUInt64Tuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount), ReadUInt64(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1411,7 +1411,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<short[,], short[,], short[,], short[,], short[,], short[,], short[,]> ReadInt16Tuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount), ReadInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1422,7 +1422,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<ushort[,], ushort[,], ushort[,], ushort[,], ushort[,], ushort[,], ushort[,]> ReadUInt16Tuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
+            return TupleU.Of(ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount), ReadUInt16(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1433,7 +1433,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,], BigInteger[,]> ReadBigIntegerTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
+            return TupleU.Of(ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount), ReadBigInteger(rowsCount, colsCount));
         }
  
         /// <summary>
@@ -1444,7 +1444,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<string[,], string[,], string[,], string[,], string[,], string[,], string[,]> ReadStringTuple7(int rowsCount, int colsCount)
         {
-            return Tuple.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
+            return TupleU.Of(ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount), ReadString(rowsCount, colsCount));
         }
         
         #endregion

@@ -86,7 +86,7 @@ namespace ABCNET.Utils
             int[,] source = new int[rowsCount, colsCount];
             for (int i = 0; i < source.GetLength(0); i++)
                 for (int j = 0; j < source.GetLength(1); j++)
-                    source[i, j] = Base.Random(low, high);
+                    source[i, j] = BaseU.Random(low, high);
 
             return source;
         }
@@ -111,7 +111,7 @@ namespace ABCNET.Utils
             double[,] source = new double[rowsCount, colsCount];
             for (int i = 0; i < source.GetLength(0); i++)
                 for (int j = 0; j < source.GetLength(1); j++)
-                    source[i, j] = Base.Random(low, high);
+                    source[i, j] = BaseU.Random(low, high);
 
             return source;
         }
