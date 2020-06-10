@@ -8,11 +8,11 @@ namespace TestProgram
     {
         private static void Main(string[] args)
         {
-            /*var t = Tuple.By7(1, x => x * 2);
+            /*var t = TupleU.By7(1, x => x * 2);
             t.PrintLine();
-            Array.Of(1, 2);
+            ArrayU.Of(1, 2);
             "Hell".PrintLine();
-            //Matr.ReadInt32(Base.ReadInt32("N:"), Base.ReadInt32("M:"), "Элемент ({0}, {1})-ый:").Count().Numerate().MaxBy(x => x.Item).Index.Println();*/
+            //Matr.ReadInt32(BaseU.ReadInt32("N:"), BaseU.ReadInt32("M:"), "Элемент ({0}, {1})-ый:").Count().Numerate().MaxBy(x => x.Item).Index.Println();*/
             Console.WriteLine(string.Format("kjlsgri", "jg"));
             Console.ReadLine();
         }
