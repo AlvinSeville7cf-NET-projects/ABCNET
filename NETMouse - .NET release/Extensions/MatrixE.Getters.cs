@@ -285,7 +285,7 @@ namespace ABCNET.Extensions
 
             int columnsCount = newMatrix.GetLength(1);
             for (int j = 0; j < columnsCount; j++)
-                Base.Swap(ref newMatrix[firstIndex, j], ref newMatrix[secondIndex, j]);
+                BaseU.Swap(ref newMatrix[firstIndex, j], ref newMatrix[secondIndex, j]);
             return newMatrix;
         }
 
@@ -304,7 +304,7 @@ namespace ABCNET.Extensions
             {
                 newMatrix[firstIndex, j] = selector(newMatrix[firstIndex, j]);
                 newMatrix[secondIndex, j] = selector(newMatrix[secondIndex, j]);
-                Base.Swap(ref newMatrix[firstIndex, j], ref newMatrix[secondIndex, j]);
+                BaseU.Swap(ref newMatrix[firstIndex, j], ref newMatrix[secondIndex, j]);
             }
 
             return newMatrix;
@@ -322,7 +322,7 @@ namespace ABCNET.Extensions
 
             int rowsCount = newMatrix.GetLength(0);
             for (int i = 0; i < rowsCount; i++)
-                Base.Swap(ref newMatrix[i, firstIndex], ref newMatrix[i, secondIndex]);
+                BaseU.Swap(ref newMatrix[i, firstIndex], ref newMatrix[i, secondIndex]);
             return newMatrix;
         }
 
@@ -341,7 +341,7 @@ namespace ABCNET.Extensions
             {
                 newMatrix[i, firstIndex] = selector(newMatrix[i, firstIndex]);
                 newMatrix[i, secondIndex] = selector(newMatrix[i, secondIndex]);
-                Base.Swap(ref newMatrix[i, firstIndex], ref newMatrix[i, secondIndex]);
+                BaseU.Swap(ref newMatrix[i, firstIndex], ref newMatrix[i, secondIndex]);
             }
 
             return newMatrix;

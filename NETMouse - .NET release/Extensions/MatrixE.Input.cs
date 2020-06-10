@@ -10,6 +10,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class MatrixE
     {
+
         #region public
 
         /// <summary>
@@ -28,7 +29,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadBoolean(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadBoolean(string.Format(prompt, i, j));
                 }
             }
         }
@@ -49,7 +50,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadByte(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadByte(string.Format(prompt, i, j));
                 }
             }
         }
@@ -70,7 +71,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadSByte(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadSByte(string.Format(prompt, i, j));
                 }
             }
         }
@@ -91,7 +92,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadChar(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadChar(string.Format(prompt, i, j));
                 }
             }
         }
@@ -112,7 +113,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadDecimal(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadDecimal(string.Format(prompt, i, j));
                 }
             }
         }
@@ -133,7 +134,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadDouble(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadDouble(string.Format(prompt, i, j));
                 }
             }
         }
@@ -154,7 +155,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadSingle(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadSingle(string.Format(prompt, i, j));
                 }
             }
         }
@@ -175,7 +176,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadInt32(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadInt32(string.Format(prompt, i, j));
                 }
             }
         }
@@ -196,7 +197,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadUInt32(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadUInt32(string.Format(prompt, i, j));
                 }
             }
         }
@@ -217,7 +218,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadInt64(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadInt64(string.Format(prompt, i, j));
                 }
             }
         }
@@ -238,7 +239,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadUInt64(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadUInt64(string.Format(prompt, i, j));
                 }
             }
         }
@@ -259,7 +260,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadInt16(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadInt16(string.Format(prompt, i, j));
                 }
             }
         }
@@ -280,7 +281,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadUInt16(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadUInt16(string.Format(prompt, i, j));
                 }
             }
         }
@@ -301,7 +302,7 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadBigInteger(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadBigInteger(string.Format(prompt, i, j));
                 }
             }
         }
@@ -322,11 +323,12 @@ namespace ABCNET.Extensions
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Base.ReadString(string.Format(prompt, i, j));
+                    matrix[i, j] = BaseU.ReadString(string.Format(prompt, i, j));
                 }
             }
         }
 
         #endregion public
+
     }
 }
