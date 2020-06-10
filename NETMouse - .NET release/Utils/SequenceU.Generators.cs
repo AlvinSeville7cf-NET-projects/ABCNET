@@ -44,7 +44,7 @@ namespace ABCNET.Utils
                 throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < count; i++)
-                yield return Base.Random(low, high);
+                yield return BaseU.Random(low, high);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace ABCNET.Utils
                 throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < count; i++)
-                yield return Base.Random(low, high);
+                yield return BaseU.Random(low, high);
         }
 
         /// <summary>
@@ -81,6 +81,6 @@ namespace ABCNET.Utils
         }
 
         #endregion public
-    
+
     }
 }
