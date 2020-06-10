@@ -7,7 +7,7 @@ namespace ABCNET.Utils
 	/// <summary>
 	/// Description of Sequence_Nullable_Input.
 	/// </summary>
-	public static partial class Sequence
+	public static partial class SequenceU
 	{
 
         public static class Nullable

@@ -6,7 +6,7 @@ namespace ABCNET.Utils
     /// <summary>
     /// Предоставляет функционал для работы с последовательностями.
     /// </summary>
-    public static partial class Sequence
+    public static partial class SequenceU
     {
 
         #region public

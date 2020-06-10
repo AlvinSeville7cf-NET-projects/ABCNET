@@ -7,7 +7,7 @@ namespace ABCNET.Utils
 	/// <summary>
 	/// Description of Class1.
 	/// </summary>
-	public static partial class Sequence
+	public static partial class SequenceU
 	{
 
         #region public
