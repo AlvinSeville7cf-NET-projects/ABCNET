@@ -9,6 +9,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class ArrayE
     {
+
         #region public
 
         /// <summary>
@@ -26,7 +27,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadBoolean(string.Format(prompt, i));
+                array[i] = BaseU.ReadBoolean(string.Format(prompt, i));
                 i++;
             }
         }
@@ -46,7 +47,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadByte(string.Format(prompt, i));
+                array[i] = BaseU.ReadByte(string.Format(prompt, i));
                 i++;
             }
         }
@@ -66,7 +67,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadSByte(string.Format(prompt, i));
+                array[i] = BaseU.ReadSByte(string.Format(prompt, i));
                 i++;
             }
         }
@@ -86,7 +87,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadChar(string.Format(prompt, i));
+                array[i] = BaseU.ReadChar(string.Format(prompt, i));
                 i++;
             }
         }
@@ -106,7 +107,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadDecimal(string.Format(prompt, i));
+                array[i] = BaseU.ReadDecimal(string.Format(prompt, i));
                 i++;
             }
         }
@@ -126,7 +127,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadDouble(string.Format(prompt, i));
+                array[i] = BaseU.ReadDouble(string.Format(prompt, i));
                 i++;
             }
         }
@@ -146,7 +147,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadSingle(string.Format(prompt, i));
+                array[i] = BaseU.ReadSingle(string.Format(prompt, i));
                 i++;
             }
         }
@@ -166,7 +167,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadInt32(string.Format(prompt, i));
+                array[i] = BaseU.ReadInt32(string.Format(prompt, i));
                 i++;
             }
         }
@@ -186,7 +187,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadUInt32(string.Format(prompt, i));
+                array[i] = BaseU.ReadUInt32(string.Format(prompt, i));
                 i++;
             }
         }
@@ -206,7 +207,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadInt64(string.Format(prompt, i));
+                array[i] = BaseU.ReadInt64(string.Format(prompt, i));
                 i++;
             }
         }
@@ -226,7 +227,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadUInt64(string.Format(prompt, i));
+                array[i] = BaseU.ReadUInt64(string.Format(prompt, i));
                 i++;
             }
         }
@@ -246,7 +247,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadInt16(string.Format(prompt, i));
+                array[i] = BaseU.ReadInt16(string.Format(prompt, i));
                 i++;
             }
         }
@@ -266,7 +267,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadUInt16(string.Format(prompt, i));
+                array[i] = BaseU.ReadUInt16(string.Format(prompt, i));
                 i++;
             }
         }
@@ -286,7 +287,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadBigInteger(string.Format(prompt, i));
+                array[i] = BaseU.ReadBigInteger(string.Format(prompt, i));
                 i++;
             }
         }
@@ -306,11 +307,12 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.ReadString(string.Format(prompt, i));
+                array[i] = BaseU.ReadString(string.Format(prompt, i));
                 i++;
             }
         }
 
         #endregion public
+
     }
 }

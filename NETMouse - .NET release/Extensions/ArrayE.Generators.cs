@@ -8,6 +8,7 @@ namespace ABCNET.Extensions
     /// </summary>
     public static partial class ArrayE
     {
+
         #region public
 
         /// <summary>
@@ -59,7 +60,7 @@ namespace ABCNET.Extensions
                 throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < array.Length; i++)
-                array[i] = Base.Random(low, high);
+                array[i] = BaseU.Random(low, high);
         }
 
         /// <summary>
@@ -76,7 +77,7 @@ namespace ABCNET.Extensions
                 throw new ArgumentException(nameof(low));
 
             for (int i = 0; i < array.Length; i++)
-                array[i] = Base.Random(low, high);
+                array[i] = BaseU.Random(low, high);
         }
 
         /// <summary>
@@ -94,5 +95,6 @@ namespace ABCNET.Extensions
         }
 
         #endregion public
+
     }
 }

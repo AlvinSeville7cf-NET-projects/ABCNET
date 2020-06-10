@@ -30,7 +30,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadBoolean(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadBoolean(string.Format(prompt, i));
                 i++;
             }
         }
@@ -50,7 +50,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadByte(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadByte(string.Format(prompt, i));
                 i++;
             }
         }
@@ -70,7 +70,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadSByte(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadSByte(string.Format(prompt, i));
                 i++;
             }
         }
@@ -90,7 +90,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadChar(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadChar(string.Format(prompt, i));
                 i++;
             }
         }
@@ -110,7 +110,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadDecimal(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadDecimal(string.Format(prompt, i));
                 i++;
             }
         }
@@ -130,7 +130,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadDouble(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadDouble(string.Format(prompt, i));
                 i++;
             }
         }
@@ -150,7 +150,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadSingle(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadSingle(string.Format(prompt, i));
                 i++;
             }
         }
@@ -170,7 +170,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadInt32(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadInt32(string.Format(prompt, i));
                 i++;
             }
         }
@@ -190,7 +190,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadUInt32(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadUInt32(string.Format(prompt, i));
                 i++;
             }
         }
@@ -210,7 +210,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadInt64(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadInt64(string.Format(prompt, i));
                 i++;
             }
         }
@@ -230,7 +230,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadUInt64(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadUInt64(string.Format(prompt, i));
                 i++;
             }
         }
@@ -250,7 +250,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadInt16(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadInt16(string.Format(prompt, i));
                 i++;
             }
         }
@@ -270,7 +270,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadUInt16(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadUInt16(string.Format(prompt, i));
                 i++;
             }
         }
@@ -290,7 +290,7 @@ namespace ABCNET.Extensions
             int i = 0;
             while (i < array.Length)
             {
-                array[i] = Base.Nullable.ReadBigInteger(string.Format(prompt, i));
+                array[i] = BaseU.Nullable.ReadBigInteger(string.Format(prompt, i));
                 i++;
             }
         }
