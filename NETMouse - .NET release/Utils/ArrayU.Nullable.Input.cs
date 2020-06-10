@@ -6,7 +6,7 @@ namespace ABCNET.Utils
     /// <summary>
     /// Предоставляет функционал для работы с массивами.
     /// </summary>
-    public static partial class Array
+    public static partial class ArrayU
     {
         /// <summary>
         /// Предоставляет функционал для работы с Nullable типами.

@@ -5,7 +5,7 @@ namespace ABCNET.Utils
     /// <summary>
     /// Предоставляет функционал для работы с массивами.
     /// </summary>
-    public static partial class Array
+    public static partial class ArrayU
     {
 
         #region public
