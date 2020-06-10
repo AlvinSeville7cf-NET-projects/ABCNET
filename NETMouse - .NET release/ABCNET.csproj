@@ -102,55 +102,55 @@
     <Compile Include="Extensions\TupleE.Output.cs">
       <DependentUpon>TupleE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Array.cs" />
-    <Compile Include="Utils\Array.Generators.cs">
-      <DependentUpon>Array.cs</DependentUpon>
+    <Compile Include="Utils\ArrayU.Generators.cs">
+      <DependentUpon>ArrayU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Array.Input.cs">
-      <DependentUpon>Array.cs</DependentUpon>
+    <Compile Include="Utils\ArrayU.Input.cs">
+      <DependentUpon>ArrayU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Array.Nullable.Input.cs">
-      <DependentUpon>Array.cs</DependentUpon>
+    <Compile Include="Utils\ArrayU.cs" />
+    <Compile Include="Utils\ArrayU.Nullable.Input.cs">
+      <DependentUpon>ArrayU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Base.cs" />
-    <Compile Include="Utils\Base.Input.cs">
-      <DependentUpon>Base.cs</DependentUpon>
+    <Compile Include="Utils\BaseU.cs" />
+    <Compile Include="Utils\BaseU.Input.cs">
+      <DependentUpon>BaseU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Base.Nullable.Input.cs">
-      <DependentUpon>Base.cs</DependentUpon>
+    <Compile Include="Utils\BaseU.Nullable.Input.cs">
+      <DependentUpon>BaseU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Base.Other.cs">
-      <DependentUpon>Base.cs</DependentUpon>
+    <Compile Include="Utils\BaseU.Other.cs">
+      <DependentUpon>BaseU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Sequence.Input.cs">
-      <DependentUpon>Sequence.cs</DependentUpon>
+    <Compile Include="Utils\MatrixU.Generators.cs">
+      <DependentUpon>MatrixU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Matrix.cs" />
-    <Compile Include="Utils\Matrix.Generators.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
+    <Compile Include="Utils\MatrixU.Input.cs">
+      <DependentUpon>MatrixU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Matrix.Input.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
+    <Compile Include="Utils\MatrixU.Nullable.Input.cs">
+      <DependentUpon>MatrixU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Matrix.Nullable.Input.cs">
-      <DependentUpon>Matrix.cs</DependentUpon>
+    <Compile Include="Utils\MatrixU.cs" />
+    <Compile Include="Utils\SequenceU.cs" />
+    <Compile Include="Utils\SequenceU.Generators.cs">
+      <DependentUpon>SequenceU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Sequence.cs" />
-    <Compile Include="Utils\Sequence.Generators.cs">
-      <DependentUpon>Sequence.cs</DependentUpon>
+    <Compile Include="Utils\SequenceU.Input.cs">
+      <DependentUpon>SequenceU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Sequence.Nullable.Input.cs">
-      <DependentUpon>Sequence.cs</DependentUpon>
+    <Compile Include="Utils\SequenceU.Nullable.Input.cs">
+      <DependentUpon>SequenceU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Tuple.Generators.cs">
-      <DependentUpon>Tuple.cs</DependentUpon>
+    <Compile Include="Utils\TupleU.cs" />
+    <Compile Include="Utils\TupleU.Generators.cs">
+      <DependentUpon>TupleU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Tuple.cs" />
-    <Compile Include="Utils\Tuple.Input.cs">
-      <DependentUpon>Tuple.cs</DependentUpon>
+    <Compile Include="Utils\TupleU.Input.cs">
+      <DependentUpon>TupleU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Tuple.Nullable.Input.cs">
-      <DependentUpon>Tuple.cs</DependentUpon>
+    <Compile Include="Utils\TupleU.Nullable.Input.cs">
+      <DependentUpon>TupleU.cs</DependentUpon>
     </Compile>
     <None Include="Examples\C#\Arrays_1.cs" />
     <None Include="Examples\C#\Arrays_10.cs" />

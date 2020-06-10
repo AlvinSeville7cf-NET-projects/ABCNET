@@ -5,7 +5,7 @@ namespace ABCNET.Utils
     /// <summary>
     /// Предоставляет функционал для работы с ссылочными кортежами.
     /// </summary>
-    public static partial class Tuple
+    public static partial class TupleU
     {
 
         #region public
