@@ -3,7 +3,7 @@
     /// <summary>
     /// Предоставляет функционал для работы с базовыми типами.
     /// </summary>
-    public static partial class Base
+    public static partial class BaseU
     {
 
         #region public
