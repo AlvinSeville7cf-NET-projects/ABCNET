@@ -18,6 +18,6 @@ begin
 end;
 
 begin
-  Matr.Rand(Base.ReadInteger('N:'), Base.ReadInteger('M:'), -30, 45).Print().Min().Println();
-  Base.ReadChar();
+  Matr.Rand(BaseU.ReadInteger('N:'), BaseU.ReadInteger('M:'), -30, 45).Print().Min().Println();
+  BaseU.ReadChar();
 end.

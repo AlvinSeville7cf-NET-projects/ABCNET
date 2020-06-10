@@ -18,10 +18,10 @@ begin
     for var k := 0 to rowsCount - 1 do
       for var i := 0 to rowsCount - k - 2 do
         if result[i, j] > result[i + 1, j] then
-          Base.Swap(result[i, j], result[i + 1, j]);
+          BaseU.Swap(result[i, j], result[i + 1, j]);
 end;
 
 begin
-  Matr.Rand(Base.ReadInteger('N:'), Base.ReadInteger('M:'), -17, 26).Print().Sort().Print();
-  Base.ReadChar();
+  Matr.Rand(BaseU.ReadInteger('N:'), BaseU.ReadInteger('M:'), -17, 26).Print().Sort().Print();
+  BaseU.ReadChar();
 end.

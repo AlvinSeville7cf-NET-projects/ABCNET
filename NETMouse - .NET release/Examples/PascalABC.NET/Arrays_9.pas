@@ -3,6 +3,6 @@
 uses ABCNET.Utils;
 uses ABCNET.Extensions;
 begin
-  Arr.Rand(Base.ReadInteger('N:'), -20, 25).Println().Numerate().MinBy(x -> x.Item).Index.Println();
-  Base.ReadChar();
+  Arr.Rand(BaseU.ReadInteger('N:'), -20, 25).Println().Numerate().MinBy(x -> x.Item).Index.Println();
+  BaseU.ReadChar();
 end.

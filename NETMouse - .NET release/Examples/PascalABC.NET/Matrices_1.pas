@@ -2,6 +2,6 @@
 uses ABCNET.Utils;
 uses ABCNET.Extensions;
 begin
-  Matr.Rand(Base.ReadInteger('N:'), Base.ReadInteger('M:'), -20, 25).Print();
-  Base.ReadChar();
+  Matr.Rand(BaseU.ReadInteger('N:'), BaseU.ReadInteger('M:'), -20, 25).Print();
+  BaseU.ReadChar();
 end.

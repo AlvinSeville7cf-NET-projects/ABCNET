@@ -25,6 +25,6 @@ begin
 end;
 
 begin
-  Matr.Rand(Base.ReadInteger('N:'), Base.ReadInteger('M:'), -27, 38).Print().Max().Println();
-  Base.ReadChar();
+  Matr.Rand(BaseU.ReadInteger('N:'), BaseU.ReadInteger('M:'), -27, 38).Print().Max().Println();
+  BaseU.ReadChar();
 end.

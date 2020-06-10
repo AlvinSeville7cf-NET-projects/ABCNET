@@ -17,6 +17,6 @@ begin
 end;
 
 begin
-  Matr.ReadInteger(Base.ReadInteger('N:'), Base.ReadInteger('M:'), 'Элемент ({0}, {1})-ый:').Sum().Println();
-  Base.ReadChar();
+  Matr.ReadInteger(BaseU.ReadInteger('N:'), BaseU.ReadInteger('M:'), 'Элемент ({0}, {1})-ый:').Sum().Println();
+  BaseU.ReadChar();
 end.
