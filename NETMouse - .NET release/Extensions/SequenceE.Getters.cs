@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABCNET.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -31,7 +32,7 @@ namespace ABCNET.Extensions
                     b = en.Current;
                     if (en.MoveNext())
                         throw new ArgumentException(nameof(collection));
-                    return Tuple.Create(a, b);
+                    return TupleU.Of(a, b);
                 }
                 throw new ArgumentException(nameof(collection));
             }
@@ -61,7 +62,7 @@ namespace ABCNET.Extensions
                         c = en.Current;
                         if (en.MoveNext())
                             throw new ArgumentException(nameof(collection));
-                        return Tuple.Create(a, b, c);
+                        return TupleU.Of(a, b, c);
                     }
                     throw new ArgumentException(nameof(collection));
                 }
@@ -97,7 +98,7 @@ namespace ABCNET.Extensions
                             d = en.Current;
                             if (en.MoveNext())
                                 throw new ArgumentException(nameof(collection));
-                            return Tuple.Create(a, b, c, d);
+                            return TupleU.Of(a, b, c, d);
                         }
                         throw new ArgumentException(nameof(collection));
                     }
@@ -139,7 +140,7 @@ namespace ABCNET.Extensions
                                 e = en.Current;
                                 if (en.MoveNext())
                                     throw new ArgumentException(nameof(collection));
-                                return Tuple.Create(a, b, c, d, e);
+                                return TupleU.Of(a, b, c, d, e);
                             }
                             throw new ArgumentException(nameof(collection));
                         }
@@ -187,7 +188,7 @@ namespace ABCNET.Extensions
                                     f = en.Current;
                                     if (en.MoveNext())
                                         throw new ArgumentException(nameof(collection));
-                                    return Tuple.Create(a, b, c, d, e, f);
+                                    return TupleU.Of(a, b, c, d, e, f);
                                 }
                                 throw new ArgumentException(nameof(collection));
                             }
@@ -241,7 +242,7 @@ namespace ABCNET.Extensions
                                         g = en.Current;
                                         if (en.MoveNext())
                                             throw new ArgumentException(nameof(collection));
-                                        return Tuple.Create(a, b, c, d, e, f, g);
+                                        return TupleU.Of(a, b, c, d, e, f, g);
                                     }
                                     throw new ArgumentException(nameof(collection));
                                 }
@@ -344,7 +345,7 @@ namespace ABCNET.Extensions
 
             while (enumerator.MoveNext())
             {
-                yield return Tuple.Create(previous, enumerator.Current);
+                yield return TupleU.Of(previous, enumerator.Current);
                 previous = enumerator.Current;
             }
         }
@@ -372,7 +373,7 @@ namespace ABCNET.Extensions
             while (enumerator.MoveNext())
             {
                 TOutput current = selector(enumerator.Current);
-                yield return Tuple.Create(previous, current);
+                yield return TupleU.Of(previous, current);
                 previous = current;
             }
         }
@@ -433,7 +434,7 @@ namespace ABCNET.Extensions
             if (secondCollection == null)
                 throw new ArgumentNullException(nameof(secondCollection));
 
-            return collection.Zip(secondCollection, delegate (T x, T1 y) { return Tuple.Create(x, y); });
+            return collection.Zip(secondCollection, delegate (T x, T1 y) { return TupleU.Of(x, y); });
         }
 
         /// <summary>
@@ -446,7 +447,7 @@ namespace ABCNET.Extensions
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
-            return Tuple.Create(collection.Select(delegate (Tuple<T, T1> x) { return x.Item1; }),
+            return TupleU.Of(collection.Select(delegate (Tuple<T, T1> x) { return x.Item1; }),
                 collection.Select(delegate (Tuple<T, T1> x) { return x.Item2; }));
         }
 
