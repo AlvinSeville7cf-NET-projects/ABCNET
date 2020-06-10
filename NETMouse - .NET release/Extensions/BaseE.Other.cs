@@ -5,6 +5,7 @@
     /// </summary>
     public static partial class BaseE
     {
+
         #region public
 
         /// <summary>
@@ -17,10 +18,11 @@
         public static bool IsBetween(this int target, int firstBorder, int secondBorder)
         {
             if (firstBorder > secondBorder)
-                Utils.Base.Swap(ref firstBorder, ref secondBorder);
+                Utils.BaseU.Swap(ref firstBorder, ref secondBorder);
             return (target >= firstBorder) && (target <= secondBorder);
         }
 
         #endregion public
+
     }
 }
