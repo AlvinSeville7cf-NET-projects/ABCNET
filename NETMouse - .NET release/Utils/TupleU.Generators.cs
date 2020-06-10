@@ -10,8 +10,6 @@ namespace ABCNET.Utils
 
         #region public
 
-        #region Of
-
         /// <summary>
         /// Создаёт кортеж из 2 значений.
         /// </summary>
@@ -298,10 +296,6 @@ namespace ABCNET.Utils
             return Of(item1, item2, item3, item4, item5, item6, item7);
         }
 
-        #endregion
-
-        #region RandomInt
-
         /// <summary>
         /// Создаёт кортеж из двух случайных значений типа Int32.
         /// </summary>
@@ -310,7 +304,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int> Random2(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -321,7 +315,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int> Random3(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -332,8 +326,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int, int> Random4(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -344,8 +338,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int, int, int> Random5(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high), Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high), BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -356,8 +350,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int, int, int, int> Random6(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -368,14 +362,10 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<int, int, int, int, int, int, int> Random7(int low = Int32BordersHelper.Low, int high = Int32BordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high));
         }
-
-        #endregion
-
-        #region RandomDouble
 
         /// <summary>
         /// Создаёт кортеж из двух случайных значений типа Double.
@@ -385,7 +375,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double> Random2(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -396,7 +386,7 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double> Random3(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -407,8 +397,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double, double> Random4(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -419,8 +409,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double, double, double> Random5(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high), Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high), BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -431,8 +421,8 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double, double, double, double> Random6(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high), Base.Random(low, high), Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high));
         }
 
         /// <summary>
@@ -443,14 +433,10 @@ namespace ABCNET.Utils
         /// <returns>Кортеж.</returns>
         public static Tuple<double, double, double, double, double, double, double> Random7(double low = DoubleBordersHelper.Low, double high = DoubleBordersHelper.High)
         {
-            return Of(Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high), Base.Random(low, high), Base.Random(low, high),
-                Base.Random(low, high));
+            return Of(BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high), BaseU.Random(low, high), BaseU.Random(low, high),
+                BaseU.Random(low, high));
         }
-
-        #endregion
-
-        #region Fill
 
         /// <summary>
         /// Создаёт кортеж из двух элементов, заполненный указанным значением.
@@ -517,9 +503,7 @@ namespace ABCNET.Utils
                 value);
         }
 
-        #endregion
-
         #endregion public
-    
+
     }
 }
