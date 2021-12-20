@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/stale@v1.1.0
+    - uses: actions/stale@v4.1.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'В данной Issue достаточно длительное время не наблюдается активности. Просьба участникам сообщества NETMouse projects рассмотреть данную Issue.'
